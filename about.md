@@ -9,8 +9,8 @@ author_profile: true
 
 <div class="hero-section">
   <div class="hero-content">
-    <h2 style="color: white; margin-bottom: 1em;">HCI Researcher & Virtual Environment Developer</h2>
-    <p style="color: rgba(255,255,255,0.9); font-size: 1.1em; margin-bottom: 0;">
+    <h2 style="color: white; margin-bottom: 1em; font-size: 1.8em;">HCI Researcher & Virtual Environment Developer</h2>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.1em; margin-bottom: 0; line-height: 1.5;">
       Passionate about bridging virtual environments with cultural heritage preservation through immersive technologies
     </p>
   </div>

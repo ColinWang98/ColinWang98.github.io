@@ -4,16 +4,7 @@ title: "Homepage"
 classes: homepage
 ---
 
-<div class="hero-section">
-  <div class="hero-content">
-    <h1 class="name-title">Wang Yao</h1>
-    <p class="position-title">MSc in Sustainable Urban Development</p>
-    <p class="affiliation">Research Assistant • The Hong Kong Polytechnic University</p>
-    <p class="research-motto">
-      <em>"Bridging virtual environments with cultural heritage preservation through immersive technologies"</em>
-    </p>
-  </div>
-</div>
+
 
 ## About Me
 

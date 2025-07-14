@@ -683,7 +683,7 @@ body {
 .masthead__inner-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 0 32px;
   min-height: 56px;
   max-width: 1400px;
@@ -867,7 +867,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 确保子页面内容有正确间距 */
+/* 统一页面样式 - 首页和子页面保持一致 */
 .page h1:first-child {
   margin-top: 0;
 }
@@ -876,37 +876,37 @@ body {
   margin-top: 2em;
 }
 
-/* 修复子页面的paper-box布局 */
-.page .paper-box {
+/* 统一paper-box布局 */
+.paper-box {
   margin: 2em 0;
 }
 
-/* 确保子页面的项目标签正确显示 */
-.page .project-tags {
+/* 统一项目标签显示 */
+.project-tags {
   margin: 1em 0;
 }
 
-/* 修复子页面的时间轴布局 */
-.page .timeline {
+/* 统一时间轴布局 */
+.timeline {
   margin: 2em 0;
 }
 
-/* 确保子页面的联系网格正确显示 */
-.page .contact-grid {
+/* 统一联系网格显示 */
+.contact-grid {
   margin: 2em 0;
 }
 
-/* 修复子页面的技能网格 */
-.page .skills-grid {
+/* 统一技能网格 */
+.skills-grid {
   margin: 2em 0;
 }
 
-/* 确保子页面的内容区域有足够的底部间距 */
+/* 统一内容区域间距 */
 .page__content {
   padding-bottom: 2em;
 }
 
-/* 修复子页面标题间距 */
+/* 统一标题间距 */
 .page h1 {
   margin-top: 0;
   margin-bottom: 1.5em;
@@ -917,8 +917,8 @@ body {
   margin-bottom: 1em;
 }
 
-/* 确保子页面的分隔线正确显示 */
-.page hr {
+/* 统一分隔线样式 */
+.page hr, hr {
   margin: 3em 0;
   border: none;
   border-top: 1px solid var(--border-color);
@@ -1159,6 +1159,7 @@ h1:before, .anchor:before {
   .masthead__inner-wrap {
     padding: 0 16px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   
   .navbar ul {

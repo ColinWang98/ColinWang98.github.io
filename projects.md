@@ -48,7 +48,6 @@ author_profile: true
     </ul>
 
     <div class="project-links">
-      <a href="https://www.spatial.io/s/The-Red-MetaChamber-66a297a573453567813f86eb" class="btn" target="_blank">🌐 Experience Live</a>
       <a href="#red-metachamber-details" class="btn">📖 Technical Details</a>
       <a href="#red-metachamber-video" class="btn">🎥 View Demo</a>
     </div>
@@ -223,6 +222,5 @@ author_profile: true
 
 <div class="cta-section">
   <a href="/publications/" class="btn">📚 View Related Publications</a>
-  <a href="https://www.spatial.io/s/The-Red-MetaChamber-66a297a573453567813f86eb" class="btn" target="_blank">🌐 Experience VR Projects</a>
   <a href="mailto:23064693g@connect.polyu.hk" class="btn">🤝 Collaborate</a>
 </div> 

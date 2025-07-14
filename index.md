@@ -35,12 +35,13 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
     
     <div class="project-links">
-      <a href="https://www.spatial.io/s/The-Red-MetaChamber-66a297a573453567813f86eb" class="btn" target="_blank">🌐 Experience</a>
       <a href="/projects/#the-red-metachamber" class="btn">📖 Details</a>
     </div>
   </div>
   <div class="paper-box-image">
-    <img src="images/RedMeta.png" alt="The Red MetaChamber Project">
+    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
+            width="100%" height="315" frameborder="0" allowfullscreen>
+    </iframe>
   </div>
 </div>
 

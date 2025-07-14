@@ -25,6 +25,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--bg-secondary);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -34,6 +36,8 @@ body {
   color: var(--text-primary);
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ==========================================================================
@@ -429,6 +433,15 @@ body {
 
 .paper-box-image img:hover {
   transform: scale(1.05);
+}
+
+.paper-box-image iframe {
+  max-width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: var(--transition);
 }
 
 /* ==========================================================================
@@ -1160,20 +1173,34 @@ h1:before, .anchor:before {
     padding: 0 16px;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 70px;
   }
   
   .navbar ul {
-    gap: 16px;
+    gap: 8px;
     flex-wrap: wrap;
-  }
-  
-  .navbar a {
-    font-size: 14px;
+    justify-content: center;
     padding: 8px 0;
   }
   
+  .navbar a {
+    font-size: 12px;
+    padding: 6px 8px;
+    white-space: nowrap;
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  .navbar a:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
   #main {
-    padding: 1em 1em;
+    padding: 1em 12px;
   }
   
   .main-container {
@@ -1185,11 +1212,13 @@ h1:before, .anchor:before {
     flex: none;
     width: 100%;
     position: static;
-    padding: 20px;
+    padding: 16px;
+    margin-bottom: 1em;
   }
   
   .page {
-    padding: 25px;
+    padding: 20px 16px;
+    border-radius: 8px;
   }
   
   .homepage   .homepage .hero-section {
@@ -1213,12 +1242,24 @@ h1:before, .anchor:before {
   
   .paper-box {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
+    padding: 16px;
+    margin: 1.5em 0;
   }
   
   .paper-box-text {
     padding-right: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .paper-box-text h3 {
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  
+  .paper-box-text p {
+    font-size: 0.9em;
+    line-height: 1.5;
   }
   
   .paper-box-image {
@@ -1261,20 +1302,37 @@ h1:before, .anchor:before {
   }
   
   .author__avatar img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   
   .author__content h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
+  }
+  
+  .author__content p {
+    font-size: 0.85em;
+  }
+  
+  .author__urls li {
+    padding: 8px 12px;
+    font-size: 0.85em;
   }
   
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+    line-height: 1.3;
   }
   
   h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    line-height: 1.3;
+    margin-top: 2em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.3;
   }
   
   .video-container {
@@ -1285,28 +1343,32 @@ h1:before, .anchor:before {
 /* 小屏移动设备 */
 @media (max-width: 480px) {
   .masthead__inner-wrap {
-    padding: 0 12px;
+    padding: 0 8px;
     justify-content: center;
+    min-height: 80px;
   }
   
   .navbar ul {
-    gap: 12px;
+    gap: 4px;
+    padding: 10px 0;
   }
   
   .navbar a {
-    font-size: 13px;
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 3px;
   }
   
   #main {
-    padding: 0.8em 0.8em;
+    padding: 0.5em 8px;
   }
   
   .sidebar {
-    padding: 15px;
+    padding: 12px;
   }
   
   .page {
-    padding: 20px;
+    padding: 16px 12px;
   }
   
   .homepage .hero-section {

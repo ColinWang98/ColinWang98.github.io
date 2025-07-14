@@ -104,4 +104,6 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 
 ### Conference Papers
 - Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  
-  *"Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour."* **Learning Technologies and Systems (ICWL 2024)**
+  *"Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour."* **Learning Technologies and Systems (SETE 2024)**  
+  *Springer, Lecture Notes in Computer Science, vol 15589*  
+  [📄 View Paper](https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4) | [🔗 DOI](https://doi.org/10.1007/978-981-96-4407-0_4)

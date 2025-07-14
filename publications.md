@@ -12,17 +12,20 @@ classes: subpage
 
 <div class="paper-box">
   <div class="paper-box-text">
-    <h3>Towards Effective Collaborative Learning in Edu-Metaverse</h3>
+    <h3>Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour</h3>
     <p><strong>Authors:</strong> Yufei Lu; Ye Jia; Guang Chen; <strong>Yao Wang</strong>; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li</p>
-    <p><strong>Conference:</strong> Learning Technologies and Systems (ICWL 2024)</p>
-    <p>A comprehensive study examining learners' anxiety, perception, and behaviour in educational metaverse environments, providing insights for designing effective collaborative learning experiences in virtual spaces.</p>
+    <p><strong>Conference:</strong> Learning Technologies and Systems (SETE 2024)</p>
+    <p><strong>Publisher:</strong> Springer, Lecture Notes in Computer Science, vol 15589</p>
+    <p><strong>Published:</strong> April 17, 2025</p>
     
-    <p><strong>Research Focus:</strong> Educational Technology, Metaverse Learning, User Experience</p>
+    <p>This study investigated how learners' attributes and environmental attributes affect collaborative learning in Edu-Metaverse using a within-subjects design involving 32 participants. The confirmatory factor analysis revealed that various behavioural metrics in Edu-Metaverse mediated the effects of trait anxiety and virtual space satisfaction on collaborative learning performance.</p>
+    
+    <p><strong>Research Focus:</strong> Educational Technology, Metaverse Learning, Collaborative Learning, User Experience, Social Presence</p>
     
     <div class="project-links">
-      <a href="#" class="btn">📄 PDF</a>
-      <a href="#" class="btn">📊 Cite</a>
-      <a href="#" class="btn">🔗 DOI</a>
+      <a href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" class="btn">📄 View Paper</a>
+      <a href="https://doi.org/10.1007/978-981-96-4407-0_4" target="_blank" class="btn">🔗 DOI</a>
+      <a href="#edu-metaverse-cite" class="btn">📊 Cite</a>
     </div>
   </div>
   <div class="paper-box-image">
@@ -108,6 +111,33 @@ classes: subpage
 - Member of ACM SIGCHI (Computer-Human Interaction)
 - Active participant in XR research communities
 - Contributor to open-source VR development projects
+
+---
+
+## Citation Format
+
+<div id="edu-metaverse-cite" class="project-details">
+  <h3>📊 Citation Information</h3>
+  
+  <h4>APA Format:</h4>
+  <p><em>Lu, Y., Jia, Y., Chen, G., Wang, Y., Ng, P. H. F., Zhou, L., Li, Q., & Li, C. (2025). Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour. In Learning Technologies and Systems (pp. 40-54). Springer.</em></p>
+  
+  <h4>IEEE Format:</h4>
+  <p><em>Y. Lu et al., "Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour," in Learning Technologies and Systems, Springer, 2025, pp. 40-54.</em></p>
+  
+  <h4>BibTeX:</h4>
+  <pre><code>@inproceedings{lu2025towards,
+  title={Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour},
+  author={Lu, Yufei and Jia, Ye and Chen, Guang and Wang, Yao and Ng, Peter HF and Zhou, Laura and Li, Qing and Li, Chen},
+  booktitle={Learning Technologies and Systems},
+  pages={40--54},
+  year={2025},
+  publisher={Springer},
+  series={Lecture Notes in Computer Science},
+  volume={15589},
+  doi={10.1007/978-981-96-4407-0_4}
+}</code></pre>
+</div>
 
 ---
 

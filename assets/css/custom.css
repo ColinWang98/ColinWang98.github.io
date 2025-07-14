@@ -56,7 +56,7 @@ body {
   overflow: hidden;
 }
 
-/* 子页面的hero区域 */
+/* 子页面的hero区域（如果存在）*/
 .page .hero-section {
   background: var(--gradient-bg);
   padding: 3em 2em;
@@ -1034,28 +1034,17 @@ body {
   overflow-x: hidden;
 }
 
-/* 统一页面样式 - 首页和子页面保持一致 */
+/* 统一页面样式 - 所有页面保持一致 */
 .page h1:first-child {
   margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
-/* 首页hero section后的内容间距 */
-.homepage .hero-section + * {
-  margin-top: 2em;
-}
-
-/* 子页面（无hero section）的内容间距 */
-.subpage h1:first-child {
-  margin-top: 0;
+.page .page__content {
   padding-top: 0;
 }
 
-/* 为没有hero section的子页面添加顶部间距 */
-.subpage .page__content {
-  padding-top: 0;
-}
-
-.subpage > .page__inner-wrap > .page__content > *:first-child {
+.page .page__inner-wrap > .page__content > *:first-child {
   margin-top: 0;
 }
 
@@ -1305,18 +1294,10 @@ h1:before, .anchor:before {
     padding: 30px;
   }
   
-  .homepage .hero-section {
-    margin: -30px -30px 3em -30px;
-    padding: 3em 0 2em 0;
-  }
+  /* 统一页面间距 */
   
-  .page .hero-section {
-    margin: -30px -30px 2em -30px;
-    padding: 2.5em 1.5em;
-  }
-  
-  /* 平板设备子页面优化 */
-  .subpage {
+  /* 平板设备页面优化 */
+  .page {
     padding: 40px 30px;
   }
   
@@ -1396,18 +1377,10 @@ h1:before, .anchor:before {
     border-radius: 8px;
   }
   
-  .homepage .hero-section {
-    margin: -25px -25px 2em -25px;
-    padding: 2.5em 0 1.5em 0;
-  }
+  /* 移动设备统一间距 */
   
-  .page .hero-section {
-    margin: -25px -25px 1.5em -25px;
-    padding: 2em 1em;
-  }
-  
-  /* 移动设备子页面优化 */
-  .subpage {
+  /* 移动设备页面优化 */
+  .page {
     padding: 24px 16px;
   }
   
@@ -1579,18 +1552,10 @@ h1:before, .anchor:before {
     padding: 16px 12px;
   }
   
-  .homepage .hero-section {
-    margin: -20px -20px 1.5em -20px;
-    padding: 2em 0 1em 0;
-  }
+  /* 小屏设备统一间距 */
   
-  .page .hero-section {
-    margin: -20px -20px 1em -20px;
-    padding: 1.5em 0.5em;
-  }
-  
-  /* 小屏设备子页面优化 */
-  .subpage {
+  /* 小屏设备页面优化 */
+  .page {
     padding: 20px 12px;
   }
   

@@ -1,6 +1,33 @@
 /* ==========================================================================
-   自定义样式 - 优化版本
+   自定义样式 - 优化版本 (增强毛玻璃效果)
    ========================================================================== */
+
+/* 毛玻璃效果浏览器支持检测和降级方案 */
+@supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+  .sidebar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  .page {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  .masthead {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  .paper-box {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
 
 /* 基础重置和变量 */
 :root {
@@ -30,7 +57,8 @@ html {
 }
 
 body {
-  background: var(--bg-secondary);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-attachment: fixed;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
@@ -38,6 +66,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 /* ==========================================================================
@@ -163,11 +192,13 @@ body {
 }
 
 .timeline-content {
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(170%) brightness(110%);
+  -webkit-backdrop-filter: blur(15px) saturate(170%) brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2em;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
 }
 
@@ -210,11 +241,13 @@ body {
 }
 
 .skill-category {
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px) saturate(160%) brightness(108%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%) brightness(108%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   padding: 2em;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
 }
 
@@ -331,13 +364,15 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px) saturate(150%) brightness(108%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%) brightness(108%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--border-radius);
   padding: 2.5em;
   margin-bottom: 2.5em;
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
-  border: 1px solid var(--border-color);
 }
 
 .paper-box:hover {
@@ -450,10 +485,12 @@ body {
 
 .research-interests-expandable {
   margin: 1.5em 0;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px) saturate(160%) brightness(108%);
+  -webkit-backdrop-filter: blur(15px) saturate(160%) brightness(108%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 12px;
-  background: var(--bg-primary);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: all var(--transition-duration);
 }
 
@@ -519,7 +556,10 @@ body {
 .interest-item {
   margin-bottom: 1.5em;
   padding: 1em;
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
   transition: all var(--transition-duration);
@@ -640,11 +680,14 @@ body {
    ========================================================================== */
 
 .project-details {
-  background: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px) saturate(140%) brightness(112%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%) brightness(112%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--border-radius);
   padding: 3em;
   margin: 3em 0;
-  border: 2px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .project-details h2 {
@@ -799,12 +842,14 @@ body {
    ========================================================================== */
 
 .masthead {
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px) saturate(180%) brightness(120%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%) brightness(120%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   animation: slideInDown 0.5s ease-out;
 }
 
@@ -885,10 +930,13 @@ body {
 
 .sidebar {
   flex: 0 0 280px;
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%) brightness(110%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(110%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--border-radius);
   padding: 30px;
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 100px;
   animation: slideInLeft 0.8s ease-out;
@@ -945,9 +993,11 @@ body {
 .author__urls li {
   margin: 10px 0;
   padding: 12px 16px;
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  background: var(--bg-primary);
   transition: var(--transition);
   display: flex;
   align-items: center;
@@ -1025,10 +1075,13 @@ body {
 
 .page {
   flex: 1;
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px) saturate(180%) brightness(105%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--border-radius);
   padding: 50px;
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
   animation: fadeInUp 0.6s ease-out;
   position: relative;
   overflow-x: hidden;

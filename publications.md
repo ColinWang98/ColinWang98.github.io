@@ -126,7 +126,7 @@ author_profile: true
 ## Academic Service & Collaboration
 
 ### Current Collaborations
-- **The Hong Kong Polytechnic University** - Research Assistant with Prof. Li Chen Richard
+- **The Hong Kong Polytechnic University** - Research Assistant with [Prof. Li Chen Richard](https://chenli.me/)
 - **Spatial.io Platform** - Metaverse development and cultural heritage projects
 
 ### Research Networks

@@ -1221,14 +1221,9 @@ h1:before, .anchor:before {
     border-radius: 8px;
   }
   
-  .homepage   .homepage .hero-section {
+  .homepage .hero-section {
     margin: -25px -25px 2em -25px;
     padding: 2.5em 0 1.5em 0;
-  }
-  
-  .page .hero-section {
-    margin: -25px -25px 1.5em -25px;
-    padding: 1.5em 0.5em;
   }
   
   .page .hero-section {

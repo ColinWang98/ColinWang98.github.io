@@ -17,7 +17,7 @@ author_profile: true
       <p><strong>07/2024 - 10/2025</strong></p>
       <p><strong>Department of Computing, The Hong Kong Polytechnic University</strong></p>
       <ul>
-        <li>Working with Prof. Li Chen Richard on advanced research projects</li>
+        <li>Working with <a href="https://chenli.me/" target="_blank">Prof. Li Chen Richard</a> on advanced research projects</li>
         <li>Modeling and scene construction for virtual environments</li>
         <li>UI prototype design and user experience research</li>
         <li>Literature collection and research development</li>

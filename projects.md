@@ -21,7 +21,7 @@ author_profile: true
       <span class="badge">AI Integration</span>
     </div>
     
-    <p><strong>Supervisor:</strong> Dr. Richard Li Chen</p>
+    <p><strong>Supervisor:</strong> <a href="https://chenli.me/" target="_blank">Dr. Richard Li Chen</a></p>
     <p><strong>Platform:</strong> Spatial.io | <strong>Duration:</strong> 2024</p>
     
     <p>A groundbreaking metaverse project that brings the classic Chinese literature "Dream of the Red Chamber" to life through virtual reality. The project presents the iconic Xiao Xiang Guan (潇湘馆) scene with immersive interactive elements, AI-powered character dialogues, and traditional Chinese music appreciation.</p>

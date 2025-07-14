@@ -1286,6 +1286,7 @@ h1:before, .anchor:before {
 @media (max-width: 480px) {
   .masthead__inner-wrap {
     padding: 0 12px;
+    justify-content: center;
   }
   
   .navbar ul {

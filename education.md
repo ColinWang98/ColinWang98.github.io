@@ -3,6 +3,7 @@ layout: default
 title: "Education"
 permalink: /education/
 author_profile: true
+classes: subpage
 ---
 
 # Education

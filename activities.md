@@ -3,6 +3,7 @@ layout: default
 title: "Activities"
 permalink: /activities/
 author_profile: true
+classes: subpage
 ---
 
 # Activities

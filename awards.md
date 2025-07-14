@@ -3,6 +3,7 @@ layout: default
 title: "Awards & Skills"
 permalink: /awards/
 author_profile: true
+classes: subpage
 ---
 
 # Awards & Skills

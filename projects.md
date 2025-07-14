@@ -3,6 +3,7 @@ layout: default
 title: "Research Projects"
 permalink: /projects/
 author_profile: true
+classes: subpage
 ---
 
 # Research Projects

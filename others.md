@@ -3,6 +3,7 @@ layout: default
 title: "Others"
 permalink: /others/
 author_profile: true
+classes: subpage
 ---
 
 # Others

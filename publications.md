@@ -3,6 +3,7 @@ layout: default
 title: "Publications & Research"
 permalink: /publications/
 author_profile: true
+classes: subpage
 ---
 
 # Publications & Research

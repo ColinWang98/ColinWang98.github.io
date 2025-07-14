@@ -3,6 +3,7 @@ layout: default
 title: "Work & Internship"
 permalink: /work/
 author_profile: true
+classes: subpage
 ---
 
 # Work & Internship Experience

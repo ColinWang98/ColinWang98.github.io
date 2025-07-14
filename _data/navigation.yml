@@ -1,13 +1,25 @@
 # main links
 main:
-  - title: "Home"
+  - title: "Homepage"
     url: /
 
-  - title: "About & Contact"
-    url: /about/
+  - title: "Education"
+    url: /education/
 
-  - title: "Research"
+  - title: "Publications & Research"
     url: /publications/
+
+  - title: "Work & Internship"
+    url: /work/
+
+  - title: "Activities"
+    url: /activities/
+
+  - title: "Awards & Skills"
+    url: /awards/
 
   - title: "Projects"
     url: /projects/
+
+  - title: "Others"
+    url: /others/

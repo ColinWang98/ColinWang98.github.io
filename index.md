@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Home"
+title: "Homepage"
 classes: homepage
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Research & Publications"
+title: "Publications & Research"
 permalink: /publications/
 author_profile: true
 ---
 
-# Research & Publications
+# Publications & Research
 
 ## Featured Research
 

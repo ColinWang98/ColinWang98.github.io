@@ -30,25 +30,7 @@ classes: subpage
   </div>
 </div>
 
-<div class="paper-box">
-  <div class="paper-box-text">
-    <h3>Virtual Reality and Urban Culture Restoration</h3>
-    <p><strong>Authors:</strong> <strong>Wang, Y.</strong>, & Chen, R.</p>
-    <p><strong>Journal:</strong> Journal of Urban Technology, 30(2), 123-135 (2023)</p>
-    <p>This research explores the potential of virtual reality technologies in preserving and restoring urban cultural heritage, focusing on digital reconstruction methods and immersive experience design.</p>
-    
-    <p><strong>Keywords:</strong> Virtual Reality, Cultural Heritage, Urban Planning, Digital Preservation</p>
-    
-    <div class="project-links">
-      <a href="#" class="btn">📄 PDF</a>
-      <a href="#" class="btn">📊 Cite</a>
-      <a href="#" class="btn">🔗 DOI</a>
-    </div>
-  </div>
-  <div class="paper-box-image">
-    <img src="images/RedMeta.png" alt="VR Urban Culture Research">
-  </div>
-</div>
+
 
 ---
 
@@ -62,17 +44,9 @@ classes: subpage
   **Role:** Unity development, environment design, experimental design  
   **Status:** <span class="status-badge">In Progress</span>
 
-### 2023
+### 2024
 
-- **Wang, Y.**, & Chen, R. (2023). *Virtual Reality and Urban Culture Restoration*. **Journal of Urban Technology**, 30(2), 123-135.
-  - **Impact:** High-citation paper in digital heritage preservation
-  - **Keywords:** Virtual Reality, Cultural Heritage, Urban Planning
-
-### 2022
-
-- **Wang, Y.** (2022). *XR in Education: A Review*. **Proceedings of the International Conference on Education and Technology**, 45-52.
-  - **Focus:** Extended Reality applications in educational contexts
-  - **Contribution:** Comprehensive literature review and future directions
+*All publications listed are based on actual research and academic work.*
 
 ---
 

@@ -10,10 +10,10 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/academicons.css">
-<link rel="stylesheet" href="assets/css/custom.css">
+<!-- For all browsers (use absolute paths) -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 <meta http-equiv="cleartype" content="on">
 <head>

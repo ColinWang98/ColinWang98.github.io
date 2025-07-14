@@ -445,6 +445,94 @@ body {
 }
 
 /* ==========================================================================
+   研究兴趣标签样式
+   ========================================================================== */
+
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 1.5em 0;
+  max-width: 100%;
+}
+
+.interest-tag {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), #4a90e2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-duration);
+  box-shadow: 0 2px 8px rgba(0,123,255,0.2);
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(0,123,255,0.3);
+  background: linear-gradient(135deg, #4a90e2, var(--primary-color));
+}
+
+.tag-label {
+  white-space: nowrap;
+  display: block;
+}
+
+/* Tooltip样式 */
+.interest-tag::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.8em;
+  font-weight: normal;
+  line-height: 1.4;
+  white-space: normal;
+  width: 280px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.interest-tag::before {
+  content: '';
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0,0,0,0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.interest-tag:hover::after,
+.interest-tag:hover::before {
+  opacity: 1;
+  visibility: visible;
+  bottom: 130%;
+}
+
+.interest-tag:hover::before {
+  bottom: 120%;
+}
+
+/* ==========================================================================
    项目标签样式
    ========================================================================== */
 
@@ -1333,6 +1421,25 @@ h1:before, .anchor:before {
   .video-container {
     margin: 15px 0;
   }
+  
+  /* 研究兴趣标签移动端优化 */
+  .research-interests {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .interest-tag {
+    font-size: 0.8em;
+    padding: 6px 12px;
+    flex: 0 1 calc(50% - 4px);
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .interest-tag::after {
+    width: 250px;
+    font-size: 0.75em;
+  }
 }
 
 /* 小屏移动设备 */
@@ -1428,5 +1535,23 @@ h1:before, .anchor:before {
   
   h1 {
     font-size: 1.8em;
+  }
+  
+  /* 小屏幕研究兴趣标签优化 */
+  .research-interests {
+    gap: 6px;
+  }
+  
+  .interest-tag {
+    font-size: 0.7em;
+    padding: 5px 10px;
+    flex: 0 1 calc(50% - 3px);
+    min-width: 100px;
+  }
+  
+  .interest-tag::after {
+    width: 200px;
+    font-size: 0.7em;
+    padding: 8px 12px;
   }
 } 

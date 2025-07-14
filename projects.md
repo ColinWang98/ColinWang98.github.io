@@ -102,7 +102,9 @@ author_profile: true
     </div>
   </div>
   <div class="paper-box-image">
-    <img src="images/500x300.png" alt="VR Breathing Training Platform">
+    <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
+            width="100%" height="250" frameborder="0" allowfullscreen>
+    </iframe>
   </div>
 </div>
 

@@ -13,12 +13,27 @@ I am a passionate HCI researcher focused on **virtual environments** and **urban
 My research lies at the intersection of **Human-Computer Interaction**, **Extended Reality**, and **Urban Culture Preservation**.
 
 ### Research Interests
-- **Human-Computer Interaction (HCI)**: Interactive design and user experience in virtual environments
-- **Extended Reality (XR)**: VR/AR applications for education, therapy, and cultural preservation  
-- **Urban Culture**: Digital preservation and restoration of traditional architecture and customs
-- **Environmental Psychology**: Understanding spatial perception and behavior in virtual environments
-- **Tourism**: Virtual tourism experiences and cultural heritage presentation
-- **Metaverse & Virtual Environments**: Social interaction and cultural expression in digital spaces
+
+<div class="research-interests">
+  <div class="interest-tag" data-tooltip="Interactive design and user experience in virtual environments">
+    <span class="tag-label">Human-Computer Interaction (HCI)</span>
+  </div>
+  <div class="interest-tag" data-tooltip="VR/AR applications for education, therapy, and cultural preservation">
+    <span class="tag-label">Extended Reality (XR)</span>
+  </div>
+  <div class="interest-tag" data-tooltip="Digital preservation and restoration of traditional architecture and customs">
+    <span class="tag-label">Urban Culture</span>
+  </div>
+  <div class="interest-tag" data-tooltip="Understanding spatial perception and behavior in virtual environments">
+    <span class="tag-label">Environmental Psychology</span>
+  </div>
+  <div class="interest-tag" data-tooltip="Virtual tourism experiences and cultural heritage presentation">
+    <span class="tag-label">Tourism</span>
+  </div>
+  <div class="interest-tag" data-tooltip="Social interaction and cultural expression in digital spaces">
+    <span class="tag-label">Metaverse & Virtual Environments</span>
+  </div>
+</div>
 
 ### Current Status
 🎯 **Seeking PhD opportunities** in HCI, XR, and related fields to advance research in virtual environments and cultural heritage preservation.
@@ -42,7 +57,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-            width="100%" height="315" frameborder="0" allowfullscreen>
+            width="100%" height="250" frameborder="0" allowfullscreen>
     </iframe>
   </div>
 </div>
@@ -60,7 +75,9 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     </div>
   </div>
   <div class="paper-box-image">
-    <img src="images/500x300.png" alt="VR Breathing Training Platform">
+    <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
+            width="100%" height="250" frameborder="0" allowfullscreen>
+    </iframe>
   </div>
 </div>
 

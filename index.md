@@ -14,26 +14,43 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 
 ### Research Interests
 
-<div class="research-interests">
-  <div class="interest-tag" data-tooltip="Interactive design and user experience in virtual environments">
-    <span class="tag-label">Human-Computer Interaction (HCI)</span>
+<details class="research-interests-expandable">
+  <summary class="research-interests-summary">
+    <div class="research-interests-preview">
+      <span class="interest-tag-preview">Human-Computer Interaction (HCI)</span>
+      <span class="interest-tag-preview">Extended Reality (XR)</span>
+      <span class="interest-tag-preview">Urban Culture</span>
+      <span class="expand-icon">▼</span>
+    </div>
+  </summary>
+  
+  <div class="research-interests-expanded">
+    <div class="interest-item">
+      <h4>Human-Computer Interaction (HCI)</h4>
+      <p>Interactive design and user experience in virtual environments</p>
+    </div>
+    <div class="interest-item">
+      <h4>Extended Reality (XR)</h4>
+      <p>VR/AR applications for education, therapy, and cultural preservation</p>
+    </div>
+    <div class="interest-item">
+      <h4>Urban Culture</h4>
+      <p>Digital preservation and restoration of traditional architecture and customs</p>
+    </div>
+    <div class="interest-item">
+      <h4>Environmental Psychology</h4>
+      <p>Understanding spatial perception and behavior in virtual environments</p>
+    </div>
+    <div class="interest-item">
+      <h4>Tourism</h4>
+      <p>Virtual tourism experiences and cultural heritage presentation</p>
+    </div>
+    <div class="interest-item">
+      <h4>Metaverse & Virtual Environments</h4>
+      <p>Social interaction and cultural expression in digital spaces</p>
+    </div>
   </div>
-  <div class="interest-tag" data-tooltip="VR/AR applications for education, therapy, and cultural preservation">
-    <span class="tag-label">Extended Reality (XR)</span>
-  </div>
-  <div class="interest-tag" data-tooltip="Digital preservation and restoration of traditional architecture and customs">
-    <span class="tag-label">Urban Culture</span>
-  </div>
-  <div class="interest-tag" data-tooltip="Understanding spatial perception and behavior in virtual environments">
-    <span class="tag-label">Environmental Psychology</span>
-  </div>
-  <div class="interest-tag" data-tooltip="Virtual tourism experiences and cultural heritage presentation">
-    <span class="tag-label">Tourism</span>
-  </div>
-  <div class="interest-tag" data-tooltip="Social interaction and cultural expression in digital spaces">
-    <span class="tag-label">Metaverse & Virtual Environments</span>
-  </div>
-</div>
+</details>
 
 ### Current Status
 🎯 **Seeking PhD opportunities** in HCI, XR, and related fields to advance research in virtual environments and cultural heritage preservation.
@@ -92,18 +109,3 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 ### Conference Papers
 - Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  
   *"Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour."* **Learning Technologies and Systems (ICWL 2024)**
-
-<div class="cta-section">
-  <a href="/publications/" class="btn">📚 View All Publications</a>
-  <a href="/projects/" class="btn">🔬 Explore Projects</a>
-</div>
-
----
-
-## Project Video Showcase
-
-<div class="video-container">
-  <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-          allowfullscreen>
-  </iframe>
-</div> 

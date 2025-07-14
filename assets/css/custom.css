@@ -445,91 +445,118 @@ body {
 }
 
 /* ==========================================================================
-   研究兴趣标签样式
+   可展开研究兴趣样式
    ========================================================================== */
 
-.research-interests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.research-interests-expandable {
   margin: 1.5em 0;
-  max-width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all var(--transition-duration);
 }
 
-.interest-tag {
-  position: relative;
+.research-interests-expandable:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.research-interests-summary {
+  cursor: pointer;
+  padding: 1.2em 1.5em;
+  list-style: none;
+  outline: none;
+  border-radius: 12px;
+  transition: all var(--transition-duration);
+}
+
+.research-interests-summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-interests-summary:hover {
+  background: var(--bg-secondary);
+}
+
+.research-interests-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interest-tag-preview {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary-color), #4a90e2);
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9em;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.85em;
   font-weight: 500;
-  cursor: pointer;
   transition: all var(--transition-duration);
-  box-shadow: 0 2px 8px rgba(0,123,255,0.2);
-  flex: 0 1 auto;
-  min-width: 0;
 }
 
-.interest-tag:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 16px rgba(0,123,255,0.3);
-  background: linear-gradient(135deg, #4a90e2, var(--primary-color));
+.expand-icon {
+  color: var(--text-muted);
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform var(--transition-duration);
+  margin-left: auto;
 }
 
-.tag-label {
-  white-space: nowrap;
-  display: block;
+.research-interests-expandable[open] .expand-icon {
+  transform: rotate(180deg);
 }
 
-/* Tooltip样式 */
-.interest-tag::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.9);
-  color: white;
-  padding: 10px 15px;
+.research-interests-expanded {
+  padding: 0 1.5em 1.5em 1.5em;
+  border-top: 1px solid var(--border-color);
+  margin-top: 1em;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.interest-item {
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: var(--bg-secondary);
   border-radius: 8px;
-  font-size: 0.8em;
-  font-weight: normal;
-  line-height: 1.4;
-  white-space: normal;
-  width: 280px;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-left: 4px solid var(--primary-color);
+  transition: all var(--transition-duration);
 }
 
-.interest-tag::before {
-  content: '';
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: rgba(0,0,0,0.9);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
+.interest-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 12px rgba(0,123,255,0.1);
 }
 
-.interest-tag:hover::after,
-.interest-tag:hover::before {
-  opacity: 1;
-  visibility: visible;
-  bottom: 130%;
+.interest-item:last-child {
+  margin-bottom: 0;
 }
 
-.interest-tag:hover::before {
-  bottom: 120%;
+.interest-item h4 {
+  margin: 0 0 0.5em 0;
+  color: var(--primary-color);
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.interest-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================================
@@ -1422,23 +1449,37 @@ h1:before, .anchor:before {
     margin: 15px 0;
   }
   
-  /* 研究兴趣标签移动端优化 */
-  .research-interests {
+  /* 可展开研究兴趣移动端优化 */
+  .research-interests-summary {
+    padding: 1em;
+  }
+  
+  .research-interests-preview {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
-    justify-content: center;
   }
   
-  .interest-tag {
+  .interest-tag-preview {
     font-size: 0.8em;
-    padding: 6px 12px;
-    flex: 0 1 calc(50% - 4px);
-    text-align: center;
-    min-width: 120px;
+    padding: 5px 10px;
   }
   
-  .interest-tag::after {
-    width: 250px;
-    font-size: 0.75em;
+  .research-interests-expanded {
+    padding: 0 1em 1em 1em;
+  }
+  
+  .interest-item {
+    padding: 0.8em;
+    margin-bottom: 1em;
+  }
+  
+  .interest-item h4 {
+    font-size: 1em;
+  }
+  
+  .interest-item p {
+    font-size: 0.9em;
   }
 }
 
@@ -1537,21 +1578,34 @@ h1:before, .anchor:before {
     font-size: 1.8em;
   }
   
-  /* 小屏幕研究兴趣标签优化 */
-  .research-interests {
-    gap: 6px;
+  /* 小屏幕可展开研究兴趣优化 */
+  .research-interests-summary {
+    padding: 0.8em;
   }
   
-  .interest-tag {
+  .interest-tag-preview {
     font-size: 0.7em;
-    padding: 5px 10px;
-    flex: 0 1 calc(50% - 3px);
-    min-width: 100px;
+    padding: 4px 8px;
   }
   
-  .interest-tag::after {
-    width: 200px;
-    font-size: 0.7em;
-    padding: 8px 12px;
+  .expand-icon {
+    font-size: 1em;
+  }
+  
+  .research-interests-expanded {
+    padding: 0 0.8em 0.8em 0.8em;
+  }
+  
+  .interest-item {
+    padding: 0.6em;
+    margin-bottom: 0.8em;
+  }
+  
+  .interest-item h4 {
+    font-size: 0.9em;
+  }
+  
+  .interest-item p {
+    font-size: 0.8em;
   }
 } 

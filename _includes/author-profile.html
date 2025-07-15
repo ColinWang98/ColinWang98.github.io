@@ -13,13 +13,11 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
-  <div class="author__urls-wrapper">
-    <!-- 简历下载按钮 -->
-    <div class="cv-download">
-      <a href="{{ '/assets/Wang Yao CV.pdf' | absolute_url }}" class="btn btn--cv" target="_blank">
-        <i class="fas fa-fw fa-download" aria-hidden="true"></i> Download CV
-      </a>
-    </div>
+  <div class="cv-download">
+    <a href="{{ '/assets/Wang Yao CV.pdf' | absolute_url }}" class="btn btn--cv" target="_blank">
+      <i class="fas fa-fw fa-download" aria-hidden="true"></i> Download CV
+    </a>
+  </div>
     
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
     <ul class="author__urls social-icons">

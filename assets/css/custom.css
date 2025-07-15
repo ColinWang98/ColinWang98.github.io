@@ -2,6 +2,37 @@
    自定义样式 - 优化版本 (增强毛玻璃效果)
    ========================================================================== */
 
+/* 子页面样式强制应用 */
+.page, .subpage, article.page, article.subpage {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 50px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1) !important;
+  animation: fadeInUp 0.6s ease-out;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 500px;
+}
+
+/* 确保内容容器正确显示 */
+.page__inner-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.page__content {
+  flex: 1 !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /* 毛玻璃效果浏览器支持检测和降级方案 */
 @supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
   .sidebar {
@@ -10,7 +41,7 @@
     -webkit-backdrop-filter: none !important;
   }
   
-  .page {
+  .page, .subpage, article.page, article.subpage {
     background: rgba(255, 255, 255, 0.9) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -1073,20 +1104,6 @@ body {
    页面内容样式
    ========================================================================== */
 
-.page {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(25px) saturate(180%) brightness(105%);
-  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--border-radius);
-  padding: 50px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.6s ease-out;
-  position: relative;
-  overflow-x: hidden;
-}
-
 /* 统一页面样式 - 所有页面保持一致 */
 .page h1:first-child {
   margin-top: 0;
@@ -1343,8 +1360,8 @@ h1:before, .anchor:before {
     flex: 0 0 240px;
   }
   
-  .page {
-    padding: 30px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 30px !important;
   }
   
   /* 统一页面间距 */
@@ -1425,16 +1442,16 @@ h1:before, .anchor:before {
     margin-bottom: 1em;
   }
   
-  .page {
-    padding: 20px 16px;
-    border-radius: 8px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 20px 16px !important;
+    border-radius: 8px !important;
   }
   
   /* 移动设备统一间距 */
   
   /* 移动设备页面优化 */
-  .page {
-    padding: 24px 16px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 24px 16px !important;
   }
   
   .name-title {
@@ -1601,15 +1618,15 @@ h1:before, .anchor:before {
     padding: 12px;
   }
   
-  .page {
-    padding: 16px 12px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 16px 12px !important;
   }
   
   /* 小屏设备统一间距 */
   
   /* 小屏设备页面优化 */
-  .page {
-    padding: 20px 12px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 20px 12px !important;
   }
   
   .name-title {

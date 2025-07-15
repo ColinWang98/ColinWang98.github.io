@@ -2,9 +2,9 @@
    自定义样式 - 优化版本 (增强毛玻璃效果)
    ========================================================================== */
 
-/* 子页面样式强制应用 */
+/* 子页面样式强制应用 - 覆盖Jekyll默认样式 */
 .page, .subpage, article.page, article.subpage {
-  flex: 1;
+  flex: 1 !important;
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
   -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
@@ -12,10 +12,13 @@
   border-radius: 12px !important;
   padding: 50px !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1) !important;
-  animation: fadeInUp 0.6s ease-out;
-  position: relative;
-  overflow-x: hidden;
-  min-height: 500px;
+  animation: fadeInUp 0.6s ease-out !important;
+  position: relative !important;
+  overflow-x: hidden !important;
+  min-height: 500px !important;
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
 }
 
 /* 确保内容容器正确显示 */
@@ -941,18 +944,19 @@ body {
    ========================================================================== */
 
 #main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 3em 2em;
-  min-height: calc(100vh - 56px);
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 3em 2em !important;
+  min-height: calc(100vh - 56px) !important;
+  animation: none !important;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 3em;
-  height: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 3em !important;
+  height: 100% !important;
 }
 
 /* ==========================================================================
@@ -1411,8 +1415,8 @@ h1:before, .anchor:before {
   /* 统一页面间距 */
   
   /* 平板设备页面优化 */
-  .page {
-    padding: 40px 30px;
+  .page, .subpage, article.page, article.subpage {
+    padding: 40px 30px !important;
   }
   
   .name-title {

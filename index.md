@@ -62,7 +62,6 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 <div class="paper-box">
   <div class="paper-box-text">
     <h3>The Red MetaChamber (元界·红楼)</h3>
-    <p><strong>Supervisor:</strong> <a href="https://chenli.me/" target="_blank">Dr. Richard Li Chen</a></p>
     <p>A metaverse project focusing on the classic architecture and original plots of the Dream of the Red Chamber through virtual reality. Features the Xiao Xiang Guan (潇湘馆) scene with interactive elements, character dialogues, and traditional Chinese music appreciation.</p>
     
     <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>

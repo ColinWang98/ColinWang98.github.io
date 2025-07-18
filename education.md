@@ -54,7 +54,7 @@ classes: subpage
 
 
         <div class="program-summary">
-          <h5>Academic Excellence</h5>
+          <h5>Programme Summary</h5>
           <ul>
             <li><strong>GIS Course Average:</strong> A (4.0/4.3)</li>
             <li><strong>Overall GPA:</strong> 3.54/4.3</li>
@@ -63,12 +63,6 @@ classes: subpage
           </ul>
         </div>
       </div>
-
-      <ul>
-        <li>Focus: Sustainable development, urban planning, environmental management</li>
-        <li>Research: Virtual environments and cultural heritage preservation</li>
-        <li>Strong foundation in GIS, urban informatics, and sustainable development</li>
-      </ul>
     </div>
   </div>
 
@@ -82,8 +76,8 @@ classes: subpage
       <ul>
         <li>5-year undergraduate programme</li>
         <li>GPA: 3.88/5</li>
-        <li>Specialized in architectural design and urban planning</li>
-        <li>Thesis: Cultural heritage preservation through digital technologies</li>
+        <li>Specialized in architectural design</li>
+        <li>Focus: Taihang Mountain Architectural Heritage Conservation, Iceland Aurora Island Visitor Center Design</li>
       </ul>
     </div>
   </div>

@@ -2577,4 +2577,35 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   .semester-block {
     padding: 15px !important;
   }
+}
+
+/* ==========================================================================
+   Figma Embed Styles - 嵌入式Figma原型样式
+   ========================================================================== */
+
+/* Figma嵌入iframe样式 */
+.paper-box-image iframe[src*="figma.com"] {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paper-box-image iframe[src*="figma.com"]:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .paper-box-image iframe[src*="figma.com"] {
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .paper-box-image iframe[src*="figma.com"] {
+    height: 180px !important;
+  }
 } 

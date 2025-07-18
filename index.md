@@ -127,17 +127,17 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <p><strong>Platform:</strong> Mobile Application Design</p>
     
     <div class="project-links">
-      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=0-1&t=SoPZDrRmCYHeDv5C-1" target="_blank" class="btn">🎨 View Figma Prototype</a>
+      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="btn">🎨 View Full Prototype</a>
     </div>
   </div>
   <div class="paper-box-image">
-    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; color: white; text-align: center;">
-      <div>
-        <h4 style="margin: 0; font-size: 1.2em;">🌱 Farming Therapy</h4>
-        <p style="margin: 0.5em 0; font-size: 0.9em;">UI/UX Design</p>
-        <p style="margin: 0; font-size: 0.8em;">Therapeutic Mobile App Interface</p>
-      </div>
-    </div>
+    <iframe 
+      style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 8px;" 
+      width="100%" 
+      height="250" 
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26show-proto-sidebar%3D1%26t%3DCfAqJiNC7My3qKD0-9" 
+      allowfullscreen>
+    </iframe>
   </div>
 </div>
 

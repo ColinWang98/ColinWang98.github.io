@@ -14,13 +14,13 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 <div class="photo-carousel">
   <div class="carousel-container">
     <div class="carousel-slide active">
-      <img src="Photos/photo1.jpg" alt="Photography 1">
+      <img src="{{ '/Photos/photo1.jpg' | relative_url }}" alt="Photography 1">
     </div>
     <div class="carousel-slide">
-      <img src="Photos/photo2.jpg" alt="Photography 2">
+      <img src="{{ '/Photos/photo2.jpg' | relative_url }}" alt="Photography 2">
     </div>
     <div class="carousel-slide">
-      <img src="Photos/photo3.jpg" alt="Photography 3">
+      <img src="{{ '/Photos/photo3.jpg' | relative_url }}" alt="Photography 3">
     </div>
   </div>
   
@@ -37,7 +37,7 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 </div>
 
 ## UI Design
-- [Farming Therapy UI Design (Figma link)](https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=0-1&t=SoPZDrRmCYHeDv5C-1)
+- [Farming Therapy UI Design (Figma link)](https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9)
 
 ## Architectural Design
 - Participated in various architectural design projects during undergraduate and postgraduate studies. 

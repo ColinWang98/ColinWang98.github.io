@@ -61,25 +61,6 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 
 <div class="paper-box">
   <div class="paper-box-text">
-    <h3>The Red MetaChamber (元界·红楼)</h3>
-    <p>A metaverse project focusing on the classic architecture and original plots of the Dream of the Red Chamber through virtual reality. Features the Xiao Xiang Guan (潇湘馆) scene with interactive elements, character dialogues, and traditional Chinese music appreciation.</p>
-    
-    <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
-    <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
-    
-    <div class="project-links">
-      <a href="/projects/#the-red-metachamber" class="btn">📖 Details</a>
-    </div>
-  </div>
-  <div class="paper-box-image">
-    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-            width="100%" height="250" frameborder="0" allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-<div class="paper-box">
-  <div class="paper-box-text">
     <h3>VR Breathing Training Platform</h3>
     <p>An immersive VR environment for respiratory therapy, integrating biofeedback and interactive design to enhance box-breathing training efficacy through nature-based therapeutic experiences.</p>
     
@@ -92,6 +73,25 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
+            width="100%" height="250" frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<div class="paper-box">
+  <div class="paper-box-text">
+    <h3>The Red MetaChamber (元界·红楼)</h3>
+    <p>A metaverse project focusing on the classic architecture and original plots of the Dream of the Red Chamber through virtual reality. Features the Xiao Xiang Guan (潇湘馆) scene with interactive elements, character dialogues, and traditional Chinese music appreciation.</p>
+    
+    <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
+    <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
+    
+    <div class="project-links">
+      <a href="/projects/#the-red-metachamber" class="btn">📖 Details</a>
+    </div>
+  </div>
+  <div class="paper-box-image">
+    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
             width="100%" height="250" frameborder="0" allowfullscreen>
     </iframe>
   </div>

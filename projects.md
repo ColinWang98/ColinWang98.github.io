@@ -212,10 +212,10 @@ classes: subpage
 
 <div id="red-metachamber-video" class="video-section">
   <h2>🎥 Project Demonstration</h2>
-  <div class="video-container">
-    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-            allowfullscreen>
-    </iframe>
+<div class="video-container">
+  <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
+          allowfullscreen>
+  </iframe>
   </div>
   <p><em>Experience the immersive journey through traditional Chinese architecture and literature in The Red MetaChamber.</em></p>
 </div>

@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* 子页面样式强制应用 - 覆盖Jekyll默认样式 */
-.page, .subpage, article.page, article.subpage {
+.page, .subpage, article.page, article.subpage, article[itemtype="http://schema.org/CreativeWork"] {
   flex: 1 !important;
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
@@ -105,7 +105,7 @@
   --border-radius: 12px;
   --transition: all 0.3s ease;
   --accent-color: #28a745;
-  --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-bg: #ffffff;
   --tag-colors: #6c63ff, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7;
 }
 
@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: #ffffff;
   background-attachment: fixed;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -1788,4 +1788,37 @@ h1:before, .anchor:before {
   .interest-item p {
     font-size: 0.8em;
   }
+}
+
+/* 最终保障 - 确保所有页面都有基础样式 */
+html {
+  background: #ffffff !important;
+  min-height: 100vh !important;
+}
+
+body {
+  background: #ffffff !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+}
+
+/* 强制所有文章页面样式 - 最高优先级 */
+article, .page, [itemtype="http://schema.org/CreativeWork"] {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 50px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1) !important;
+  margin: 20px !important;
+  min-height: 400px !important;
+}
+
+/* 确保导航栏可见 */
+.masthead {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
 } 

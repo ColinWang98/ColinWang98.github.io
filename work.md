@@ -90,9 +90,4 @@ classes: subpage
 - **Communication**: Technical documentation, presentation skills
 - **Problem Solving**: Creative solutions, analytical thinking
 
-## Professional Achievements
-
-- Successfully contributed to multiple research publications
-- Developed innovative VR applications for cultural heritage preservation
-- Led collaborative projects with international research teams
-- Gained practical experience in both academic and industry settings 
+ 

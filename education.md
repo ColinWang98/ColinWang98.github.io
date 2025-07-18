@@ -51,31 +51,7 @@ classes: subpage
           <p class="semester-note">Focus on spatial data analysis, urban modeling, and geospatial technologies</p>
         </div>
 
-        <div class="gis-skills-summary">
-          <h5>🛠️ Technical Skills Acquired</h5>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <span class="skill-icon">🗺️</span>
-              <span class="skill-name">GIS Software</span>
-              <span class="skill-detail">ArcGIS, QGIS, PostGIS</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">📊</span>
-              <span class="skill-name">Spatial Analysis</span>
-              <span class="skill-detail">Spatial statistics, Network analysis</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">🌐</span>
-              <span class="skill-name">Urban Modeling</span>
-              <span class="skill-detail">Urban systems, Smart city applications</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon">💻</span>
-              <span class="skill-name">Programming</span>
-              <span class="skill-detail">Python, R, SQL for spatial data</span>
-            </div>
-          </div>
-        </div>
+
 
         <div class="program-summary">
           <h5>Academic Excellence</h5>
@@ -112,14 +88,6 @@ classes: subpage
     </div>
   </div>
 </div>
-
-## Academic Achievements
-
-### Coursework Highlights
-- **Sustainable Urban Development**: Advanced studies in sustainable city planning and development strategies
-- **Environmental Management**: Comprehensive understanding of environmental impact assessment and management
-- **Digital Architecture**: Integration of digital technologies in architectural design and preservation
-- **Urban Planning Theory**: Theoretical foundations of modern urban planning principles
 
 ### Research Interests
 - Virtual Reality applications in cultural heritage

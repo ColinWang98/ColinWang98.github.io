@@ -1081,6 +1081,25 @@ body {
   flex-shrink: 0;
 }
 
+/* Font Awesome 图标基础样式确保 */
+.fas, .far, .fal, .fab, .fa {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 5 Free", "FontAwesome" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto !important;
+  line-height: 1 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Academicons 图标样式 */
+.ai {
+  font-family: "Academicons" !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
 /* 纯图标显示优化 - 确保在sidebar中也生效 */
 .author__urls li.icon-only,
 .sidebar .author__urls li.icon-only {
@@ -1098,7 +1117,8 @@ body {
   font-size: 24px !important;
   width: auto !important;
   color: var(--primary-color) !important;
-  display: block !important;
+  display: inline-block !important;
+  font-family: inherit !important;
 }
 
 .author__urls li.icon-only a,
@@ -1119,7 +1139,8 @@ body {
   width: auto !important;
   transition: all var(--transition-duration) !important;
   color: inherit !important;
-  display: block !important;
+  display: inline-block !important;
+  font-family: inherit !important;
 }
 
 .author__urls li.icon-only:hover a i,

@@ -87,10 +87,6 @@ classes: subpage
 - **Cultural Heritage Documentation**: Specialized training in heritage preservation methods
 - **Research Methodology**: Advanced training in academic research techniques
 
-### Workshops & Conferences
-- **International Conference on Virtual Heritage** - Presenter (2024)
-- **Urban Planning Innovation Workshop** - Participant (2023)
-- **Digital Preservation Techniques** - Advanced Training (2023)
-- **HCI Research Methods** - Graduate Level Course (2024)
+
 
  

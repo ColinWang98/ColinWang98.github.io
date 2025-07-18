@@ -62,6 +62,13 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 <div class="paper-box">
   <div class="paper-box-text">
     <h3>VR Breathing Training Platform</h3>
+    <div class="project-tags">
+      <span class="badge">Healthcare VR</span>
+      <span class="badge">Biofeedback</span>
+      <span class="badge">Therapeutic Design</span>
+      <span class="badge">Unity</span>
+    </div>
+    
     <p>An immersive VR environment for respiratory therapy, integrating biofeedback and interactive design to enhance box-breathing training efficacy through nature-based therapeutic experiences.</p>
     
     <p><strong>Research Focus:</strong> Bio-responsive interaction, Implicit/Explicit cues, Therapeutic VR</p>
@@ -81,6 +88,13 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 <div class="paper-box">
   <div class="paper-box-text">
     <h3>The Red MetaChamber (元界·红楼)</h3>
+    <div class="project-tags">
+      <span class="badge">VR/AR</span>
+      <span class="badge">Cultural Heritage</span>
+      <span class="badge">Metaverse</span>
+      <span class="badge">AI Integration</span>
+    </div>
+    
     <p>A metaverse project focusing on the classic architecture and original plots of the Dream of the Red Chamber through virtual reality. Features the Xiao Xiang Guan (潇湘馆) scene with interactive elements, character dialogues, and traditional Chinese music appreciation.</p>
     
     <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
@@ -94,6 +108,36 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
             width="100%" height="250" frameborder="0" allowfullscreen>
     </iframe>
+  </div>
+</div>
+
+<div class="paper-box">
+  <div class="paper-box-text">
+    <h3>Farming Therapy UI/UX Design</h3>
+    <div class="project-tags">
+      <span class="badge">UI/UX Design</span>
+      <span class="badge">Therapeutic Design</span>
+      <span class="badge">Mobile App</span>
+      <span class="badge">Figma</span>
+    </div>
+    
+    <p>Designed and implemented user interfaces for farming therapy applications, focusing on accessible design principles and therapeutic user experiences. The project emphasized creating calming, intuitive interfaces that support mental health and wellness through digital gardening experiences.</p>
+    
+    <p><strong>Design Principles:</strong> Accessibility, therapeutic interaction, nature-inspired aesthetics</p>
+    <p><strong>Platform:</strong> Mobile Application Design</p>
+    
+    <div class="project-links">
+      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=0-1&t=SoPZDrRmCYHeDv5C-1" target="_blank" class="btn">🎨 View Figma Prototype</a>
+    </div>
+  </div>
+  <div class="paper-box-image">
+    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px; color: white; text-align: center;">
+      <div>
+        <h4 style="margin: 0; font-size: 1.2em;">🌱 Farming Therapy</h4>
+        <p style="margin: 0.5em 0; font-size: 0.9em;">UI/UX Design</p>
+        <p style="margin: 0; font-size: 0.8em;">Therapeutic Mobile App Interface</p>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -15,7 +15,9 @@ classes: subpage
     <div class="timeline-marker"></div>
     <div class="timeline-content">
       <div style="display: flex; align-items: center; margin-bottom: 1em;">
-        <div style="width: 60px; height: 60px; margin-right: 15px; background: linear-gradient(135deg, #6c63ff, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9em;">PolyU</div>
+        <div style="width: 60px; height: 60px; margin-right: 15px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: white; border: 2px solid #e0e0e0;">
+          <img src="images/polyu-logo.png" alt="PolyU Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
         <div>
           <h3>The Hong Kong Polytechnic University</h3>
           <p><strong>September 2023 - October 2024</strong></p>
@@ -23,7 +25,7 @@ classes: subpage
       </div>
       <p><strong>Master of Science in Sustainable Urban Development</strong></p>
       <p>Faculty of Construction and Environment</p>
-      <p><strong>Overall GPA: 3.54/4.3 | GPA for Award: 3.51/4.3</strong></p>
+      <p><strong>Overall GPA: 3.51/4.3</strong></p>
       <p>Mode of Attendance: Full-time</p>
       
       <div class="coursework-highlight">
@@ -53,15 +55,7 @@ classes: subpage
 
 
 
-        <div class="program-summary">
-          <h5>Programme Summary</h5>
-          <ul>
-            <li><strong>GIS Course Average:</strong> A (4.0/4.3)</li>
-            <li><strong>Overall GPA:</strong> 3.54/4.3</li>
-            <li><strong>Programme:</strong> MSc Sustainable Urban Development</li>
-            <li><strong>Graduation:</strong> 2024</li>
-          </ul>
-        </div>
+
       </div>
     </div>
   </div>
@@ -69,8 +63,15 @@ classes: subpage
   <div class="timeline-item">
     <div class="timeline-marker"></div>
     <div class="timeline-content">
-      <h3>Hebei University (HBU)</h3>
-      <p><strong>09/2017 - 06/2022</strong></p>
+      <div style="display: flex; align-items: center; margin-bottom: 1em;">
+        <div style="width: 60px; height: 60px; margin-right: 15px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: white; border: 2px solid #e0e0e0;">
+          <img src="images/9HEBEIU.jpg" alt="HBU Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <h3>Hebei University (HBU)</h3>
+          <p><strong>09/2017 - 06/2022</strong></p>
+        </div>
+      </div>
       <p><strong>BEng in Architecture</strong></p>
       <p>College of Civil Engineering and Architecture</p>
       <ul>

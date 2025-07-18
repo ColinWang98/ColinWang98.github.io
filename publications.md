@@ -142,7 +142,7 @@ classes: subpage
 ---
 
 <div class="cta-section">
-  <a href="/projects/" class="btn">🔬 View Research Projects</a>
+  <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact for Collaboration</a>
   <a href="/about/" class="btn">📧 Collaborate</a>
   <a href="mailto:23064693g@connect.polyu.hk" class="btn">✉️ Contact</a>
 </div> 

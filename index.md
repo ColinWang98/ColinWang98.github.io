@@ -75,7 +75,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <p><strong>Duration:</strong> 10/2024 - 03/2025</p>
     
     <div class="project-links">
-      <a href="/projects/#vr-breathing-training" class="btn">📖 Learn More</a>
+      <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact</a>
     </div>
   </div>
   <div class="paper-box-image">
@@ -101,7 +101,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
     
     <div class="project-links">
-      <a href="/projects/#the-red-metachamber" class="btn">📖 Details</a>
+      <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact</a>
     </div>
   </div>
   <div class="paper-box-image">

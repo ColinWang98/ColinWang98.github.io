@@ -2101,53 +2101,115 @@ img, iframe, video {
   }
 }
 
+/* 移动端优化 */
+@media (max-width: 768px) {
+  /* 基础字体和间距 */
+  html, body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  /* 主容器布局 */
+  #main {
+    padding: 0.5rem;
+    display: block !important;
+  }
+  
+  /* 侧边栏在移动端隐藏或调整 */
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+  
+  /* 页面内容 */
+  .page, .subpage, article.page, article.subpage {
+    padding: 1rem !important;
+    margin: 0.5rem 0;
+    width: 100% !important;
+  }
+  
+  /* 导航栏 */
+  .masthead__inner-wrap {
+    padding: 0 1rem;
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap;
+  }
+  
+  /* 标题和文本 */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
+  
+  .name-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
 /* 小屏移动设备 */
 @media (max-width: 480px) {
-  /* 基础布局 */
+  /* 更小的字体 */
   html, body {
     font-size: 14px;
   }
   
-  .masthead__inner-wrap {
-    padding: 0 12px;
-    justify-content: center;
-    min-height: 60px;
-  }
-  
-  .navbar ul {
-    gap: 6px;
-    padding: 8px 0;
-  }
-  
-  .navbar a {
-    font-size: 11px;
-    padding: 5px 8px;
-    border-radius: 4px;
-  }
-  
+  /* 更紧凑的布局 */
   #main {
-    padding: 0.5em 12px;
-  }
-  
-  .sidebar {
-    padding: 16px;
+    padding: 0.25rem;
   }
   
   .page, .subpage, article.page, article.subpage {
-    padding: 18px 16px !important;
-    margin: 0.5em 0;
+    padding: 0.75rem !important;
+    margin: 0.25rem 0;
   }
   
+  .sidebar {
+    padding: 0.75rem;
+  }
+  
+  /* 导航栏紧凑模式 */
+  .masthead__inner-wrap {
+    padding: 0 0.5rem;
+  }
+  
+  .navbar a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  /* 更小的标题 */
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  
   .name-title {
-    font-size: 1.8em;
-    line-height: 1.2;
+    font-size: 1.4rem;
   }
   
   .hero-content {
-    padding: 0 1em;
+    padding: 0 0.5rem;
   }
-  
-  .author__avatar img {
+}
+
+.author__avatar img {
     width: 90px;
     height: 90px;
   }
@@ -2213,8 +2275,6 @@ img, iframe, video {
     height: 12px;
     margin: 0 3px;
   }
-}
-  
   .project-details {
     padding: 1em;
   }

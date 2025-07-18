@@ -1,5 +1,5 @@
-# 王尧 Wang Yao
+# Wang Yao
 
-香港理工大学可持续城市发展硕士，专注于虚拟现实、文化遗产数字化与人机交互研究。热爱创新与跨界，致力于用科技赋能传统文化，推动元宇宙与教育、建筑的深度融合。
+MSc in Sustainable Urban Development at The Hong Kong Polytechnic University, specializing in Virtual Reality, Digital Heritage Preservation, and Human-Computer Interaction research. Passionate about innovation and interdisciplinary approaches, dedicated to empowering traditional culture through technology and promoting the deep integration of metaverse with education and architecture.
 
-欢迎访问我的个人主页，了解更多学术与项目成果！
+Welcome to visit my personal homepage to learn more about my academic and project achievements!

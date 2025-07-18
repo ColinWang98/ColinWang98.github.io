@@ -1099,6 +1099,28 @@ body {
   font-family: "Academicons" !important;
   font-weight: normal !important;
   font-style: normal !important;
+  display: inline-block !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* ORCID图标特殊处理 */
+.ai-orcid-square {
+  font-family: "Academicons" !important;
+  font-size: 24px !important;
+  color: var(--primary-color) !important;
+}
+
+/* ORCID图标备用方案 */
+.ai-orcid-square:before {
+  content: "\e95f" !important;
+}
+
+/* 如果Academicons加载失败，使用文字备用 */
+.ai-orcid-square:not([class*="ai-"]):after {
+  content: "🎓" !important;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji" !important;
 }
 
 /* 纯图标显示优化 - 确保在sidebar中也生效 */

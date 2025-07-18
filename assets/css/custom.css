@@ -1080,43 +1080,53 @@ body {
   flex-shrink: 0;
 }
 
-/* 纯图标显示优化 */
-.author__urls li.icon-only {
-  justify-content: center;
-  text-align: center;
-  min-height: 52px;
-  padding: 15px;
+/* 纯图标显示优化 - 确保在sidebar中也生效 */
+.author__urls li.icon-only,
+.sidebar .author__urls li.icon-only {
+  justify-content: center !important;
+  text-align: center !important;
+  min-height: 52px !important;
+  padding: 15px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.author__urls li.icon-only > i {
-  margin: 0;
-  font-size: 24px;
-  width: auto;
-  color: var(--primary-color);
+.author__urls li.icon-only > i,
+.sidebar .author__urls li.icon-only > i {
+  margin: 0 !important;
+  font-size: 24px !important;
+  width: auto !important;
+  color: var(--primary-color) !important;
+  display: block !important;
 }
 
-.author__urls li.icon-only a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: var(--primary-color);
+.author__urls li.icon-only a,
+.sidebar .author__urls li.icon-only a {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-decoration: none !important;
+  color: var(--primary-color) !important;
 }
 
-.author__urls li.icon-only a i {
-  margin: 0;
-  font-size: 24px;
-  width: auto;
-  transition: all var(--transition-duration);
-  color: inherit;
+.author__urls li.icon-only a i,
+.sidebar .author__urls li.icon-only a i {
+  margin: 0 !important;
+  font-size: 24px !important;
+  width: auto !important;
+  transition: all var(--transition-duration) !important;
+  color: inherit !important;
+  display: block !important;
 }
 
 .author__urls li.icon-only:hover a i,
-.author__urls li.icon-only:hover > i {
-  transform: scale(1.2);
-  color: var(--primary-hover);
+.author__urls li.icon-only:hover > i,
+.sidebar .author__urls li.icon-only:hover a i,
+.sidebar .author__urls li.icon-only:hover > i {
+  transform: scale(1.2) !important;
+  color: var(--primary-hover) !important;
 }
 
 .author__urls li a {
@@ -1385,14 +1395,37 @@ h1:before, .anchor:before {
    ========================================================================== */
 
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(30px) scale(0.98);
   }
-  to {
+  50% {
+    opacity: 0.7;
+    transform: translateY(15px) scale(0.99);
+  }
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
+}
+
+/* 增强动画流畅度 */
+* {
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* 优化硬件加速 */
+.page, .subpage, article.page, article.subpage, 
+.sidebar, .masthead, .timeline-item, .paper-box,
+.project-item, .skill-category {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }
 
 @keyframes slideInLeft {
@@ -1821,4 +1854,143 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
+}
+
+/* 课程作业展示样式 */
+.coursework-highlight {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 25px !important;
+  margin: 20px 0 !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.semester-block {
+  margin-bottom: 25px !important;
+  padding: 20px !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.semester-block h5 {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  margin-bottom: 15px !important;
+  font-size: 1.1em !important;
+}
+
+.course-grid {
+  display: grid !important;
+  gap: 12px !important;
+  margin-bottom: 15px !important;
+}
+
+.course-item {
+  display: grid !important;
+  grid-template-columns: 80px 1fr 50px !important;
+  gap: 12px !important;
+  align-items: center !important;
+  padding: 12px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+.course-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.course-code {
+  font-weight: 600 !important;
+  color: var(--primary-color) !important;
+  font-size: 0.9em !important;
+}
+
+.course-title {
+  color: #333 !important;
+  font-size: 0.9em !important;
+  line-height: 1.3 !important;
+}
+
+.grade {
+  font-weight: bold !important;
+  text-align: center !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 0.8em !important;
+}
+
+.grade-a {
+  background: #d4edda !important;
+  color: #155724 !important;
+}
+
+.grade-b-plus {
+  background: #d1ecf1 !important;
+  color: #0c5460 !important;
+}
+
+.grade-b {
+  background: #fff3cd !important;
+  color: #856404 !important;
+}
+
+.semester-gpa {
+  font-weight: 600 !important;
+  color: var(--primary-color) !important;
+  text-align: right !important;
+  margin: 10px 0 0 0 !important;
+  font-size: 0.95em !important;
+}
+
+.program-summary {
+  background: rgba(108, 99, 255, 0.1) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  border-left: 4px solid var(--primary-color) !important;
+}
+
+.program-summary h5 {
+  color: var(--primary-color) !important;
+  margin-bottom: 15px !important;
+}
+
+.program-summary ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+}
+
+.program-summary li {
+  margin-bottom: 8px !important;
+  color: #333 !important;
+}
+
+/* 小屏幕响应式设计 */
+@media (max-width: 768px) {
+  .course-item {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+  
+  .course-code {
+    font-size: 0.8em !important;
+  }
+  
+  .course-title {
+    font-size: 0.8em !important;
+  }
+  
+  .coursework-highlight {
+    padding: 15px !important;
+  }
+  
+  .semester-block {
+    padding: 15px !important;
+  }
 } 

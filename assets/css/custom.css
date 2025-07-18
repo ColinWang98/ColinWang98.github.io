@@ -1082,7 +1082,7 @@ body {
 }
 
 /* Font Awesome 图标基础样式确保 */
-.fas, .far, .fal, .fab, .fa {
+.fas, .far, .fal, .fab, .fa, .fa-solid, .fa-regular, .fa-light, .fa-brands {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 5 Free", "FontAwesome" !important;
   font-weight: 900 !important;
   font-style: normal !important;
@@ -1091,6 +1091,7 @@ body {
   line-height: 1 !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+  display: inline-block !important;
 }
 
 /* Academicons 图标样式 */
@@ -1118,7 +1119,11 @@ body {
   width: auto !important;
   color: var(--primary-color) !important;
   display: inline-block !important;
-  font-family: inherit !important;
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 .author__urls li.icon-only a,
@@ -1140,7 +1145,11 @@ body {
   transition: all var(--transition-duration) !important;
   color: inherit !important;
   display: inline-block !important;
-  font-family: inherit !important;
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 .author__urls li.icon-only:hover a i,

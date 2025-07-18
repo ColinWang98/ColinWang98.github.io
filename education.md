@@ -15,7 +15,7 @@ classes: subpage
     <div class="timeline-marker"></div>
     <div class="timeline-content">
       <div style="display: flex; align-items: center; margin-bottom: 1em;">
-        <img src="{{ '/images/polyu-logo.png' | relative_url }}" alt="PolyU Logo" style="width: 60px; height: 60px; margin-right: 15px;">
+        <div style="width: 60px; height: 60px; margin-right: 15px; background: linear-gradient(135deg, #6c63ff, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9em;">PolyU</div>
         <div>
           <h3>The Hong Kong Polytechnic University</h3>
           <p><strong>September 2023 - October 2024</strong></p>
@@ -27,26 +27,11 @@ classes: subpage
       <p>Mode of Attendance: Full-time</p>
       
       <div class="coursework-highlight">
-        <h4>📚 Coursework Highlights</h4>
+        <h4>🗺️ GIS & Spatial Analysis Coursework</h4>
         
         <div class="semester-block">
-          <h5>2023-2024 Semester 1</h5>
+          <h5>Core GIS Courses</h5>
           <div class="course-grid">
-            <div class="course-item">
-              <span class="course-code">BRE562</span>
-              <span class="course-title">PROJECT APPRAISAL</span>
-              <span class="grade grade-a">A</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">BRE582</span>
-              <span class="course-title">DEVELOPMENT FINANCE AND INVESTMENT</span>
-              <span class="grade grade-b-plus">B+</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">BSE5518</span>
-              <span class="course-title">SUSTAINABILITY AND THE BUILT ENVIRONMENT</span>
-              <span class="grade grade-b-plus">B+</span>
-            </div>
             <div class="course-item">
               <span class="course-code">LSGI521</span>
               <span class="course-title">PRINCIPLES OF GIS</span>
@@ -57,49 +42,48 @@ classes: subpage
               <span class="course-title">URBAN SCIENCE AND SYSTEMS</span>
               <span class="grade grade-a">A</span>
             </div>
-          </div>
-          <p class="semester-gpa">GPA (cumulative): 3.51</p>
-        </div>
-
-        <div class="semester-block">
-          <h5>2023-2024 Semester 2</h5>
-          <div class="course-grid">
-            <div class="course-item">
-              <span class="course-code">APSS5210</span>
-              <span class="course-title">QUANTITATIVE METHODS FOR POLICY RESEARCH AND EVALUATION</span>
-              <span class="grade grade-a">A</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">BRE524</span>
-              <span class="course-title">URBAN PLANNING AND URBAN DESIGN</span>
-              <span class="grade grade-a">A</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">BRE532</span>
-              <span class="course-title">MAINTENANCE MANAGEMENT AND OPERATION</span>
-              <span class="grade grade-b">B</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">CSE544</span>
-              <span class="course-title">SUSTAINABLE DEVELOPMENT AND ENVIRONMENTAL PLANNING</span>
-              <span class="grade grade-b">B</span>
-            </div>
             <div class="course-item">
               <span class="course-code">LSGI545</span>
               <span class="course-title">URBAN INFORMATICS</span>
               <span class="grade grade-a">A</span>
             </div>
           </div>
-          <p class="semester-gpa">GPA (cumulative): 3.54</p>
+          <p class="semester-note">Focus on spatial data analysis, urban modeling, and geospatial technologies</p>
+        </div>
+
+        <div class="gis-skills-summary">
+          <h5>🛠️ Technical Skills Acquired</h5>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <span class="skill-icon">🗺️</span>
+              <span class="skill-name">GIS Software</span>
+              <span class="skill-detail">ArcGIS, QGIS, PostGIS</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon">📊</span>
+              <span class="skill-name">Spatial Analysis</span>
+              <span class="skill-detail">Spatial statistics, Network analysis</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon">🌐</span>
+              <span class="skill-name">Urban Modeling</span>
+              <span class="skill-detail">Urban systems, Smart city applications</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon">💻</span>
+              <span class="skill-name">Programming</span>
+              <span class="skill-detail">Python, R, SQL for spatial data</span>
+            </div>
+          </div>
         </div>
 
         <div class="program-summary">
-          <h5>Programme Summary</h5>
+          <h5>Academic Excellence</h5>
           <ul>
-            <li><strong>Programme Credit Requirement:</strong> 30.0 credits</li>
-            <li><strong>Credits Attained:</strong> 30.0 credits</li>
-            <li><strong>Year of Graduation:</strong> 2024</li>
-            <li><strong>Mode of Attendance:</strong> Full-time</li>
+            <li><strong>GIS Course Average:</strong> A (4.0/4.3)</li>
+            <li><strong>Overall GPA:</strong> 3.54/4.3</li>
+            <li><strong>Programme:</strong> MSc Sustainable Urban Development</li>
+            <li><strong>Graduation:</strong> 2024</li>
           </ul>
         </div>
       </div>

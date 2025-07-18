@@ -22,6 +22,24 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
     <div class="carousel-slide">
       <img src="{{ '/Photos/photo3.jpg' | relative_url }}" alt="Photography 3">
     </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo4.jpg' | relative_url }}" alt="Photography 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo5.jpg' | relative_url }}" alt="Photography 5">
+    </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo6.jpg' | relative_url }}" alt="Photography 6">
+    </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo8.jpg' | relative_url }}" alt="Photography 8">
+    </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo9.jpg' | relative_url }}" alt="Photography 9">
+    </div>
+    <div class="carousel-slide">
+      <img src="{{ '/Photos/photo11.jpg' | relative_url }}" alt="Photography 11">
+    </div>
   </div>
   
   <!-- 轮播控制按钮 -->
@@ -33,6 +51,12 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
     <span class="indicator active" onclick="currentSlide(1)"></span>
     <span class="indicator" onclick="currentSlide(2)"></span>
     <span class="indicator" onclick="currentSlide(3)"></span>
+    <span class="indicator" onclick="currentSlide(4)"></span>
+    <span class="indicator" onclick="currentSlide(5)"></span>
+    <span class="indicator" onclick="currentSlide(6)"></span>
+    <span class="indicator" onclick="currentSlide(7)"></span>
+    <span class="indicator" onclick="currentSlide(8)"></span>
+    <span class="indicator" onclick="currentSlide(9)"></span>
   </div>
 </div>
 

@@ -2611,4 +2611,81 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
     height: 220px !important;
     min-height: 220px;
   }
+}
+
+/* ==========================================================================
+   PDF Preview Styles - PDF预览样式
+   ========================================================================== */
+
+/* PDF预览容器 */
+.pdf-preview-container {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.pdf-preview-container iframe {
+  display: block;
+  margin: 0;
+  background: #f8f9fa;
+}
+
+/* PDF下载部分 */
+.pdf-download-section {
+  padding: 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-top: 1px solid #dee2e6;
+}
+
+.pdf-download-btn {
+  display: inline-block;
+  padding: 12px 24px !important;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3) !important;
+  border: none !important;
+}
+
+.pdf-download-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4) !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.pdf-description {
+  margin: 1rem 0 0 0 !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
+  font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .pdf-preview-container iframe {
+    height: 400px !important;
+  }
+  
+  .pdf-download-section {
+    padding: 1rem;
+  }
+  
+  .pdf-download-btn {
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdf-preview-container iframe {
+    height: 300px !important;
+  }
 } 

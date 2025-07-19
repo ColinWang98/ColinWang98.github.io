@@ -60,8 +60,26 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
   </div>
 </div>
 
-## UI Design
-- [Farming Therapy UI Design (Figma link)](https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9)
+## Design Portfolio
+View my design work collection featuring architectural and creative projects.
+
+<div class="pdf-preview-container">
+  <iframe 
+    src="{{ '/docs/ColinDesign.pdf' | relative_url }}" 
+    width="100%" 
+    height="600" 
+    style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  </iframe>
+  
+  <div class="pdf-download-section">
+    <a href="{{ '/docs/ColinDesign.pdf' | relative_url }}" 
+       target="_blank" 
+       class="btn pdf-download-btn">
+      📄 Download PDF
+    </a>
+    <p class="pdf-description">Design portfolio showcasing architectural and creative works</p>
+  </div>
+</div>
 
 ## Architectural Design
 - Participated in various architectural design projects during undergraduate and postgraduate studies. 

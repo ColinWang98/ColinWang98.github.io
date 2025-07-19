@@ -2614,78 +2614,121 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
 }
 
 /* ==========================================================================
-   PDF Preview Styles - PDF预览样式
+   Design Portfolio Card Styles - 设计作品集卡片样式
    ========================================================================== */
 
-/* PDF预览容器 */
-.pdf-preview-container {
+/* 设计作品集卡片 */
+.design-portfolio-card {
+  display: flex;
+  align-items: center;
   margin: 2rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  border: 1px solid #e0e0e0;
-}
-
-.pdf-preview-container iframe {
-  display: block;
-  margin: 0;
-  background: #f8f9fa;
-}
-
-/* PDF下载部分 */
-.pdf-download-section {
-  padding: 1.5rem;
-  text-align: center;
+  padding: 2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-top: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  gap: 1.5rem;
 }
 
-.pdf-download-btn {
+.design-portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-icon {
+  font-size: 3rem;
+  min-width: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 123, 255, 0.3));
+}
+
+.portfolio-content {
+  flex: 1;
+}
+
+.portfolio-content h3 {
+  margin: 0 0 0.5rem 0 !important;
+  color: #212529 !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+}
+
+.portfolio-content p {
+  margin: 0 0 1rem 0 !important;
+  color: #6c757d !important;
+  line-height: 1.6 !important;
+}
+
+.portfolio-meta {
+  margin: 0 !important;
+}
+
+.file-size {
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.portfolio-action {
+  text-align: center;
+}
+
+.portfolio-download-btn {
   display: inline-block;
-  padding: 12px 24px !important;
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+  padding: 14px 28px !important;
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%) !important;
   color: white !important;
   text-decoration: none !important;
   border-radius: 25px !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3) !important;
+  box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3) !important;
   border: none !important;
+  font-size: 1rem !important;
 }
 
-.pdf-download-btn:hover {
+.portfolio-download-btn:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4) !important;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4) !important;
   color: white !important;
   text-decoration: none !important;
-}
-
-.pdf-description {
-  margin: 1rem 0 0 0 !important;
-  color: #6c757d !important;
-  font-size: 0.9rem !important;
-  font-style: italic;
+  background: linear-gradient(135deg, #34ce57 0%, #28a745 100%) !important;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .pdf-preview-container iframe {
-    height: 400px !important;
+  .design-portfolio-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1rem;
   }
   
-  .pdf-download-section {
-    padding: 1rem;
+  .portfolio-icon {
+    font-size: 2.5rem;
+    min-width: auto;
   }
   
-  .pdf-download-btn {
-    padding: 10px 20px !important;
+  .portfolio-download-btn {
+    padding: 12px 24px !important;
     font-size: 0.9rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .pdf-preview-container iframe {
-    height: 300px !important;
+  .design-portfolio-card {
+    padding: 1rem;
+  }
+  
+  .portfolio-content h3 {
+    font-size: 1.2rem !important;
   }
 } 

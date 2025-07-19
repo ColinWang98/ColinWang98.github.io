@@ -63,20 +63,22 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 ## Design Portfolio
 View my design work collection featuring architectural and creative projects.
 
-<div class="pdf-preview-container">
-  <iframe 
-    src="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
-    width="100%" 
-    height="600" 
-    style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  </iframe>
-  
-  <div class="pdf-download-section">
+<div class="design-portfolio-card">
+  <div class="portfolio-icon">
+    📐
+  </div>
+  <div class="portfolio-content">
+    <h3>Colin Design Portfolio</h3>
+    <p>A comprehensive collection of architectural and creative design works showcasing innovative spatial concepts and design thinking.</p>
+    <div class="portfolio-meta">
+      <span class="file-size">📄 PDF Document • 4.2MB</span>
+    </div>
+  </div>
+  <div class="portfolio-action">
     <a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
        target="_blank" 
-       class="btn pdf-download-btn">
-      📄 Download PDF
+       class="btn portfolio-download-btn">
+      📥 Download Portfolio
     </a>
-    <p class="pdf-description">Design portfolio showcasing architectural and creative works</p>
   </div>
 </div> 

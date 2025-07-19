@@ -2590,6 +2590,7 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   background: #f8f9fa;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
 }
 
 .paper-box-image iframe[src*="figma.com"]:hover {
@@ -2600,12 +2601,14 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
 /* 响应式设计 */
 @media (max-width: 768px) {
   .paper-box-image iframe[src*="figma.com"] {
-    height: 200px !important;
+    height: 250px !important;
+    min-height: 250px;
   }
 }
 
 @media (max-width: 480px) {
   .paper-box-image iframe[src*="figma.com"] {
-    height: 180px !important;
+    height: 220px !important;
+    min-height: 220px;
   }
 } 

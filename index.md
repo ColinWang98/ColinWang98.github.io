@@ -134,8 +134,8 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <iframe 
       style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 8px;" 
       width="100%" 
-      height="250" 
-      src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26show-proto-sidebar%3D1%26t%3DCfAqJiNC7My3qKD0-9" 
+      height="300" 
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1" 
       allowfullscreen>
     </iframe>
   </div>

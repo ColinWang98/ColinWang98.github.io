@@ -65,21 +65,18 @@ View my design work collection featuring architectural and creative projects.
 
 <div class="pdf-preview-container">
   <iframe 
-    src="{{ '/docs/ColinDesign.pdf' | relative_url }}" 
+    src="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
     width="100%" 
     height="600" 
     style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </iframe>
   
   <div class="pdf-download-section">
-    <a href="{{ '/docs/ColinDesign.pdf' | relative_url }}" 
+    <a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
        target="_blank" 
        class="btn pdf-download-btn">
       📄 Download PDF
     </a>
     <p class="pdf-description">Design portfolio showcasing architectural and creative works</p>
   </div>
-</div>
-
-## Architectural Design
-- Participated in various architectural design projects during undergraduate and postgraduate studies. 
+</div> 

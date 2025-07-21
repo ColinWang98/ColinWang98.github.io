@@ -27,36 +27,7 @@ classes: subpage
       <p>Faculty of Construction and Environment</p>
       <p><strong>Overall GPA: 3.51/4.3</strong></p>
       <p>Mode of Attendance: Full-time</p>
-      
-      <div class="coursework-highlight">
-        <h4>🗺️ GIS & Spatial Analysis Coursework</h4>
-        
-        <div class="semester-block">
-          <h5>Core GIS Courses</h5>
-          <div class="course-grid">
-            <div class="course-item">
-              <span class="course-code">LSGI521</span>
-              <span class="course-title">PRINCIPLES OF GIS</span>
-              <span class="grade grade-a">A</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">LSGI544</span>
-              <span class="course-title">URBAN SCIENCE AND SYSTEMS</span>
-              <span class="grade grade-a">A</span>
-            </div>
-            <div class="course-item">
-              <span class="course-code">LSGI545</span>
-              <span class="course-title">URBAN INFORMATICS</span>
-              <span class="grade grade-a">A</span>
-            </div>
-          </div>
-          <p class="semester-note">Focus on spatial data analysis, urban modeling, and geospatial technologies</p>
-        </div>
 
-
-
-
-      </div>
     </div>
   </div>
 

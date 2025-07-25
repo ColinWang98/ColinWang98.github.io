@@ -229,7 +229,7 @@
 </div>
 
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function() {
   // 只插入一次iframe
   if(!document.getElementById('bg-automaton-egg')){
     var iframe = document.createElement('iframe');
@@ -242,10 +242,20 @@
   var bg = document.getElementById('bg-automaton-egg');
   var show = false;
   if(avatar && bg){
-    avatar.addEventListener('click',function(){
+    avatar.style.cursor = 'pointer';
+    avatar.style.zIndex = 10;
+    avatar.addEventListener('click',function(e){
       show = !show;
       bg.style.opacity = show ? 1 : 0;
+      e.stopPropagation();
+    });
+    // 点击页面其他地方关闭彩蛋
+    document.body.addEventListener('click',function(e){
+      if(show && e.target!==avatar){
+        bg.style.opacity = 0;
+        show = false;
+      }
     });
   }
-})();
+});
 </script>

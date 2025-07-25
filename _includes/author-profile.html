@@ -4,8 +4,8 @@
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
-  <div class="author__avatar" style="position:relative;z-index:2;">
-    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}" id="egg-avatar">
+  <div class="author__avatar" style="position:relative;z-index:20;">
+    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}" id="egg-avatar" style="position:relative;z-index:20;cursor:pointer;">
   </div>
 
   <div class="author__content">
@@ -241,9 +241,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var avatar = document.getElementById('egg-avatar');
   var bg = document.getElementById('bg-automaton-egg');
   var show = false;
+  console.log('头像元素:', avatar);
   if(avatar && bg){
-    avatar.style.cursor = 'pointer';
-    avatar.style.zIndex = 10;
     avatar.addEventListener('click',function(e){
       show = !show;
       bg.style.opacity = show ? 1 : 0;

@@ -22,7 +22,6 @@ classes: subpage
         <li>Modeling and scene construction for virtual environments</li>
         <li>UI prototype design and user experience research</li>
         <li>Literature collection and research development</li>
-        <li>Contributing to academic publications and conference presentations</li>
       </ul>
     </div>
   </div>
@@ -75,19 +74,5 @@ classes: subpage
     </div>
   </div>
 </div>
-
-## Key Skills & Competencies
-
-### Technical Skills
-- **3D Modeling & Design**: Unity, Blender, Maya, Rhino
-- **Programming**: VR/AR development, interactive design
-- **Urban Planning**: GIS, CAD, planning software
-- **Data Analysis**: Statistical analysis, research methodologies
-
-### Professional Skills
-- **Project Management**: Leading cross-functional teams
-- **Research & Development**: Academic research, literature review
-- **Communication**: Technical documentation, presentation skills
-- **Problem Solving**: Creative solutions, analytical thinking
 
  

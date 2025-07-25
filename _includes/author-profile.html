@@ -4,8 +4,8 @@
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
-  <div class="author__avatar">
-    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
+  <div class="author__avatar" style="position:relative;z-index:2;">
+    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}" id="egg-avatar">
   </div>
 
   <div class="author__content">
@@ -227,3 +227,26 @@
     </div>
   </div>
 </div>
+
+<script>
+(function(){
+  // 只插入一次iframe
+  if(!document.getElementById('bg-automaton-egg')){
+    var iframe = document.createElement('iframe');
+    iframe.src = '/images/cellular-automaton-animation.html';
+    iframe.id = 'bg-automaton-egg';
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;opacity:0;transition:opacity 0.8s;';
+    document.body.appendChild(iframe);
+  }
+  var avatar = document.getElementById('egg-avatar');
+  var bg = document.getElementById('bg-automaton-egg');
+  if(avatar && bg){
+    avatar.addEventListener('mouseenter',function(){
+      bg.style.opacity = 1;
+    });
+    avatar.addEventListener('mouseleave',function(){
+      bg.style.opacity = 0;
+    });
+  }
+})();
+</script>

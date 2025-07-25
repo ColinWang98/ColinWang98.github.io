@@ -16,7 +16,6 @@ classes: subpage
     <ul>
       <li><strong>Unity</strong> - Game development and VR/AR applications</li>
       <li><strong>Blender</strong> - 3D modeling and animation</li>
-      <li><strong>Maya</strong> - Advanced 3D modeling and rendering</li>
       <li><strong>Rhino</strong> - Parametric design and CAD modeling</li>
       <li><strong>Figma</strong> - UI/UX design and prototyping</li>
     </ul>
@@ -37,6 +36,7 @@ classes: subpage
     <h4><i class="fas fa-chart-bar"></i> Data & Analysis</h4>
     <ul>
       <li><strong>Stata</strong> - Statistical analysis and econometrics</li>
+      <li><strong>SPSS</strong> - Statistical analysis and data management</li>
       <li><strong>GIS Software</strong> - Geographic information systems</li>
       <li><strong>Research Methods</strong> - Quantitative and qualitative analysis</li>
       <li><strong>Data Visualization</strong> - Charts, graphs, and infographics</li>
@@ -48,7 +48,6 @@ classes: subpage
     <ul>
       <li><strong>English</strong> - IELTS overall 7.0 (Professional proficiency)</li>
       <li><strong>Chinese</strong> - Native speaker (Mandarin)</li>
-      <li><strong>Technical Writing</strong> - Academic and technical documentation</li>
     </ul>
   </div>
 </div>
@@ -78,14 +77,6 @@ classes: subpage
     <span class="badge">Cultural Studies</span>
   </div>
 </div>
-
-## Professional Development
-
-### Certifications & Training
-- **Virtual Reality Development**: Advanced training in VR application development
-- **Urban Planning Software**: Certified in professional planning and GIS tools
-- **Cultural Heritage Documentation**: Specialized training in heritage preservation methods
-- **Research Methodology**: Advanced training in academic research techniques
 
 
 

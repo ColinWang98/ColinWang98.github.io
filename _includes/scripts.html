@@ -1,5 +1,40 @@
 <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 页面主内容淡入动画
+  var mainContent = document.querySelector("main") || document.querySelector(".page__content") || document.body;
+  gsap.from(mainContent, { duration: 1, opacity: 0, y: 50, ease: "power2.out" });
+
+  // 按钮浮动动画
+  document.querySelectorAll('button, .float-btn').forEach(function(btn) {
+    btn.addEventListener('mouseenter', function() {
+      gsap.to(btn, { y: -10, scale: 1.1, duration: 0.3, ease: "power1.out" });
+    });
+    btn.addEventListener('mouseleave', function() {
+      gsap.to(btn, { y: 0, scale: 1, duration: 0.3, ease: "power1.in" });
+    });
+  });
+
+  // 页面切换过渡动画（可选）
+  document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if(link.hostname === location.hostname && !link.hasAttribute('target') && link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        gsap.to(mainContent, {
+          duration: 0.5,
+          opacity: 0,
+          y: 50,
+          onComplete: function() {
+            window.location = link.href;
+          }
+        });
+      }
+    });
+  });
+});
+</script>
 
 {% include analytics.html %}
 {% include fetch_google_scholar_stats.html %}

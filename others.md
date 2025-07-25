@@ -61,7 +61,7 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 </div>
 
 ## Poetry
-<div id="poem-container" style="min-height:320px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;"></div>
+<div id="poem-container" style="min-height:700px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>

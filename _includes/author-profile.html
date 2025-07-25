@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // 只插入一次iframe
   if(!document.getElementById('bg-automaton-egg')){
     var iframe = document.createElement('iframe');
-    iframe.src = '/images/cellular-automaton-animation.html';
+    iframe.src = '/images/cellular-automaton-animation.html'; // 如有新文件名请替换此处
     iframe.id = 'bg-automaton-egg';
     iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;opacity:0;transition:opacity 0.8s;';
     document.body.appendChild(iframe);

@@ -240,12 +240,11 @@
   }
   var avatar = document.getElementById('egg-avatar');
   var bg = document.getElementById('bg-automaton-egg');
+  var show = false;
   if(avatar && bg){
-    avatar.addEventListener('mouseenter',function(){
-      bg.style.opacity = 1;
-    });
-    avatar.addEventListener('mouseleave',function(){
-      bg.style.opacity = 0;
+    avatar.addEventListener('click',function(){
+      show = !show;
+      bg.style.opacity = show ? 1 : 0;
     });
   }
 })();

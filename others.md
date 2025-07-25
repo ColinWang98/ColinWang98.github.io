@@ -81,31 +81,75 @@ const poems = [
   }
 ];
 let poemIndex = 0;
-function wrapChars(str) {
-  // 每个字用span包裹，保留换行
-  return str.replace(/([^\n])/g, '<span class="poem-char">$1</span>').replace(/\n/g, '<br>');
+
+function wrapCharsRandom(str, containerW, containerH) {
+  // 每个字用span包裹，初始随机位置
+  let html = '';
+  let x0 = containerW/2, y0 = containerH/2;
+  let line = 0, col = 0;
+  for(let i=0;i<str.length;i++){
+    let ch = str[i];
+    if(ch==="\n"){line++;col=0;html+='<br>';continue;}
+    let rx = Math.random()*containerW;
+    let ry = Math.random()*containerH;
+    html += `<span class="poem-char" data-line="${line}" data-col="${col}" style="position:absolute;left:${rx}px;top:${ry}px;opacity:0;">${ch}</span>`;
+    col++;
+  }
+  return html;
 }
+
+function layoutPoemChars(container, lineHeight, fontSize) {
+  // 让每个字回到诗歌排版位置
+  const chars = container.querySelectorAll('.poem-char');
+  let x0 = container.offsetWidth/2, y0 = 20;
+  let maxCol = 0;
+  chars.forEach(span=>{maxCol=Math.max(maxCol,parseInt(span.dataset.col));});
+  chars.forEach(span=>{
+    let line = parseInt(span.dataset.line);
+    let col = parseInt(span.dataset.col);
+    let left = x0 - (maxCol/2-col)*fontSize*1.1;
+    let top = y0 + line*lineHeight;
+    gsap.to(span, {left:left, top:top, opacity:1, duration:0.8, ease:'power2.out', delay:0.2+Math.random()*0.3});
+  });
+}
+
+function flyAwayPoemChars(container) {
+  // 每个字无序飞走
+  const chars = container.querySelectorAll('.poem-char');
+  chars.forEach(span=>{
+    let dx = (Math.random()-0.5)*600;
+    let dy = (Math.random()-0.5)*300;
+    gsap.to(span, {left:`+=${dx}`, top:`+=${dy}`, opacity:0, duration:0.7+Math.random()*0.4, ease:'power1.in'});
+  });
+}
+
 function showPoem(idx) {
   const container = document.getElementById('poem-container');
+  container.style.position = 'relative';
+  container.style.height = '260px';
+  container.innerHTML = '';
   const poem = poems[idx];
-  // 聚拢消失（每个字）
-  const chars = container.querySelectorAll('.poem-char');
-  gsap.to(chars, {y:30, opacity:0, stagger:0.01, duration:0.4, onComplete:()=>{
-    container.innerHTML = `<div style='font-weight:bold;font-size:1.3em;margin-bottom:0.5em;'>${wrapChars(poem.title)}</div><div>${wrapChars(poem.content)}</div>`;
-    // 沙子散开出现（每个字）
-    gsap.fromTo(container.querySelectorAll('.poem-char'),
-      {y:-30, opacity:0},
-      {y:0, opacity:1, stagger:0.01, duration:0.6, ease:'power1.out'}
-    );
-  }});
+  // 标题
+  let title = poem.title;
+  let content = poem.content;
+  let html = `<div style='font-weight:bold;font-size:1.3em;margin-bottom:0.5em;position:relative;height:2em;'>${wrapCharsRandom(title,container.offsetWidth,40)}</div>`;
+  html += `<div style='position:relative;height:200px;'>${wrapCharsRandom(content,container.offsetWidth,200)}</div>`;
+  container.innerHTML = html;
+  setTimeout(()=>{
+    layoutPoemChars(container,32,20);
+  },100);
 }
+
 window.addEventListener('DOMContentLoaded', ()=>{
   const container = document.getElementById('poem-container');
   container.innerHTML = '';
   showPoem(poemIndex);
   setInterval(()=>{
-    poemIndex = (poemIndex+1)%poems.length;
-    showPoem(poemIndex);
+    flyAwayPoemChars(container);
+    setTimeout(()=>{
+      poemIndex = (poemIndex+1)%poems.length;
+      showPoem(poemIndex);
+    },900);
   }, 9000);
 });
 </script>

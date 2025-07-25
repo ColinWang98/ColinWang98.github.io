@@ -2741,4 +2741,25 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   .portfolio-content h3 {
     font-size: 1.2rem !important;
   }
+}
+
+@media (max-width: 768px) {
+  .page, .subpage, article.page, article.subpage {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
+    overflow: visible !important;
+    min-height: 200px !important;
+    background: rgba(255,255,255,0.95) !important;
+  }
+  .page__content, .page__inner-wrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
 } 

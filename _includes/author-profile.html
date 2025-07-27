@@ -4,8 +4,8 @@
 
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
-  <div class="author__avatar" style="position:relative;z-index:20;">
-    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}" id="egg-avatar" style="position:relative;z-index:20;cursor:pointer;">
+  <div class="author__avatar" style="position:relative;z-index:50;">
+    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}" id="egg-avatar" style="position:relative;z-index:50;cursor:pointer;pointer-events:auto;">
   </div>
 
   <div class="author__content">
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var iframe = document.createElement('iframe');
     iframe.src = '/images/cellular-automaton-animation.html'; // 如有新文件名请替换此处
     iframe.id = 'bg-automaton-egg';
-    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;opacity:0;transition:opacity 0.8s;';
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.8s;';
     document.body.appendChild(iframe);
   }
   var avatar = document.getElementById('egg-avatar');

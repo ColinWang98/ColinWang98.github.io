@@ -61,7 +61,7 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 </div>
 
 ## Poetry
-<div id="poem-container" style="min-height:700px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;"></div>
+<div id="poem-container" style="min-height:700px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;max-width:100vw;overflow:hidden;"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>
@@ -125,18 +125,24 @@ function flyAwayPoemChars(container) {
 
 function showPoem(idx) {
   const container = document.getElementById('poem-container');
+  // 移动端自适应高度和字体
+  let isMobile = window.innerWidth <= 768;
+  let height = isMobile ? 420 : 700;
+  let fontSize = isMobile ? 15 : 20;
+  let lineHeight = isMobile ? 24 : 32;
   container.style.position = 'relative';
-  container.style.height = '260px';
+  container.style.height = height + 'px';
+  container.style.fontSize = fontSize + 'px';
   container.innerHTML = '';
   const poem = poems[idx];
   // 标题
   let title = poem.title;
   let content = poem.content;
   let html = `<div style='font-weight:bold;font-size:1.3em;margin-bottom:0.5em;position:relative;height:2em;'>${wrapCharsRandom(title,container.offsetWidth,40)}</div>`;
-  html += `<div style='position:relative;height:200px;'>${wrapCharsRandom(content,container.offsetWidth,200)}</div>`;
+  html += `<div style='position:relative;height:${height-100}px;'>${wrapCharsRandom(content,container.offsetWidth,height-100)}</div>`;
   container.innerHTML = html;
   setTimeout(()=>{
-    layoutPoemChars(container,32,20);
+    layoutPoemChars(container,lineHeight,fontSize);
   },100);
 }
 

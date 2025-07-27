@@ -27,7 +27,7 @@ classes: subpage
       <p>Faculty of Construction and Environment</p>
       <p><strong>Overall GPA: 3.51/4.3</strong></p>
       <p>Mode of Attendance: Full-time</p>
-
+      
     </div>
   </div>
 

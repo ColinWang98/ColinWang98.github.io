@@ -53,7 +53,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 </details>
 
 ### Current Status
-🎯 **Seeking PhD opportunities** in HCI，XR，Virtual Environment，环境心理学等领域。
+🎯 **Seeking PhD opportunities** in HCI, XR, Virtual Environment, Environmental Psychology and related fields.
 
 ---
 

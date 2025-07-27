@@ -2,7 +2,7 @@
   <div class="sidebar sticky">
     <div class="profile_box">
       <div class="author__avatar">
-        <img src="{{ site.author.avatar | relative_url }}" alt="Avatar">
+        <img src="{{ site.author.avatar | relative_url }}" alt="Avatar" id="egg-avatar" style="cursor:pointer;z-index:50;position:relative;pointer-events:auto;">
       </div>
       <div class="author__content">
         <h3 class="author__name">{{ site.author.name }}</h3>
@@ -24,3 +24,30 @@
     </div>
   </div>
 {% endif %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if(!document.getElementById('bg-automaton-egg')){
+    var iframe = document.createElement('iframe');
+    iframe.src = '/images/cellular-automaton-animation.html';
+    iframe.id = 'bg-automaton-egg';
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.8s;';
+    document.body.appendChild(iframe);
+  }
+  var avatar = document.getElementById('egg-avatar');
+  var bg = document.getElementById('bg-automaton-egg');
+  var show = false;
+  if(avatar && bg){
+    avatar.addEventListener('click',function(e){
+      show = !show;
+      bg.style.opacity = show ? 1 : 0;
+      e.stopPropagation();
+    });
+    document.body.addEventListener('click',function(e){
+      if(show && e.target!==avatar){
+        bg.style.opacity = 0;
+        show = false;
+      }
+    });
+  }
+});
+</script>

@@ -2753,10 +2753,30 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
     overflow: visible !important;
     min-height: 200px !important;
     background: rgba(255,255,255,0.95) !important;
+    position: relative !important;
+    display: block !important;
+    float: none !important;
   }
   .page__content, .page__inner-wrap {
     width: 100% !important;
     min-width: 0 !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+    display: block !important;
+    float: none !important;
+  }
+  #main {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0.5rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+  .main-container {
+    width: 100% !important;
     max-width: 100vw !important;
     padding: 0 !important;
     margin: 0 !important;

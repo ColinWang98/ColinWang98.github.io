@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var iframe = document.createElement('iframe');
     iframe.src = '{{ site.baseurl }}/images/cellular-automaton-animation.html';
     iframe.id = 'bg-automaton-egg';
-    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;pointer-events:none;opacity:0;transition:opacity 0.8s;background:transparent;';
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;pointer-events:none;opacity:0;transition:opacity 0.8s;background:transparent;border:none;';
     document.body.appendChild(iframe);
     console.log('侧边栏iframe已创建:', iframe);
   }

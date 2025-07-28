@@ -230,31 +230,44 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM加载完成，开始设置彩蛋');
+  
   // 只插入一次iframe
   if(!document.getElementById('bg-automaton-egg')){
     var iframe = document.createElement('iframe');
-    iframe.src = '/images/cellular-automaton-animation.html'; // 如有新文件名请替换此处
+    iframe.src = '{{ site.baseurl }}/images/cellular-automaton-animation.html';
     iframe.id = 'bg-automaton-egg';
-    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.8s;';
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;pointer-events:none;opacity:0;transition:opacity 0.8s;background:transparent;';
     document.body.appendChild(iframe);
+    console.log('iframe已创建:', iframe);
   }
+  
   var avatar = document.getElementById('egg-avatar');
   var bg = document.getElementById('bg-automaton-egg');
   var show = false;
+  
   console.log('头像元素:', avatar);
+  console.log('背景元素:', bg);
+  
   if(avatar && bg){
     avatar.addEventListener('click',function(e){
+      console.log('头像被点击');
       show = !show;
       bg.style.opacity = show ? 1 : 0;
+      console.log('背景透明度设置为:', bg.style.opacity);
       e.stopPropagation();
     });
+    
     // 点击页面其他地方关闭彩蛋
     document.body.addEventListener('click',function(e){
-      if(show && e.target!==avatar){
+      if(show && e.target!==avatar && !avatar.contains(e.target)){
         bg.style.opacity = 0;
         show = false;
+        console.log('点击其他地方，关闭彩蛋');
       }
     });
+  } else {
+    console.log('未找到头像或背景元素');
   }
 });
 </script>

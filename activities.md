@@ -40,11 +40,3 @@ classes: subpage
 
 
 
-## Volunteer Experience
-
-### Cultural Heritage Preservation
-- Volunteer work with local museums and cultural institutions
-- Assistance in archaeological site documentation
-- Support for heritage tourism development initiatives
-
- 

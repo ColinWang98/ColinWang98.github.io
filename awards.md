@@ -10,45 +10,146 @@ classes: subpage
 
 ## Technical Skills
 
-<div class="skills-grid">
-  <div class="skill-category">
+<div class="skills-container">
+  <div class="skill-section">
     <h4><i class="fas fa-code"></i> Programming & Development</h4>
-    <ul>
-      <li><strong>Unity</strong> - Game development and VR/AR applications</li>
-      <li><strong>Blender</strong> - 3D modeling and animation</li>
-      <li><strong>Rhino</strong> - Parametric design and CAD modeling</li>
-      <li><strong>Figma</strong> - UI/UX design and prototyping</li>
-    </ul>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Unity</span>
+          <span class="skill-level">90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Blender</span>
+          <span class="skill-level">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Figma</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="skill-category">
+  <div class="skill-section">
     <h4><i class="fas fa-paint-brush"></i> Design & Creative</h4>
-    <ul>
-      <li><strong>Photoshop</strong> - Digital image editing and manipulation</li>
-      <li><strong>Aquarelle</strong> - Traditional watercolor painting</li>
-      <li><strong>Mark Painting</strong> - Mixed media art techniques</li>
-      <li><strong>Sketch</strong> - Concept art and illustration</li>
-      <li><strong>Photography</strong> - Professional photography and editing</li>
-    </ul>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Photoshop</span>
+          <span class="skill-level">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Sketch</span>
+          <span class="skill-level">75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Photography</span>
+          <span class="skill-level">90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="skill-category">
+  <div class="skill-section">
     <h4><i class="fas fa-chart-bar"></i> Data & Analysis</h4>
-    <ul>
-      <li><strong>Stata</strong> - Statistical analysis and econometrics</li>
-      <li><strong>SPSS</strong> - Statistical analysis and data management</li>
-      <li><strong>GIS Software</strong> - Geographic information systems</li>
-      <li><strong>Research Methods</strong> - Quantitative and qualitative analysis</li>
-      <li><strong>Data Visualization</strong> - Charts, graphs, and infographics</li>
-    </ul>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Stata</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">SPSS</span>
+          <span class="skill-level">75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">GIS Software</span>
+          <span class="skill-level">70%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 70%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Research Methods</span>
+          <span class="skill-level">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Data Visualization</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="skill-category">
+  <div class="skill-section">
     <h4><i class="fas fa-globe"></i> Languages</h4>
-    <ul>
-      <li><strong>English</strong> - IELTS overall 7.0 (Professional proficiency)</li>
-      <li><strong>Chinese</strong> - Native speaker (Mandarin)</li>
-    </ul>
+    <div class="skill-bars">
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">English</span>
+          <span class="skill-level">85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-info">
+          <span class="skill-name">Chinese</span>
+          <span class="skill-level">100%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

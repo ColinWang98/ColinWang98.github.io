@@ -29,7 +29,7 @@ classes: subpage
     </div>
   </div>
   <div class="paper-box-image">
-    <img src="images/500x300.png" alt="Edu-Metaverse Research">
+    <!-- no image -->
   </div>
 </div>
 
@@ -99,50 +99,4 @@ classes: subpage
 - Mixed-Methods Research
 - Participatory Design
 
----
-
-## Academic Service & Collaboration
-
-### Current Collaborations
-- **The Hong Kong Polytechnic University** - Research Assistant with [Prof. Li Chen Richard](https://chenli.me/)
-- **Spatial.io Platform** - Metaverse development and cultural heritage projects
-
-### Research Networks
-- Member of ACM SIGCHI (Computer-Human Interaction)
-- Active participant in XR research communities
-- Contributor to open-source VR development projects
-
----
-
-## Citation Format
-
-<div id="edu-metaverse-cite" class="project-details">
-  <h3>📊 Citation Information</h3>
-  
-  <h4>APA Format:</h4>
-  <p><em>Lu, Y., Jia, Y., Chen, G., Wang, Y., Ng, P. H. F., Zhou, L., Li, Q., & Li, C. (2025). Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour. In Learning Technologies and Systems (pp. 40-54). Springer.</em></p>
-  
-  <h4>IEEE Format:</h4>
-  <p><em>Y. Lu et al., "Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour," in Learning Technologies and Systems, Springer, 2025, pp. 40-54.</em></p>
-  
-  <h4>BibTeX:</h4>
-  <pre><code>@inproceedings{lu2025towards,
-  title={Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour},
-  author={Lu, Yufei and Jia, Ye and Chen, Guang and Wang, Yao and Ng, Peter HF and Zhou, Laura and Li, Qing and Li, Chen},
-  booktitle={Learning Technologies and Systems},
-  pages={40--54},
-  year={2025},
-  publisher={Springer},
-  series={Lecture Notes in Computer Science},
-  volume={15589},
-  doi={10.1007/978-981-96-4407-0_4}
-}</code></pre>
-</div>
-
----
-
-<div class="cta-section">
-  <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact for Collaboration</a>
-  <a href="/about/" class="btn">📧 Collaborate</a>
-  <a href="mailto:23064693g@connect.polyu.hk" class="btn">✉️ Contact</a>
-</div> 
+--- 

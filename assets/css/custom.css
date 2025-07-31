@@ -169,21 +169,50 @@ body {
   width: var(--sphere-size, 20px);
   height: var(--sphere-size, 20px);
   background: radial-gradient(circle, 
-    var(--sphere-color-1, rgba(76, 175, 80, 0.4)) 0%, 
-    var(--sphere-color-2, rgba(139, 195, 74, 0.2)) 40%, 
-    var(--sphere-color-3, rgba(205, 220, 57, 0.1)) 70%,
+    rgba(76, 175, 80, 0.8) 0%, 
+    rgba(76, 175, 80, 0.6) 30%, 
+    rgba(76, 175, 80, 0.4) 60%,
+    rgba(76, 175, 80, 0.2) 80%,
     transparent 100%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
   opacity: var(--sphere-opacity, 0);
   transition: opacity 0.8s ease, width 0.8s ease, height 0.8s ease;
-  box-shadow: 0 0 30px var(--sphere-shadow, rgba(76, 175, 80, 0.3));
+  box-shadow: 
+    0 0 30px rgba(76, 175, 80, 0.4),
+    0 0 60px rgba(76, 175, 80, 0.2),
+    0 0 90px rgba(76, 175, 80, 0.1);
   backdrop-filter: blur(8px);
   left: var(--sphere-x, 50%);
   top: var(--sphere-y, 50%);
   transform: translate(-50%, -50%);
-  filter: hue-rotate(var(--sphere-hue, 0deg)) saturate(var(--sphere-saturation, 1.2)) brightness(var(--sphere-brightness, 1));
+  filter: brightness(1.2) saturate(1.3);
+}
+
+/* 粒子效果动画 */
+@keyframes particleGlow {
+  0% {
+    box-shadow: 
+      0 0 30px rgba(76, 175, 80, 0.4),
+      0 0 60px rgba(76, 175, 80, 0.2),
+      0 0 90px rgba(76, 175, 80, 0.1);
+    filter: brightness(1.2) saturate(1.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(76, 175, 80, 0.6),
+      0 0 80px rgba(76, 175, 80, 0.3),
+      0 0 120px rgba(76, 175, 80, 0.15);
+    filter: brightness(1.4) saturate(1.5);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(76, 175, 80, 0.4),
+      0 0 60px rgba(76, 175, 80, 0.2),
+      0 0 90px rgba(76, 175, 80, 0.1);
+    filter: brightness(1.2) saturate(1.3);
+  }
 }
 
 /* Siri风格的流体颜色动画 */
@@ -3234,86 +3263,48 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   width: var(--sphere-size, 20px);
   height: var(--sphere-size, 20px);
   background: radial-gradient(circle, 
-    var(--sphere-color-1, rgba(76, 175, 80, 0.4)) 0%, 
-    var(--sphere-color-2, rgba(139, 195, 74, 0.2)) 40%, 
-    var(--sphere-color-3, rgba(205, 220, 57, 0.1)) 70%,
+    rgba(76, 175, 80, 0.8) 0%, 
+    rgba(76, 175, 80, 0.6) 30%, 
+    rgba(76, 175, 80, 0.4) 60%,
+    rgba(76, 175, 80, 0.2) 80%,
     transparent 100%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
   opacity: var(--sphere-opacity, 0);
   transition: opacity 0.8s ease, width 0.8s ease, height 0.8s ease;
-  box-shadow: 0 0 30px var(--sphere-shadow, rgba(76, 175, 80, 0.3));
+  box-shadow: 
+    0 0 30px rgba(76, 175, 80, 0.4),
+    0 0 60px rgba(76, 175, 80, 0.2),
+    0 0 90px rgba(76, 175, 80, 0.1);
   backdrop-filter: blur(8px);
   left: var(--sphere-x, 50%);
   top: var(--sphere-y, 50%);
   transform: translate(-50%, -50%);
-  filter: hue-rotate(var(--sphere-hue, 0deg)) saturate(var(--sphere-saturation, 1.2)) brightness(var(--sphere-brightness, 1));
+  filter: brightness(1.2) saturate(1.3);
 }
 
-/* Siri风格的流体颜色动画 */
-@keyframes siriColorFlow {
+/* 粒子效果动画 */
+@keyframes particleGlow {
   0% {
-    --sphere-color-1: rgba(76, 175, 80, 0.4);
-    --sphere-color-2: rgba(139, 195, 74, 0.2);
-    --sphere-color-3: rgba(205, 220, 57, 0.1);
-    --sphere-shadow: rgba(76, 175, 80, 0.3);
-    --sphere-hue: 0deg;
-    --sphere-saturation: 1.2;
-    --sphere-brightness: 1;
-  }
-  16.66% {
-    --sphere-color-1: rgba(139, 195, 74, 0.4);
-    --sphere-color-2: rgba(205, 220, 57, 0.2);
-    --sphere-color-3: rgba(255, 235, 59, 0.1);
-    --sphere-shadow: rgba(139, 195, 74, 0.3);
-    --sphere-hue: 30deg;
-    --sphere-saturation: 1.3;
-    --sphere-brightness: 1.1;
-  }
-  33.33% {
-    --sphere-color-1: rgba(205, 220, 57, 0.4);
-    --sphere-color-2: rgba(255, 235, 59, 0.2);
-    --sphere-color-3: rgba(255, 193, 7, 0.1);
-    --sphere-shadow: rgba(205, 220, 57, 0.3);
-    --sphere-hue: 60deg;
-    --sphere-saturation: 1.4;
-    --sphere-brightness: 1.2;
+    box-shadow: 
+      0 0 30px rgba(76, 175, 80, 0.4),
+      0 0 60px rgba(76, 175, 80, 0.2),
+      0 0 90px rgba(76, 175, 80, 0.1);
+    filter: brightness(1.2) saturate(1.3);
   }
   50% {
-    --sphere-color-1: rgba(255, 235, 59, 0.4);
-    --sphere-color-2: rgba(255, 193, 7, 0.2);
-    --sphere-color-3: rgba(255, 152, 0, 0.1);
-    --sphere-shadow: rgba(255, 235, 59, 0.3);
-    --sphere-hue: 90deg;
-    --sphere-saturation: 1.5;
-    --sphere-brightness: 1.3;
-  }
-  66.66% {
-    --sphere-color-1: rgba(255, 193, 7, 0.4);
-    --sphere-color-2: rgba(255, 152, 0, 0.2);
-    --sphere-color-3: rgba(255, 111, 0, 0.1);
-    --sphere-shadow: rgba(255, 193, 7, 0.3);
-    --sphere-hue: 120deg;
-    --sphere-saturation: 1.4;
-    --sphere-brightness: 1.2;
-  }
-  83.33% {
-    --sphere-color-1: rgba(255, 152, 0, 0.4);
-    --sphere-color-2: rgba(255, 111, 0, 0.2);
-    --sphere-color-3: rgba(255, 87, 34, 0.1);
-    --sphere-shadow: rgba(255, 152, 0, 0.3);
-    --sphere-hue: 150deg;
-    --sphere-saturation: 1.3;
-    --sphere-brightness: 1.1;
+    box-shadow: 
+      0 0 40px rgba(76, 175, 80, 0.6),
+      0 0 80px rgba(76, 175, 80, 0.3),
+      0 0 120px rgba(76, 175, 80, 0.15);
+    filter: brightness(1.4) saturate(1.5);
   }
   100% {
-    --sphere-color-1: rgba(76, 175, 80, 0.4);
-    --sphere-color-2: rgba(139, 195, 74, 0.2);
-    --sphere-color-3: rgba(205, 220, 57, 0.1);
-    --sphere-shadow: rgba(76, 175, 80, 0.3);
-    --sphere-hue: 0deg;
-    --sphere-saturation: 1.2;
-    --sphere-brightness: 1;
+    box-shadow: 
+      0 0 30px rgba(76, 175, 80, 0.4),
+      0 0 60px rgba(76, 175, 80, 0.2),
+      0 0 90px rgba(76, 175, 80, 0.1);
+    filter: brightness(1.2) saturate(1.3);
   }
 }

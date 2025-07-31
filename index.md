@@ -23,7 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   heroSection.addEventListener('mousemove', function(e) {
-    createRipple(e);
+    // 限制波纹创建频率，避免过于密集
+    if (!heroSection.rippleTimer) {
+      heroSection.rippleTimer = setTimeout(() => {
+        createRipple(e);
+        heroSection.rippleTimer = null;
+      }, 100);
+    }
   });
   
   function createRipple(e) {
@@ -42,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setTimeout(() => {
       ripple.remove();
-    }, 1200);
+    }, 2000);
   }
 });
 </script>

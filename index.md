@@ -8,7 +8,6 @@ classes: homepage
   <div class="hero-content">
     <div class="name-title">Wang Yao</div>
     <div class="position-title">HCI Researcher & XR Developer</div>
-    <div class="affiliation">The Hong Kong Polytechnic University</div>
     <div class="research-motto">
       <em>"Constantly thinking, constantly progressing"</em>
     </div>

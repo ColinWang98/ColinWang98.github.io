@@ -166,13 +166,23 @@ body {
 .hero-section::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: none !important;
-  animation: none !important;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.4) 0%, rgba(139, 195, 74, 0.2) 50%, rgba(205, 220, 57, 0.1) 100%);
+  border-radius: 50%;
   pointer-events: none;
+  z-index: 1;
+  opacity: var(--sphere-opacity, 0);
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 30px rgba(76, 175, 80, 0.3);
+  backdrop-filter: blur(5px);
+  left: var(--sphere-x, 50%);
+  top: var(--sphere-y, 50%);
+  transform: translate(-50%, -50%);
+}
+
+.hero-section:hover::after {
+  opacity: 1;
 }
 
 .hero-section {
@@ -181,15 +191,7 @@ body {
 
 /* 自然水波纹涟漪效果 */
 .hero-section .ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: natural-ripple 2s ease-out;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(76, 175, 80, 0.1) 50%, transparent 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  pointer-events: none;
-  z-index: 10;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  display: none;
 }
 
 @keyframes natural-ripple {

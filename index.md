@@ -18,38 +18,23 @@ classes: homepage
 document.addEventListener('DOMContentLoaded', function() {
   const heroSection = document.getElementById('hero-section');
   
-  heroSection.addEventListener('mouseenter', function(e) {
-    createRipple(e);
-  });
-  
   heroSection.addEventListener('mousemove', function(e) {
-    // 限制波纹创建频率，避免过于密集
-    if (!heroSection.rippleTimer) {
-      heroSection.rippleTimer = setTimeout(() => {
-        createRipple(e);
-        heroSection.rippleTimer = null;
-      }, 100);
-    }
+    const rect = heroSection.getBoundingClientRect();
+    const x = e.clientX - rect.left - 60; // 60px是球体半径
+    const y = e.clientY - rect.top - 60;
+    
+    // 更新球体位置
+    heroSection.style.setProperty('--sphere-x', x + 'px');
+    heroSection.style.setProperty('--sphere-y', y + 'px');
   });
   
-  function createRipple(e) {
-    const ripple = document.createElement('span');
-    const rect = heroSection.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
-    
-    ripple.style.width = ripple.style.height = size + 'px';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    ripple.classList.add('ripple');
-    
-    heroSection.appendChild(ripple);
-    
-    setTimeout(() => {
-      ripple.remove();
-    }, 2000);
-  }
+  heroSection.addEventListener('mouseenter', function() {
+    heroSection.style.setProperty('--sphere-opacity', '1');
+  });
+  
+  heroSection.addEventListener('mouseleave', function() {
+    heroSection.style.setProperty('--sphere-opacity', '0');
+  });
 });
 </script>
 

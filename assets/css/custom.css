@@ -180,11 +180,32 @@ body {
   transform: perspective(1000px) rotateX(10deg);
 }
 
+/* 悬停5秒后触发的VR头盔效果 */
 .hero-content:hover .name-title,
 .hero-content:hover .position-title,
 .hero-content:hover .affiliation,
 .hero-content:hover .research-motto {
-  animation: vrGlassesEffect 1.2s ease-in-out forwards;
+  transition: all 5s ease-in-out;
+}
+
+.hero-content:hover .name-title {
+  animation: vrHelmetText1 5s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+.hero-content:hover .position-title {
+  animation: vrHelmetText2 5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-content:hover .affiliation {
+  animation: vrHelmetText3 5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.hero-content:hover .research-motto {
+  animation: vrHelmetText4 5s ease-in-out forwards;
+  animation-delay: 1.5s;
 }
 
 .name-title {
@@ -197,8 +218,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.8s ease-in-out;
+  transition: all 5s ease-in-out;
   position: relative;
+  display: inline-block;
 }
 
 .position-title {
@@ -206,8 +228,9 @@ body {
   color: var(--text-secondary);
   margin-bottom: 1rem;
   font-weight: 500;
-  transition: all 0.8s ease-in-out;
+  transition: all 5s ease-in-out;
   position: relative;
+  display: inline-block;
 }
 
 .affiliation {
@@ -215,8 +238,9 @@ body {
   color: var(--accent-color);
   margin-bottom: 1.5rem;
   font-weight: 600;
-  transition: all 0.8s ease-in-out;
+  transition: all 5s ease-in-out;
   position: relative;
+  display: inline-block;
 }
 
 .research-motto {
@@ -230,8 +254,9 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(76, 175, 80, 0.2);
-  transition: all 0.8s ease-in-out;
+  transition: all 5s ease-in-out;
   position: relative;
+  display: inline-block;
 }
 
 .research-motto em {
@@ -240,73 +265,183 @@ body {
   font-weight: 600;
 }
 
-@keyframes vrGlassesEffect {
+/* VR头盔文字重排动画 */
+@keyframes vrHelmetText1 {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) rotateX(0deg);
     opacity: 1;
   }
-  
-  25% {
-    transform: translateY(-20px) scale(0.9);
+  20% {
+    transform: translateY(-50px) scale(0.8) rotateX(20deg);
     opacity: 0.8;
   }
-  
-  50% {
-    transform: translateY(-40px) scale(0.8);
+  40% {
+    transform: translateY(-100px) scale(0.6) rotateX(40deg);
     opacity: 0.6;
   }
-  
-  75% {
-    transform: translateY(-60px) scale(0.7);
+  60% {
+    transform: translateY(-150px) scale(0.4) rotateX(60deg);
     opacity: 0.4;
   }
-  
-  100% {
-    transform: translateY(-80px) scale(0.6);
+  80% {
+    transform: translateY(-200px) scale(0.2) rotateX(80deg);
     opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-250px) scale(0.1) rotateX(90deg);
+    opacity: 0;
   }
 }
 
-/* VR眼镜形状的伪元素 */
+@keyframes vrHelmetText2 {
+  0% {
+    transform: translateY(0) scale(1) rotateX(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-30px) scale(0.9) rotateX(15deg);
+    opacity: 0.9;
+  }
+  40% {
+    transform: translateY(-60px) scale(0.7) rotateX(30deg);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(-90px) scale(0.5) rotateX(45deg);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(-120px) scale(0.3) rotateX(60deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-150px) scale(0.1) rotateX(75deg);
+    opacity: 0;
+  }
+}
+
+@keyframes vrHelmetText3 {
+  0% {
+    transform: translateY(0) scale(1) rotateX(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-20px) scale(0.95) rotateX(10deg);
+    opacity: 0.95;
+  }
+  40% {
+    transform: translateY(-40px) scale(0.8) rotateX(20deg);
+    opacity: 0.8;
+  }
+  60% {
+    transform: translateY(-60px) scale(0.6) rotateX(30deg);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateY(-80px) scale(0.4) rotateX(40deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.2) rotateX(50deg);
+    opacity: 0;
+  }
+}
+
+@keyframes vrHelmetText4 {
+  0% {
+    transform: translateY(0) scale(1) rotateX(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-10px) scale(0.98) rotateX(5deg);
+    opacity: 0.98;
+  }
+  40% {
+    transform: translateY(-20px) scale(0.9) rotateX(10deg);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(-30px) scale(0.7) rotateX(15deg);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(-40px) scale(0.5) rotateX(20deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-50px) scale(0.3) rotateX(25deg);
+    opacity: 0;
+  }
+}
+
+/* VR头盔形状容器 */
 .hero-content:hover::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 120px;
-  border: 4px solid var(--accent-color);
-  border-radius: 60px;
-  background: rgba(76, 175, 80, 0.1);
-  backdrop-filter: blur(10px);
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(135deg, 
+    rgba(76, 175, 80, 0.2) 0%, 
+    rgba(139, 195, 74, 0.2) 25%, 
+    rgba(205, 220, 57, 0.2) 50%, 
+    rgba(255, 235, 59, 0.2) 75%, 
+    rgba(255, 193, 7, 0.2) 100%);
+  border: 6px solid var(--accent-color);
+  border-radius: 200px 200px 100px 100px;
   z-index: -1;
-  animation: vrGlassesAppear 1.2s ease-in-out forwards;
-  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+  opacity: 0;
+  animation: vrHelmetAppear 5s ease-in-out forwards;
+  animation-delay: 2s;
+  box-shadow: 
+    0 20px 40px rgba(76, 175, 80, 0.3),
+    inset 0 10px 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
 }
 
+/* VR头盔顶部装饰 */
 .hero-content:hover::after {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 4px;
+  width: 120px;
+  height: 40px;
   background: var(--accent-color);
-  border-radius: 2px;
+  border-radius: 20px;
   z-index: -1;
-  animation: vrGlassesBridge 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation: vrHelmetTop 5s ease-in-out forwards;
+  animation-delay: 2.5s;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-@keyframes vrGlassesAppear {
+@keyframes vrHelmetAppear {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.3) rotateX(90deg);
   }
   50% {
     opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1) rotateX(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotateX(0deg);
+  }
+}
+
+@keyframes vrHelmetTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.2);
   }
   100% {
     opacity: 1;
@@ -314,43 +449,32 @@ body {
   }
 }
 
-@keyframes vrGlassesBridge {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  50% {
-    opacity: 0.5;
-    width: 40px;
-  }
-  100% {
-    opacity: 1;
-    width: 80px;
-  }
-}
-
 /* 响应式设计 */
 @media (max-width: 768px) {
   .hero-content:hover::before {
-    width: 250px;
-    height: 100px;
-    border-radius: 50px;
+    width: 300px;
+    height: 220px;
+    border-radius: 150px 150px 75px 75px;
   }
   
   .hero-content:hover::after {
-    width: 60px;
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content:hover::before {
-    width: 200px;
-    height: 80px;
-    border-radius: 40px;
+    width: 250px;
+    height: 180px;
+    border-radius: 125px 125px 60px 60px;
   }
   
   .hero-content:hover::after {
-    width: 50px;
+    width: 70px;
+    height: 25px;
+    border-radius: 12px;
   }
 }
 

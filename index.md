@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 球体从小变大
     heroSection.style.setProperty('--sphere-size', '120px');
     heroSection.style.setProperty('--sphere-opacity', '1');
-    // 开始更自然的颜色动画
-    heroSection.style.animation = 'gentleColorShift 15s ease-in-out infinite';
+    // 开始Siri风格的流体颜色动画
+    heroSection.style.animation = 'siriColorFlow 8s ease-in-out infinite';
     animateSphere();
   });
   

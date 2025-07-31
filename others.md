@@ -98,7 +98,10 @@ function wrapCharsRandom(str, containerW, containerH) {
     if(ch==="\n"){line++;col=0;html+='<br>';continue;}
     let rx = Math.random()*containerW;
     let ry = Math.random()*containerH;
-    html += `<span class="poem-char" data-line="${line}" data-col="${col}" style="position:absolute;left:${rx}px;top:${ry}px;opacity:0;">${ch}</span>`;
+    // 为英文单词添加特殊处理
+    let isEnglish = /[a-zA-Z]/.test(ch);
+    let charClass = isEnglish ? 'poem-char-en' : 'poem-char';
+    html += `<span class="${charClass}" data-line="${line}" data-col="${col}" style="position:absolute;left:${rx}px;top:${ry}px;opacity:0;white-space:nowrap;">${ch}</span>`;
     col++;
   }
   return html;
@@ -106,14 +109,16 @@ function wrapCharsRandom(str, containerW, containerH) {
 
 function layoutPoemChars(container, lineHeight, fontSize) {
   // 让每个字回到诗歌排版位置
-  const chars = container.querySelectorAll('.poem-char');
+  const chars = container.querySelectorAll('.poem-char, .poem-char-en');
   let x0 = container.offsetWidth/2, y0 = 20;
   let maxCol = 0;
   chars.forEach(span=>{maxCol=Math.max(maxCol,parseInt(span.dataset.col));});
   chars.forEach(span=>{
     let line = parseInt(span.dataset.line);
     let col = parseInt(span.dataset.col);
-    let left = x0 - (maxCol/2-col)*fontSize*1.1;
+    let isEnglish = span.classList.contains('poem-char-en');
+    let charWidth = isEnglish ? fontSize * 0.6 : fontSize * 1.1; // 英文字符宽度较小
+    let left = x0 - (maxCol/2-col)*charWidth;
     let top = y0 + line*lineHeight;
     gsap.to(span, {left:left, top:top, opacity:1, duration:0.8, ease:'power2.out', delay:0.2+Math.random()*0.3});
   });
@@ -121,7 +126,7 @@ function layoutPoemChars(container, lineHeight, fontSize) {
 
 function flyAwayPoemChars(container) {
   // 每个字无序飞走
-  const chars = container.querySelectorAll('.poem-char');
+  const chars = container.querySelectorAll('.poem-char, .poem-char-en');
   chars.forEach(span=>{
     let dx = (Math.random()-0.5)*600;
     let dy = (Math.random()-0.5)*300;
@@ -166,13 +171,13 @@ function showPoem(idx) {
     
     if(chineseLine.trim() === '') {
       // 空行
-      html += `<div style='height:${lineHeight}px;'></div>`;
+      html += `<div style='height:${lineHeight*1.5}px;'></div>`;
     } else {
       // 中文行
-      html += `<div style='position:relative;height:${lineHeight}px;'>${wrapCharsRandom(chineseLine,container.offsetWidth,lineHeight)}</div>`;
+      html += `<div style='position:relative;height:${lineHeight}px;margin-bottom:2px;'>${wrapCharsRandom(chineseLine,container.offsetWidth,lineHeight)}</div>`;
       // 英文翻译行（如果有）
       if(englishLine.trim() !== '') {
-        html += `<div style='position:relative;height:${lineHeight*0.8}px;color:#666;font-size:0.9em;'>${wrapCharsRandom(englishLine,container.offsetWidth,lineHeight*0.8)}</div>`;
+        html += `<div style='position:relative;height:${lineHeight*0.8}px;color:#666;font-size:0.85em;margin-bottom:${lineHeight*0.3}px;'>${wrapCharsRandom(englishLine,container.offsetWidth,lineHeight*0.8)}</div>`;
       }
     }
   }

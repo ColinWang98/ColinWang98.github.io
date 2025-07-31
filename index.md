@@ -46,23 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
       Math.pow(e.clientY - rect.top - centerY, 2)
     );
     
-    // 根据距离中心的远近调整色相
-    const hueOffset = (distanceFromCenter / 100) * 60;
+    // 温和的色相调整
+    const hueOffset = (distanceFromCenter / 200) * 30;
     heroSection.style.setProperty('--sphere-hue', hueOffset + 'deg');
     
-    // 根据背景颜色调整饱和度
-    const saturation = 1 + (distanceFromCenter / 200);
+    // 温和的饱和度调整
+    const saturation = 0.8 + (distanceFromCenter / 400);
     heroSection.style.setProperty('--sphere-saturation', saturation);
   });
   
   heroSection.addEventListener('mouseenter', function() {
+    // 球体从小变大
+    heroSection.style.setProperty('--sphere-size', '120px');
     heroSection.style.setProperty('--sphere-opacity', '1');
-    // 开始颜色动画
-    heroSection.style.animation = 'sphereColorShift 8s ease-in-out infinite';
+    // 开始温和的颜色动画
+    heroSection.style.animation = 'gentleColorShift 10s ease-in-out infinite';
     animateSphere();
   });
   
   heroSection.addEventListener('mouseleave', function() {
+    // 球体变小并消失
+    heroSection.style.setProperty('--sphere-size', '20px');
     heroSection.style.setProperty('--sphere-opacity', '0');
     // 停止颜色动画
     heroSection.style.animation = 'none';

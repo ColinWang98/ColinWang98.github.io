@@ -132,31 +132,22 @@ body {
 }
 
 /* ==========================================================================
-   首页英雄区域样式
+   首页英雄区域 - 智能园艺系统设计风格
    ========================================================================== */
 
-/* 首页专用的hero区域 */
-.homepage .hero-section {
-  background: var(--gradient-bg);
-  padding: 4em 0 3em 0;
-  margin: -50px -50px 3em -50px;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  color: white;
-  text-align: center;
+.hero-section {
+  background: linear-gradient(135deg, 
+    rgba(76, 175, 80, 0.1) 0%, 
+    rgba(139, 195, 74, 0.1) 25%, 
+    rgba(205, 220, 57, 0.1) 50%, 
+    rgba(255, 235, 59, 0.1) 75%, 
+    rgba(255, 193, 7, 0.1) 100%);
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
-}
-
-/* 子页面的hero区域（如果存在）*/
-.page .hero-section {
-  background: var(--gradient-bg);
-  padding: 3em 2em;
-  margin: -50px -50px 2em -50px;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.1);
 }
 
 .hero-section::before {
@@ -166,54 +157,106 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.1);
-  z-index: 1;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%234CAF50" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%238BC34A" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23CDDC39" opacity="0.1"/><circle cx="90" cy="90" r="1.5" fill="%23FFEB3B" opacity="0.1"/></svg>');
+  background-size: 100px 100px;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
 }
 
 .hero-content {
+  text-align: center;
   position: relative;
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 2em;
 }
 
 .name-title {
-  font-size: 3.5em;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 0.3em;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #4CAF50, #8BC34A, #CDDC39);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .position-title {
-  font-size: 1.3em;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
   font-weight: 500;
-  margin-bottom: 0.5em;
-  color: rgba(255,255,255,0.9);
 }
 
 .affiliation {
-  font-size: 1.1em;
-  margin-bottom: 1.5em;
-  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .research-motto {
-  font-size: 1.2em;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1.5em 2em;
-  background: rgba(255,255,255,0.1);
-  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
 .research-motto em {
-  font-style: italic;
-  color: rgba(255,255,255,0.95);
+  color: var(--primary-color);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .name-title {
+    font-size: 2.5rem;
+  }
+  
+  .position-title {
+    font-size: 1.3rem;
+  }
+  
+  .research-motto {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .name-title {
+    font-size: 2rem;
+  }
+  
+  .position-title {
+    font-size: 1.1rem;
+  }
+  
+  .research-motto {
+    font-size: 1rem;
+  }
 }
 
 /* ==========================================================================
@@ -2956,5 +2999,93 @@ article, .page, [itemtype="http://schema.org/CreativeWork"] {
   
   .skill-level {
     align-self: flex-end;
+  }
+}
+
+/* ==========================================================================
+   Click Me 弧形引导样式
+   ========================================================================== */
+
+.click-me-hint {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 60px;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out infinite;
+  z-index: 100;
+}
+
+.click-me-curve {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.curve-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawCurve 2s ease-in-out infinite;
+}
+
+.click-me-text {
+  font-size: 12px;
+  font-weight: 600;
+  fill: var(--accent-color);
+  font-family: 'Arial', sans-serif;
+  opacity: 0;
+  animation: textFade 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes drawCurve {
+  0% { stroke-dashoffset: 200; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -200; }
+}
+
+@keyframes textFade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.author__avatar {
+  position: relative;
+}
+
+.author__avatar:hover .click-me-hint {
+  animation-play-state: paused;
+  opacity: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .click-me-hint {
+    width: 100px;
+    height: 50px;
+    top: -35px;
+  }
+  
+  .click-me-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .click-me-hint {
+    width: 80px;
+    height: 40px;
+    top: -30px;
+  }
+  
+  .click-me-text {
+    font-size: 8px;
   }
 }

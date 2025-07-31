@@ -4,6 +4,17 @@ title: "Homepage"
 classes: homepage
 ---
 
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="name-title">Wang Yao</div>
+    <div class="position-title">HCI Researcher & XR Developer</div>
+    <div class="affiliation">The Hong Kong Polytechnic University</div>
+    <div class="research-motto">
+      <em>"Bridging virtual worlds with cultural heritage through accessible, therapeutic design"</em>
+    </div>
+  </div>
+</div>
+
 
 
 ## About Me
@@ -53,7 +64,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 </details>
 
 ### Current Status
-🎯 **Seeking PhD opportunities** in HCI, XR, Virtual Environment, Environmental Psychology and related fields.
+🎯 **Seeking PhD opportunities** in HCI, XR, Virtual Environment, Environmental Psychology, City Culture and related fields.
 
 ---
 
@@ -113,17 +124,17 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 
 <div class="paper-box">
   <div class="paper-box-text">
-    <h3>Farming Therapy UI/UX Design</h3>
+    <h3>UI Design for a Smart Gardening System for Dementia Therapy</h3>
     <div class="project-tags">
       <span class="badge">UI/UX Design</span>
       <span class="badge">Therapeutic Design</span>
-      <span class="badge">Mobile App</span>
+      <span class="badge">Accessibility</span>
       <span class="badge">Figma</span>
     </div>
     
-    <p>Designed and implemented user interfaces for farming therapy applications, focusing on accessible design principles and therapeutic user experiences. The project emphasized creating calming, intuitive interfaces that support mental health and wellness through digital gardening experiences.</p>
+    <p>User interfaces for farming therapy applications, focusing on accessible design principles. The project emphasized creating calming, intuitive interfaces that support mental health and wellness through digital guidance of gardening experiences.</p>
     
-    <p><strong>Design Principles:</strong> Accessibility, therapeutic interaction, nature-inspired aesthetics</p>
+    <p><strong>Design Principles:</strong> Accessibility, therapeutic interaction, nature-inspired aesthetics, dementia-friendly design</p>
     <p><strong>Platform:</strong> Mobile Application Design</p>
     
     <div class="project-links">

@@ -17,23 +17,58 @@ classes: homepage
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const heroSection = document.getElementById('hero-section');
+  let mouseX = 0, mouseY = 0;
+  let sphereX = 0, sphereY = 0;
+  let animationId;
+  
+  // 平滑跟随动画
+  function animateSphere() {
+    // 添加延迟效果，球体跟随鼠标有一定滞后
+    sphereX += (mouseX - sphereX) * 0.1;
+    sphereY += (mouseY - sphereY) * 0.1;
+    
+    heroSection.style.setProperty('--sphere-x', sphereX + 'px');
+    heroSection.style.setProperty('--sphere-y', sphereY + 'px');
+    
+    animationId = requestAnimationFrame(animateSphere);
+  }
   
   heroSection.addEventListener('mousemove', function(e) {
     const rect = heroSection.getBoundingClientRect();
-    const x = e.clientX - rect.left - 60; // 60px是球体半径
-    const y = e.clientY - rect.top - 60;
+    mouseX = e.clientX - rect.left - 60;
+    mouseY = e.clientY - rect.top - 60;
     
-    // 更新球体位置
-    heroSection.style.setProperty('--sphere-x', x + 'px');
-    heroSection.style.setProperty('--sphere-y', y + 'px');
+    // 根据鼠标位置调整颜色
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const distanceFromCenter = Math.sqrt(
+      Math.pow(e.clientX - rect.left - centerX, 2) + 
+      Math.pow(e.clientY - rect.top - centerY, 2)
+    );
+    
+    // 根据距离中心的远近调整色相
+    const hueOffset = (distanceFromCenter / 100) * 60;
+    heroSection.style.setProperty('--sphere-hue', hueOffset + 'deg');
+    
+    // 根据背景颜色调整饱和度
+    const saturation = 1 + (distanceFromCenter / 200);
+    heroSection.style.setProperty('--sphere-saturation', saturation);
   });
   
   heroSection.addEventListener('mouseenter', function() {
     heroSection.style.setProperty('--sphere-opacity', '1');
+    // 开始颜色动画
+    heroSection.style.animation = 'sphereColorShift 8s ease-in-out infinite';
+    animateSphere();
   });
   
   heroSection.addEventListener('mouseleave', function() {
     heroSection.style.setProperty('--sphere-opacity', '0');
+    // 停止颜色动画
+    heroSection.style.animation = 'none';
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
   });
 });
 </script>

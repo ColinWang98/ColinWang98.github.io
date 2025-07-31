@@ -61,7 +61,7 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 </div>
 
 ## Poetry
-<div id="poem-container" style="min-height:700px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;max-width:100vw;overflow:hidden;"></div>
+<div id="poem-container" style="min-height:900px;position:relative;text-align:center;margin:2em 0 4em 0;font-size:1.2em;line-height:2;max-width:100vw;overflow:hidden;"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>
@@ -69,15 +69,21 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 const poems = [
   {
     title: "空悬",
-    content: `镜中人是勤劳的蓝色的\n她们把时间编进擦拭眼泪的手帕\n称之为宿命\n而宿命又被藏进夜晚的梦里\n等待来日被忘记\n“我们取一些风晾晒在阳台”\n玻璃房子里的花童 暂时将眼睛闭起来\n生锈的街道上\n男人，女人和孩子，他们的号子是风中的私语\n催眠时代的梦境\n夜晚的斗篷绣满玫瑰花的种子\n阳光下开出荆棘缠绕的浪漫\n一场游戏？ 一出好戏！\n愚人的妻子踮着脚 住进了沙滩城堡\n战士们则不知疲倦地决斗 对手只是一颗刺梨\n饮下薄荷叶发酵的毒酒\n月亮下的倒影依旧沉寂`
+    titleEn: "Suspended",
+    content: `镜中人是勤劳的蓝色的\n她们把时间编进擦拭眼泪的手帕\n称之为宿命\n而宿命又被藏进夜晚的梦里\n等待来日被忘记\n"我们取一些风晾晒在阳台"\n玻璃房子里的花童 暂时将眼睛闭起来\n生锈的街道上\n男人，女人和孩子，他们的号子是风中的私语\n催眠时代的梦境\n夜晚的斗篷绣满玫瑰花的种子\n阳光下开出荆棘缠绕的浪漫\n一场游戏？ 一出好戏！\n愚人的妻子踮着脚 住进了沙滩城堡\n战士们则不知疲倦地决斗 对手只是一颗刺梨\n饮下薄荷叶发酵的毒酒\n月亮下的倒影依旧沉寂`,
+    contentEn: `The mirror people are industrious blue\nThey weave time into handkerchiefs that wipe away tears\nCalling it destiny\nAnd destiny is hidden in the dreams of night\nWaiting to be forgotten tomorrow\n"We take some wind to dry on the balcony"\nThe flower child in the glass house temporarily closes her eyes\nOn the rusty streets\nMen, women, and children, their chants are whispers in the wind\nHypnotizing the dreams of an era\nThe night's cloak is embroidered with rose seeds\nUnder sunlight, thorns entwine romance\nA game? A good show!\nThe fool's wife tiptoes into a sandcastle\nWhile warriors tirelessly duel, their opponent just a prickly pear\nDrinking the poisoned wine fermented from mint leaves\nThe reflection under the moon remains silent`
   },
   {
     title: "低语",
-    content: `“忘掉那些红色的梦吧”\n钢铁森林 迷雾笼罩着金属的声音\n独眼巨人守护着最后一片不毛之地\n在大地上画满未知的警告  试图抵御文明的入侵\n向左！向左！\n乌鸦点缀了田野的脊骨  哀悼生锈的农具\n贵族们的甲胄发出阵阵耻笑  化作阳光下的悲鸣\n巨人饮下时代的毒酒  刹那间的盎然生机\n太阳沉沉睡去 和那些生锈了的信仰一起\n消失在秋天的春风里`
+    titleEn: "Whisper",
+    content: `"忘掉那些红色的梦吧"\n钢铁森林 迷雾笼罩着金属的声音\n独眼巨人守护着最后一片不毛之地\n在大地上画满未知的警告  试图抵御文明的入侵\n向左！向左！\n乌鸦点缀了田野的脊骨  哀悼生锈的农具\n贵族们的甲胄发出阵阵耻笑  化作阳光下的悲鸣\n巨人饮下时代的毒酒  刹那间的盎然生机\n太阳沉沉睡去 和那些生锈了的信仰一起\n消失在秋天的春风里`,
+    contentEn: `"Forget those red dreams"\nSteel forest, mist shrouds the sound of metal\nThe one-eyed giant guards the last barren land\nDrawing unknown warnings on the earth, trying to resist civilization's invasion\nLeft! Left!\nCrows dot the spine of the fields, mourning rusty farm tools\nThe nobles' armor emits bursts of mockery, turning into lamentation under sunlight\nThe giant drinks the era's poisoned wine, a moment of vibrant life\nThe sun falls into deep sleep, along with those rusted beliefs\nDisappearing in the spring breeze of autumn`
   },
   {
     title: "一场游戏",
-    content: `（一）咽下短暂的欢愉 拥抱垂死的浪漫\n我在田野的脊骨旁哀悼\n烟气、沥青与电火花泵入时代的动脉\n轰鸣 轰鸣掩盖嘴边未说出的喜欢\n如同末世烟花一般 绚烂 短暂\n而墙上新春的桃符 只剩几个字母\n一年又去 大雾愈发浓重\n\n（二）\n戏剧上演便从未停下\n人们扮演着荒诞角色 假装彼此相爱\n然后偷偷地 给仿生人写一封电子情书\n妄图在二极管导向的乌托邦内苟活\n毕竟现世 不抵一场错过\n\n\n（三）\n在欲望相搏的游戏里\n痛苦便是仅存的信仰\n欲望闪烁 沉沦是清醒者的救赎\n霓虹聚又散 世界化作一场狂欢\n被神眷顾的一代 遗忘却成了奢望\n\n（四）\n“妈妈 我会像他们那样闪烁吗”\n男子呆呆地问  面色苍白繁星不语  \n妇人头低了下去破损的宇航服  \n面罩内布满了云雾闪烁着的星河褪色 \n逐渐化为了他的坟冢 一抔碎裂的呢喃\n\n\n（五）\n魂魄或许出走山林\n泥河偶有山雀  归家仍无期`
+    titleEn: "A Game",
+    content: `（一）咽下短暂的欢愉 拥抱垂死的浪漫\n我在田野的脊骨旁哀悼\n烟气、沥青与电火花泵入时代的动脉\n轰鸣 轰鸣掩盖嘴边未说出的喜欢\n如同末世烟花一般 绚烂 短暂\n而墙上新春的桃符 只剩几个字母\n一年又去 大雾愈发浓重\n\n（二）\n戏剧上演便从未停下\n人们扮演着荒诞角色 假装彼此相爱\n然后偷偷地 给仿生人写一封电子情书\n妄图在二极管导向的乌托邦内苟活\n毕竟现世 不抵一场错过\n\n\n（三）\n在欲望相搏的游戏里\n痛苦便是仅存的信仰\n欲望闪烁 沉沦是清醒者的救赎\n霓虹聚又散 世界化作一场狂欢\n被神眷顾的一代 遗忘却成了奢望\n\n（四）\n"妈妈 我会像他们那样闪烁吗"\n男子呆呆地问  面色苍白繁星不语  \n妇人头低了下去破损的宇航服  \n面罩内布满了云雾闪烁着的星河褪色 \n逐渐化为了他的坟冢 一抔碎裂的呢喃\n\n\n（五）\n魂魄或许出走山林\n泥河偶有山雀  归家仍无期`,
+    contentEn: `(I) Swallow brief joy, embrace dying romance\nI mourn beside the spine of the fields\nSmoke, asphalt, and electric sparks pump into the era's arteries\nRoaring, roaring covers the unspoken like on lips\nLike apocalyptic fireworks, brilliant, brief\nWhile the spring peach charms on the wall, only a few letters remain\nAnother year passes, the fog grows thicker\n\n(II)\nThe drama never stops once it begins\nPeople play absurd roles, pretending to love each other\nThen secretly write an electronic love letter to an android\nAttempting to survive in a diode-directed utopia\nAfter all, this world is not worth a single miss\n\n(III)\nIn the game where desires clash\nPain is the only remaining faith\nDesire flickers, sinking is the salvation of the clear-minded\nNeon gathers and disperses, the world becomes a carnival\nFor the generation blessed by gods, forgetting has become a luxury\n\n(IV)\n"Mom, will I flicker like them?"\nThe man asks dully, pale-faced, stars silent\nThe woman lowers her head in the damaged spacesuit\nThe visor filled with clouds, the flickering galaxy fades\nGradually becoming his grave, a handful of shattered whispers\n\n(V)\nPerhaps the soul has wandered to the mountains\nMuddy rivers occasionally have sparrows, but homecoming remains uncertain`
   }
 ];
 let poemIndex = 0;
@@ -127,7 +133,7 @@ function showPoem(idx) {
   const container = document.getElementById('poem-container');
   // 移动端自适应高度和字体
   let isMobile = window.innerWidth <= 768;
-  let height = isMobile ? 420 : 700;
+  let height = isMobile ? 600 : 900; // 增加高度以容纳英文翻译
   let fontSize = isMobile ? 15 : 20;
   let lineHeight = isMobile ? 24 : 32;
   container.style.position = 'relative';
@@ -135,12 +141,45 @@ function showPoem(idx) {
   container.style.fontSize = fontSize + 'px';
   container.innerHTML = '';
   const poem = poems[idx];
+  
   // 标题
   let title = poem.title;
+  let titleEn = poem.titleEn;
   let content = poem.content;
-  let html = `<div style='font-weight:bold;font-size:1.3em;margin-bottom:0.5em;position:relative;height:2em;'>${wrapCharsRandom(title,container.offsetWidth,40)}</div>`;
-  html += `<div style='position:relative;height:${height-100}px;'>${wrapCharsRandom(content,container.offsetWidth,height-100)}</div>`;
+  let contentEn = poem.contentEn;
+  
+  // 创建标题HTML
+  let html = `<div style='font-weight:bold;font-size:1.3em;margin-bottom:0.5em;position:relative;height:3em;'>${wrapCharsRandom(title,container.offsetWidth,60)}</div>`;
+  html += `<div style='font-weight:bold;font-size:1.1em;margin-bottom:1em;position:relative;height:2em;color:#666;'>${wrapCharsRandom(titleEn,container.offsetWidth,40)}</div>`;
+  
+  // 创建内容HTML - 中英文对照
+  html += `<div style='position:relative;height:${height-150}px;'>`;
+  
+  // 将中英文内容按行分割并配对
+  let chineseLines = content.split('\n');
+  let englishLines = contentEn.split('\n');
+  
+  // 为每行创建中英文对照
+  for(let i = 0; i < chineseLines.length; i++) {
+    let chineseLine = chineseLines[i];
+    let englishLine = englishLines[i] || '';
+    
+    if(chineseLine.trim() === '') {
+      // 空行
+      html += `<div style='height:${lineHeight}px;'></div>`;
+    } else {
+      // 中文行
+      html += `<div style='position:relative;height:${lineHeight}px;'>${wrapCharsRandom(chineseLine,container.offsetWidth,lineHeight)}</div>`;
+      // 英文翻译行（如果有）
+      if(englishLine.trim() !== '') {
+        html += `<div style='position:relative;height:${lineHeight*0.8}px;color:#666;font-size:0.9em;'>${wrapCharsRandom(englishLine,container.offsetWidth,lineHeight*0.8)}</div>`;
+      }
+    }
+  }
+  
+  html += '</div>';
   container.innerHTML = html;
+  
   setTimeout(()=>{
     layoutPoemChars(container,lineHeight,fontSize);
   },100);

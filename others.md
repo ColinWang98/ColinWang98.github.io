@@ -101,7 +101,7 @@ function wrapCharsRandom(str, containerW, containerH) {
     // 为英文单词添加特殊处理
     let isEnglish = /[a-zA-Z]/.test(ch);
     let charClass = isEnglish ? 'poem-char-en' : 'poem-char';
-    html += `<span class="${charClass}" data-line="${line}" data-col="${col}" style="position:absolute;left:${rx}px;top:${ry}px;opacity:0;white-space:nowrap;">${ch}</span>`;
+    html += `<span class="${charClass}" data-line="${line}" data-col="${col}" style="position:absolute;left:${rx}px;top:${ry}px;opacity:0;white-space:nowrap;display:inline-block;min-width:1em;">${ch}</span>`;
     col++;
   }
   return html;
@@ -174,10 +174,17 @@ function showPoem(idx) {
       html += `<div style='height:${lineHeight*1.5}px;'></div>`;
     } else {
       // 中文行
-      html += `<div style='position:relative;height:${lineHeight}px;margin-bottom:2px;'>${wrapCharsRandom(chineseLine,container.offsetWidth,lineHeight)}</div>`;
+      html += `<div style='position:relative;height:${lineHeight}px;margin-bottom:4px;'>`;
+      html += `<div style='text-align:center;'>`;
+      html += `<div style='display:inline-block;text-align:left;'>${wrapCharsRandom(chineseLine,container.offsetWidth,lineHeight)}</div>`;
+      html += '</div></div>';
+      
       // 英文翻译行（如果有）
       if(englishLine.trim() !== '') {
-        html += `<div style='position:relative;height:${lineHeight*0.8}px;color:#666;font-size:0.85em;margin-bottom:${lineHeight*0.3}px;'>${wrapCharsRandom(englishLine,container.offsetWidth,lineHeight*0.8)}</div>`;
+        html += `<div style='position:relative;height:${lineHeight*0.8}px;color:#666;font-size:0.85em;margin-bottom:${lineHeight*0.3}px;'>`;
+        html += `<div style='text-align:center;'>`;
+        html += `<div style='display:inline-block;text-align:left;'>${wrapCharsRandom(englishLine,container.offsetWidth,lineHeight*0.8)}</div>`;
+        html += '</div></div>';
       }
     }
   }

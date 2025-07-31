@@ -4,7 +4,7 @@ title: "Homepage"
 classes: homepage
 ---
 
-<div class="hero-section">
+<div class="hero-section" id="hero-section">
   <div class="hero-content">
     <div class="name-title">Wang Yao</div>
     <div class="position-title">HCI Researcher & XR Developer</div>
@@ -14,6 +14,38 @@ classes: homepage
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heroSection = document.getElementById('hero-section');
+  
+  heroSection.addEventListener('mouseenter', function(e) {
+    createRipple(e);
+  });
+  
+  heroSection.addEventListener('mousemove', function(e) {
+    createRipple(e);
+  });
+  
+  function createRipple(e) {
+    const ripple = document.createElement('span');
+    const rect = heroSection.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+    
+    heroSection.appendChild(ripple);
+    
+    setTimeout(() => {
+      ripple.remove();
+    }, 1200);
+  }
+});
+</script>
 
 
 ## About Me

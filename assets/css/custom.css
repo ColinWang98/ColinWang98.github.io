@@ -162,7 +162,7 @@ body {
   animation: float 20s ease-in-out infinite;
 }
 
-/* VR头盔背景图案循环 */
+/* 移除VR头盔背景，添加鼠标波纹扰动效果 */
 .hero-section::after {
   content: '';
   position: absolute;
@@ -170,11 +170,30 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><ellipse cx="100" cy="80" rx="60" ry="30" fill="none" stroke="%234CAF50" stroke-width="2" opacity="0.1"/><rect x="85" y="50" width="30" height="8" rx="4" fill="%234CAF50" opacity="0.1"/><circle cx="70" cy="75" r="3" fill="%234CAF50" opacity="0.1"/><circle cx="130" cy="75" r="3" fill="%234CAF50" opacity="0.1"/><circle cx="100" cy="85" r="3" fill="%234CAF50" opacity="0.1"/></svg>');
-  background-size: 200px 200px;
-  background-position: center;
-  animation: vrHelmetFade 8s ease-in-out infinite;
+  background: none !important;
+  animation: none !important;
   pointer-events: none;
+}
+
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-section .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-effect 1.2s linear;
+  background: rgba(76, 175, 80, 0.25);
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes ripple-effect {
+  to {
+    transform: scale(8);
+    opacity: 0;
+  }
 }
 
 @keyframes float {

@@ -10,7 +10,7 @@ classes: homepage
     <div class="position-title">HCI Researcher & XR Developer</div>
     <div class="affiliation">The Hong Kong Polytechnic University</div>
     <div class="research-motto">
-      <em>"Bridging virtual worlds with cultural heritage through accessible, therapeutic design"</em>
+      <em>"Constantly thinking, constantly progressing"</em>
     </div>
   </div>
 </div>

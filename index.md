@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## About Me
 
-I am a passionate HCI researcher focused on **virtual environments** and **urban culture restoration**. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
+I am a passionate HCI researcher focused on **Virtual Experience** and **urban culture restoration**. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
 
-My research lies at the intersection of **Human-Computer Interaction**, **Extended Reality**, and **Urban Culture Preservation**.
+My research lies at the intersection of **Human-Computer Interaction**, **Extended Reality**, and **Virtual Experience Design**.
 
 ### Research Interests
 
@@ -91,7 +91,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     <div class="research-interests-preview">
       <span class="interest-tag-preview">Human-Computer Interaction (HCI)</span>
       <span class="interest-tag-preview">Extended Reality (XR)</span>
-      <span class="interest-tag-preview">Urban Culture</span>
+      <span class="interest-tag-preview">Virtual Experience</span>
       <span class="expand-icon">▼</span>
     </div>
   </summary>
@@ -106,8 +106,8 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
       <p>VR/AR applications for education, therapy, and cultural preservation</p>
     </div>
     <div class="interest-item">
-      <h4>Urban Culture</h4>
-      <p>Digital preservation and restoration of traditional architecture and customs</p>
+      <h4>Virtual Experience</h4>
+      <p>Design and development of immersive virtual experiences for cultural preservation and education</p>
     </div>
     <div class="interest-item">
       <h4>Environmental Psychology</h4>
@@ -125,7 +125,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 </details>
 
 ### Current Status
-🎯 **Seeking PhD opportunities** in HCI, XR, Virtual Environment, Environmental Psychology, City Culture and related fields.
+🎯 **Seeking PhD opportunities** in HCI, XR, Virtual Experience, Environmental Psychology, and related fields.
 
 ---
 

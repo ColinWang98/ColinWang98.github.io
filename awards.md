@@ -110,30 +110,4 @@ classes: subpage
 
 
 
-## Creative Portfolio
-
-### Photography
-<div class="project-item">
-  <h4>Signed Contributor - tuchong.com</h4>
-  <p>Recognized photographer with a portfolio of landscape, architectural, and cultural heritage photography. Specializing in documenting traditional architecture and cultural sites.</p>
-  <div class="project-tags">
-    <span class="badge">Photography</span>
-    <span class="badge">Cultural Heritage</span>
-    <span class="badge">Architecture</span>
-  </div>
-</div>
-
-### Literary Works
-<div class="project-item">
-  <h4>Published Writer - Jianshu.com</h4>
-  <p>Author of over 10,000 words of poetry and creative writing, exploring themes of cultural heritage, urban development, and human connection with the built environment.</p>
-  <div class="project-tags">
-    <span class="badge">Creative Writing</span>
-    <span class="badge">Poetry</span>
-    <span class="badge">Cultural Studies</span>
-  </div>
-</div>
-
-
-
  

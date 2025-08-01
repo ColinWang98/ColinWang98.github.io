@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## About Me
 
-I am a passionate HCI researcher focused on **Virtual Experience** and **urban culture restoration**. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
+I am a passionate HCI researcher focused on **Virtual Experience** and **Nature restoration**. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
 
 My research lies at the intersection of **Human-Computer Interaction**, **Extended Reality**, and **Virtual Experience Design**.
 

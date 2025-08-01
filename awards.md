@@ -32,15 +32,6 @@ classes: subpage
           <div class="skill-progress" style="width: 85%"></div>
         </div>
       </div>
-      <div class="skill-item">
-        <div class="skill-info">
-          <span class="skill-name">Figma</span>
-          <span class="skill-level">80%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 80%"></div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -58,15 +49,6 @@ classes: subpage
       </div>
       <div class="skill-item">
         <div class="skill-info">
-          <span class="skill-name">Sketch</span>
-          <span class="skill-level">75%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 75%"></div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-info">
           <span class="skill-name">Photography</span>
           <span class="skill-level">90%</span>
         </div>
@@ -78,35 +60,8 @@ classes: subpage
   </div>
 
   <div class="skill-section">
-    <h4><i class="fas fa-chart-bar"></i> Data & Analysis</h4>
+    <h4><i class="fas fa-chart-bar"></i> Research & Analysis</h4>
     <div class="skill-bars">
-      <div class="skill-item">
-        <div class="skill-info">
-          <span class="skill-name">Stata</span>
-          <span class="skill-level">80%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 80%"></div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-info">
-          <span class="skill-name">SPSS</span>
-          <span class="skill-level">75%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 75%"></div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-info">
-          <span class="skill-name">GIS Software</span>
-          <span class="skill-level">70%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-progress" style="width: 70%"></div>
-        </div>
-      </div>
       <div class="skill-item">
         <div class="skill-info">
           <span class="skill-name">Research Methods</span>
@@ -118,7 +73,7 @@ classes: subpage
       </div>
       <div class="skill-item">
         <div class="skill-info">
-          <span class="skill-name">Data Visualization</span>
+          <span class="skill-name">Data Analysis</span>
           <span class="skill-level">80%</span>
         </div>
         <div class="skill-bar">

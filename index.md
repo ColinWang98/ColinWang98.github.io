@@ -145,10 +145,6 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     
     <p><strong>Research Focus:</strong> Bio-responsive interaction, Implicit/Explicit cues, Therapeutic VR</p>
     <p><strong>Duration:</strong> 10/2024 - 03/2025</p>
-    
-    <div class="project-links">
-      <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact</a>
-    </div>
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
@@ -171,10 +167,6 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
     
     <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
-    
-    <div class="project-links">
-      <a href="mailto:23064693g@connect.polyu.hk" class="btn">📧 Contact</a>
-    </div>
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 

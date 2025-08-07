@@ -1,8 +1,8 @@
 /* ==========================================================================
-   自定义样式 - 优化版本 (移除发光交互，修复移动端)
+   自定义样�?- 优化版本 (移除发光交互，修复移动端)
    ========================================================================== */
 
-/* 子页面样式强制应用 - 覆盖Jekyll默认样式 */
+/* 子页面样式强制应�?- 覆盖Jekyll默认样式 */
 .page, .subpage, article.page, article.subpage, article[itemtype="http://schema.org/CreativeWork"] {
   flex: 1 !important;
   background: rgba(255, 255, 255, 0.15) !important;
@@ -90,7 +90,7 @@
   }
 }
 
-/* 基础重置和变量 */
+/* 基础重置和变�?*/
 :root {
   --primary-color: #007bff;
   --primary-hover: #0056b3;
@@ -132,8 +132,7 @@ body {
 }
 
 /* ==========================================================================
-   首页英雄区域 - 移除所有发光交互效果
-   ========================================================================== */
+   首页英雄区域 - 移除所有发光交互效�?   ========================================================================== */
 
 .hero-section {
   background: linear-gradient(135deg, 
@@ -223,7 +222,7 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* 移除所有悬停效果 */
+/* 移除所有悬停效�?*/
 .hero-content:hover .research-motto::before,
 .hero-content:hover .research-motto::after {
   display: none;
@@ -233,7 +232,7 @@ body {
   display: none;
 }
 
-/* 响应式设计 */
+/* 响应式设�?*/
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 1rem;
@@ -932,8 +931,7 @@ body {
 }
 
 /* ==========================================================================
-   状态徽章
-   ========================================================================== */
+   状态徽�?   ========================================================================== */
 
 .status-badge {
   display: inline-block;
@@ -959,8 +957,7 @@ body {
 }
 
 /* ==========================================================================
-   导航栏样式
-   ========================================================================== */
+   导航栏样�?   ========================================================================== */
 
 .masthead {
   background: rgba(255, 255, 255, 0.1);
@@ -1047,8 +1044,7 @@ body {
 }
 
 /* ==========================================================================
-   侧边栏样式
-   ========================================================================== */
+   侧边栏样�?   ========================================================================== */
 
 .sidebar {
   flex: 0 0 280px;
@@ -1171,7 +1167,7 @@ body {
   color: var(--primary-color) !important;
 }
 
-/* 确保ORCID图标使用正确的字符代码 */
+/* 确保ORCID图标使用正确的字符代�?*/
 .ai-orcid-square:before {
   content: "\e841" !important;
   font-family: "Academicons" !important;
@@ -1185,14 +1181,14 @@ body {
   font-style: normal !important;
 }
 
-/* 如果Academicons加载失败，使用备用图标 */
+/* 如果Academicons加载失败，使用备用图�?*/
 .ai-orcid-square:not(.ai):after {
   content: "🆔" !important;
   font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji" !important;
   font-size: 20px !important;
 }
 
-/* 纯图标显示优化 - 确保在sidebar中也生效 */
+/* 纯图标显示优�?- 确保在sidebar中也生效 */
 .author__urls li.icon-only,
 .sidebar .author__urls li.icon-only {
   justify-content: center !important;
@@ -1264,8 +1260,7 @@ body {
 }
 
 /* ==========================================================================
-   简历下载按钮样式
-   ========================================================================== */
+   简历下载按钮样�?   ========================================================================== */
 
 .cv-download {
   margin-bottom: 20px;
@@ -1311,7 +1306,7 @@ body {
    页面内容样式
    ========================================================================== */
 
-/* 统一页面样式 - 所有页面保持一致 */
+/* 统一页面样式 - 所有页面保持一�?*/
 .page h1:first-child {
   margin-top: 0;
   margin-bottom: 1.5em;
@@ -1345,7 +1340,7 @@ body {
   margin: 2em 0;
 }
 
-/* 统一技能网格 */
+/* 统一技能网�?*/
 .skills-grid {
   margin: 2em 0;
 }
@@ -1366,7 +1361,7 @@ body {
   margin-bottom: 1em;
 }
 
-/* 统一分隔线样式 */
+/* 统一分隔线样�?*/
 .page hr, hr {
   margin: 3em 0;
   border: none;
@@ -1614,7 +1609,7 @@ html {
   scroll-behavior: smooth !important;
 }
 
-/* 浏览器兼容性优化 */
+/* 浏览器兼容性优�?*/
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -1709,7 +1704,7 @@ img, iframe, video {
   border-radius: 3px 0 0 3px;
 }
 
-/* 指示器 */
+/* 指示�?*/
 .carousel-indicators {
   text-align: center;
   padding: 20px;
@@ -1731,7 +1726,7 @@ img, iframe, video {
   background-color: var(--primary-color);
 }
 
-/* 响应式设计 */
+/* 响应式设�?*/
 @media (max-width: 768px) {
   .photo-carousel {
     margin: 1rem;
@@ -1782,8 +1777,7 @@ img, iframe, video {
 }
 
 /* ==========================================================================
-   响应式设计
-   ========================================================================== */
+   响应式设�?   ========================================================================== */
 
 /* 平板设备 */
 @media (max-width: 1024px) {
@@ -1834,14 +1828,14 @@ img, iframe, video {
 
 /* 移动设备 */
 @media (max-width: 768px) {
-  /* 确保页面宽度不超出屏幕 */
+  /* 确保页面宽度不超出屏�?*/
   html, body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
   }
   
-  /* 导航栏优化 */
+  /* 导航栏优�?*/
   .masthead__inner-wrap {
     padding: 0 16px;
     flex-wrap: wrap;
@@ -1951,7 +1945,7 @@ img, iframe, video {
     margin-bottom: 0.5em;
   }
   
-  /* Paper box 移动端优化 */
+  /* Paper box 移动端优�?*/
   .paper-box {
     flex-direction: column;
     text-align: left;
@@ -1992,7 +1986,7 @@ img, iframe, video {
     border-radius: 8px;
   }
   
-  /* Timeline 移动端优化 */
+  /* Timeline 移动端优�?*/
   .timeline-item {
     padding-left: 30px;
     margin-bottom: 2em;
@@ -2136,7 +2130,7 @@ img, iframe, video {
     margin: 15px 0;
   }
   
-  /* 可展开研究兴趣移动端优化 */
+  /* 可展开研究兴趣移动端优�?*/
   .research-interests-summary {
     padding: 1em;
   }
@@ -2170,9 +2164,9 @@ img, iframe, video {
   }
 }
 
-/* 移动端优化 */
+/* 移动端优�?*/
 @media (max-width: 768px) {
-  /* 基础字体和间距 */
+  /* 基础字体和间�?*/
   html, body {
     font-size: 15px;
     line-height: 1.6;
@@ -2200,7 +2194,7 @@ img, iframe, video {
     width: 100% !important;
   }
   
-  /* 导航栏 */
+  /* 导航�?*/
   .masthead__inner-wrap {
     padding: 0 1rem;
     flex-direction: column;
@@ -2220,7 +2214,7 @@ img, iframe, video {
     white-space: nowrap;
   }
   
-  /* 标题和文本 */
+  /* 标题和文�?*/
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.3rem; }
@@ -2235,7 +2229,7 @@ img, iframe, video {
 
 /* 小屏移动设备 */
 @media (max-width: 480px) {
-  /* 更小的字体 */
+  /* 更小的字�?*/
   html, body {
     font-size: 14px;
   }
@@ -2254,7 +2248,7 @@ img, iframe, video {
     padding: 0.75rem;
   }
   
-  /* 导航栏紧凑模式 */
+  /* 导航栏紧凑模�?*/
   .masthead__inner-wrap {
     padding: 0 0.5rem;
   }
@@ -2264,7 +2258,7 @@ img, iframe, video {
     padding: 0.4rem 0.6rem;
   }
   
-  /* 更小的标题 */
+  /* 更小的标�?*/
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.3rem; }
   h3 { font-size: 1.1rem; }
@@ -2409,7 +2403,7 @@ img, iframe, video {
   }
 }
 
-/* 最终保障 - 确保所有页面都有基础样式 */
+/* 最终保�?- 确保所有页面都有基础样式 */
 html {
   background: #ffffff !important;
   min-height: 100vh !important;
@@ -2422,732 +2416,5 @@ body {
   color: #333 !important;
 }
 
-/* 移动端紧急修复 - 确保内容显示 */
+/* 移动端紧急修�?- 确保内容显示 */
 @media (max-width: 768px) {
-  /* 强制页面内容显示 */
-  .page, .subpage, article.page, article.subpage, article[itemtype="http://schema.org/CreativeWork"] {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 20px !important;
-    margin: 10px 0 !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    overflow: visible !important;
-    position: relative !important;
-    float: none !important;
-    min-height: auto !important;
-  }
-  
-  /* 确保主容器正确显示 */
-  #main {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 10px !important;
-    margin: 0 !important;
-    overflow: visible !important;
-  }
-  
-  /* 确保侧边栏正确显示 */
-  .sidebar {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 15px !important;
-    margin: 10px 0 !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-    position: relative !important;
-    float: none !important;
-  }
-  
-  /* 确保导航栏正确显示 */
-  .masthead {
-    display: block !important;
-    width: 100% !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-  
-  /* 确保内容区域正确显示 */
-  .page__content, .page__inner-wrap {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: visible !important;
-  }
-  
-  /* 确保所有文本可见 */
-  h1, h2, h3, h4, h5, h6, p, li, div, span {
-    color: #333 !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有内容区域 */
-  .hero-section, .hero-content, .name-title, .position-title, .research-motto {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #333 !important;
-  }
-  
-  /* 强制显示项目内容 */
-  .paper-box, .paper-box-text, .paper-box-image {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-  
-  /* 强制显示研究兴趣 */
-  .research-interests-expandable, .research-interests-summary, .research-interests-expanded {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有列表和段落 */
-  ul, ol, li, p, div, section, article {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #333 !important;
-  }
-  
-  /* 强制显示所有标题 */
-  h1, h2, h3, h4, h5, h6 {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #333 !important;
-    margin: 10px 0 !important;
-    padding: 5px 0 !important;
-  }
-  
-  /* 强制显示所有链接 */
-  a {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #007bff !important;
-  }
-  
-  /* 强制显示所有按钮 */
-  .btn {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: white !important;
-    background: #007bff !important;
-    padding: 8px 16px !important;
-    border-radius: 4px !important;
-    text-decoration: none !important;
-  }
-  
-  /* 强制显示所有徽章 */
-  .badge {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: white !important;
-    background: #007bff !important;
-    padding: 4px 8px !important;
-    border-radius: 4px !important;
-    margin: 2px !important;
-  }
-  
-  /* 强制显示所有iframe */
-  iframe {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    height: 200px !important;
-  }
-  
-  /* 强制显示所有图片 */
-  img {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有details和summary */
-  details, summary {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有表格 */
-  table, th, td {
-    display: table !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    border: 1px solid #ddd !important;
-    padding: 8px !important;
-  }
-  
-  /* 强制显示所有代码块 */
-  code, pre {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background: #f8f9fa !important;
-    padding: 8px !important;
-    border-radius: 4px !important;
-    overflow-x: auto !important;
-  }
-  
-  /* 强制显示所有引用 */
-  blockquote {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    border-left: 4px solid #007bff !important;
-    padding-left: 16px !important;
-    margin: 16px 0 !important;
-  }
-  
-  /* 强制显示所有水平线 */
-  hr {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    border: none !important;
-    border-top: 1px solid #ddd !important;
-    margin: 20px 0 !important;
-  }
-  
-  /* 强制显示所有表单元素 */
-  input, textarea, select, button {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    padding: 8px !important;
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-  }
-  
-  /* 强制显示所有导航元素 */
-  nav, nav ul, nav li, nav a {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有页脚元素 */
-  footer, footer * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有侧边栏元素 */
-  .sidebar * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有主要内容区域 */
-  .main-container * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有页面内容 */
-  .page__content * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有文章内容 */
-  article * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有div内容 */
-  div {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有span内容 */
-  span {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有strong和em */
-  strong, em {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-weight: bold !important;
-  }
-  
-  /* 强制显示所有small */
-  small {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.875em !important;
-  }
-  
-  /* 强制显示所有abbr */
-  abbr {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    text-decoration: underline dotted !important;
-  }
-  
-  /* 强制显示所有cite */
-  cite {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-style: italic !important;
-  }
-  
-  /* 强制显示所有time */
-  time {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有mark */
-  mark {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background: yellow !important;
-  }
-  
-  /* 强制显示所有del和ins */
-  del, ins {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有sub和sup */
-  sub, sup {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.75em !important;
-  }
-  
-  /* 强制显示所有kbd */
-  kbd {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background: #f8f9fa !important;
-    border: 1px solid #ddd !important;
-    border-radius: 3px !important;
-    padding: 2px 4px !important;
-  }
-  
-  /* 强制显示所有samp */
-  samp {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-family: monospace !important;
-  }
-  
-  /* 强制显示所有var */
-  var {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-style: italic !important;
-  }
-  
-  /* 强制显示所有dfn */
-  dfn {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-style: italic !important;
-  }
-  
-  /* 强制显示所有q */
-  q {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-style: italic !important;
-  }
-  
-  /* 强制显示所有s */
-  s {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    text-decoration: line-through !important;
-  }
-  
-  /* 强制显示所有u */
-  u {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    text-decoration: underline !important;
-  }
-  
-  /* 强制显示所有b */
-  b {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-weight: bold !important;
-  }
-  
-  /* 强制显示所有i */
-  i {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-style: italic !important;
-  }
-  
-  /* 强制显示所有br */
-  br {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有hr */
-  hr {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    border: none !important;
-    border-top: 1px solid #ddd !important;
-    margin: 20px 0 !important;
-  }
-  
-  /* 强制显示所有wbr */
-  wbr {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有ruby, rt, rp */
-  ruby, rt, rp {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有bdi, bdo */
-  bdi, bdo {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有data */
-  data {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有meter, progress */
-  meter, progress {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有output */
-  output {
-    display: inline !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有canvas */
-  canvas {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有svg */
-  svg {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有audio, video */
-  audio, video {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有source, track */
-  source, track {
-    display: none !important;
-  }
-  
-  /* 强制显示所有embed, object, param */
-  embed, object, param {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有area */
-  area {
-    display: none !important;
-  }
-  
-  /* 强制显示所有map */
-  map {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有fieldset, legend */
-  fieldset, legend {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有label */
-  label {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有optgroup, option */
-  optgroup, option {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有datalist */
-  datalist {
-    display: none !important;
-  }
-  
-  /* 强制显示所有details, summary */
-  details, summary {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有dialog */
-  dialog {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有menu, menuitem */
-  menu, menuitem {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有slot */
-  slot {
-    display: contents !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  /* 强制显示所有template */
-  template {
-    display: none !important;
-  }
-  
-  /* 强制显示所有所有自定义元素 */
-  * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #333 !important;
-  }
-  
-  /* 强制显示所有内联元素 */
-  span, a, strong, em, b, i, u, s, mark, small, sub, sup, ins, del, cite, q, dfn, abbr, time, var, samp, kbd, code, data, bdi, bdo, ruby, rt, rp {
-    display: inline !important;
-  }
-  
-  /* 强制显示所有块级元素 */
-  div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, blockquote, pre, table, form, fieldset, legend, section, article, aside, header, footer, nav, main, figure, figcaption, address, details, summary, dialog, menu {
-    display: block !important;
-  }
-  
-  /* 强制显示所有表格元素 */
-  table {
-    display: table !important;
-  }
-  
-  tr {
-    display: table-row !important;
-  }
-  
-  td, th {
-    display: table-cell !important;
-  }
-  
-  colgroup, col {
-    display: table-column-group !important;
-  }
-  
-  thead, tbody, tfoot {
-    display: table-row-group !important;
-  }
-  
-  caption {
-    display: table-caption !important;
-  }
-  
-  /* 强制显示所有列表元素 */
-  ul, ol {
-    display: block !important;
-  }
-  
-  li {
-    display: list-item !important;
-  }
-  
-  /* 强制显示所有定义列表元素 */
-  dl {
-    display: block !important;
-  }
-  
-  dt {
-    display: block !important;
-  }
-  
-  dd {
-    display: block !important;
-  }
-  
-  /* 强制显示所有表单元素 */
-  form {
-    display: block !important;
-  }
-  
-  input, textarea, select, button {
-    display: inline-block !important;
-  }
-  
-  /* 强制显示所有媒体元素 */
-  img, iframe, embed, object, video, audio, canvas, svg {
-    display: block !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* 强制显示所有交互元素 */
-  details, summary {
-    display: block !important;
-  }
-  
-  dialog {
-    display: block !important;
-  }
-  
-  /* 强制显示所有语义元素 */
-  section, article, aside, header, footer, nav, main, figure, figcaption, address {
-    display: block !important;
-  }
-  
-  /* 强制显示所有文本元素 */
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre, address {
-    display: block !important;
-  }
-  
-  /* 强制显示所有列表元素 */
-  ul, ol, li, dl, dt, dd {
-    display: block !important;
-  }
-  
-  /* 强制显示所有表格元素 */
-  table, tr, td, th, thead, tbody, tfoot, caption, colgroup, col {
-    display: table !important;
-  }
-  
-  /* 强制显示所有表单元素 */
-  form, input, textarea, select, button, fieldset, legend, label, optgroup, option {
-    display: block !important;
-  }
-  
-  /* 强制显示所有媒体元素 */
-  img, iframe, embed, object, video, audio, canvas, svg, map, area {
-    display: block !important;
-  }
-  
-  /* 强制显示所有交互元素 */
-  details, summary, dialog, menu, menuitem {
-    display: block !important;
-  }
-  
-  /* 强制显示所有其他元素 */
-  slot, template {
-    display: contents !important;
-  }
-  
-  /* 强制显示所有自定义元素 */
-  * {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    color: #333 !important;
-  }
-}
-

@@ -241,4 +241,77 @@
   iframe {
     max-width: 100% !important;
   }
+}
+
+/* ==========================================================================
+   移动端字体修复 - 覆盖custom.css中的monospace强制设置
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* 强制覆盖custom.css中的monospace设置 */
+  html, body, 
+  .page, .subpage, article.page, article.subpage,
+  .page__content, .page__inner-wrap,
+  h1, h2, h3, h4, h5, h6, p, li, div, span,
+  .hero-section, .hero-content, .name-title, .position-title, .research-motto,
+  .paper-box, .paper-box-text, .paper-box-image,
+  .research-interests-expandable, .research-interests-summary, .research-interests-expanded,
+  ul, ol, li, p, div, section, article,
+  .timeline-item, .timeline-content,
+  .skill-category, .contact-item,
+  .project-item, .project-details {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+  }
+  
+  /* 确保代码块保持monospace */
+  code, pre, samp, kbd {
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+  
+  /* 确保samp元素在移动端不显示为代码 */
+  samp:not(code):not(pre) {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  }
+  
+  /* 强制显示所有文本内容 */
+  .page__content * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* 内联元素保持内联 */
+  span, a, strong, em, b, i, u, s, mark, small, sub, sup, ins, del, cite, q, dfn, abbr, time, var, samp, kbd, code, data, bdi, bdo, ruby, rt, rp {
+    display: inline !important;
+  }
+  
+  /* 确保段落和列表正常显示 */
+  p, li, div, section, article, aside, header, footer, nav, main, figure, figcaption, address, details, summary, dialog, menu {
+    display: block !important;
+  }
+  
+  /* 确保表格正常显示 */
+  table {
+    display: table !important;
+  }
+  
+  tr {
+    display: table-row !important;
+  }
+  
+  td, th {
+    display: table-cell !important;
+  }
+  
+  /* 确保表单元素正常显示 */
+  input, textarea, select, button {
+    display: inline-block !important;
+  }
+  
+  /* 确保媒体元素正常显示 */
+  img, iframe, embed, object, video, audio, canvas, svg {
+    display: block !important;
+  }
 } 

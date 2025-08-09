@@ -273,17 +273,27 @@
   /* 确保samp元素在移动端不显示为代码 */
   samp:not(code):not(pre) {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    white-space: normal !important;
   }
   
-  /* 强制显示所有文本内容 */
+  /* 强制显示所有文本内容 - 但不破坏原有布局 */
   .page__content * {
-    display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
   
   /* 内联元素保持内联 */
-  span, a, strong, em, b, i, u, s, mark, small, sub, sup, ins, del, cite, q, dfn, abbr, time, var, samp, kbd, code, data, bdi, bdo, ruby, rt, rp {
+  span, a, strong, em, b, i, u, s, mark, small, sub, sup, ins, del, cite, q, dfn, abbr, time, var, data, bdi, bdo, ruby, rt, rp {
+    display: inline !important;
+  }
+  
+  /* 代码元素特殊处理 */
+  code {
+    display: inline !important;
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+  
+  samp, kbd {
     display: inline !important;
   }
   
@@ -312,6 +322,26 @@
   
   /* 确保媒体元素正常显示 */
   img, iframe, embed, object, video, audio, canvas, svg {
+    display: block !important;
+  }
+  
+  /* 特殊修复：确保文本正常换行和显示 */
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+  
+  /* 代码块保持预格式化 */
+  pre, code {
+    white-space: pre-wrap !important;
+  }
+  
+  /* 确保正文内容不被其他样式覆盖 */
+  .page__content p, .page__content div, .page__content section {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    font-style: normal !important;
+    white-space: normal !important;
     display: block !important;
   }
 } 

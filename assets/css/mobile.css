@@ -329,6 +329,10 @@
   * {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
+  }
+  
+  /* 大部分元素使用正常的空白处理 */
+  p, div, section, article, h1, h2, h3, h4, h5, h6, span, li {
     white-space: normal !important;
   }
   
@@ -343,5 +347,148 @@
     font-style: normal !important;
     white-space: normal !important;
     display: block !important;
+  }
+  
+  /* ==========================================================================
+     Hero Section 移动端优化
+     ========================================================================== */
+  
+  .hero-section {
+    padding: 2rem 1rem !important;
+    min-height: 300px !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  
+  .hero-content {
+    z-index: 10 !important;
+    position: relative !important;
+    padding: 1rem !important;
+  }
+  
+  .hero-section .name-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+  }
+  
+  .hero-section .position-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+    color: var(--text-muted, #666) !important;
+  }
+  
+  .hero-section .research-motto {
+    font-size: 1rem !important;
+    font-style: italic !important;
+    color: var(--text-muted, #666) !important;
+  }
+  
+  /* 禁用移动端的鼠标动画效果 */
+  .hero-section::before {
+    display: none !important;
+  }
+  
+  /* ==========================================================================
+     Research Interests 移动端优化
+     ========================================================================== */
+  
+  .research-interests-expandable {
+    margin: 1.5rem 0 !important;
+  }
+  
+  .research-interests-summary {
+    cursor: pointer !important;
+    padding: 1rem !important;
+    background: var(--bg-secondary, #f8f9fa) !important;
+    border-radius: 8px !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .research-interests-preview {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
+  }
+  
+  .interest-tag-preview {
+    background: var(--primary-color, #0066cc) !important;
+    color: white !important;
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 4px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .expand-icon {
+    margin-left: auto !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .research-interests-expanded {
+    padding: 1rem !important;
+  }
+  
+  .interest-item {
+    margin-bottom: 1.5rem !important;
+    padding: 1rem !important;
+    background: var(--bg-secondary, #f8f9fa) !important;
+    border-radius: 6px !important;
+  }
+  
+  .interest-item h4 {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.1rem !important;
+  }
+  
+  .interest-item p {
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* ==========================================================================
+     Project Tags 移动端优化
+     ========================================================================== */
+  
+  .project-tags {
+    margin: 1rem 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+  
+  .badge {
+    background: var(--primary-color, #0066cc) !important;
+    color: white !important;
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+  }
+  
+  /* ==========================================================================
+     Project Links 移动端优化
+     ========================================================================== */
+  
+  .project-links {
+    margin: 1rem 0 !important;
+  }
+  
+  .project-links .btn {
+    display: inline-block !important;
+    padding: 0.6rem 1rem !important;
+    background: var(--primary-color, #0066cc) !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    margin: 0.25rem 0 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .project-links .btn:hover {
+    background: var(--primary-color-dark, #0052a3) !important;
   }
 } 

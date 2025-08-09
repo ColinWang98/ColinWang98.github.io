@@ -4,7 +4,7 @@
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 <link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<!-- 移动端样式必须最后加载，优先级最高 -->
 <link rel="stylesheet" href="{{ '/assets/css/mobile.css' | relative_url }}">
 
 <meta http-equiv="cleartype" content="on">

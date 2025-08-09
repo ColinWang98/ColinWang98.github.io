@@ -6,8 +6,8 @@ classes: homepage
 
 <div class="hero-section" id="hero-section">
   <div class="hero-content">
-    <div class="name-title">Wang Yao</div>
-    <div class="position-title">HCI Researcher & XR Developer</div>
+    <h1 class="name-title">Wang Yao</h1>
+    <h2 class="position-title">HCI Researcher & XR Developer</h2>
     <div class="research-motto">
       <em>"Constantly thinking, constantly progressing"</em>
     </div>
@@ -17,6 +17,15 @@ classes: homepage
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const heroSection = document.getElementById('hero-section');
+  
+  // 检测是否为移动设备
+  const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  // 移动设备不执行复杂动画
+  if (isMobile) {
+    return;
+  }
+  
   let mouseX = 0, mouseY = 0;
   let sphereX = 0, sphereY = 0;
   let animationId;

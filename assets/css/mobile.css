@@ -43,6 +43,13 @@
     box-sizing: border-box !important;
   }
   
+  /* 移动端隐藏click-me提示 */
+  .click-me-hint,
+  .click-me-curve,
+  .click-me-text {
+    display: none !important;
+  }
+  
   /* 页面内容 */
   .page, .subpage, article.page, article.subpage {
     padding: 1rem !important;
@@ -185,9 +192,24 @@
   }
   
   /* 头像和按钮优化 */
+  .author__avatar {
+    margin-bottom: 6px !important;
+  }
+  
   .author__avatar img {
-    width: 80px;
-    height: 80px;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12) !important;
+  }
+  
+  /* click-me提示小屏移动端完全隐藏 */
+  .click-me-hint,
+  .click-me-curve,
+  .click-me-text {
+    display: none !important;
   }
   
   .author__urls li {

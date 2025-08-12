@@ -24,7 +24,6 @@ classes: subpage
     
     <div class="project-links">
       <a href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" class="btn">📄 View Paper</a>
-      <a href="https://doi.org/10.1007/978-981-96-4407-0_4" target="_blank" class="btn">🔗 DOI</a>
       <a href="#edu-metaverse-cite" class="btn">📊 Cite</a>
     </div>
   </div>
@@ -44,7 +43,6 @@ classes: subpage
 - **Breathing Scenery: Impact of Respiration Interaction in Nature Therapy** (10/2024 - 03/2025)  
   *Ongoing Research Project*  
   Developed a novel framework integrating implicit/explicit cues and bio-responsive interaction in VR to enhance box-breathing training efficacy.  
-  **Role:** Unity development, environment design, experimental design  
   **Status:** <span class="status-badge">In Progress</span>
 
 ### 2024
@@ -88,10 +86,39 @@ classes: subpage
 - **Educational Technology**: Metaverse learning environments, collaborative virtual spaces
 
 ### Technical Skills
-- **Development:** Unity, C#, Python, JavaScript
-- **3D Modeling:** SketchUp, Blender, Maya
-- **Research:** Experimental design, User studies, Statistical analysis
-- **AI Integration:** ChatGPT API, Suno AI, Computer Vision
+<div class="skill-bars">
+  <div class="skill-item">
+    <span class="skill-name">Development</span>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width: 85%"></div>
+    </div>
+    <span class="skill-tools">Unity, C#, Python, JavaScript</span>
+  </div>
+  
+  <div class="skill-item">
+    <span class="skill-name">3D Modeling</span>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width: 75%"></div>
+    </div>
+    <span class="skill-tools">SketchUp, Blender, Maya</span>
+  </div>
+  
+  <div class="skill-item">
+    <span class="skill-name">Research</span>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width: 90%"></div>
+    </div>
+    <span class="skill-tools">Experimental design, User studies, Statistical analysis</span>
+  </div>
+  
+  <div class="skill-item">
+    <span class="skill-name">AI Integration</span>
+    <div class="skill-bar">
+      <div class="skill-fill" style="width: 70%"></div>
+    </div>
+    <span class="skill-tools">ChatGPT API, Suno AI, Computer Vision</span>
+  </div>
+</div>
 
 ### Methodologies
 - User-Centered Design (UCD)

@@ -1,8 +1,8 @@
 /* ==========================================================================
-   自定义样�?- 优化版本 (移除发光交互，修复移动端)
+   自定义样�?- 优化版本 (移除发光交互，修复移动端)
    ========================================================================== */
 
-/* 子页面样式强制应�?- 覆盖Jekyll默认样式 */
+/* 子页面样式强制应�?- 覆盖Jekyll默认样式 */
 .page, .subpage, article.page, article.subpage, article[itemtype="http://schema.org/CreativeWork"] {
   flex: 1 !important;
   background: rgba(255, 255, 255, 0.15) !important;
@@ -90,7 +90,7 @@
   }
 }
 
-/* 基础重置和变�?*/
+/* 基础重置和变�?*/
 :root {
   --primary-color: #007bff;
   --primary-hover: #0056b3;
@@ -132,7 +132,7 @@ body {
 }
 
 /* ==========================================================================
-   首页英雄区域 - 移除所有发光交互效�?   ========================================================================== */
+   首页英雄区域 - 移除所有发光交互效�?   ========================================================================== */
 
 .hero-section {
   background: linear-gradient(135deg, 
@@ -222,7 +222,7 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* 移除所有悬停效�?*/
+/* 移除所有悬停效�?*/
 .hero-content:hover .research-motto::before,
 .hero-content:hover .research-motto::after {
   display: none;
@@ -232,7 +232,7 @@ body {
   display: none;
 }
 
-/* 响应式设�?*/
+/* 响应式设�?*/
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 1rem;
@@ -931,7 +931,7 @@ body {
 }
 
 /* ==========================================================================
-   状态徽�?   ========================================================================== */
+   状态徽�?   ========================================================================== */
 
 .status-badge {
   display: inline-block;
@@ -957,7 +957,7 @@ body {
 }
 
 /* ==========================================================================
-   导航栏样�?   ========================================================================== */
+   导航栏样�?   ========================================================================== */
 
 .masthead {
   background: rgba(255, 255, 255, 0.1);
@@ -1044,7 +1044,7 @@ body {
 }
 
 /* ==========================================================================
-   侧边栏样�?   ========================================================================== */
+   侧边栏样�?   ========================================================================== */
 
 .sidebar {
   flex: 0 0 280px;
@@ -1167,7 +1167,7 @@ body {
   color: var(--primary-color) !important;
 }
 
-/* 确保ORCID图标使用正确的字符代�?*/
+/* 确保ORCID图标使用正确的字符代�?*/
 .ai-orcid-square:before {
   content: "\e841" !important;
   font-family: "Academicons" !important;
@@ -1181,14 +1181,14 @@ body {
   font-style: normal !important;
 }
 
-/* 如果Academicons加载失败，使用备用图�?*/
+/* 如果Academicons加载失败，使用备用图�?*/
 .ai-orcid-square:not(.ai):after {
   content: "🆔" !important;
   font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji" !important;
   font-size: 20px !important;
 }
 
-/* 纯图标显示优�?- 确保在sidebar中也生效 */
+/* 纯图标显示优�?- 确保在sidebar中也生效 */
 .author__urls li.icon-only,
 .sidebar .author__urls li.icon-only {
   justify-content: center !important;
@@ -1260,7 +1260,7 @@ body {
 }
 
 /* ==========================================================================
-   简历下载按钮样�?   ========================================================================== */
+   简历下载按钮样�?   ========================================================================== */
 
 .cv-download {
   margin-bottom: 20px;
@@ -1306,7 +1306,7 @@ body {
    页面内容样式
    ========================================================================== */
 
-/* 统一页面样式 - 所有页面保持一�?*/
+/* 统一页面样式 - 所有页面保持一�?*/
 .page h1:first-child {
   margin-top: 0;
   margin-bottom: 1.5em;
@@ -1340,7 +1340,7 @@ body {
   margin: 2em 0;
 }
 
-/* 统一技能网�?*/
+/* 统一技能网�?*/
 .skills-grid {
   margin: 2em 0;
 }
@@ -1361,7 +1361,7 @@ body {
   margin-bottom: 1em;
 }
 
-/* 统一分隔线样�?*/
+/* 统一分隔线样�?*/
 .page hr, hr {
   margin: 3em 0;
   border: none;
@@ -1609,7 +1609,7 @@ html {
   scroll-behavior: smooth !important;
 }
 
-/* 浏览器兼容性优�?*/
+/* 浏览器兼容性优�?*/
 * {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -1704,7 +1704,7 @@ img, iframe, video {
   border-radius: 3px 0 0 3px;
 }
 
-/* 指示�?*/
+/* 指示�?*/
 .carousel-indicators {
   text-align: center;
   padding: 20px;
@@ -1726,7 +1726,7 @@ img, iframe, video {
   background-color: var(--primary-color);
 }
 
-/* 响应式设�?*/
+/* 响应式设�?*/
 @media (max-width: 768px) {
   .photo-carousel {
     margin: 1rem;
@@ -1777,7 +1777,7 @@ img, iframe, video {
 }
 
 /* ==========================================================================
-   响应式设�?   ========================================================================== */
+   响应式设�?   ========================================================================== */
 
 /* 平板设备 */
 @media (max-width: 1024px) {
@@ -1823,6 +1823,93 @@ img, iframe, video {
   
   .timeline-item {
     padding-left: 50px;
+  }
+}
+
+/* ==========================================================================
+   技能条样式
+   ========================================================================== */
+
+.skill-bars {
+  margin: 2em 0;
+}
+
+.skill-item {
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 120px;
+  font-size: 1.1em;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 12px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  min-width: 200px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+  position: relative;
+}
+
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.skill-tools {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  font-style: italic;
+  min-width: 200px;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* 响应式技能条 */
+@media (max-width: 768px) {
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  
+  .skill-name {
+    min-width: auto;
+  }
+  
+  .skill-bar {
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .skill-tools {
+    min-width: auto;
+    width: 100%;
   }
 }
 

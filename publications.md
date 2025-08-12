@@ -90,7 +90,7 @@ classes: subpage
   <div class="skill-item">
     <span class="skill-name">Development</span>
     <div class="skill-bar">
-      <div class="skill-fill" style="width: 85%"></div>
+      <div class="skill-fill" style="width: 88%"></div>
     </div>
     <span class="skill-tools">Unity, C#, Python, JavaScript</span>
   </div>
@@ -98,7 +98,7 @@ classes: subpage
   <div class="skill-item">
     <span class="skill-name">3D Modeling</span>
     <div class="skill-bar">
-      <div class="skill-fill" style="width: 75%"></div>
+      <div class="skill-fill" style="width: 72%"></div>
     </div>
     <span class="skill-tools">SketchUp, Blender, Maya</span>
   </div>
@@ -106,7 +106,7 @@ classes: subpage
   <div class="skill-item">
     <span class="skill-name">Research</span>
     <div class="skill-bar">
-      <div class="skill-fill" style="width: 90%"></div>
+      <div class="skill-fill" style="width: 95%"></div>
     </div>
     <span class="skill-tools">Experimental design, User studies, Statistical analysis</span>
   </div>
@@ -114,7 +114,7 @@ classes: subpage
   <div class="skill-item">
     <span class="skill-name">AI Integration</span>
     <div class="skill-bar">
-      <div class="skill-fill" style="width: 70%"></div>
+      <div class="skill-fill" style="width: 65%"></div>
     </div>
     <span class="skill-tools">ChatGPT API, Suno AI, Computer Vision</span>
   </div>

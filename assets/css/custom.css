@@ -2013,3 +2013,78 @@ img, iframe, video {
   }
 }
 
+/* ==========================================================================
+   Awards表格样式
+   ========================================================================== */
+
+.awards-table-container {
+  margin: 2em 0;
+  overflow-x: auto;
+}
+
+.awards-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-size: 0.95em;
+}
+
+.awards-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.awards-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+}
+
+.awards-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+
+.awards-table tbody tr:hover {
+  background: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.awards-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 响应式表格 */
+@media (max-width: 768px) {
+  .awards-table {
+    font-size: 0.85em;
+  }
+  
+  .awards-table th,
+  .awards-table td {
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .awards-table th:nth-child(4),
+  .awards-table td:nth-child(4) {
+    display: none; /* 在移动端隐藏Organization列 */
+  }
+  
+  .awards-table th:nth-child(5),
+  .awards-table td:nth-child(5) {
+    display: none; /* 在移动端隐藏Description列 */
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-table th:nth-child(3),
+  .awards-table td:nth-child(3) {
+    display: none; /* 在超小屏幕上隐藏Category列 */
+  }
+}
+

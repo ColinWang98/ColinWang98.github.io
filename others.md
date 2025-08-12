@@ -207,10 +207,51 @@ View my design work collection featuring architectural and creative projects.
     </div>
   </div>
   <div class="portfolio-action">
+    <button onclick="togglePDFViewer()" class="btn portfolio-view-btn">
+      👁️ View Portfolio
+    </button>
     <a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
        target="_blank" 
        class="btn portfolio-download-btn">
       📥 Download Portfolio
     </a>
   </div>
-</div> 
+</div>
+
+<!-- PDF内嵌查看器 -->
+<div id="pdf-viewer" class="pdf-viewer" style="display: none;">
+  <div class="pdf-viewer-header">
+    <h3>Colin Design Portfolio</h3>
+    <button onclick="togglePDFViewer()" class="pdf-close-btn">✕</button>
+  </div>
+  <div class="pdf-viewer-content">
+    <iframe src="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
+            width="100%" 
+            height="600px" 
+            frameborder="0">
+      <p>您的浏览器不支持PDF内嵌显示，请<a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" target="_blank">下载查看</a></p>
+    </iframe>
+  </div>
+</div>
+
+<script>
+function togglePDFViewer() {
+  const viewer = document.getElementById('pdf-viewer');
+  if (viewer.style.display === 'none') {
+    viewer.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滚动
+  } else {
+    viewer.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// 点击PDF查看器外部区域关闭
+document.addEventListener('click', function(event) {
+  const viewer = document.getElementById('pdf-viewer');
+  const viewerContent = viewer.querySelector('.pdf-viewer-content');
+  if (event.target === viewer) {
+    togglePDFViewer();
+  }
+});
+</script> 

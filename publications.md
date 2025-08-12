@@ -77,7 +77,7 @@ classes: subpage
 
 ---
 
-## Research Interests & Expertise
+## Research Interests
 
 ### Primary Research Areas
 - **Human-Computer Interaction (HCI)**: User experience design, interaction patterns, usability studies
@@ -119,11 +119,5 @@ classes: subpage
     <span class="skill-tools">UI/UX Design, Visual Design, User Research</span>
   </div>
 </div>
-
-### Methodologies
-- User-Centered Design (UCD)
-- Agile Development
-- Mixed-Methods Research
-- Participatory Design
 
 --- 

@@ -1913,3 +1913,103 @@ img, iframe, video {
   }
 }
 
+/* ==========================================================================
+   PDF查看器样式
+   ========================================================================== */
+
+.pdf-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-viewer-header {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 80%;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-viewer-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.pdf-close-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.pdf-close-btn:hover {
+  background: #c82333;
+}
+
+.pdf-viewer-content {
+  background: white;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  min-width: 80%;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.portfolio-view-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.portfolio-view-btn:hover {
+  background: #218838;
+}
+
+/* 响应式PDF查看器 */
+@media (max-width: 768px) {
+  .pdf-viewer-header,
+  .pdf-viewer-content {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  
+  .pdf-viewer-content iframe {
+    height: 400px;
+  }
+  
+  .pdf-viewer-header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .pdf-viewer-header h3 {
+    font-size: 1.1em;
+  }
+}
+

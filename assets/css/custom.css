@@ -2025,15 +2025,16 @@ img, iframe, video {
 .awards-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: #fafafa;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   font-size: 0.95em;
+  border: 1px solid #e1e8ed;
 }
 
 .awards-table thead {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   color: white;
 }
 
@@ -2051,8 +2052,16 @@ img, iframe, video {
 }
 
 .awards-table tbody tr:hover {
-  background: #f8f9fa;
+  background: #ecf0f1;
   transition: background-color 0.3s ease;
+}
+
+.awards-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.awards-table tbody tr:nth-child(even):hover {
+  background: #e8f4f8;
 }
 
 .awards-table tbody tr:last-child td {

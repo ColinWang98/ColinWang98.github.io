@@ -37,7 +37,6 @@ classes: subpage
         <li>Programming and interactive design development</li>
         <li>Experiment proposal and methodology design</li>
         <li>Data collection and statistical analysis</li>
-        <li>Cross-cultural research collaboration</li>
       </ul>
     </div>
   </div>

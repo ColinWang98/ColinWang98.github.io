@@ -55,7 +55,7 @@ classes: subpage
     <div class="skill-bar">
       <div class="skill-fill" style="width: 70%"></div>
     </div>
-    <span class="skill-tools">Unity, C#, Python, JavaScript</span>
+    <span class="skill-tools">Unity</span>
   </div>
   
   <div class="skill-item">

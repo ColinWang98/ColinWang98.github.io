@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 I am a passionate HCI researcher focused on **Virtual Experience** and **Nature restoration**. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
 
-My research lies at the intersection of **Human-Computer Interaction**, **Extended Reality**, and **Virtual Experience Design**.
+
 
 ### Research Interests
 
@@ -134,7 +134,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 </details>
 
 ### Current Status
-🎯 **Seeking PhD opportunities** in HCI, XR, Culture Heritage, Environmental Psychology, and related fields.
+🎯 **Seeking PhD opportunities** in HCI, XR, Culture Heritage, and Environmental Psychology.
 
 ---
 
@@ -186,7 +186,7 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
 
 <div class="paper-box">
   <div class="paper-box-text">
-    <h3>UI Design for a Smart Gardening System for Dementia Therapy</h3>
+    <h3>UI Design for Sensor-enabled Urban Green Care Farm</h3>
     <div class="project-tags">
       <span class="badge">UI/UX Design</span>
       <span class="badge">Therapeutic Design</span>
@@ -211,6 +211,35 @@ My research lies at the intersection of **Human-Computer Interaction**, **Extend
       src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1" 
       allowfullscreen>
     </iframe>
+  </div>
+</div>
+
+<div class="paper-box">
+  <div class="paper-box-text">
+    <h3>Intercultural Communication in Virtual Platform</h3>
+    <div class="project-tags">
+      <span class="badge">VR Collaboration</span>
+      <span class="badge">Intercultural Communication</span>
+      <span class="badge">3D Painting</span>
+      <span class="badge">Social VR</span>
+    </div>
+    
+    <p>Foster communication among individuals from diverse cultural backgrounds through collaborative 3D painting tasks in VR.</p>
+    
+    <p><strong>Research Focus:</strong> Idea generation, Experimental design and conduction, Data Processing</p>
+    <p><strong>Platform:</strong> Virtual Reality</p>
+    
+    <div class="project-links">
+      <a href="https://www.icc-artgallery2025.top/" target="_blank" class="btn">🌐 View Experimental Results</a>
+    </div>
+  </div>
+  <div class="paper-box-image">
+    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+      <div style="text-align: center; color: white;">
+        <i class="fas fa-palette" style="font-size: 48px; margin-bottom: 16px;"></i>
+        <p style="margin: 0; font-size: 16px;">VR Collaborative<br>3D Painting</p>
+      </div>
+    </div>
   </div>
 </div>
 

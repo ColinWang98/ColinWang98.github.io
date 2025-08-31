@@ -71,6 +71,31 @@
   }
 }
 
+/* 全局性能优化：减少动画和过渡效果 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 进一步优化：减少不必要的动画 */
+.page, .subpage, article.page, article.subpage {
+  animation: none !important;
+}
+
+/* 优化过渡效果 */
+.paper-box, .timeline-item, .research-interests-expandable {
+  transition: none !important;
+}
+
+/* 移除浮动动画 */
+.hero-section::before {
+  animation: none !important;
+}
+
 /* 毛玻璃效果浏览器支持检测和降级方案 */
 @supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
   .sidebar {
@@ -111,7 +136,7 @@
   --shadow-light: 0 4px 12px rgba(0,0,0,0.08);
   --shadow-medium: 0 8px 24px rgba(0,0,0,0.15);
   --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --transition: all 0.1s ease;
   --accent-color: #28a745;
   --gradient-bg: #ffffff;
   --tag-colors: #6c63ff, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7;
@@ -166,7 +191,8 @@ body {
   bottom: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%234CAF50" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%238BC34A" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23CDDC39" opacity="0.1"/><circle cx="90" cy="90" r="1.5" fill="%23FFEB3B" opacity="0.1"/></svg>');
   background-size: 100px 100px;
-  animation: float 20s ease-in-out infinite;
+  /* 移除动画以提高性能 */
+  /* animation: float 20s ease-in-out infinite; */
 }
 
 /* 移除所有发光效果和交互 */
@@ -174,10 +200,11 @@ body {
   display: none;
 }
 
-@keyframes float {
+/* 移除浮动动画定义以提高性能 */
+/* @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(180deg); }
-}
+} */
 
 .hero-content {
   text-align: center;

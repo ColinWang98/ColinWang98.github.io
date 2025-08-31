@@ -15,82 +15,10 @@ classes: homepage
 </div>
 
 <script>
+// 移除所有鼠标跟随动画，保持页面简洁
 document.addEventListener('DOMContentLoaded', function() {
-  const heroSection = document.getElementById('hero-section');
-  
-  // 检测是否为移动设备
-  const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  
-  // 移动设备不执行复杂动画
-  if (isMobile) {
-    return;
-  }
-  
-  let mouseX = 0, mouseY = 0;
-  let sphereX = 0, sphereY = 0;
-  let animationId;
-  
-  // 平滑跟随动画
-  function animateSphere() {
-    // 添加延迟效果，球体跟随鼠标有一定滞后
-    sphereX += (mouseX - sphereX) * 0.1;
-    sphereY += (mouseY - sphereY) * 0.1;
-    
-    heroSection.style.setProperty('--sphere-x', sphereX + 'px');
-    heroSection.style.setProperty('--sphere-y', sphereY + 'px');
-    
-    animationId = requestAnimationFrame(animateSphere);
-  }
-  
-  // 使用节流函数优化鼠标移动事件
-  let throttleTimer;
-  heroSection.addEventListener('mousemove', function(e) {
-    if (throttleTimer) return;
-    
-    throttleTimer = setTimeout(() => {
-      const rect = heroSection.getBoundingClientRect();
-      mouseX = e.clientX - rect.left - 60;
-      mouseY = e.clientY - rect.top - 60;
-      
-      // 根据鼠标位置调整颜色
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const distanceFromCenter = Math.sqrt(
-        Math.pow(e.clientX - rect.left - centerX, 2) + 
-        Math.pow(e.clientY - rect.top - centerY, 2)
-      );
-      
-      // 温和的色相调整
-      const hueOffset = (distanceFromCenter / 200) * 30;
-      heroSection.style.setProperty('--sphere-hue', hueOffset + 'deg');
-      
-      // 温和的饱和度调整
-      const saturation = 0.8 + (distanceFromCenter / 400);
-      heroSection.style.setProperty('--sphere-saturation', saturation);
-      
-      throttleTimer = null;
-    }, 16); // 约60fps的更新频率
-  });
-  
-  heroSection.addEventListener('mouseenter', function() {
-    // 球体从小变大
-    heroSection.style.setProperty('--sphere-size', '120px');
-    heroSection.style.setProperty('--sphere-opacity', '1');
-    // 移除不存在的动画引用
-    // heroSection.style.animation = 'particleGlow 3s ease-in-out infinite';
-    animateSphere();
-  });
-  
-  heroSection.addEventListener('mouseleave', function() {
-    // 球体变小并消失
-    heroSection.style.setProperty('--sphere-size', '20px');
-    heroSection.style.setProperty('--sphere-opacity', '0');
-    // 停止颜色动画
-    heroSection.style.animation = 'none';
-    if (animationId) {
-      cancelAnimationFrame(animationId);
-    }
-  });
+  // 页面加载完成后的基础初始化
+  console.log('页面加载完成');
 });
 </script>
 

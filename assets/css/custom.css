@@ -63,6 +63,14 @@
   box-shadow: none !important;
 }
 
+/* 性能优化：减少毛玻璃效果的模糊半径 */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar, .page, .subpage, article.page, article.subpage, .masthead, .paper-box {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+}
+
 /* 毛玻璃效果浏览器支持检测和降级方案 */
 @supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
   .sidebar {

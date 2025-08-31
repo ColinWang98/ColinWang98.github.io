@@ -49,12 +49,6 @@ classes: subpage
   </div>
 </div>
 
-### Research Interests
-- Virtual Reality applications in cultural heritage
-- Sustainable urban development methodologies
-- Human-Computer Interaction in educational environments
-- Digital preservation of architectural heritage
-
 ### Language Proficiency
 - **English**: IELTS overall 7.0
 - **Chinese**: Native speaker

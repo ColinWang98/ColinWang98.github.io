@@ -184,7 +184,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 ## Recent Publications
 
 ### Conference Papers
-- Jiashuo Cao*; **Yao Wang***; Mark Billinghurst; Chen Li  
+- Jiashuo Cao&#42;; **Yao Wang**&#42;; Mark Billinghurst; Chen Li  
   *"Evaluate Impact of Visual Guidance and Biofeedback in VR-supported Breath Training: A Pilot Study."* **Siggraph Asia 2025 Technical Communication (Under Review)**
 
 - Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  

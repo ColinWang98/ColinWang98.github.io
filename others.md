@@ -222,59 +222,135 @@ View my design work collection featuring architectural and creative projects.
 <div id="pdf-viewer" class="pdf-viewer" style="display: none;">
   <div class="pdf-viewer-header">
     <h3>Portfolio</h3>
-    <button onclick="togglePDFViewer()" class="pdf-close-btn">✕</button>
+    <button onclick="closePDFViewer()" class="pdf-close-btn">✕</button>
   </div>
   <div class="pdf-viewer-content">
-    <div class="pdf-viewer-options">
-      <div class="pdf-option">
-        <h4>选项1: 直接查看</h4>
-        <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" 
-                width="100%" 
-                height="550px" 
-                frameborder="0"
-                style="border: 1px solid #ddd;">
-          <p>您的浏览器不支持PDF内嵌显示</p>
-        </iframe>
-      </div>
-      <div class="pdf-option" style="margin-top: 20px;">
-        <h4>选项2: Google Docs查看器</h4>
-        <iframe src="https://docs.google.com/viewer?url={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}&embedded=true" 
-                width="100%" 
-                height="550px" 
-                frameborder="0"
-                style="border: 1px solid #ddd;">
-        </iframe>
-      </div>
-      <div class="pdf-option" style="margin-top: 20px; text-align: center;">
-        <h4>选项3: 新窗口打开</h4>
-        <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
-           target="_blank" 
-           class="btn"
-           style="display: inline-block; margin: 10px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
-          🔗 在新窗口中打开PDF
-        </a>
-      </div>
+    <div class="pdf-viewer-tabs">
+      <button class="tab-btn active" onclick="showTab('direct')">直接查看</button>
+      <button class="tab-btn" onclick="showTab('google')">Google查看器</button>
+      <button class="tab-btn" onclick="showTab('download')">下载</button>
+    </div>
+    
+    <div id="tab-direct" class="tab-content active">
+      <iframe id="direct-iframe" 
+              width="100%" 
+              height="600px" 
+              frameborder="0"
+              style="border: 1px solid #ddd; border-radius: 4px;">
+      </iframe>
+    </div>
+    
+    <div id="tab-google" class="tab-content">
+      <iframe id="google-iframe" 
+              width="100%" 
+              height="600px" 
+              frameborder="0"
+              style="border: 1px solid #ddd; border-radius: 4px;">
+      </iframe>
+    </div>
+    
+    <div id="tab-download" class="tab-content" style="text-align: center; padding: 50px;">
+      <h3>下载Portfolio</h3>
+      <p>如果在线查看有问题，可以下载PDF文件到本地查看</p>
+      <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
+         target="_blank" 
+         download
+         class="btn"
+         style="display: inline-block; margin: 20px; padding: 15px 30px; background: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">
+        📥 下载Portfolio.pdf
+      </a>
     </div>
   </div>
 </div>
 
 <script>
+// 全局变量
+let pdfViewerInitialized = false;
+
 function togglePDFViewer() {
   const viewer = document.getElementById('pdf-viewer');
-  if (viewer.style.display === 'none') {
-    viewer.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // 防止背景滚动
+  if (viewer.style.display === 'none' || viewer.style.display === '') {
+    openPDFViewer();
   } else {
-    viewer.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    closePDFViewer();
   }
 }
 
-// 点击PDF查看器外部区域关闭
+function openPDFViewer() {
+  const viewer = document.getElementById('pdf-viewer');
+  viewer.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  // 初始化PDF内容
+  if (!pdfViewerInitialized) {
+    initializePDFContent();
+    pdfViewerInitialized = true;
+  }
+}
+
+function closePDFViewer() {
+  const viewer = document.getElementById('pdf-viewer');
+  viewer.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+function initializePDFContent() {
+  // 获取当前页面的基础URL
+  const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '');
+  const pdfUrl = baseUrl + '/assets/Portfolio.pdf';
+  
+  // 设置直接查看iframe
+  const directIframe = document.getElementById('direct-iframe');
+  if (directIframe) {
+    directIframe.src = pdfUrl;
+  }
+  
+  // 设置Google查看器iframe
+  const googleIframe = document.getElementById('google-iframe');
+  if (googleIframe) {
+    googleIframe.src = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}&embedded=true`;
+  }
+}
+
+function showTab(tabName) {
+  // 隐藏所有标签内容
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.classList.remove('active'));
+  
+  // 移除所有按钮的active状态
+  const btns = document.querySelectorAll('.tab-btn');
+  btns.forEach(btn => btn.classList.remove('active'));
+  
+  // 显示选中的标签
+  const selectedTab = document.getElementById('tab-' + tabName);
+  if (selectedTab) {
+    selectedTab.classList.add('active');
+  }
+  
+  // 激活对应按钮
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach((btn, index) => {
+    if ((tabName === 'direct' && index === 0) ||
+        (tabName === 'google' && index === 1) ||
+        (tabName === 'download' && index === 2)) {
+      btn.classList.add('active');
+    }
+  });
+}
+
+// 点击查看器外部区域关闭
 document.addEventListener('click', function(event) {
   const viewer = document.getElementById('pdf-viewer');
-  if (event.target === viewer) {
-    togglePDFViewer();
+  const content = viewer?.querySelector('.pdf-viewer-content');
+  if (event.target === viewer && !content?.contains(event.target)) {
+    closePDFViewer();
+  }
+});
+
+// ESC键关闭
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closePDFViewer();
   }
 });
 
@@ -292,6 +368,7 @@ style.textContent = `
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
+    display: none;
   }
   
   .pdf-viewer-header {
@@ -307,9 +384,43 @@ style.textContent = `
   .pdf-viewer-content {
     background: white;
     border-radius: 0 0 8px 8px;
-    padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+  }
+  
+  .pdf-viewer-tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn.active {
+    background: white;
+    border-bottom-color: #007bff;
+    color: #007bff;
+  }
+  
+  .tab-btn:hover {
+    background: #e9ecef;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 20px;
+  }
+  
+  .tab-content.active {
+    display: block;
   }
   
   .pdf-close-btn {
@@ -326,30 +437,22 @@ style.textContent = `
     background: #c82333;
   }
   
-  .pdf-option {
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .pdf-option h4 {
-    margin-top: 0;
-    color: #495057;
-    font-size: 16px;
-  }
-  
   @media (max-width: 768px) {
     .pdf-viewer {
       padding: 10px;
     }
     
-    .pdf-viewer-content {
+    .tab-content {
       padding: 15px;
     }
     
-    .pdf-option iframe {
+    .tab-content iframe {
       height: 400px !important;
+    }
+    
+    .tab-btn {
+      font-size: 12px;
+      padding: 10px 8px;
     }
   }
 `;

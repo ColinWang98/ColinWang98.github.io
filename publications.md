@@ -45,6 +45,9 @@ classes: subpage
 
 ### 2024
 
+- Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  
+  *"Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour."* **Learning Technologies and Systems (ICWL 2024)**
+
 *All publications listed are based on actual research and academic work.*
 
 ---

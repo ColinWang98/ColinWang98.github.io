@@ -8,14 +8,23 @@ classes: subpage
 
 # Activities
 
-## 09/2017 - 06/2020 | President, Taihang Local Culture Research Society
+## Leadership & Organization
+
+### President, Taihang Local Culture Research Society
+**Duration:** September 2017 - June 2020  
 Led peers to carry out various activities, e.g. field trips and photo exhibitions, to investigate or promote local cultures.
 
-## 09/2019 | Surveyor, Ancient Buildings Mapping & Protection in Yuanqu Village, Handan
+---
+
+## Research & Survey Projects
+
+### Surveyor, Ancient Buildings Mapping & Protection in Yuanqu Village, Handan
+**Duration:** September 2019  
 - Surveyed and mapped the villages dating back to the Ming and Qing Dynasties
 - Sorted out and summarized the data collected
 
-## 10/2019 | Surveyor, Mapping and Research Project related to Baoding Industrial Heritage
+### Surveyor, Mapping and Research Project related to Baoding Industrial Heritage
+**Duration:** October 2019  
 - Involved in mapping and data collection of the old plant site
 
 

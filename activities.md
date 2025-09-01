@@ -6,7 +6,7 @@ author_profile: true
 classes: subpage
 ---
 
-# ACTIVITIES
+# Activities
 
 ## 09/2017 - 06/2020 | President, Taihang Local Culture Research Society
 Led peers to carry out various activities, e.g. field trips and photo exhibitions, to investigate or promote local cultures.

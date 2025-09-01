@@ -200,17 +200,17 @@ View my design work collection featuring architectural and creative projects.
     📐
   </div>
   <div class="portfolio-content">
-    <h3>Colin Design Portfolio</h3>
+    <h3>Portfolio</h3>
     <p>A comprehensive collection of architectural and creative design works showcasing innovative spatial concepts and design thinking.</p>
     <div class="portfolio-meta">
-      <span class="file-size">📄 PDF Document • 4.2MB</span>
+      <span class="file-size">📄 PDF Document</span>
     </div>
   </div>
   <div class="portfolio-action">
     <button onclick="togglePDFViewer()" class="btn portfolio-view-btn">
       👁️ View Portfolio
     </button>
-    <a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
+    <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
        target="_blank" 
        class="btn portfolio-download-btn">
       📥 Download Portfolio
@@ -221,16 +221,40 @@ View my design work collection featuring architectural and creative projects.
 <!-- PDF内嵌查看器 -->
 <div id="pdf-viewer" class="pdf-viewer" style="display: none;">
   <div class="pdf-viewer-header">
-    <h3>Colin Design Portfolio</h3>
+    <h3>Portfolio</h3>
     <button onclick="togglePDFViewer()" class="pdf-close-btn">✕</button>
   </div>
   <div class="pdf-viewer-content">
-    <iframe src="{{ '/assets/ColinDesign.pdf' | relative_url }}" 
-            width="100%" 
-            height="600px" 
-            frameborder="0">
-      <p>您的浏览器不支持PDF内嵌显示，请<a href="{{ '/assets/ColinDesign.pdf' | relative_url }}" target="_blank">下载查看</a></p>
-    </iframe>
+    <div class="pdf-viewer-options">
+      <div class="pdf-option">
+        <h4>选项1: 直接查看</h4>
+        <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" 
+                width="100%" 
+                height="550px" 
+                frameborder="0"
+                style="border: 1px solid #ddd;">
+          <p>您的浏览器不支持PDF内嵌显示</p>
+        </iframe>
+      </div>
+      <div class="pdf-option" style="margin-top: 20px;">
+        <h4>选项2: Google Docs查看器</h4>
+        <iframe src="https://docs.google.com/viewer?url={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}&embedded=true" 
+                width="100%" 
+                height="550px" 
+                frameborder="0"
+                style="border: 1px solid #ddd;">
+        </iframe>
+      </div>
+      <div class="pdf-option" style="margin-top: 20px; text-align: center;">
+        <h4>选项3: 新窗口打开</h4>
+        <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
+           target="_blank" 
+           class="btn"
+           style="display: inline-block; margin: 10px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+          🔗 在新窗口中打开PDF
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -249,9 +273,85 @@ function togglePDFViewer() {
 // 点击PDF查看器外部区域关闭
 document.addEventListener('click', function(event) {
   const viewer = document.getElementById('pdf-viewer');
-  const viewerContent = viewer.querySelector('.pdf-viewer-content');
   if (event.target === viewer) {
     togglePDFViewer();
   }
 });
+
+// 添加样式
+const style = document.createElement('style');
+style.textContent = `
+  .pdf-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pdf-viewer-header {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  
+  .pdf-viewer-content {
+    background: white;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .pdf-close-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .pdf-close-btn:hover {
+    background: #c82333;
+  }
+  
+  .pdf-option {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .pdf-option h4 {
+    margin-top: 0;
+    color: #495057;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .pdf-viewer {
+      padding: 10px;
+    }
+    
+    .pdf-viewer-content {
+      padding: 15px;
+    }
+    
+    .pdf-option iframe {
+      height: 400px !important;
+    }
+  }
+`;
+document.head.appendChild(style);
 </script> 

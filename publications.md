@@ -103,16 +103,3 @@ Endeavored to help in spreading local culture and protecting Taihang Murals by a
 Explored whether and how values and consumption views of middle school students are affected by the urban-rural economic gap.  
 **Role:** Idea generation and report drafting
 
----
-
-## Research Interests
-
-### Primary Research Areas
-- **Human-Computer Interaction (HCI)**: User experience design, interaction patterns, usability studies
-- **Extended Reality (XR)**: VR/AR/MR applications for education, therapy, and cultural preservation
-- **Cultural Heritage Preservation**: Digital reconstruction, virtual museums, immersive storytelling
-- **Educational Technology**: Metaverse learning environments, collaborative virtual spaces
-
-
-
---- 

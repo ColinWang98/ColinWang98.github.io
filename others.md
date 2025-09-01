@@ -207,136 +207,74 @@ View my design work collection featuring architectural and creative projects.
     </div>
   </div>
   <div class="portfolio-action">
-    <button onclick="showPortfolioEmbed()" class="btn portfolio-view-btn">
-      👁️ View Portfolio
-    </button>
     <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
        target="_blank" 
        class="btn portfolio-download-btn">
       📥 Download Portfolio
     </a>
-    <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}"
-       target="_blank" 
-       class="btn portfolio-online-btn">
-      🌐 在线查看 (PDF.js)
-    </a>
   </div>
 </div>
 
-<!-- 简化的PDF展示区域 -->
-<div id="portfolio-embed" style="display: none; margin-top: 20px;">
-  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-      <h3 style="margin: 0;">Portfolio 预览</h3>
-      <button onclick="hidePortfolioEmbed()" style="background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">关闭</button>
-    </div>
-    
-    <!-- 直接嵌入PDF -->
-    <div style="text-align: center; margin-bottom: 15px;">
-      <iframe id="portfolio-iframe" 
-              width="100%" 
-              height="600px" 
-              style="border: 1px solid #ccc; border-radius: 4px;"
-              src="">
-        您的浏览器不支持PDF预览
-      </iframe>
-    </div>
-    
-    <!-- 备选链接 -->
-    <div style="text-align: center; background: white; padding: 15px; border-radius: 4px;">
-      <p style="margin-bottom: 10px; color: #666;">如果上方预览无法显示，请尝试以下方式：</p>
-      <div>
-        <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
-           target="_blank" 
-           style="display: inline-block; margin: 5px; padding: 8px 16px; background: #007bff; color: white; text-decoration: none; border-radius: 4px;">
-          📄 新窗口打开
-        </a>
-        <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
-           download 
-           style="display: inline-block; margin: 5px; padding: 8px 16px; background: #28a745; color: white; text-decoration: none; border-radius: 4px;">
-          💾 下载查看
-        </a>
-        <a href="https://docs.google.com/viewer?url={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}"
-           target="_blank" 
-           style="display: inline-block; margin: 5px; padding: 8px 16px; background: #ffc107; color: #212529; text-decoration: none; border-radius: 4px;">
-          🔍 Google查看器
-        </a>
-      </div>
+<!-- Portfolio嵌入预览 -->
+<div style="margin-top: 30px;">
+  <h3 style="margin-bottom: 20px; color: #333;">📄 Portfolio 预览</h3>
+  
+  <!-- 直接嵌入PDF -->
+  <div style="margin-bottom: 20px; text-align: center;">
+    <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" 
+            width="100%" 
+            height="700px" 
+            style="border: 2px solid #dee2e6; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+      <p style="padding: 20px; text-align: center; color: #666;">
+        您的浏览器不支持PDF内嵌显示，请点击下方链接查看Portfolio
+      </p>
+    </iframe>
+  </div>
+  
+  <!-- 备选查看方式 -->
+  <div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6;">
+    <p style="margin-bottom: 15px; color: #666; font-size: 14px;">如果上方预览无法正常显示，请尝试以下方式：</p>
+    <div>
+      <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
+         target="_blank" 
+         style="display: inline-block; margin: 8px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-size: 14px;">
+        🔗 新窗口打开
+      </a>
+      <a href="https://docs.google.com/viewer?url={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}"
+         target="_blank" 
+         style="display: inline-block; margin: 8px; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 6px; font-size: 14px;">
+        📋 Google查看器
+      </a>
     </div>
   </div>
 </div>
 
 <script>
-function showPortfolioEmbed() {
-  const embed = document.getElementById('portfolio-embed');
-  const iframe = document.getElementById('portfolio-iframe');
-  
-  // 显示嵌入区域
-  embed.style.display = 'block';
-  
-  // 滚动到嵌入区域
-  embed.scrollIntoView({ behavior: 'smooth' });
-  
-  // 设置iframe源
-  if (!iframe.src) {
-    // 尝试多种方式加载PDF
-    tryLoadPDF(iframe);
-  }
-}
-
-function hidePortfolioEmbed() {
-  const embed = document.getElementById('portfolio-embed');
-  embed.style.display = 'none';
-}
-
-function tryLoadPDF(iframe) {
-  // 获取PDF文件URL
-  const baseUrl = window.location.origin;
-  const pdfPath = '/assets/Portfolio.pdf';
-  const fullPdfUrl = baseUrl + pdfPath;
-  
-  // 方法1: 直接加载PDF
-  iframe.src = fullPdfUrl;
-  
-  // 如果直接加载失败，3秒后尝试Google查看器
-  setTimeout(() => {
-    if (!iframe.contentDocument && iframe.src === fullPdfUrl) {
-      console.log('直接加载失败，尝试Google查看器');
-      iframe.src = `https://docs.google.com/viewer?url=${encodeURIComponent(fullPdfUrl)}&embedded=true`;
-    }
-  }, 3000);
-}
-
-// 添加样式
-const embedStyles = document.createElement('style');
-embedStyles.textContent = `
-  .portfolio-online-btn {
-    background: #17a2b8 !important;
-    color: white !important;
-    margin: 5px !important;
-    text-decoration: none !important;
-    padding: 8px 16px !important;
-    border-radius: 4px !important;
-    display: inline-block !important;
-  }
-  
-  .portfolio-online-btn:hover {
-    background: #138496 !important;
-  }
-  
+// 添加移动端响应式样式
+const portfolioStyles = document.createElement('style');
+portfolioStyles.textContent = `
   @media (max-width: 768px) {
-    #portfolio-embed iframe {
-      height: 400px !important;
+    /* 移动端优化 */
+    iframe[src*="Portfolio.pdf"] {
+      height: 500px !important;
     }
     
-    #portfolio-embed {
-      margin: 10px !important;
+    .portfolio-meta {
+      font-size: 14px;
     }
     
-    #portfolio-embed > div {
-      padding: 15px !important;
+    .portfolio-action a {
+      display: block !important;
+      margin: 10px 0 !important;
+      text-align: center;
     }
+  }
+  
+  /* 为PDF iframe添加加载状态 */
+  iframe[src*="Portfolio.pdf"] {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="18" text-anchor="middle" x="50" fill="%23999">加载中...</text></svg>') center center no-repeat;
+    background-size: 200px 50px;
   }
 `;
-document.head.appendChild(embedStyles);
+document.head.appendChild(portfolioStyles);
 </script> 

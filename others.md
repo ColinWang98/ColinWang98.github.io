@@ -231,22 +231,7 @@ View my design work collection featuring architectural and creative projects.
     </iframe>
   </div>
   
-  <!-- 备选查看方式 -->
-  <div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #dee2e6;">
-    <p style="margin-bottom: 15px; color: #666; font-size: 14px;">如果上方预览无法正常显示，请尝试以下方式：</p>
-    <div>
-      <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" 
-         target="_blank" 
-         style="display: inline-block; margin: 8px; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-size: 14px;">
-        🔗 新窗口打开
-      </a>
-      <a href="https://docs.google.com/viewer?url={{ site.url }}{{ '/assets/Portfolio.pdf' | relative_url }}"
-         target="_blank" 
-         style="display: inline-block; margin: 8px; padding: 10px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 6px; font-size: 14px;">
-        📋 Google查看器
-      </a>
-    </div>
-  </div>
+
 </div>
 
 <script>

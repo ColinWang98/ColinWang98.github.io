@@ -38,12 +38,10 @@ classes: subpage
 
 ## Recent Publications
 
-### 2024
+### 2025
 
-- **Breathing Scenery: Impact of Respiration Interaction in Nature Therapy** (10/2024 - 03/2025)  
-  *Ongoing Research Project*  
-  Developed a novel framework integrating implicit/explicit cues and bio-responsive interaction in VR to enhance box-breathing training efficacy.  
-  **Status:** <span class="status-badge">In Progress</span>
+- Jiashuo Cao&#42;; **Yao Wang**&#42;; Mark Billinghurst; Chen Li  
+  *"Evaluate Impact of Visual Guidance and Biofeedback in VR-supported Breath Training: A Pilot Study."* **Siggraph Asia 2025 Technical Communication (Under Review)**
 
 ### 2024
 

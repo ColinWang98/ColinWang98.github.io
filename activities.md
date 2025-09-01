@@ -6,37 +6,17 @@ author_profile: true
 classes: subpage
 ---
 
-# Activities
+# ACTIVITIES
 
+## 09/2017 - 06/2020 | President, Taihang Local Culture Research Society
+Led peers to carry out various activities, e.g. field trips and photo exhibitions, to investigate or promote local cultures.
 
+## 09/2019 | Surveyor, Ancient Buildings Mapping & Protection in Yuanqu Village, Handan
+- Surveyed and mapped the villages dating back to the Ming and Qing Dynasties
+- Sorted out and summarized the data collected
 
-## Research & Survey Projects
-
-### Mapping and Research Project on Baoding Industrial Heritage (2019)
-<div class="project-item">
-  <h4>Heritage Documentation Specialist</h4>
-  <p><strong>Role:</strong> Surveyor and Data Analyst</p>
-  <ul>
-    <li>Conducted comprehensive mapping of historical industrial sites</li>
-    <li>Performed detailed data collection of old plant facilities</li>
-    <li>Documented architectural features and historical significance</li>
-    <li>Created digital archives for heritage preservation</li>
-    <li>Collaborated with local historians and preservation experts</li>
-  </ul>
-</div>
-
-### Ancient Buildings Mapping & Protection in Yuanqu Village, Handan (2019)
-<div class="project-item">
-  <h4>Cultural Heritage Surveyor</h4>
-  <p><strong>Focus:</strong> Ming and Qing Dynasty Village Documentation</p>
-  <ul>
-    <li>Surveyed and mapped historical village layouts</li>
-    <li>Documented traditional architectural elements and construction techniques</li>
-    <li>Organized and digitized historical data and findings</li>
-    <li>Contributed to cultural preservation recommendations</li>
-    <li>Worked with government agencies on heritage protection policies</li>
-  </ul>
-</div>
+## 10/2019 | Surveyor, Mapping and Research Project related to Baoding Industrial Heritage
+- Involved in mapping and data collection of the old plant site
 
 
 

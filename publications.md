@@ -14,7 +14,7 @@ classes: subpage
   <div class="paper-box-text">
     <h3>Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour</h3>
     <p><strong>Authors:</strong> Yufei Lu; Ye Jia; Guang Chen; <strong>Yao Wang</strong>; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li</p>
-    <p><strong>Conference:</strong> Learning Technologies and Systems (SETE 2024)</p>
+    <p><strong>Conference:</strong> Learning Technologies and Systems (ICWL 2024)</p>
     <p><strong>Publisher:</strong> Springer, Lecture Notes in Computer Science, vol 15589</p>
     <p><strong>Published:</strong> April 17, 2025</p>
     
@@ -53,27 +53,54 @@ classes: subpage
 
 ## Research Projects
 
-### Current Projects (2024-2025)
+#### Agentic Audio Moderator vs Human Moderator in Usability Testing
+**Duration:** 06/2025 - Present  
+This study investigates the effectiveness of AI agent moderators versus human moderators in facilitating think-aloud usability testing protocols.  
+**Role:** Literature review, Experimental design and conduction
 
-#### Immersive Participation in Ancient Villages' Development
+#### Evaluate Impact of Visual Guidance and Biofeedback in VR-supported Breath Training
+**Duration:** 10/2024 - Present  
+The study contributes a novel framework integrating implicit/explicit cues and bio-responsive interaction in VR to significantly enhance box-breathing training efficacy.  
+**Role:** Unity development, Environment design, Experimental design and conduction, Data Processing
+
+#### Intercultural Communication Platform in Virtual Platform
+**Duration:** 12/2024 - Present  
+Foster communication among individuals from diverse cultural backgrounds through collaborative 3D painting tasks in VR.  
+**Role:** Idea generation, Experimental design and conduction, Data Processing
+
+#### PolyU Edu-Metaverse Platform
+**Duration:** 10/2023 - 07/2024  
+This project develops an Edu-Metaverse platform to deliver interdisciplinary content and explore its potential for active, effective learning.  
+**Role:** 3D Modelling, Environment planning, Experimental conduction
+
+---
+
+## Other Projects
+
+#### UI Design for Sensor-enabled Urban Green Care Farm
+**Duration:** 11/2024 - 03/2025  
+Therapy user interfaces for farming therapy applications, focusing on accessible design principles.  
+**Role:** UI Design
+
+#### The RedMeta Chamber on Spatial.io
+**Duration:** 06/2024 - 08/2024  
+A Dream of the Red Chamber VR scene offering an immersive experience of Xiaoxiang Guan, with interactive character dialogues and music.  
+**Role:** Idea generation, Environment design
+
+#### Immersive Participation in Ancient Villages' Development in Context of Rural Revitalization: exemplified by Yuanqu Village of Handan
 **Duration:** 09/2020 - 06/2021  
-**Role:** Brainstorming, progress management, report writing  
-**Achievement:** Revitalized Yuanqu Village in Henan through design-for-equity model, achieving success in heritage conservation, tourism revival, and commercial operations.  
-**Recognition:** Approved by 2020 Hebei Province College Student Innovation & Entrepreneur Training Project
+This project aims to revitalize Yuanqu Village in Handan through a design-for-equity model.  
+**Role:** Idea generation, progress management and report drafting
 
-#### Development of "Yigeng Murals" App
+#### An App Concept Called "Yigeng Murals": the digital regeneration and activation plan of Taihang Murals
 **Duration:** 09/2019 - 06/2020  
-**Role:** Idea generation, task division, communication, report drafting  
-**Impact:** Promoted local culture and protected Taihang Murals through digital activation and integration into modern life.  
-**Award:** 3rd Prize, "Challenge Cup" Hebei Province College Student Entrepreneurship Contest
+Endeavored to help in spreading local culture and protecting Taihang Murals by achieving artistic activation of those murals with adoption of digital technologies.  
+**Role:** Idea generation and report drafting
 
-### Completed Projects
-
-#### Socio-Economic Impact Study
-**Title:** Influence and Enlightenment of Urban-Rural Economic and Cultural Differences on Middle School Students' Consumption View  
+#### Influence and Enlightenment of How Urban-Rural Economic and Cultural Differences Affect Formation of Middle School Students' Consumption View: A Case Study in Baoding and Cangzhou in Hebei
 **Duration:** 09/2018 - 08/2019  
-**Focus:** Explored the impact of urban-rural economic gap on students' values and consumption views.  
-**Recognition:** Provincial 3rd Prize for "Research Hebei Project"
+Explored whether and how values and consumption views of middle school students are affected by the urban-rural economic gap.  
+**Role:** Idea generation and report drafting
 
 ---
 

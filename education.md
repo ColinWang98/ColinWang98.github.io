@@ -34,22 +34,16 @@ classes: subpage
       <div style="display: flex; align-items: center; margin-bottom: 1em;">
         <div>
           <h3>Hebei University (HBU)</h3>
-          <p><strong>09/2017 - 06/2022</strong></p>
+          <p><strong>September 2017 - June 2022</strong></p>
         </div>
       </div>
       <p><strong>BEng in Architecture</strong></p>
       <p>College of Civil Engineering and Architecture</p>
-      <ul>
-        <li>5-year undergraduate programme</li>
-        <li>GPA: 3.88/5</li>
-        <li>Specialized in architectural design</li>
-        <li>Focus: Taihang Mountain Architectural Heritage Conservation, Iceland Aurora Island Visitor Center Design</li>
-      </ul>
+      <p><strong>GPA: 3.88/5</strong></p>
     </div>
   </div>
 </div>
 
 ### Language Proficiency
 - **English**: IELTS overall 7.0
-- **Chinese**: Native speaker
-- **Technical Documentation**: Proficient in academic and technical writing 
+- **Chinese**: Native speaker 

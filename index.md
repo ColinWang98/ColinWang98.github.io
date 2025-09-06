@@ -20,6 +20,46 @@ document.addEventListener('DOMContentLoaded', function() {
   // 页面加载完成后的基础初始化
   console.log('页面加载完成');
 });
+
+// 添加research interests样式
+const researchInterestsStyle = document.createElement('style');
+researchInterestsStyle.textContent = `
+  .research-interests-simple {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  
+  .interest-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .interest-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  @media (max-width: 768px) {
+    .research-interests-simple {
+      justify-content: center;
+    }
+    
+    .interest-tag {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+`;
+document.head.appendChild(researchInterestsStyle);
 </script>
 
 
@@ -31,43 +71,11 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 
 ### Research Interests
 
-<details class="research-interests-expandable">
-  <summary class="research-interests-summary">
-    <div class="research-interests-preview">
-      <span class="interest-tag-preview">Human-Computer Interaction (HCI)</span>
-      <span class="interest-tag-preview">Extended Reality (XR)</span>
-      <span class="interest-tag-preview">Virtual Experience</span>
-      <span class="expand-icon">▼</span>
-    </div>
-  </summary>
-  
-  <div class="research-interests-expanded">
-    <div class="interest-item">
-      <h4>Human-Computer Interaction (HCI)</h4>
-      <p>Interactive design and user experience in virtual environments</p>
-    </div>
-    <div class="interest-item">
-      <h4>Extended Reality (XR)</h4>
-      <p>VR/AR applications for education, therapy, and cultural preservation</p>
-    </div>
-    <div class="interest-item">
-      <h4>Virtual Experience</h4>
-      <p>Design and development of immersive virtual experiences for cultural preservation and education</p>
-    </div>
-    <div class="interest-item">
-      <h4>Environmental Psychology</h4>
-      <p>Understanding spatial perception and behavior in virtual environments</p>
-    </div>
-    <div class="interest-item">
-      <h4>Tourism</h4>
-      <p>Virtual tourism experiences and cultural heritage presentation</p>
-    </div>
-    <div class="interest-item">
-      <h4>Metaverse & Virtual Environments</h4>
-      <p>Social interaction and cultural expression in digital spaces</p>
-    </div>
-  </div>
-</details>
+<div class="research-interests-simple">
+  <span class="interest-tag">Human-Computer Interaction (HCI)</span>
+  <span class="interest-tag">Extended Reality (XR)</span>
+  <span class="interest-tag">Virtual Experience</span>
+</div>
 
 ### Current Status
 🎯 **Seeking PhD opportunities** in HCI, XR, Culture Heritage, and Environmental Psychology.

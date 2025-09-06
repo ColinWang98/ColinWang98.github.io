@@ -8,7 +8,7 @@ classes: subpage
 
 # Awards & Skills
 
-## AWARDS
+## Awards
 
 - **Commendation Award (2024)** - PolyU Metaverse Contest 2023/24
 - **Provincial-Level Grant (2021)** - National College Student Innovation & Entrepreneurship Training Program
@@ -17,7 +17,7 @@ classes: subpage
 
 ---
 
-## PROFICIENCY & SKILLS
+## Proficiency & Skills
 
 ### Language
 - **IELTS overall 7.0**

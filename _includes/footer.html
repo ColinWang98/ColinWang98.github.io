@@ -1,0 +1,46 @@
+<div class="page__footer">
+  <footer>
+    <div class="page__footer-copyright">
+      &copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}. 
+      <span id="site-visitor-count" style="font-size: 0.9em; opacity: 0.7; margin-left: 10px;">
+        访问人次: <span id="visitor-count-num">加载中...</span>
+      </span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  // 访问人次统计
+  function updateVisitorCount() {
+    var countElement = document.getElementById('visitor-count-num');
+    if (!countElement) return;
+    
+    // 使用sessionStorage判断本次会话是否已计数（整个网站会话级别）
+    var sessionKey = 'siteVisitCounted';
+    var hasCounted = sessionStorage.getItem(sessionKey);
+    
+    // 获取当前访问次数
+    var visitorCount = parseInt(localStorage.getItem('totalVisitorCount') || '0');
+    
+    // 如果本次会话还没有计数，增加计数
+    if (!hasCounted) {
+      visitorCount += 1;
+      localStorage.setItem('totalVisitorCount', visitorCount.toString());
+      sessionStorage.setItem(sessionKey, 'true');
+    }
+    
+    // 显示访问次数
+    if (countElement) {
+      countElement.textContent = visitorCount.toLocaleString();
+    }
+  }
+  
+  // 页面加载完成后更新计数
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateVisitorCount);
+  } else {
+    updateVisitorCount();
+  }
+})();
+</script>

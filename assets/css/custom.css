@@ -2132,3 +2132,20 @@ img, iframe, video {
   }
 }
 
+/* ==========================================================================
+   访问人次统计样式
+   ========================================================================== */
+
+#site-visitor-count {
+  font-size: 0.75em !important;
+  opacity: 0.6 !important;
+  color: inherit !important;
+  margin-left: 10px;
+  font-weight: normal !important;
+}
+
+#visitor-count-num {
+  font-weight: 500;
+  color: inherit;
+}
+

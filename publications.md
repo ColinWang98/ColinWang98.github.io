@@ -38,6 +38,11 @@ classes: subpage
 
 ## Recent Publications
 
+### 2026
+
+- Wangda Zhu; Guang Chen; **Yao Wang**; Pengcheng An; Jiachun Du; Chen Li  
+  *"Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial."* **CHI '26: ACM CHI Conference on Human Factors in Computing Systems (To Appear)**
+
 ### 2024
 
 - Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  

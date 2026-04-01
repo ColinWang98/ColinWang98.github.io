@@ -274,6 +274,27 @@ article.subpage {
   color: var(--accent);
 }
 
+.author__urls-wrapper {
+  width: 100%;
+}
+
+.author__menu-toggle {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.author__menu-toggle i {
+  transition: transform 180ms ease;
+}
+
+.author__menu-toggle.open i {
+  transform: rotate(180deg);
+}
+
 .author-summary {
   width: 100%;
   height: auto;

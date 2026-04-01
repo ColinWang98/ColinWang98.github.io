@@ -104,6 +104,14 @@
     height: 92px;
   }
 
+  .author__menu-toggle {
+    display: inline-flex;
+  }
+
+  .author__urls-wrapper .author__urls {
+    display: none;
+  }
+
   .hero-fact,
   .interest-tag,
   .status-pill,

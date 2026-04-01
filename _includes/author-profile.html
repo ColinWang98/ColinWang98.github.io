@@ -18,7 +18,12 @@
     </a>
   </div>
 
-  <ul class="author__urls social-icons">
+  <div class="author__urls-wrapper">
+    <button class="btn btn--glass author__menu-toggle" type="button">
+      Contact
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+    <ul class="author__urls social-icons">
     {% if site.description %}
       <li class="author-summary">{{ site.description }}</li>
     {% endif %}
@@ -124,7 +129,8 @@
     {% if author.wikipedia %}
       <li class="icon-only" title="Wikipedia"><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i></a></li>
     {% endif %}
-  </ul>
+    </ul>
+  </div>
 
   <div class="author__urls_sm">
     {% if author.uri %}<a href="{{ author.uri }}" title="Website"><i class="fas fa-fw fa-link" aria-hidden="true"></i></a>{% endif %}

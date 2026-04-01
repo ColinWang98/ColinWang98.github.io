@@ -15,6 +15,10 @@
         <p class="author__bio">{{ site.author.bio }}</p>
       </div>
       <div class="author__urls-wrapper">
+        <button class="btn btn--glass author__menu-toggle" type="button">
+          Contact
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
         <ul class="author__urls social-icons">
           <li class="icon-only" title="Location: {{ site.author.location }}"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></li>
           <li class="icon-only" title="Email: {{ site.author.email }}"><a href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>

@@ -55,7 +55,7 @@ classes: subpage
 ## Research Projects
 
 #### Agentic Audio Moderator vs Human Moderator in Usability Testing
-**Duration:** 06/2025 - Present  
+**Duration:** 06/2025 - 09/2025  
 This study investigates the effectiveness of AI agent moderators versus human moderators in facilitating think-aloud usability testing protocols.  
 **Role:** Literature review, Experimental design and conduction
 

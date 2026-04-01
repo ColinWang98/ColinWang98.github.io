@@ -14,7 +14,7 @@ classes: subpage
   <div class="timeline-item">
     <div class="timeline-marker"></div>
     <div class="timeline-content">
-      <div style="display: flex; align-items: center; margin-bottom: 1em;">
+      <div class="timeline-header">
         <div>
           <h3>The Hong Kong Polytechnic University</h3>
           <p><strong>September 2023 - October 2024</strong></p>
@@ -31,7 +31,7 @@ classes: subpage
   <div class="timeline-item">
     <div class="timeline-marker"></div>
     <div class="timeline-content">
-      <div style="display: flex; align-items: center; margin-bottom: 1em;">
+      <div class="timeline-header">
         <div>
           <h3>Hebei University (HBU)</h3>
           <p><strong>September 2017 - June 2022</strong></p>

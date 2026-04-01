@@ -187,7 +187,7 @@ article.page,
 .subpage,
 article.subpage {
   border-radius: 32px;
-  padding: 2rem;
+  padding: 2.4rem;
 }
 
 .page__inner-wrap,
@@ -313,12 +313,12 @@ article.subpage {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  min-height: 40px;
-  padding: 0.72rem 1.05rem;
+  min-height: 44px;
+  padding: 0.82rem 1.2rem;
   border: 0;
   border-radius: 999px;
-  font-size: 0.86rem;
-  font-weight: 650;
+  font-size: 0.92rem;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 0.02em;
   color: #f8fbfd !important;
@@ -346,7 +346,7 @@ article.subpage {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: clamp(1.7rem, 3.2vw, 2.8rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
   margin: -0.5rem -0.5rem 2.5rem;
   border-radius: calc(var(--radius-xl) + 6px);
   background:
@@ -369,7 +369,7 @@ article.subpage {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 920px;
+  max-width: 700px;
 }
 
 .hero-eyebrow,
@@ -380,34 +380,32 @@ article.subpage {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.42rem 0.72rem;
+  padding: 0.48rem 0.8rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.54);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
 .hero-eyebrow {
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .name-title {
-  max-width: 18ch;
-  font-size: clamp(2rem, 3.3vw, 3.35rem);
-  line-height: 1.02;
+  max-width: 12ch;
 }
 
 .position-title {
   margin: 0;
   font-family: var(--font-sans);
-  max-width: 70ch;
-  font-size: clamp(0.96rem, 1.08vw, 1.06rem);
-  font-weight: 500;
-  line-height: 1.55;
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--text-strong);
 }
 
@@ -427,17 +425,11 @@ article.subpage {
 }
 
 .hero-actions {
-  margin-top: 1.15rem;
+  margin-top: 1.4rem;
 }
 
 .hero-facts {
-  margin-top: 1.2rem;
-  gap: 0.65rem;
-}
-
-.hero-fact {
-  font-size: 0.82rem;
-  font-weight: 600;
+  margin-top: 1.5rem;
 }
 
 .research-motto,

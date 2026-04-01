@@ -185,27 +185,19 @@
     }, 9000);
   }
 
-  function initHeroAura() {
-    const hero = document.querySelector(".hero-section");
-    if (!hero || !window.matchMedia("(pointer: fine)").matches) return;
+  function initCursorAura() {
+    const near = document.querySelector(".page-orb--near");
+    const far = document.querySelector(".page-orb--far");
+    if (!near || !far || !window.matchMedia("(pointer: fine)").matches) return;
 
-    const root = document.documentElement;
     let rafId = null;
-    let clientX = window.innerWidth * 0.58;
-    let clientY = window.innerHeight * 0.22;
+    let clientX = window.innerWidth * 0.55;
+    let clientY = window.innerHeight * 0.2;
 
     const render = () => {
       rafId = null;
-      root.style.setProperty("--cursor-x", `${clientX}px`);
-      root.style.setProperty("--cursor-y", `${clientY}px`);
-
-      const rect = hero.getBoundingClientRect();
-      const relativeX = ((clientX - rect.left) / rect.width) * 100;
-      const relativeY = ((clientY - rect.top) / rect.height) * 100;
-      const clampedX = Math.max(0, Math.min(100, relativeX));
-      const clampedY = Math.max(0, Math.min(100, relativeY));
-      hero.style.setProperty("--hero-glow-x", `${clampedX}%`);
-      hero.style.setProperty("--hero-glow-y", `${clampedY}%`);
+      near.style.transform = `translate3d(${clientX - 160}px, ${clientY - 160}px, 0)`;
+      far.style.transform = `translate3d(${clientX - 260}px, ${clientY - 260}px, 0)`;
     };
 
     const queueRender = () => {
@@ -219,11 +211,6 @@
       queueRender();
     }, { passive: true });
 
-    hero.addEventListener("pointerleave", () => {
-      hero.style.setProperty("--hero-glow-x", "58%");
-      hero.style.setProperty("--hero-glow-y", "44%");
-    });
-
     queueRender();
   }
 
@@ -233,6 +220,6 @@
     initEasterEgg();
     initCarousels();
     initPoems();
-    initHeroAura();
+    initCursorAura();
   });
 })();

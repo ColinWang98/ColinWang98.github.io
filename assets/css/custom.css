@@ -23,8 +23,6 @@
   --content-max: 1320px;
   --nav-height: 72px;
   --transition: 180ms ease;
-  --cursor-x: 58vw;
-  --cursor-y: 22vh;
 }
 
 html {
@@ -53,21 +51,31 @@ body::before {
   z-index: -1;
 }
 
-body::after {
-  content: "";
+.page-orb {
   position: fixed;
-  left: calc(var(--cursor-x) - 210px);
-  top: calc(var(--cursor-y) - 210px);
-  width: 420px;
-  height: 420px;
+  left: 0;
+  top: 0;
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(103, 154, 191, 0.18) 0%, rgba(103, 154, 191, 0.08) 34%, transparent 72%);
-  filter: blur(64px);
-  opacity: 0.7;
-  z-index: -2;
+  z-index: 0;
   transform: translate3d(0, 0, 0);
-  transition: left 260ms ease-out, top 260ms ease-out, opacity 240ms ease;
+  transition: transform 220ms ease-out, opacity 220ms ease;
+}
+
+.page-orb--near {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(181, 227, 244, 0.42) 0%, rgba(121, 183, 209, 0.18) 38%, transparent 72%);
+  filter: blur(42px);
+  opacity: 0.72;
+}
+
+.page-orb--far {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(103, 154, 191, 0.18) 0%, rgba(103, 154, 191, 0.08) 34%, transparent 72%);
+  filter: blur(88px);
+  opacity: 0.52;
 }
 
 h1,
@@ -124,6 +132,12 @@ a:hover {
   -webkit-backdrop-filter: blur(24px) saturate(150%);
   border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
+}
+
+#main,
+.page__footer {
+  position: relative;
+  z-index: 1;
 }
 
 .masthead__inner-wrap {
@@ -372,8 +386,6 @@ article.subpage {
 .hero-section {
   position: relative;
   overflow: hidden;
-  --hero-glow-x: 58%;
-  --hero-glow-y: 44%;
   padding: clamp(2rem, 4vw, 3.5rem);
   margin: -0.5rem -0.5rem 2.5rem;
   border-radius: calc(var(--radius-xl) + 6px);
@@ -394,25 +406,9 @@ article.subpage {
   pointer-events: none;
 }
 
-.hero-section::after {
-  content: "";
-  position: absolute;
-  left: calc(var(--hero-glow-x) - 140px);
-  top: calc(var(--hero-glow-y) - 140px);
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  pointer-events: none;
-  background:
-    radial-gradient(circle, rgba(181, 227, 244, 0.54) 0%, rgba(121, 183, 209, 0.24) 36%, rgba(121, 183, 209, 0.08) 58%, transparent 74%);
-  filter: blur(28px);
-  opacity: 0.95;
-  transition: left 160ms ease-out, top 160ms ease-out, opacity 180ms ease;
-}
-
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 700px;
 }
 

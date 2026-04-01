@@ -86,6 +86,25 @@
     grid-template-columns: 1fr;
   }
 
+  .portfolio-icon {
+    min-width: 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .poem-stage {
+    padding: 1.1rem 1rem;
+  }
+
+  .poem-title {
+    font-size: 1.35rem;
+  }
+
+  .poem-body {
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
   .portfolio-preview iframe {
     min-height: 480px;
   }

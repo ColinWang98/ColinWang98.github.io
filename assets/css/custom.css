@@ -770,6 +770,7 @@ article.subpage {
   display: grid;
   align-items: center;
   text-align: center;
+  padding: 1.4rem 1.5rem;
 }
 
 .poem-stage.is-ready .poem-card {
@@ -785,8 +786,16 @@ article.subpage {
   transition: opacity 360ms ease, transform 360ms ease;
 }
 
+.poem-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
 .poem-body {
   white-space: pre-line;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.95;
+  color: var(--text-body);
 }
 
 .design-portfolio-card {
@@ -802,12 +811,17 @@ article.subpage {
 .portfolio-icon {
   display: grid;
   place-items: center;
-  width: 64px;
+  min-width: 64px;
   height: 64px;
-  border-radius: 20px;
-  background: rgba(26, 91, 114, 0.1);
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(26, 91, 114, 0.14), rgba(35, 75, 105, 0.18));
+  box-shadow: inset 0 0 0 1px rgba(26, 91, 114, 0.14);
   color: var(--accent);
-  font-size: 1.8rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .portfolio-content {
@@ -821,9 +835,18 @@ article.subpage {
   margin: 0;
 }
 
+.portfolio-content h3 {
+  font-size: 1.2rem;
+}
+
+.portfolio-content p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
 .portfolio-meta {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .portfolio-preview iframe {

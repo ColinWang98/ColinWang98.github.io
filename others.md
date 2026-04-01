@@ -48,7 +48,7 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 View my design work collection featuring architectural and creative projects.
 
 <div class="design-portfolio-card">
-  <div class="portfolio-icon">Portfolio</div>
+  <div class="portfolio-icon">PDF</div>
   <div class="portfolio-content">
     <h3>Portfolio</h3>
     <p>A comprehensive collection of architectural and creative design works showcasing innovative spatial concepts and design thinking.</p>

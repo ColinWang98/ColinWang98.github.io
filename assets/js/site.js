@@ -156,8 +156,8 @@
         index = (target + slides.length) % slides.length;
         render();
       };
-      prev && prev.addEventListener("click", () => goTo(index - 1));
-      next && next.addEventListener("click", () => goTo(index + 1));
+      if (prev) prev.addEventListener("click", () => goTo(index - 1));
+      if (next) next.addEventListener("click", () => goTo(index + 1));
       indicators.forEach((indicator, indicatorIndex) => indicator.addEventListener("click", () => goTo(indicatorIndex)));
       let timer = window.setInterval(() => goTo(index + 1), 5000);
       carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
@@ -185,11 +185,54 @@
     }, 9000);
   }
 
+  function initHeroAura() {
+    const hero = document.querySelector(".hero-section");
+    if (!hero || !window.matchMedia("(pointer: fine)").matches) return;
+
+    const root = document.documentElement;
+    let rafId = null;
+    let clientX = window.innerWidth * 0.58;
+    let clientY = window.innerHeight * 0.22;
+
+    const render = () => {
+      rafId = null;
+      root.style.setProperty("--cursor-x", `${clientX}px`);
+      root.style.setProperty("--cursor-y", `${clientY}px`);
+
+      const rect = hero.getBoundingClientRect();
+      const relativeX = ((clientX - rect.left) / rect.width) * 100;
+      const relativeY = ((clientY - rect.top) / rect.height) * 100;
+      const clampedX = Math.max(0, Math.min(100, relativeX));
+      const clampedY = Math.max(0, Math.min(100, relativeY));
+      hero.style.setProperty("--hero-glow-x", `${clampedX}%`);
+      hero.style.setProperty("--hero-glow-y", `${clampedY}%`);
+    };
+
+    const queueRender = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(render);
+    };
+
+    window.addEventListener("pointermove", (event) => {
+      clientX = event.clientX;
+      clientY = event.clientY;
+      queueRender();
+    }, { passive: true });
+
+    hero.addEventListener("pointerleave", () => {
+      hero.style.setProperty("--hero-glow-x", "58%");
+      hero.style.setProperty("--hero-glow-y", "44%");
+    });
+
+    queueRender();
+  }
+
   ready(() => {
     initFadeIns();
     initVisitorCount();
     initEasterEgg();
     initCarousels();
     initPoems();
+    initHeroAura();
   });
 })();

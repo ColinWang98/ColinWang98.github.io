@@ -25,6 +25,15 @@
 }
 
 @media (max-width: 768px) {
+  body::after {
+    width: 280px;
+    height: 280px;
+    left: calc(var(--cursor-x) - 140px);
+    top: calc(var(--cursor-y) - 140px);
+    filter: blur(54px);
+    opacity: 0.4;
+  }
+
   body {
     font-size: 15px;
   }
@@ -61,6 +70,15 @@
   .hero-section {
     margin: 0 0 1.75rem;
     padding: 1.4rem;
+  }
+
+  .hero-section::after {
+    width: 210px;
+    height: 210px;
+    left: calc(var(--hero-glow-x) - 105px);
+    top: calc(var(--hero-glow-y) - 105px);
+    filter: blur(24px);
+    opacity: 0.72;
   }
 
   .hero-actions a,

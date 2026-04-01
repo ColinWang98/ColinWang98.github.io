@@ -300,10 +300,12 @@ article.subpage {
 .author__menu-toggle {
   display: none;
   width: 100%;
+  min-height: 44px;
+  padding: 0.82rem 1.2rem;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 0.9rem;
+  margin: 0 0 0.9rem;
 }
 
 .author__menu-toggle i {
@@ -312,6 +314,11 @@ article.subpage {
 
 .author__menu-toggle.open i {
   transform: rotate(180deg);
+}
+
+.cv-download .btn--cv,
+.author__urls-wrapper .author__menu-toggle {
+  width: 100%;
 }
 
 .author-summary {

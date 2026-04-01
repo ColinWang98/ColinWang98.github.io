@@ -72,6 +72,11 @@
     padding: 1.25rem;
   }
 
+  .page.homepage,
+  article.page.homepage {
+    padding: 1.25rem;
+  }
+
   .hero-section {
     margin: 0 0 1.75rem;
     padding: 1.4rem;

@@ -8,20 +8,15 @@ classes: homepage
   <div class="hero-content">
     <div class="hero-eyebrow">Wang Yao</div>
     <h1 class="name-title">Human-Computer Interaction, XR, and Cultural Heritage</h1>
-    <p class="position-title">Research assistant, HCI researcher, and XR developer working across immersive therapy, AI-mediated usability evaluation, and digital heritage experiences.</p>
-    <p class="hero-intro">This site brings together academic work, selected prototypes, and interdisciplinary projects developed at the intersection of virtual experience, learning, and spatial culture.</p>
+    <p class="position-title">Research assistant and XR developer exploring immersive therapy, AI-mediated usability evaluation, and digital heritage experiences.</p>
     <div class="hero-actions">
       <a href="{{ '/publications/' | relative_url }}" class="btn">View Publications</a>
       <a href="{{ '/work/' | relative_url }}" class="btn btn--ghost">Research Experience</a>
-      <a href="mailto:23064693g@connect.polyu.hk" class="btn btn--ghost">Contact</a>
     </div>
     <div class="hero-facts">
       <span class="hero-fact">Hong Kong Polytechnic University</span>
       <span class="hero-fact">HCI + XR + Digital Heritage</span>
       <span class="hero-fact">Seeking PhD Opportunities</span>
-    </div>
-    <div class="research-motto">
-      <em>"Constantly thinking, constantly progressing"</em>
     </div>
   </div>
 </div>
@@ -64,7 +59,11 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 10/2024 - 03/2025</p>
   </div>
   <div class="paper-box-image">
-    <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" width="100%" height="250" frameborder="0" allowfullscreen></iframe>
+    <a href="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" target="_blank" class="project-thumb thumb--breathing">
+      <span class="project-thumb__eyebrow">Featured Prototype</span>
+      <strong>VR Breathing Training Platform</strong>
+      <span class="project-thumb__meta">Immersive therapy, biofeedback, and nature-based breathing support</span>
+    </a>
   </div>
 </div>
 
@@ -85,12 +84,11 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     </div>
   </div>
   <div class="paper-box-image">
-    <div class="project-poster poster--violet">
-      <div>
-        <i class="fas fa-palette" aria-hidden="true"></i>
-        <p>VR Collaborative<br>3D Painting</p>
-      </div>
-    </div>
+    <a href="https://www.icc-artgallery2025.top/" target="_blank" class="project-thumb thumb--painting">
+      <span class="project-thumb__eyebrow">Live Project</span>
+      <strong>VR Collaborative 3D Painting</strong>
+      <span class="project-thumb__meta">Intercultural co-creation through shared virtual canvases</span>
+    </a>
   </div>
 </div>
 
@@ -108,30 +106,31 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 06/2025 - 09/2025</p>
   </div>
   <div class="paper-box-image">
-    <div class="project-poster poster--ember">
-      <div>
-        <i class="fas fa-robot" aria-hidden="true"></i>
-        <p>AI vs Human<br>Moderator Study</p>
-      </div>
+    <div class="project-thumb thumb--moderator">
+      <span class="project-thumb__eyebrow">Study Design</span>
+      <strong>AI vs Human Moderator</strong>
+      <span class="project-thumb__meta">Controlled usability testing workflow comparing agentic and human facilitation</span>
     </div>
   </div>
 </div>
 
 <div class="paper-box">
   <div class="paper-box-text">
-    <h3>The Red MetaChamber (鍏冪晫路绾㈡ゼ)</h3>
+    <h3>The Red MetaChamber</h3>
     <div class="project-tags">
       <span class="badge">VR/AR</span>
       <span class="badge">Cultural Heritage</span>
       <span class="badge">Metaverse</span>
       <span class="badge">AI Integration</span>
     </div>
-    <p>A metaverse project focusing on the classic architecture and original plots of the Dream of the Red Chamber through virtual reality. Features the Xiao Xiang Guan (娼囨箻棣? scene with interactive elements, character dialogues, and traditional Chinese music appreciation.</p>
+    <p>A metaverse project focused on the architecture and narrative world of Dream of the Red Chamber through virtual reality, featuring immersive scene interaction, character dialogues, and music appreciation.</p>
     <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
   </div>
   <div class="paper-box-image">
-    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" width="100%" height="250" frameborder="0" allowfullscreen></iframe>
+    <a href="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" target="_blank" class="project-thumb thumb--image">
+      <img src="{{ '/images/RedMeta.png' | relative_url }}" alt="The Red MetaChamber cover image">
+    </a>
   </div>
 </div>
 
@@ -151,8 +150,12 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
       <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="btn">View Full Prototype</a>
     </div>
   </div>
-  <div class="paper-box-image embed-frame">
-    <iframe width="100%" height="300" src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1" allowfullscreen></iframe>
+  <div class="paper-box-image">
+    <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="project-thumb thumb--farm">
+      <span class="project-thumb__eyebrow">Prototype Preview</span>
+      <strong>Urban Green Care Farm UI</strong>
+      <span class="project-thumb__meta">Accessible mobile interfaces for therapeutic gardening and sensor-enabled care</span>
+    </a>
   </div>
 </div>
 

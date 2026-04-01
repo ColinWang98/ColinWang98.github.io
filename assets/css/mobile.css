@@ -76,9 +76,11 @@
   }
 
   .paper-box-image iframe,
-  .project-poster {
-    min-height: 220px;
-  }
+    .project-poster,
+    .project-thumb,
+    .thumb--image img {
+      min-height: 220px;
+    }
 
   .design-portfolio-card {
     grid-template-columns: 1fr;

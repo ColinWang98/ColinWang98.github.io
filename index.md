@@ -14,51 +14,6 @@ classes: homepage
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('页面加载完成');
-});
-
-const researchInterestsStyle = document.createElement('style');
-researchInterestsStyle.textContent = `
-  .research-interests-simple {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 20px 0;
-  }
-  
-  .interest-tag {
-    display: inline-block;
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .interest-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
-  
-  @media (max-width: 768px) {
-    .research-interests-simple {
-      justify-content: center;
-    }
-    
-    .interest-tag {
-      font-size: 13px;
-      padding: 6px 12px;
-    }
-  }
-`;
-document.head.appendChild(researchInterestsStyle);
-</script>
-
 ## About Me
 
 I am a passionate HCI researcher. Currently working as a Research Assistant with **[Prof. Li Chen Richard](https://chenli.me/)** at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development (SUD).
@@ -72,7 +27,11 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 </div>
 
 ### Current Status
-🎯 **Seeking PhD opportunities** in HCI, XR, Culture Heritage, and Environmental Psychology.
+
+<div class="status-panel">
+  <span class="status-pill">Seeking PhD opportunities</span>
+  <p>Current focus includes HCI, XR, cultural heritage, and environmental psychology.</p>
+</div>
 
 ---
 
@@ -116,11 +75,11 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Platform:</strong> Virtual Reality</p>
     
     <div class="project-links">
-      <a href="https://www.icc-artgallery2025.top/" target="_blank" class="btn">🌐 View Experimental Results</a>
+      <a href="https://www.icc-artgallery2025.top/" target="_blank" class="btn">View Experimental Results</a>
     </div>
   </div>
   <div class="paper-box-image">
-    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #355c7d 0%, #6e7ea6 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
       <div style="text-align: center; color: white;">
         <i class="fas fa-palette" style="font-size: 48px; margin-bottom: 16px;"></i>
         <p style="margin: 0; font-size: 16px;">VR Collaborative<br>3D Painting</p>
@@ -145,7 +104,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 06/2025 - 09/2025</p>
   </div>
   <div class="paper-box-image">
-    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #c55f5f 0%, #9b4f3e 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
       <div style="text-align: center; color: white;">
         <i class="fas fa-robot" style="font-size: 48px; margin-bottom: 16px;"></i>
         <p style="margin: 0; font-size: 16px;">AI vs Human<br>Moderator Study</p>
@@ -192,7 +151,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Platform:</strong> Mobile Application Design</p>
     
     <div class="project-links">
-      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="btn">🎨 View Full Prototype</a>
+      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="btn">View Full Prototype</a>
     </div>
   </div>
   <div class="paper-box-image">

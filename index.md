@@ -171,8 +171,9 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 
 ### Conference Papers
 
-- Wangda Zhu; Guang Chen; **Yao Wang**; Pengcheng An; Jiachun Du; Chen Li  
-  *"Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial."* **CHI '26: ACM CHI Conference on Human Factors in Computing Systems (To Appear)**
+- Wangda Zhu; Guang Chen; **Yao Wang**; Pengcheng An; Jiachun Du; Chen Li<br>
+  *"Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial."* **CHI '26: ACM CHI Conference on Human Factors in Computing Systems (To Appear)**<br>
+  [DOI](https://dl.acm.org/doi/10.1145/3772318.3791653)
 
 - Yufei Lu; Ye Jia; Guang Chen; **Yao Wang**; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li  
   *"Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour."* **Learning Technologies and Systems (ICWL 2024)**  

@@ -41,7 +41,8 @@ classes: subpage
 ### 2026
 
 - Wangda Zhu; Guang Chen; **Yao Wang**; Pengcheng An; Jiachun Du; Chen Li<br>
-  *"Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial."* **CHI '26: ACM CHI Conference on Human Factors in Computing Systems (To Appear)**<br>
+  *"Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial."* **CHI '26: ACM CHI Conference on Human Factors in Computing Systems**<br>
+  *Published April 13, 2026. Article 727, pp. 1-19.*<br>
   [DOI](https://dl.acm.org/doi/10.1145/3772318.3791653)
 
 ### 2024

@@ -69,3 +69,23 @@ View my design work collection featuring architectural and creative projects.
     <p>Your browser does not support embedded PDFs. Please use the download button above.</p>
   </iframe>
 </div>
+
+## AI Video
+
+An AI-generated video experiment exploring visual storytelling and creative direction.
+
+<div class="design-portfolio-card">
+  <div class="portfolio-icon">VID</div>
+  <div class="portfolio-content">
+    <h3>TapNow AI Video</h3>
+    <p>A short video created with AI tools, added here as part of my broader creative experiments across media and interaction.</p>
+    <div class="portfolio-meta">
+      <span class="file-size">External link</span>
+    </div>
+  </div>
+  <div class="portfolio-action">
+    <a href="https://app.tapnow.ai/home/taptv/28/f4c804db-b253-4a81-9236-be5bf1d6dd7c" target="_blank" class="btn portfolio-download-btn">
+      View Video
+    </a>
+  </div>
+</div>

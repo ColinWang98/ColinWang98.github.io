@@ -54,10 +54,8 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     </div>
   </div>
   <div class="paper-box-image">
-    <a href="https://neonhk.vercel.app/" target="_blank" class="project-thumb thumb--neonhk">
-      <span class="project-thumb__eyebrow">Current Project</span>
-      <strong>NeonHK</strong>
-      <span class="project-thumb__meta">Spatial storytelling for Hong Kong places</span>
+    <a href="https://neonhk.vercel.app/" target="_blank" class="project-thumb thumb--image">
+      <img src="/assets/neonhk-snapshot.png" alt="NeonHK Spatial Story interface snapshot">
     </a>
   </div>
 </div>

@@ -665,13 +665,6 @@ article.page.homepage {
     radial-gradient(circle at 84% 18%, rgba(240, 244, 220, 0.3), transparent 22%);
 }
 
-.thumb--neonhk {
-  background:
-    linear-gradient(145deg, rgba(20, 51, 67, 0.94), rgba(55, 104, 118, 0.78)),
-    radial-gradient(circle at 76% 18%, rgba(255, 125, 104, 0.28), transparent 22%),
-    radial-gradient(circle at 16% 78%, rgba(130, 217, 214, 0.28), transparent 24%);
-}
-
 .thumb--image {
   display: block;
   padding: 0;

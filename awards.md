@@ -19,32 +19,34 @@ classes: subpage
 
 ## Proficiency & Skills
 
-<div class="skill-category">
-  <h3>Research & Design</h3>
-  <p>HCI research, XR prototyping, usability testing, experimental design, qualitative coding, and digital heritage experience design.</p>
-</div>
-
-<div class="skill-category">
-  <h3>Tools & Software</h3>
-  <div class="research-interests-simple">
-    <span class="interest-tag">Unity</span>
-    <span class="interest-tag">Blender</span>
-    <span class="interest-tag">Figma</span>
-    <span class="interest-tag">Photoshop</span>
-    <span class="interest-tag">Nvivo</span>
-    <span class="interest-tag">SPSS</span>
-    <span class="interest-tag">Stata</span>
-    <span class="interest-tag">AutoCAD</span>
-    <span class="interest-tag">ArcGIS</span>
+<div class="skills-grid">
+  <div class="skill-category">
+    <h3>Research & Design</h3>
+    <p>HCI research, XR prototyping, usability testing, experimental design, qualitative coding, and digital heritage experience design.</p>
   </div>
-</div>
 
-<div class="skill-category">
-  <h3>Language & Expression</h3>
-  <p><strong>IELTS overall 7.0.</strong> Contributor to tuchong.com; posted poems of over 10,000 words on an online literature platform.</p>
-</div>
+  <div class="skill-category skill-category--wide">
+    <h3>Tools & Software</h3>
+    <div class="skill-tags">
+      <span class="interest-tag">Unity</span>
+      <span class="interest-tag">Blender</span>
+      <span class="interest-tag">Figma</span>
+      <span class="interest-tag">Photoshop</span>
+      <span class="interest-tag">Nvivo</span>
+      <span class="interest-tag">SPSS</span>
+      <span class="interest-tag">Stata</span>
+      <span class="interest-tag">AutoCAD</span>
+      <span class="interest-tag">ArcGIS</span>
+    </div>
+  </div>
 
-<div class="skill-category">
-  <h3>Fine Art</h3>
-  <p>Aquarelle, marker rendering, and sketching.</p>
+  <div class="skill-category">
+    <h3>Language & Expression</h3>
+    <p><strong>IELTS overall 7.0.</strong> Contributor to tuchong.com; posted poems of over 10,000 words on an online literature platform.</p>
+  </div>
+
+  <div class="skill-category">
+    <h3>Fine Art</h3>
+    <p>Aquarelle, marker rendering, and sketching.</p>
+  </div>
 </div>

@@ -35,6 +35,35 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 
 ---
 
+## Ongoing Project
+
+<div class="paper-box">
+  <div class="paper-box-text">
+    <h3>NeonHK Spatial Story</h3>
+    <div class="project-tags">
+      <span class="badge">AI Storytelling</span>
+      <span class="badge">Urban Experience</span>
+      <span class="badge">Hong Kong</span>
+      <span class="badge">XR Research</span>
+    </div>
+
+    <p>An ongoing project exploring AI-supported spatial storytelling for Hong Kong urban scenes, connecting visual place cues with situated narrative experiences.</p>
+
+    <div class="project-links">
+      <a href="https://neonhk.vercel.app/" target="_blank" class="btn">View Current Project</a>
+    </div>
+  </div>
+  <div class="paper-box-image">
+    <a href="https://neonhk.vercel.app/" target="_blank" class="project-thumb thumb--neonhk">
+      <span class="project-thumb__eyebrow">Current Project</span>
+      <strong>NeonHK</strong>
+      <span class="project-thumb__meta">Spatial storytelling for Hong Kong places</span>
+    </a>
+  </div>
+</div>
+
+---
+
 ## Featured Research Projects
 
 <div class="paper-box">

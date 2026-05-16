@@ -23,7 +23,7 @@ classes: subpage
     <p><strong>Research Focus:</strong> Educational Technology, Metaverse Learning, Collaborative Learning, User Experience, Social Presence</p>
     
     <div class="project-links">
-      <a href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" class="btn">📄 View Paper</a>
+      <a href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" rel="noopener noreferrer" class="btn">📄 View Paper</a>
       <a href="#edu-metaverse-cite" class="btn">📊 Cite</a>
     </div>
   </div>

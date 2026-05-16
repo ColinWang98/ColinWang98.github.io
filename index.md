@@ -50,12 +50,12 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p>An ongoing project exploring AI-supported spatial storytelling for Hong Kong urban scenes, connecting visual place cues with situated narrative experiences.</p>
 
     <div class="project-links">
-      <a href="https://neonhk.vercel.app/" target="_blank" class="btn">View Current Project</a>
+      <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">View Current Project</a>
     </div>
   </div>
   <div class="paper-box-image">
-    <a href="https://neonhk.vercel.app/" target="_blank" class="project-thumb thumb--image">
-      <img src="/assets/neonhk-snapshot.png" alt="NeonHK Spatial Story interface snapshot">
+    <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-thumb thumb--image">
+      <img src="/assets/neonhk-snapshot.png" alt="NeonHK Spatial Story interface snapshot" loading="lazy" decoding="async">
     </a>
   </div>
 </div>
@@ -81,7 +81,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
-            width="100%" height="250" frameborder="0" allowfullscreen>
+            width="100%" height="250" frameborder="0" allowfullscreen loading="lazy">
     </iframe>
   </div>
 </div>
@@ -102,14 +102,14 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Platform:</strong> Virtual Reality</p>
     
     <div class="project-links">
-      <a href="https://www.icc-artgallery2025.top/" target="_blank" class="btn">View Experimental Results</a>
+      <a href="https://www.icc-artgallery2025.top/" target="_blank" rel="noopener noreferrer" class="btn">View Experimental Results</a>
     </div>
   </div>
   <div class="paper-box-image">
-    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #355c7d 0%, #6e7ea6 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-      <div style="text-align: center; color: white;">
-        <i class="fas fa-palette" style="font-size: 48px; margin-bottom: 16px;"></i>
-        <p style="margin: 0; font-size: 16px;">VR Collaborative<br>3D Painting</p>
+    <div class="project-poster poster--violet">
+      <div>
+        <i class="fas fa-palette" aria-hidden="true"></i>
+        <p>VR Collaborative<br>3D Painting</p>
       </div>
     </div>
   </div>
@@ -131,10 +131,10 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 06/2025 - 09/2025</p>
   </div>
   <div class="paper-box-image">
-    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #c55f5f 0%, #9b4f3e 100%); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-      <div style="text-align: center; color: white;">
-        <i class="fas fa-robot" style="font-size: 48px; margin-bottom: 16px;"></i>
-        <p style="margin: 0; font-size: 16px;">AI vs Human<br>Moderator Study</p>
+    <div class="project-poster poster--ember">
+      <div>
+        <i class="fas fa-robot" aria-hidden="true"></i>
+        <p>AI vs Human<br>Moderator Study</p>
       </div>
     </div>
   </div>
@@ -157,7 +157,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
   </div>
   <div class="paper-box-image">
     <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-            width="100%" height="250" frameborder="0" allowfullscreen>
+            width="100%" height="250" frameborder="0" allowfullscreen loading="lazy">
     </iframe>
   </div>
 </div>
@@ -178,7 +178,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Platform:</strong> Mobile Application Design</p>
     
     <div class="project-links">
-      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" class="btn">View Full Prototype</a>
+      <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" rel="noopener noreferrer" class="btn">View Full Prototype</a>
     </div>
   </div>
   <div class="paper-box-image">
@@ -187,7 +187,8 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
       width="100%" 
       height="300" 
       src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1" 
-      allowfullscreen>
+      allowfullscreen
+      loading="lazy">
     </iframe>
   </div>
 </div>

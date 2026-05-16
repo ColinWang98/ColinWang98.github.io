@@ -14,15 +14,15 @@ Contributor to [tuchong.com](https://tuchong.com), an online photography communi
 
 <div class="photo-carousel">
   <div class="carousel-container">
-    <div class="carousel-slide active"><img src="{{ '/Photos/photo1.jpg' | relative_url }}" alt="Photography 1"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo2.jpg' | relative_url }}" alt="Photography 2"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo3.jpg' | relative_url }}" alt="Photography 3"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo4.jpg' | relative_url }}" alt="Photography 4"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo5.jpg' | relative_url }}" alt="Photography 5"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo6.jpg' | relative_url }}" alt="Photography 6"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo8.jpg' | relative_url }}" alt="Photography 8"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo9.jpg' | relative_url }}" alt="Photography 9"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo11.jpg' | relative_url }}" alt="Photography 11"></div>
+    <div class="carousel-slide active"><img src="{{ '/Photos/photo1.jpg' | relative_url }}" alt="Photography 1" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo2.jpg' | relative_url }}" alt="Photography 2" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo3.jpg' | relative_url }}" alt="Photography 3" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo4.jpg' | relative_url }}" alt="Photography 4" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo5.jpg' | relative_url }}" alt="Photography 5" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo6.jpg' | relative_url }}" alt="Photography 6" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo8.jpg' | relative_url }}" alt="Photography 8" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo9.jpg' | relative_url }}" alt="Photography 9" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide"><img src="{{ '/Photos/photo11.jpg' | relative_url }}" alt="Photography 11" loading="lazy" decoding="async"></div>
   </div>
   <button class="carousel-btn prev" type="button" aria-label="Previous photo">&#10094;</button>
   <button class="carousel-btn next" type="button" aria-label="Next photo">&#10095;</button>
@@ -57,7 +57,7 @@ View my design work collection featuring architectural and creative projects.
     </div>
   </div>
   <div class="portfolio-action">
-    <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" target="_blank" class="btn portfolio-download-btn">
+    <a href="{{ '/assets/Portfolio.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn portfolio-download-btn">
       Download Portfolio
     </a>
   </div>
@@ -65,7 +65,7 @@ View my design work collection featuring architectural and creative projects.
 
 <div class="portfolio-preview">
   <h3>Portfolio Preview</h3>
-  <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" width="100%" height="700" title="Portfolio Preview">
+  <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" width="100%" height="700" title="Portfolio Preview" loading="lazy">
     <p>Your browser does not support embedded PDFs. Please use the download button above.</p>
   </iframe>
 </div>
@@ -84,7 +84,7 @@ An AI-generated video experiment exploring visual storytelling and creative dire
     </div>
   </div>
   <div class="portfolio-action">
-    <a href="https://app.tapnow.ai/home/taptv/28/f4c804db-b253-4a81-9236-be5bf1d6dd7c" target="_blank" class="btn portfolio-download-btn">
+    <a href="https://app.tapnow.ai/home/taptv/28/f4c804db-b253-4a81-9236-be5bf1d6dd7c" target="_blank" rel="noopener noreferrer" class="btn portfolio-download-btn">
       View Video
     </a>
   </div>

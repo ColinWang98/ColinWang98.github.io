@@ -172,17 +172,84 @@
     const container = document.getElementById("poem-container");
     if (!container) return;
     let poemIndex = 0;
+    let isAnimating = false;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const scatter = (distance) => {
+      const angle = Math.random() * Math.PI * 2;
+      const radius = distance * (0.55 + Math.random() * 0.75);
+      return {
+        x: `${Math.cos(angle) * radius}px`,
+        y: `${Math.sin(angle) * radius}px`,
+        rotate: `${Math.round((Math.random() - 0.5) * 80)}deg`
+      };
+    };
+    const appendCharacters = (parent, text, baseIndex) => {
+      let charIndex = baseIndex;
+      const characters = Array.from(text);
+      characters.forEach((char, lineIndex) => {
+        const span = document.createElement("span");
+        const entry = scatter(180);
+        const exit = scatter(220);
+        span.className = "poem-char";
+        span.textContent = char === " " ? "\u00a0" : char;
+        span.style.setProperty("--scatter-x", entry.x);
+        span.style.setProperty("--scatter-y", entry.y);
+        span.style.setProperty("--scatter-r", entry.rotate);
+        span.style.setProperty("--exit-x", exit.x);
+        span.style.setProperty("--exit-y", exit.y);
+        span.style.setProperty("--exit-r", exit.rotate);
+        span.style.setProperty("--delay", `${Math.min(charIndex * 14, 900)}ms`);
+        span.style.setProperty("--exit-delay", `${Math.min((characters.length - lineIndex) * 8, 420)}ms`);
+        parent.appendChild(span);
+        charIndex += 1;
+      });
+      return charIndex;
+    };
+    const buildPoem = (poem) => {
+      const article = document.createElement("article");
+      const title = document.createElement("h3");
+      const body = document.createElement("div");
+      let charIndex = 0;
+
+      article.className = "poem-card poem-card--scatter";
+      title.className = "poem-title";
+      body.className = "poem-body";
+      charIndex = appendCharacters(title, poem.title, charIndex);
+
+      poem.content.split("\n").forEach((line) => {
+        const lineElement = document.createElement("div");
+        lineElement.className = "poem-line";
+        if (line.length) {
+          charIndex = appendCharacters(lineElement, line, charIndex);
+        } else {
+          lineElement.appendChild(document.createElement("br"));
+        }
+        body.appendChild(lineElement);
+      });
+
+      article.appendChild(title);
+      article.appendChild(body);
+      return article;
+    };
     const render = () => {
       const poem = poems[poemIndex];
-      container.classList.remove("is-ready");
-      container.innerHTML = `<article class="poem-card"><h3 class="poem-title">${poem.title}</h3><div class="poem-body">${poem.content}</div></article>`;
+      container.replaceChildren(buildPoem(poem));
       window.requestAnimationFrame(() => container.classList.add("is-ready"));
     };
     render();
+    if (prefersReducedMotion) return;
     window.setInterval(() => {
-      poemIndex = (poemIndex + 1) % poems.length;
-      render();
-    }, 9000);
+      if (isAnimating) return;
+      const currentPoem = container.querySelector(".poem-card");
+      isAnimating = true;
+      container.classList.remove("is-ready");
+      if (currentPoem) currentPoem.classList.add("is-scattering");
+      window.setTimeout(() => {
+        poemIndex = (poemIndex + 1) % poems.length;
+        render();
+        isAnimating = false;
+      }, 1800);
+    }, 10500);
   }
 
   function initCursorAura() {

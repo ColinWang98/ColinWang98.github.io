@@ -852,6 +852,7 @@ article.page.homepage {
   align-items: center;
   text-align: center;
   padding: 1.4rem 1.5rem;
+  overflow: hidden;
 }
 
 .poem-stage.is-ready .poem-card {
@@ -867,16 +868,55 @@ article.page.homepage {
   transition: opacity 360ms ease, transform 360ms ease;
 }
 
+.poem-card--scatter {
+  opacity: 1;
+  transform: none;
+}
+
 .poem-title {
   margin: 0 0 1rem;
   font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .poem-body {
-  white-space: pre-line;
   font-size: clamp(0.98rem, 1.15vw, 1.08rem);
   line-height: 1.95;
   color: var(--text-body);
+}
+
+.poem-line {
+  min-height: 1.95em;
+}
+
+.poem-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(var(--scatter-x), var(--scatter-y), 0) rotate(var(--scatter-r)) scale(0.72);
+  transition:
+    opacity 720ms ease,
+    transform 960ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: var(--delay);
+  will-change: opacity, transform;
+}
+
+.poem-stage.is-ready .poem-char {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+}
+
+.poem-card.is-scattering .poem-char {
+  opacity: 0;
+  transform: translate3d(var(--exit-x), var(--exit-y), 0) rotate(var(--exit-r)) scale(0.68);
+  transition-duration: 760ms, 1080ms;
+  transition-delay: var(--exit-delay);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poem-char {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .design-portfolio-card {

@@ -975,3 +975,27 @@ article.page.homepage {
   transform: translateY(0);
   transition: opacity 420ms ease, transform 420ms ease;
 }
+
+@media (max-width: 760px) {
+  .paper-box,
+  .homepage .paper-box {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .paper-box-image {
+    width: 100%;
+  }
+
+  .project-thumb,
+  .project-poster,
+  .paper-box-image iframe {
+    min-height: 220px;
+  }
+
+  .thumb--image img {
+    max-height: 260px;
+    min-height: 220px;
+  }
+}

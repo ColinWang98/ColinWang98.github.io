@@ -80,7 +80,16 @@
     }
   }
 
+  function prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
   function initFadeIns() {
+    if (prefersReducedMotion()) {
+      document.querySelectorAll(".hero-section, .paper-box, .timeline-item, .photo-carousel, .design-portfolio-card, .poem-stage")
+        .forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
     if (!("IntersectionObserver" in window)) return;
     const targets = document.querySelectorAll(".hero-section, .paper-box, .timeline-item, .photo-carousel, .design-portfolio-card, .poem-stage");
     const observer = new IntersectionObserver((entries) => {
@@ -159,11 +168,14 @@
       if (prev) prev.addEventListener("click", () => goTo(index - 1));
       if (next) next.addEventListener("click", () => goTo(index + 1));
       indicators.forEach((indicator, indicatorIndex) => indicator.addEventListener("click", () => goTo(indicatorIndex)));
-      let timer = window.setInterval(() => goTo(index + 1), 5000);
-      carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
-      carousel.addEventListener("mouseleave", () => {
+      let timer = null;
+      if (!prefersReducedMotion()) {
         timer = window.setInterval(() => goTo(index + 1), 5000);
-      });
+        carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
+        carousel.addEventListener("mouseleave", () => {
+          timer = window.setInterval(() => goTo(index + 1), 5000);
+        });
+      }
       render();
     });
   }
@@ -255,7 +267,7 @@
   function initCursorAura() {
     const near = document.querySelector(".page-orb--near");
     const far = document.querySelector(".page-orb--far");
-    if (!near || !far || !window.matchMedia("(pointer: fine)").matches) return;
+    if (!near || !far || prefersReducedMotion() || !window.matchMedia("(pointer: fine)").matches) return;
 
     let rafId = null;
     let clientX = window.innerWidth * 0.55;

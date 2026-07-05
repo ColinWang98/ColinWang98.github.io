@@ -8,21 +8,23 @@ classes: subpage
 
 # Others
 
+Creative work and media experiments beyond formal research, including photography, writing, design, and AI-assisted video.
+
 ## Photography
 
 Contributor to [tuchong.com](https://tuchong.com), an online photography community.
 
 <div class="photo-carousel">
   <div class="carousel-container">
-    <div class="carousel-slide active"><img src="{{ '/Photos/photo1.jpg' | relative_url }}" alt="Photography 1" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo2.jpg' | relative_url }}" alt="Photography 2" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo3.jpg' | relative_url }}" alt="Photography 3" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo4.jpg' | relative_url }}" alt="Photography 4" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo5.jpg' | relative_url }}" alt="Photography 5" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo6.jpg' | relative_url }}" alt="Photography 6" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo8.jpg' | relative_url }}" alt="Photography 8" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo9.jpg' | relative_url }}" alt="Photography 9" loading="lazy" decoding="async"></div>
-    <div class="carousel-slide"><img src="{{ '/Photos/photo11.jpg' | relative_url }}" alt="Photography 11" loading="lazy" decoding="async"></div>
+    <div class="carousel-slide active"><img src="{{ '/assets/images/photos-web/photo1.jpg' | relative_url }}" alt="Photography 1" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo2.jpg' | relative_url }}" alt="Photography 2" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo3.jpg' | relative_url }}" alt="Photography 3" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo4.jpg' | relative_url }}" alt="Photography 4" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo5.jpg' | relative_url }}" alt="Photography 5" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo6.jpg' | relative_url }}" alt="Photography 6" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo8.jpg' | relative_url }}" alt="Photography 8" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo9.jpg' | relative_url }}" alt="Photography 9" loading="lazy" decoding="async" width="1600"></div>
+    <div class="carousel-slide"><img src="{{ '/assets/images/photos-web/photo11.jpg' | relative_url }}" alt="Photography 11" loading="lazy" decoding="async" width="1600"></div>
   </div>
   <button class="carousel-btn prev" type="button" aria-label="Previous photo">&#10094;</button>
   <button class="carousel-btn next" type="button" aria-label="Next photo">&#10095;</button>
@@ -63,12 +65,12 @@ View my design work collection featuring architectural and creative projects.
   </div>
 </div>
 
-<div class="portfolio-preview">
-  <h3>Portfolio Preview</h3>
-  <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" width="100%" height="700" title="Portfolio Preview" loading="lazy">
+<details class="portfolio-preview">
+  <summary>Open Portfolio Preview</summary>
+  <iframe src="{{ '/assets/Portfolio.pdf' | relative_url }}" width="100%" height="700" loading="lazy" title="Portfolio Preview">
     <p>Your browser does not support embedded PDFs. Please use the download button above.</p>
   </iframe>
-</div>
+</details>
 
 ## AI Video
 

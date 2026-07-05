@@ -80,8 +80,8 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 10/2024 - 03/2025</p>
   </div>
   <div class="paper-box-image">
-    <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview" 
-            width="100%" height="250" frameborder="0" allowfullscreen loading="lazy">
+    <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview"
+            width="100%" height="250" frameborder="0" loading="lazy" title="VR Breathing Training Platform preview" allowfullscreen>
     </iframe>
   </div>
 </div>
@@ -106,7 +106,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     </div>
   </div>
   <div class="paper-box-image">
-    <div class="project-poster poster--violet">
+    <div class="project-poster poster--violet" role="img" aria-label="VR collaborative 3D painting project preview">
       <div>
         <i class="fas fa-palette" aria-hidden="true"></i>
         <p>VR Collaborative<br>3D Painting</p>
@@ -131,7 +131,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Duration:</strong> 06/2025 - 09/2025</p>
   </div>
   <div class="paper-box-image">
-    <div class="project-poster poster--ember">
+    <div class="project-poster poster--ember" role="img" aria-label="AI versus human moderator study preview">
       <div>
         <i class="fas fa-robot" aria-hidden="true"></i>
         <p>AI vs Human<br>Moderator Study</p>
@@ -156,8 +156,8 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
   </div>
   <div class="paper-box-image">
-    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview" 
-            width="100%" height="250" frameborder="0" allowfullscreen loading="lazy">
+    <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview"
+            width="100%" height="250" frameborder="0" loading="lazy" title="The Red MetaChamber preview" allowfullscreen>
     </iframe>
   </div>
 </div>
@@ -182,13 +182,14 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     </div>
   </div>
   <div class="paper-box-image">
-    <iframe 
-      style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 8px;" 
-      width="100%" 
-      height="300" 
-      src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1" 
-      allowfullscreen
-      loading="lazy">
+    <iframe
+      class="embed-frame"
+      width="100%"
+      height="300"
+      loading="lazy"
+      title="Sensor-enabled Urban Green Care Farm Figma prototype"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1"
+      allowfullscreen>
     </iframe>
   </div>
 </div>

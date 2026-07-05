@@ -99,11 +99,15 @@
   }
 
   .paper-box-image iframe,
-    .project-poster,
-    .project-thumb,
-    .thumb--image img {
-      min-height: 220px;
-    }
+  .project-poster,
+  .project-thumb,
+  .thumb--image img {
+    min-height: 220px;
+  }
+
+  .paper-box-image iframe {
+    height: 240px;
+  }
 
   .design-portfolio-card {
     grid-template-columns: 1fr;
@@ -130,6 +134,11 @@
 
   .portfolio-preview iframe {
     min-height: 480px;
+    height: 480px;
+  }
+
+  .portfolio-preview summary {
+    width: 100%;
   }
 }
 
@@ -171,5 +180,6 @@
 
   .portfolio-preview iframe {
     min-height: 360px;
+    height: 360px;
   }
 }

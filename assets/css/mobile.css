@@ -165,6 +165,13 @@
     display: none;
   }
 
+  .education-logo {
+    flex-basis: 76px;
+    width: 76px;
+    height: 56px;
+    padding: 0.35rem;
+  }
+
   .hero-fact,
   .interest-tag,
   .status-pill,

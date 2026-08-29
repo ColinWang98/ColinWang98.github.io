@@ -15,8 +15,8 @@ classes: subpage
     <div class="timeline-marker"></div>
     <div class="timeline-content">
       <h3>Research Assistant</h3>
-      <p><strong>07/2024 - 10/2025</strong></p>
-      <p><strong>Department of Computing, The Hong Kong Polytechnic University</strong></p>
+      <p><strong>07/2024 - Current</strong></p>
+      <p><strong>Department of Computing and Department of Applied Social Science, The Hong Kong Polytechnic University</strong></p>
       <ul>
         <li>Working with <a href="https://chenli.me/" target="_blank" rel="noopener noreferrer">Prof. Li Chen Richard</a> on advanced research projects</li>
         <li>Modeling and scene construction for virtual environments</li>

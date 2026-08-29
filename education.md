@@ -15,6 +15,9 @@ classes: subpage
     <div class="timeline-marker"></div>
     <div class="timeline-content">
       <div class="timeline-header">
+        <div class="education-logo">
+          <img src="{{ '/assets/images/education/polyu-logo.jpg' | relative_url }}" alt="The Hong Kong Polytechnic University logo" loading="lazy" decoding="async">
+        </div>
         <div>
           <h3>The Hong Kong Polytechnic University</h3>
           <p><strong>September 2023 - October 2024</strong></p>
@@ -32,6 +35,9 @@ classes: subpage
     <div class="timeline-marker"></div>
     <div class="timeline-content">
       <div class="timeline-header">
+        <div class="education-logo">
+          <img src="{{ '/assets/images/education/hebei-university-logo.png' | relative_url }}" alt="Hebei University logo" loading="lazy" decoding="async">
+        </div>
         <div>
           <h3>Hebei University (HBU)</h3>
           <p><strong>September 2017 - June 2022</strong></p>

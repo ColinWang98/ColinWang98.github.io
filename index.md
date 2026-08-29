@@ -29,7 +29,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 ### Current Status
 
 <div class="status-panel">
-  <span class="status-pill">Seeking PhD opportunities</span>
+  <span class="status-pill status-pill--phd">Seeking PhD opportunities</span>
   <p>Current focus includes HCI, XR, cultural heritage, and environmental psychology.</p>
 </div>
 
@@ -101,9 +101,6 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
     <p><strong>Research Focus:</strong> Idea generation, Experimental design and conduction, Data Processing</p>
     <p><strong>Platform:</strong> Virtual Reality</p>
     
-    <div class="project-links">
-      <a href="https://www.icc-artgallery2025.top/" target="_blank" rel="noopener noreferrer" class="btn">View Experimental Results</a>
-    </div>
   </div>
   <div class="paper-box-image">
     <div class="project-poster poster--violet" role="img" aria-label="VR collaborative 3D painting project preview">

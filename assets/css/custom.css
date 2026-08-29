@@ -618,23 +618,19 @@ article.page.homepage {
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 800;
   line-height: 1.3;
+  letter-spacing: 0;
+  word-spacing: 0;
   box-shadow: none;
 }
 
 .phd-status-char {
   display: inline-block;
-  animation: phd-char-float var(--phd-float-duration) ease-in-out var(--phd-float-delay) infinite;
-  will-change: transform;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@keyframes phd-char-float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  50% {
-    transform: translate3d(var(--phd-float-x), var(--phd-float-y), 0) rotate(var(--phd-float-rotate));
+@media (hover: hover) and (pointer: fine) {
+  .phd-status-char:hover {
+    transform: rotateZ(360deg);
   }
 }
 
@@ -1541,11 +1537,6 @@ article.page.homepage {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .phd-status-char {
-    animation: none;
-    transform: none;
-  }
-
   html {
     scroll-behavior: auto;
   }

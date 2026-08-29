@@ -132,11 +132,6 @@
       letter.className = "phd-status-char";
       letter.setAttribute("aria-hidden", "true");
       letter.textContent = character === " " ? "\u00a0" : character;
-      letter.style.setProperty("--phd-float-x", `${(Math.random() * 4 - 2).toFixed(1)}px`);
-      letter.style.setProperty("--phd-float-y", `${(-2.5 - Math.random() * 4).toFixed(1)}px`);
-      letter.style.setProperty("--phd-float-rotate", `${(Math.random() * 5 - 2.5).toFixed(1)}deg`);
-      letter.style.setProperty("--phd-float-duration", `${(3.4 + Math.random() * 2.4).toFixed(2)}s`);
-      letter.style.setProperty("--phd-float-delay", `${(-Math.random() * 5.8).toFixed(2)}s`);
       status.appendChild(letter);
     });
   }

@@ -29,7 +29,7 @@ I am a passionate HCI researcher. Currently working as a Research Assistant with
 ### Current Status
 
 <div class="status-panel">
-  <span class="status-pill status-pill--phd">Seeking PhD opportunities</span>
+  <span class="status-pill status-pill--phd" data-phd-status>Seeking PhD opportunities</span>
   <p>Current focus includes HCI, XR, cultural heritage, and environmental psychology.</p>
 </div>
 

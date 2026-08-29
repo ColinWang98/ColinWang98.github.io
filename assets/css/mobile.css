@@ -172,6 +172,11 @@
     padding: 0.35rem;
   }
 
+  .status-pill--phd {
+    width: fit-content;
+    justify-content: flex-start;
+  }
+
   .hero-fact,
   .interest-tag,
   .status-pill,

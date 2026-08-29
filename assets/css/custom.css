@@ -608,27 +608,33 @@ article.page.homepage {
 
 .status-pill--phd {
   align-self: start;
-  padding: 0.68rem 1.08rem;
-  border: 1px solid rgba(26, 91, 114, 0.2);
+  gap: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: none;
   color: var(--accent);
-  font-size: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 800;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.88),
-    inset 0 -8px 18px rgba(26, 91, 114, 0.05),
-    0 12px 24px rgba(21, 40, 68, 0.1);
-  animation: phd-status-float 4.8s ease-in-out infinite;
+  line-height: 1.3;
+  box-shadow: none;
+}
+
+.phd-status-char {
+  display: inline-block;
+  animation: phd-char-float var(--phd-float-duration) ease-in-out var(--phd-float-delay) infinite;
   will-change: transform;
 }
 
-@keyframes phd-status-float {
+@keyframes phd-char-float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) rotate(0deg);
   }
 
   50% {
-    transform: translateY(-6px);
+    transform: translate3d(var(--phd-float-x), var(--phd-float-y), 0) rotate(var(--phd-float-rotate));
   }
 }
 
@@ -1535,6 +1541,11 @@ article.page.homepage {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .phd-status-char {
+    animation: none;
+    transform: none;
+  }
+
   html {
     scroll-behavior: auto;
   }

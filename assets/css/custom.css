@@ -204,6 +204,60 @@ summary:focus-visible {
   display: none;
 }
 
+.nav-deadlines-item {
+  align-self: center;
+}
+
+.navbar a.nav-deadlines {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--glass-frost);
+  box-shadow: var(--shadow-sm);
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: 0;
+  overflow: visible;
+}
+
+.navbar a.nav-deadlines:hover,
+.navbar a.nav-deadlines:focus-visible,
+.navbar a.nav-deadlines[aria-current="page"] {
+  background: rgba(26, 91, 114, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.navbar a.nav-deadlines:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.nav-deadlines-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 1;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--text-strong);
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.nav-deadlines:hover .nav-deadlines-tooltip,
+.nav-deadlines:focus-visible .nav-deadlines-tooltip {
+  visibility: visible;
+}
+
 #main {
   max-width: var(--content-max);
   margin: 0 auto;

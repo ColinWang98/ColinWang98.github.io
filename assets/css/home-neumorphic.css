@@ -49,6 +49,19 @@ body.home-neumorphic .navbar a:focus-visible {
   box-shadow: var(--recessed);
 }
 
+body.home-neumorphic .navbar a.nav-deadlines {
+  border-color: rgba(255, 255, 255, 0.92);
+  color: var(--accent);
+  background: linear-gradient(145deg, #faf9f4, #e7e5db);
+  box-shadow: var(--raised-small);
+}
+
+body.home-neumorphic .navbar a.nav-deadlines:hover,
+body.home-neumorphic .navbar a.nav-deadlines:focus-visible {
+  background: var(--cream);
+  box-shadow: var(--recessed);
+}
+
 body.home-neumorphic .sidebar,
 body.home-neumorphic article.page.homepage {
   border: 1px solid rgba(255, 255, 255, 0.76);
@@ -289,7 +302,7 @@ body.home-neumorphic .research-motto {
 }
 
 body.home-neumorphic .interest-tag,
-body.home-neumorphic .status-pill,
+body.home-neumorphic .status-pill:not(.status-pill--phd),
 body.home-neumorphic .badge {
   border: 1px solid rgba(255, 255, 255, 0.78);
   color: #4d5a49;

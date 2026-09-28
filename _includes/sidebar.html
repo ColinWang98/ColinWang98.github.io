@@ -1,36 +1,37 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
+  <aside class="sidebar sticky" aria-label="Personal profile">
     <div class="profile_box">
-      <div class="author__avatar is-interactive js-easter-egg-trigger">
-        <img src="{{ site.author.avatar | relative_url }}" width="124" height="124" alt="Wang Yao avatar">
-        <div class="click-me-hint">
-          <svg class="click-me-curve" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10,25 Q25,10 50,25 T90,25" stroke="var(--accent)" stroke-width="2" fill="none" class="curve-path"/>
-            <text x="50" y="15" text-anchor="middle" class="click-me-text">click me</text>
-          </svg>
-        </div>
+      <div class="profile-display">
+        <button class="author__avatar is-interactive js-easter-egg-trigger" type="button" aria-label="Toggle animated background" aria-pressed="false">
+          <img src="{{ site.author.avatar | relative_url }}" width="96" height="96" alt="Wang Yao avatar">
+        </button>
       </div>
       <div class="author__content">
-        <h3 class="author__name">{{ site.author.name }}</h3>
-        <p class="author__bio">{{ site.author.bio }}</p>
+        <p class="author__name">{{ site.author.name }}</p>
+        <p class="author__bio">Research Assistant<br>The Hong Kong Polytechnic University</p>
+        <span class="profile-location">Hong Kong</span>
       </div>
       <div class="author__urls-wrapper">
-        <button class="btn btn--glass author__menu-toggle" type="button">
+        <button class="btn btn--secondary author__menu-toggle" type="button" aria-expanded="false" aria-controls="author-contact-links">
           Contact
           <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
         </button>
-        <ul class="author__urls social-icons">
+        <div class="author-contact-panel">
+        <div class="author-contact-viewport">
+        <ul class="author__urls social-icons" id="author-contact-links">
           <li class="icon-only" title="LinkedIn"><a href="https://www.linkedin.com/in/yao-wang-3332a1284/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
-          <li class="icon-only" title="Email: {{ site.author.email }}"><a href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
-          <li class="icon-only" title="Phone: {{ site.author.tel }}"><a href="tel:{{ site.author.tel }}"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
-          <li class="icon-only" title="ORCID"><a href="{{ site.author.orcid }}" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid-square ai-fw" aria-hidden="true"></i></a></li>
+          <li class="icon-only" title="Email: {{ site.author.email }}"><a href="mailto:{{ site.author.email }}" aria-label="Email Wang Yao"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+          <li class="icon-only" title="Phone: {{ site.author.tel }}"><a href="tel:{{ site.author.tel }}" aria-label="Call Wang Yao"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
+          <li class="icon-only" title="ORCID"><a href="{{ site.author.orcid }}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="ai ai-orcid-square ai-fw" aria-hidden="true"></i></a></li>
         </ul>
+        </div>
+        </div>
       </div>
     </div>
     <div class="cv-download">
-      <a href="{{ '/assets/Wang Yao CV.pdf' | absolute_url }}" class="btn btn--cv" target="_blank" rel="noopener noreferrer">
+      <a href="{{ '/assets/Wang Yao CV.pdf' | relative_url }}" class="btn btn--cv" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-fw fa-download" aria-hidden="true"></i> Download CV
       </a>
     </div>
-  </div>
+  </aside>
 {% endif %}

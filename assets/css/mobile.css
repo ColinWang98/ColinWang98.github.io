@@ -29,22 +29,8 @@
 }
 
 @media (max-width: 768px) {
-  .page-orb--near {
-    width: 220px;
-    height: 220px;
-    filter: blur(34px);
-    opacity: 0.48;
-  }
-
-  .page-orb--far {
-    width: 320px;
-    height: 320px;
-    filter: blur(54px);
-    opacity: 0.3;
-  }
-
   body {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .masthead__inner-wrap {
@@ -144,7 +130,7 @@
 
 @media (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .navbar a {

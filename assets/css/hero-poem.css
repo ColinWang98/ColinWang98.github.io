@@ -1,0 +1,52 @@
+.hero-poem {
+  --hero-poem-ink: var(--text-strong, #333333);
+  --hero-poem-dither: var(--text-muted, #666666);
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px 0 0;
+  border: 0;
+  border-top: 1px solid #26332330;
+  background: transparent;
+  color: var(--hero-poem-ink);
+  box-shadow: none;
+  font-family: var(--font-sans, "Manrope", sans-serif);
+  font-size: 16px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.hero-poem, .hero-poem * { box-sizing: border-box; }
+.hero-poem [hidden] { display: none !important; }
+.hero-poem:focus-visible { outline: 2px solid var(--hero-poem-ink); outline-offset: 4px; }
+.hero-poem .hero-poem__label {
+  margin: 0;
+  color: var(--text-muted);
+  font: 13px/1.4 var(--font-eink, monospace);
+  letter-spacing: .04em;
+}
+.hero-poem__verses, .hero-poem__entry { min-width: 0; }
+.hero-poem__verses { display: grid; background: transparent; }
+/* Reserve space only for the short verses, so rotation does not move the page. */
+.hero-poem .hero-poem__entry { grid-area: 1 / 1; align-self: start; margin: 0; }
+.hero-poem__entry[aria-hidden="true"] { visibility: hidden; }
+.hero-poem .hero-poem__quote { margin: 0; padding: 0; border: 0; font-style: normal; }
+.hero-poem .hero-poem__text {
+  margin: 0;
+  color: var(--hero-poem-ink);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+.hero-poem__line { display: block; }
+.hero-poem__decoration { height: 8px; width: 64px; opacity: .25; pointer-events: none; }
+.hero-poem[data-poem-index="0"] .hero-poem__decoration {
+  background: repeating-linear-gradient(0deg, var(--hero-poem-dither) 0 1px, transparent 1px 5px);
+}
+.hero-poem[data-poem-index="1"] .hero-poem__decoration {
+  background: repeating-linear-gradient(90deg, var(--hero-poem-dither) 0 1px, transparent 1px 5px, var(--hero-poem-dither) 5px 6px, transparent 6px 14px);
+}
+.hero-poem[data-poem-index="2"] .hero-poem__decoration {
+  background: radial-gradient(circle, var(--hero-poem-dither) 1px, transparent 1.5px) 0 0 / 8px 8px;
+}

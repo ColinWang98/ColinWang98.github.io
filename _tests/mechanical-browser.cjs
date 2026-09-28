@@ -1,0 +1,81 @@
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+
+(async () => {
+  const browser = await chromium.launch({ channel: 'msedge', headless: true, args: ['--no-sandbox', '--disable-gpu'] });
+  const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  try {
+    await page.goto('http://127.0.0.1:4173', { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => document.querySelector('.author__avatar img').naturalWidth > 0);
+    const geometry = await page.evaluate(() => {
+      const panel = document.querySelector('.sidebar').getBoundingClientRect();
+      const avatar = document.querySelector('.author__avatar').getBoundingClientRect();
+      const image = document.querySelector('.author__avatar img').getBoundingClientRect();
+      return { panel: panel.toJSON(), avatar: avatar.toJSON(), image: image.toJSON() };
+    });
+    const inside = (inner, outer) => inner.width > 0 && inner.height > 0 && inner.top >= outer.top - 1 && inner.bottom <= outer.bottom + 1 && inner.left >= outer.left - 1 && inner.right <= outer.right + 1;
+    assert.ok(inside(geometry.avatar, geometry.panel) && inside(geometry.image, geometry.avatar), `avatar escapes profile bounds: ${JSON.stringify(geometry)}`);
+    const button = page.locator('.author__menu-toggle');
+    const links = page.locator('#author-contact-links');
+    assert.equal(await links.evaluate((el) => el.inert), true);
+    await button.click();
+    await page.waitForTimeout(500);
+    assert.equal(await links.evaluate((el) => el.inert), false);
+    assert.equal(await page.locator('.author-contact-panel').evaluate((el) => getComputedStyle(el).opacity), '1');
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(400);
+    assert.equal(await links.evaluate((el) => el.inert), true);
+    assert.equal(await page.locator('.author-contact-panel').evaluate((el) => el.getBoundingClientRect().height), 0);
+    assert.equal(await button.evaluate((el) => el === document.activeElement), true, 'Escape restores focus to Contact');
+    console.log('PASS mobile avatar bounds and animated, keyboard-safe Contact panel');
+
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    const key = page.locator('.btn--cv');
+    const state = () => key.evaluate((el) => ({ shadow: getComputedStyle(el).boxShadow, y: getComputedStyle(el).translate, duration: getComputedStyle(el).transitionDuration }));
+    await page.mouse.move(1400, 900);
+    await page.waitForTimeout(500);
+    const rest = await state();
+    await key.hover();
+    await page.waitForTimeout(500);
+    const hover = await state();
+    assert.notEqual(hover.shadow, rest.shadow);
+    assert.match(hover.y, /-1px/);
+    await page.mouse.down();
+    await page.waitForTimeout(160);
+    const pressed = await state();
+    assert.equal(parseFloat(pressed.y.split(/\s+/).at(-1)), 1, `button downstroke: ${JSON.stringify(pressed)}`);
+    assert.notEqual(pressed.shadow, hover.shadow);
+    await page.mouse.move(1400, 900);
+    await page.mouse.up();
+    await page.waitForTimeout(500);
+    assert.equal((await state()).shadow, rest.shadow);
+    assert.match((await state()).duration, /0\.22s/);
+    const wheel = page.locator('.wheel-center');
+    await wheel.scrollIntoViewIfNeeded();
+    await page.mouse.move(1400, 900);
+    await page.waitForTimeout(500);
+    const before = await wheel.boundingBox();
+    await wheel.hover();
+    await page.waitForTimeout(500);
+    const after = await wheel.boundingBox();
+    assert.ok(Math.abs(before.x - after.x) < 2 && Math.abs(before.y - after.y) < 2 && Math.abs(before.width - after.width) < 2 && Math.abs(before.height - after.height) < 2, `wheel hover must not displace its hit target: ${JSON.stringify({ before, after })}`);
+    assert.ok(await page.evaluate(({ x, y }) => !!document.elementFromPoint(x, y)?.closest('.wheel-center'), { x: before.x + before.width / 2, y: before.y + before.height / 2 }), 'the original center point remains a wheel-center hit target after hover');
+    await page.setViewportSize({ width: 768, height: 900 });
+    await links.locator('a').first().focus();
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.waitForTimeout(400);
+    assert.equal(await button.evaluate((el) => el === document.activeElement), true, 'resize preserves focus on Contact toggle');
+    await button.click();
+    await page.waitForTimeout(500);
+    const clearance = await links.locator('a').first().evaluate((el) => {
+      const clip = el.closest('.author-contact-panel').getBoundingClientRect();
+      const key = el.getBoundingClientRect();
+      return Math.min(key.top - clip.top, clip.bottom - key.bottom);
+    });
+    assert.ok(clearance >= 6, `contact key needs outline and shadow clearance, got ${clearance}px`);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    assert.ok((await state()).duration.split(',').every((duration) => parseFloat(duration) === 0), 'reduced motion removes key transitions');
+    assert.equal(await page.locator('html').evaluate((el) => getComputedStyle(el).scrollBehavior), 'auto');
+    console.log('PASS physical key hover, downstroke, release and reduced-motion fallback');
+  } finally { await browser.close(); }
+})().catch((error) => { console.error(error); process.exitCode = 1; });

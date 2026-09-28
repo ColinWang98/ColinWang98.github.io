@@ -20,7 +20,7 @@ classes: subpage
 ## Proficiency & Skills
 
 <div class="skills-grid">
-  <div class="skill-category">
+  <div class="skill-category skill-category--wide">
     <h3>Research & Design</h3>
     <p>HCI research, XR prototyping, usability testing, experimental design, qualitative coding, and digital heritage experience design.</p>
   </div>

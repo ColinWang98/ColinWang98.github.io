@@ -111,13 +111,17 @@
     if (!countElement) return;
     const sessionKey = "siteVisitCounted";
     const storageKey = "totalVisitorCount";
-    let visitorCount = Number.parseInt(localStorage.getItem(storageKey) || "0", 10);
-    if (!sessionStorage.getItem(sessionKey)) {
-      visitorCount += 1;
-      localStorage.setItem(storageKey, String(visitorCount));
-      sessionStorage.setItem(sessionKey, "true");
+    try {
+      let visitorCount = Number.parseInt(localStorage.getItem(storageKey) || "0", 10);
+      if (!sessionStorage.getItem(sessionKey)) {
+        visitorCount += 1;
+        localStorage.setItem(storageKey, String(visitorCount));
+        sessionStorage.setItem(sessionKey, "true");
+      }
+      countElement.textContent = visitorCount.toLocaleString();
+    } catch {
+      countElement.textContent = "Unavailable";
     }
-    countElement.textContent = visitorCount.toLocaleString();
   }
 
   function initPhdStatus() {
@@ -149,17 +153,26 @@
       document.body.appendChild(iframe);
     }
     let open = false;
+    const setOpen = (value) => {
+      open = value;
+      iframe.classList.toggle("is-active", open);
+      triggers.forEach((trigger) => trigger.setAttribute("aria-pressed", String(open)));
+    };
     triggers.forEach((trigger) => {
       trigger.addEventListener("click", (event) => {
         event.stopPropagation();
-        open = !open;
-        iframe.classList.toggle("is-active", open);
+        setOpen(!open);
+      });
+      trigger.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          trigger.click();
+        }
       });
     });
     document.addEventListener("click", (event) => {
       if (open && !event.target.closest(".js-easter-egg-trigger")) {
-        iframe.classList.remove("is-active");
-        open = false;
+        setOpen(false);
       }
     });
   }
@@ -280,40 +293,34 @@
     }, 10500);
   }
 
-  function initCursorAura() {
-    const near = document.querySelector(".page-orb--near");
-    const far = document.querySelector(".page-orb--far");
-    if (!near || !far || prefersReducedMotion() || !window.matchMedia("(pointer: fine)").matches) return;
-
-    let rafId = null;
-    let clientX = window.innerWidth * 0.55;
-    let clientY = window.innerHeight * 0.2;
-
-    const render = () => {
-      rafId = null;
-      near.style.transform = `translate3d(${clientX - 160}px, ${clientY - 160}px, 0)`;
-      far.style.transform = `translate3d(${clientX - 260}px, ${clientY - 260}px, 0)`;
+  function initContactMenu() {
+    const button = document.querySelector(".author__menu-toggle");
+    const links = document.getElementById("author-contact-links");
+    if (!button || !links) return;
+    const compact = window.matchMedia("(max-width: 480px)");
+    const setOpen = (open) => {
+      if (!open && compact.matches && links.contains(document.activeElement)) {
+        button.focus({ preventScroll: true });
+      }
+      links.classList.toggle("is-open", open);
+      links.closest(".author-contact-panel").classList.toggle("is-open", open);
+      links.inert = compact.matches && !open;
+      button.classList.toggle("open", open);
+      button.setAttribute("aria-expanded", String(open));
     };
-
-    const queueRender = () => {
-      if (rafId !== null) return;
-      rafId = window.requestAnimationFrame(render);
-    };
-
-    window.addEventListener("pointermove", (event) => {
-      clientX = event.clientX;
-      clientY = event.clientY;
-      queueRender();
-    }, { passive: true });
-
-    queueRender();
-  }
-
-  function initWheelNavigation() {
-    if (!window.jQuery) return;
-    window.jQuery(() => {
-      window.jQuery(".hero-wheel a[href^='#']").off("click.smoothscroll");
+    button.addEventListener("click", () => setOpen(button.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && compact.matches && button.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        button.focus();
+      }
     });
+    compact.addEventListener("change", () => {
+      const buttonFocused = document.activeElement === button;
+      setOpen(!compact.matches);
+      if (!compact.matches && buttonFocused) links.querySelector("a").focus({ preventScroll: true });
+    });
+    setOpen(!compact.matches);
   }
 
   ready(() => {
@@ -323,7 +330,6 @@
     initEasterEgg();
     initCarousels();
     initPoems();
-    initCursorAura();
-    initWheelNavigation();
+    initContactMenu();
   });
 })();

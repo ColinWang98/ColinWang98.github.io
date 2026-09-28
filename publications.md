@@ -8,79 +8,40 @@ classes: subpage publications-page
 
 # Publications & Research
 
-<section class="publication-section">
-  <div class="section-heading">
-    <h2>Featured Research</h2>
-    <p>Selected peer-reviewed work and research directions across HCI, XR, learning technologies, and AI-supported interaction.</p>
-  </div>
-
-  <article class="paper-box publication-feature">
-    <div class="paper-box-text">
-      <div class="project-tags">
-        <span class="badge">ICWL 2024</span>
-        <span class="badge">Edu-Metaverse</span>
-        <span class="badge">Collaborative Learning</span>
-      </div>
-
-      <h3>Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour</h3>
-      <div class="publication-meta-grid">
-        <p><strong>Authors</strong><span>Yufei Lu; Ye Jia; Guang Chen; <strong>Yao Wang</strong>; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li</span></p>
-        <p><strong>Conference</strong><span>Learning Technologies and Systems (ICWL 2024)</span></p>
-        <p><strong>Publisher</strong><span>Springer, Lecture Notes in Computer Science, vol 15589</span></p>
-        <p><strong>Published</strong><span>April 17, 2025</span></p>
-      </div>
-
-      <p>This study investigated how learners' attributes and environmental attributes affect collaborative learning in Edu-Metaverse using a within-subjects design involving 32 participants. The confirmatory factor analysis revealed that various behavioural metrics in Edu-Metaverse mediated the effects of trait anxiety and virtual space satisfaction on collaborative learning performance.</p>
-
-      <p><strong>Research Focus:</strong> Educational Technology, Metaverse Learning, Collaborative Learning, User Experience, Social Presence</p>
-
-      <div class="project-links">
-        <a href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" rel="noopener noreferrer" class="btn">View Paper</a>
-        <a href="#edu-metaverse-cite" class="btn btn--ghost">Cite</a>
-      </div>
-    </div>
-
-    <aside class="publication-snapshot" aria-label="Featured research summary">
-      <span class="publication-snapshot__label">Featured Paper</span>
-      <strong>32</strong>
-      <span>participants in a within-subjects Edu-Metaverse study</span>
-      <div class="publication-snapshot__chips">
-        <span>Trait anxiety</span>
-        <span>Virtual space satisfaction</span>
-        <span>Behavioural metrics</span>
-      </div>
-    </aside>
-  </article>
-</section>
+Peer-reviewed work and research projects across HCI, XR, learning technologies, and AI-supported interaction.
 
 <section class="publication-section">
   <div class="section-heading">
-    <h2>Recent Publications</h2>
+    <h2>Published Research</h2>
   </div>
 
   <div class="publication-list">
-    <article class="publication-card">
+    <article class="publication-card" id="chi-moderator-cite">
       <div class="publication-year">2026</div>
       <div>
         <h3>Agentic Audio Moderator vs Human Moderator in Think-Aloud Usability Testing: Results from a Randomized Controlled Trial.</h3>
         <p>Wangda Zhu; Guang Chen; <strong>Yao Wang</strong>; Pengcheng An; Jiachun Du; Chen Li</p>
         <p><strong>CHI '26: ACM CHI Conference on Human Factors in Computing Systems</strong></p>
         <p>Published April 13, 2026. Article 727, pp. 1-19.</p>
-        <a href="https://dl.acm.org/doi/10.1145/3772318.3791653" target="_blank" rel="noopener noreferrer">DOI</a>
+        <div class="project-links"><a class="btn" href="https://dl.acm.org/doi/10.1145/3772318.3791653" target="_blank" rel="noopener noreferrer">View Paper &nearr;</a><a class="btn btn--secondary" href="{{ '/#project-moderator' | relative_url }}">Related Project</a></div>
       </div>
     </article>
 
     <article class="publication-card" id="edu-metaverse-cite">
-      <div class="publication-year">2024</div>
+      <div class="publication-year">2025</div>
       <div>
         <h3>Towards Effective Collaborative Learning in Edu-Metaverse: A Study on Learners' Anxiety, Perception, and Behaviour.</h3>
         <p>Yufei Lu; Ye Jia; Guang Chen; <strong>Yao Wang</strong>; Peter H. F. Ng; Laura Zhou; Qing Li; Chen Li</p>
         <p><strong>Learning Technologies and Systems (ICWL 2024)</strong></p>
+        <p>Published April 17, 2025. Springer, Lecture Notes in Computer Science, vol 15589.</p>
+        <p>This study investigated how learners' attributes and environmental attributes affect collaborative learning in Edu-Metaverse using a within-subjects design involving 32 participants. The confirmatory factor analysis revealed that various behavioural metrics in Edu-Metaverse mediated the effects of trait anxiety and virtual space satisfaction on collaborative learning performance.</p>
+        <p><strong>Research Focus:</strong> Educational Technology, Metaverse Learning, Collaborative Learning, User Experience, Social Presence</p>
+        <div class="project-links"><a class="btn" href="https://link.springer.com/chapter/10.1007/978-981-96-4407-0_4" target="_blank" rel="noopener noreferrer">View Paper &nearr;</a><a class="btn btn--secondary" href="https://doi.org/10.1007/978-981-96-4407-0_4" target="_blank" rel="noopener noreferrer">DOI &nearr;</a></div>
       </div>
     </article>
   </div>
 
-  <p class="section-note">All publications listed are based on actual research and academic work.</p>
+  <p class="section-note">Entries are ordered by publication year; conference editions are shown separately.</p>
 </section>
 
 <section class="publication-section">

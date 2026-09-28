@@ -1,21 +1,29 @@
-<div class="masthead">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead">
   <div class="masthead__inner-wrap">
-    <nav class="navbar" id="site-nav">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Homepage</a></li>
-        <li><a href="{{ '/education/' | relative_url }}">Education</a></li>
-        <li><a href="{{ '/publications/' | relative_url }}">Publications & Research</a></li>
-        <li><a href="{{ '/work/' | relative_url }}">Work & Internship</a></li>
-        <li><a href="{{ '/activities/' | relative_url }}">Activities</a></li>
-        <li><a href="{{ '/awards/' | relative_url }}">Awards & Skills</a></li>
-        <li><a href="{{ '/others/' | relative_url }}">Others</a></li>
-        <li class="nav-deadlines-item">
-          <a class="nav-deadlines" href="{{ '/deadlines/' | relative_url }}" aria-label="HCI Deadlines"{% if page.url == '/deadlines/' %} aria-current="page"{% endif %}>
-            <i class="fa-solid fa-clock" aria-hidden="true"></i>
-            <span class="nav-deadlines-tooltip" aria-hidden="true">HCI Deadlines</span>
-          </a>
+    <a class="site-signature" href="{{ '/' | relative_url }}" aria-label="Wang Yao home">
+      <img class="site-wordmark" width="110" height="40" src="{{ '/assets/images/colin-wordmark.svg' | relative_url }}" alt="" aria-hidden="true">
+      <span class="site-signature__tagline">Research &amp; practice</span>
+    </a>
+    <nav class="navbar" id="site-nav" aria-label="Main navigation">
+      <button class="nav-toggle btn btn--secondary" type="button" aria-expanded="false" aria-controls="primary-links" hidden>Menu <i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+      <ul id="primary-links">
+        <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+        <li><a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Research</a></li>
+        <li>
+          <details class="nav-experience">
+            <summary>Experience <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+            <ul class="nav-submenu">
+              <li><a href="{{ '/education/' | relative_url }}"{% if page.url == '/education/' %} aria-current="page"{% endif %}>Education</a></li>
+              <li><a href="{{ '/work/' | relative_url }}"{% if page.url == '/work/' %} aria-current="page"{% endif %}>Work &amp; Internship</a></li>
+              <li><a href="{{ '/activities/' | relative_url }}"{% if page.url == '/activities/' %} aria-current="page"{% endif %}>Activities</a></li>
+              <li><a href="{{ '/awards/' | relative_url }}"{% if page.url == '/awards/' %} aria-current="page"{% endif %}>Awards &amp; Skills</a></li>
+            </ul>
+          </details>
         </li>
+        <li><a href="{{ '/others/' | relative_url }}"{% if page.url == '/others/' %} aria-current="page"{% endif %}>Creative Work</a></li>
+        <li><a href="{{ '/deadlines/' | relative_url }}"{% if page.url == '/deadlines/' %} aria-current="page"{% endif %}>Deadlines</a></li>
       </ul>
     </nav>
   </div>
-</div>
+</header>

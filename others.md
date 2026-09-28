@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Others"
+title: "Creative Work"
 permalink: /others/
 author_profile: true
 classes: subpage
 ---
 
-# Others
+# Creative Work
 
 Creative work and media experiments beyond formal research, including photography, writing, design, and AI-assisted video.
 

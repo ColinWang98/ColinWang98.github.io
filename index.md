@@ -5,12 +5,35 @@ classes: homepage
 ---
 
 <div class="hero-section" id="hero-section">
-  <div class="hero-content">
-    <h1 class="name-title">Wang Yao</h1>
-    <h2 class="position-title">HCI Researcher & XR Developer</h2>
-    <div class="research-motto">
-      <em>"Constantly thinking, constantly progressing"</em>
+  <div class="hero-device-label" aria-hidden="true">
+    <span>WANG YAO / PERSONAL ARCHIVE</span>
+    <span>HK&nbsp;&nbsp;·&nbsp;&nbsp;001</span>
+  </div>
+  <div class="hero-device-grid">
+    <div class="hero-display">
+      <div class="hero-display-bar" aria-hidden="true">
+        <span><span class="display-light"></span> PROFILE / 01</span>
+        <span>HCI + XR</span>
+      </div>
+      <div class="hero-content">
+        <h1 class="name-title">Wang Yao</h1>
+        <h2 class="position-title">HCI Researcher & XR Developer</h2>
+        <div class="research-motto">
+          <em>"Constantly thinking, constantly progressing"</em>
+        </div>
+      </div>
+      <div class="hero-display-footer" aria-hidden="true">
+        <span>RESEARCH / DESIGN / EXPERIENCE</span>
+        <span>POLYU · HONG KONG</span>
+      </div>
     </div>
+    <nav class="hero-wheel" aria-label="Homepage quick links">
+      <a class="wheel-link wheel-link--top" href="#about-me">ABOUT</a>
+      <a class="wheel-link wheel-link--right" href="#ongoing-project">ONGOING</a>
+      <a class="wheel-link wheel-link--bottom" href="#recent-publications">PAPERS</a>
+      <a class="wheel-link wheel-link--left" href="#featured-research-projects">PROJECTS</a>
+      <a class="wheel-center" href="mailto:{{ site.author.email }}">CONTACT</a>
+    </nav>
   </div>
 </div>
 

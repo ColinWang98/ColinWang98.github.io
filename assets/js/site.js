@@ -309,6 +309,13 @@
     queueRender();
   }
 
+  function initWheelNavigation() {
+    if (!window.jQuery) return;
+    window.jQuery(() => {
+      window.jQuery(".hero-wheel a[href^='#']").off("click.smoothscroll");
+    });
+  }
+
   ready(() => {
     initFadeIns();
     initVisitorCount();
@@ -317,5 +324,6 @@
     initCarousels();
     initPoems();
     initCursorAura();
+    initWheelNavigation();
   });
 })();

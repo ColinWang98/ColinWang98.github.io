@@ -26,7 +26,7 @@ classes: homepage
       <section class="device-page device-info" data-device-page="research" aria-label="Research overview" hidden>
         <p class="device-eyebrow">RESEARCH / 02</p>
         <h2>People, technology,<br>and virtual experience.</h2>
-        <ul><li>Human-computer interaction and AI-mediated usability evaluation</li><li>XR interaction, biofeedback and immersive therapy</li><li>Digital heritage and spatial storytelling</li></ul>
+        <ul><li>Human-computer interaction and environmental psychology</li><li>XR interaction, biofeedback and immersive therapy</li><li>Digital heritage and spatial storytelling</li></ul>
         <a class="btn btn--secondary" href="{{ '/publications/' | relative_url }}">Research &amp; publications &rarr;</a>
       </section>
       <section class="device-page device-info" data-device-page="projects" aria-label="Project overview" hidden>
@@ -38,7 +38,7 @@ classes: homepage
       <section class="device-page device-info" data-device-page="contact" aria-label="Contact and PhD interests" hidden>
         <p class="device-eyebrow">CONNECT / 04</p>
         <h2>Seeking PhD<br>opportunities.</h2>
-        <p>I am interested in doctoral research across HCI, XR, AI-mediated evaluation, and digital heritage.</p>
+        <p>I am interested in doctoral research across HCI, environmental psychology, XR, and digital heritage.</p>
         <a href="#phd-interests">Read my research interests &rarr;</a>
         <div class="device-actions"><a class="btn" href="mailto:{{ site.author.email }}">Email me</a><a class="btn btn--secondary" href="{{ '/assets/Wang Yao CV.pdf' | relative_url }}" download>Download CV</a></div>
       </section>
@@ -71,14 +71,14 @@ classes: homepage
   </div>
   <p>I am an HCI researcher and Research Assistant with <a href="https://chenli.me/">Prof. Li Chen Richard</a> at The Hong Kong Polytechnic University, where I completed my Master's degree in Sustainable Urban Development. My work explores HCI, XR, cultural heritage, and environmental psychology.</p>
   <div class="home-interests" id="research-interests">
-    <strong>Research interests</strong><span>Human-Computer Interaction</span><span>Extended Reality</span><span>Virtual Experience</span>
+    <strong>Research interests</strong><span>Human-Computer Interaction</span><span>Extended Reality</span><span>Virtual Experience</span><span>Environmental Psychology</span>
   </div>
   <section class="phd-interests" aria-labelledby="phd-interests">
     <p class="device-eyebrow">DOCTORAL RESEARCH</p>
     <h3 id="phd-interests">Seeking PhD opportunities</h3>
     <p>Research themes I would like to develop further:</p>
     <div class="phd-theme-grid">
-      <div><h4>HCI &amp; AI-mediated evaluation</h4><p>How can AI agents support usability evaluation, and how do their interactions compare with human-led approaches?</p></div>
+      <div><h4>HCI &amp; environmental psychology</h4><p>How do physical and virtual environments shape perception, emotion, and behaviour, and how can these insights inform interactive experiences?</p></div>
       <div><h4>XR interaction &amp; wellbeing</h4><p>How can biofeedback and immersive environments support breathing practice, therapeutic experiences, and meaningful interaction?</p></div>
       <div><h4>Digital heritage &amp; spatial experience</h4><p>How can XR and AI-supported storytelling connect people with cultural heritage, urban places, and cross-cultural experiences?</p></div>
     </div>

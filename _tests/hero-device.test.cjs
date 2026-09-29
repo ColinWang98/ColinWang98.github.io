@@ -38,3 +38,14 @@ test('video controls stay scoped and playback pauses when obscured', () => {
   assert.match(js, /Escape/);
   assert.match(js, /entry.inert/);
 });
+
+test('research interests do not turn the moderator project into a PhD intention', () => {
+  const home = read('index.md');
+  const introduction = home.slice(0, home.indexOf('<section class="selected-publications"'));
+  assert.doesNotMatch(introduction, /AI-mediated (?:usability )?evaluation|How can AI agents support usability evaluation/);
+  assert.match(home, /id="project-moderator"/);
+  assert.match(home, /10\.1145\/3772318\.3791653/);
+  assert.match(home, /<h4>HCI &amp; environmental psychology<\/h4>/);
+  assert.match(home, /<span>Environmental Psychology<\/span>/);
+  assert.match(home, /physical and virtual environments/);
+});

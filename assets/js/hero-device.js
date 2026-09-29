@@ -12,7 +12,24 @@
   const video = device.querySelector("[data-device-video]");
   const status = device.querySelector("[data-video-status]");
   const modes = { up: "profile", right: "research", down: "projects", left: "contact" };
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let mode = "profile";
+  let initialized = false;
+  let heightTransition;
+  let contentTransition;
+
+  function finishTransition() {
+    if (heightTransition) {
+      heightTransition.onfinish = null;
+      heightTransition.cancel();
+    }
+    if (contentTransition) contentTransition.cancel();
+    heightTransition = contentTransition = null;
+    pages.classList.remove("is-switching");
+  }
+
+  reducedMotion.addEventListener("change", finishTransition);
+  window.addEventListener("resize", finishTransition);
 
   function controls() {
     const viewing = mode === "video";
@@ -23,6 +40,11 @@
   }
 
   function select(next) {
+    if (initialized && next === mode) return;
+    const animate = next !== mode && !reducedMotion.matches && typeof pages.animate === "function";
+    // Read the in-flight height before cancelling so repeated presses never jump back.
+    const previousHeight = animate ? pages.getBoundingClientRect().height : 0;
+    finishTransition();
     mode = next;
     if (mode !== "video") video.pause();
     device.dataset.deviceMode = mode;
@@ -36,6 +58,21 @@
     announcement.textContent = `${mode} screen`;
     pages.dispatchEvent(new Event("hero-device:change"));
     controls();
+    initialized = true;
+    if (animate) {
+      const nextHeight = pages.getBoundingClientRect().height;
+      const active = entries.find((entry) => entry.dataset.devicePage === mode);
+      pages.classList.add("is-switching");
+      heightTransition = pages.animate([
+        { height: `${previousHeight}px` },
+        { height: `${nextHeight}px` }
+      ], { duration: 360, easing: "cubic-bezier(.22, 1, .36, 1)" });
+      contentTransition = active.animate([
+        { opacity: 0, transform: "translateY(6px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ], { duration: 240, easing: "ease-out" });
+      heightTransition.onfinish = finishTransition;
+    }
   }
 
   async function play() {

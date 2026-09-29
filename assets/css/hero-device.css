@@ -1,6 +1,7 @@
 .hero-device-grid:not(.is-interactive) { grid-template-columns: minmax(0, 1fr); }
 .hero-section { scroll-margin-top: 12px; }
 .device-pages { display: grid; min-width: 0; }
+.device-pages.is-switching { overflow: clip; }
 .device-page { grid-area: 1 / 1; min-width: 0; }
 .device-page[aria-hidden="true"] { display: none; }
 .device-info { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px 0 0; }

@@ -174,7 +174,7 @@ test('verse heights remain intrinsic, text wraps, and decorative patterns remain
   const css = read('assets/css/hero-poem.css');
   assert.match(css, /grid-area: 1 \/ 1/);
   assert.match(css, /aria-hidden="true"\] \{ visibility: hidden/);
-  assert.match(css, /font-size: 16px/);
+  assert.match(css, /font-size: 18px/);
   assert.match(css, /line-height: 1\.6/);
   assert.match(css, /:focus-visible/);
   assert.equal([...css.matchAll(/data-poem-index="[0-2]"/g)].length, 3);

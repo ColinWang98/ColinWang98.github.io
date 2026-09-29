@@ -159,7 +159,7 @@ body.ceramic-theme::before { display: none; }
 /* Homepage identity screen: stable information, a separate space for poetry. */
 .ceramic-theme .hero-section { margin: 0 0 40px; padding: 24px; border: 1px solid #ffffff45; border-radius: 28px; background: var(--housing-face); box-shadow: 14px 14px 38px var(--shadow-dark), -14px -14px 38px var(--shadow-light); overflow: visible; }
 .ceramic-theme .hero-section::before { display: none; }
-.hero-device-label { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 16px; font: 13px var(--font-instrument); color: var(--text-muted); }
+.hero-device-label { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 16px; font: 14px var(--font-instrument); color: var(--text-muted); }
 .hero-device-grid { display: grid; grid-template-columns: minmax(0, 1fr) 224px; gap: 32px; align-items: center; }
 .hero-display {
   --font-eink: "Pixelify Sans", "PingFang SC", "Microsoft YaHei", Consolas, monospace;
@@ -173,14 +173,14 @@ body.ceramic-theme::before { display: none; }
   display: flex; flex-direction: column; min-width: 0; min-height: 0;
   padding: 16px 24px; border: 6px solid #d9d9d9; border-radius: 18px;
   background: radial-gradient(circle at 1px 1px, #26332312 .6px, transparent .8px) 0 0 / 4px 4px, #b9cba5;
-  color: var(--text-strong); font-family: var(--font-sans); font-size: 16px;
+  color: var(--text-strong); font-family: var(--font-sans); font-size: 18px;
   box-shadow: inset 3px 3px 10px #0000001c, inset -2px -2px 6px #ffffff80, 0 0 0 1px #99999960;
 }
-.hero-display-bar { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #55555540; color: var(--text-muted); font: 13px var(--font-eink); }
+.hero-display-bar { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid #55555540; color: var(--text-muted); font: 14px var(--font-eink); }
 .hero-display .display-light { border-radius: 0; background: var(--text-muted); box-shadow: none; }
 .ceramic-theme .hero-content { min-width: 0; padding: 16px 0; }
-.ceramic-theme .name-title { margin: 0 0 8px; font-family: var(--font-eink); font-size: clamp(2rem, 3vw, 2.25rem); font-weight: 500; letter-spacing: -.025em; }
-.ceramic-theme :is(.position-title, .research-motto) { font-size: 16px; line-height: 1.6; }
+.ceramic-theme .name-title { margin: 0 0 8px; font-family: var(--font-eink); font-size: clamp(2.5rem, 3vw, 2.75rem); font-weight: 500; letter-spacing: -.025em; }
+.ceramic-theme :is(.position-title, .research-motto) { font-size: 18px; line-height: 1.6; }
 .ceramic-theme .position-title { margin: 0; font-weight: 600; }
 .ceramic-theme .research-motto { margin: 8px 0 0; padding: 0; background: none; color: var(--text-body); }
 .hero-display .research-motto em { font-style: normal; }

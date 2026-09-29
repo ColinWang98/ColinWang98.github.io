@@ -5,12 +5,12 @@
 .device-page[aria-hidden="true"] { display: none; }
 .device-info { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px 0 0; }
 .ceramic-theme .device-info h2 { margin: 0; font-size: clamp(24px, 2.4vw, 32px); letter-spacing: 0; }
-.ceramic-theme .device-info p, .ceramic-theme .device-info ul { margin: 0; font-size: 16px; }
+.ceramic-theme .device-info p, .ceramic-theme .device-info ul { margin: 0; font-size: 18px; }
 .device-info ul { padding-left: 20px; }
 .device-info li + li { margin-top: 12px; }
 .device-info a:not(.btn) { text-decoration: underline; text-underline-offset: 4px; }
 .device-eyebrow { font: 13px/1.5 var(--font-instrument); letter-spacing: .06em; color: var(--text-muted); }
-.hero-display .device-eyebrow { font-family: var(--font-eink); }
+.hero-display .device-eyebrow { font-family: var(--font-eink); font-size: 14px; }
 .device-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .device-controls { min-width: 0; }
 .wheel-link[aria-pressed="true"] { background: #cfd7d0; color: #374b3d; box-shadow: inset 2px 2px 4px #b5beb5, inset -2px -2px 4px #eef3ee; }

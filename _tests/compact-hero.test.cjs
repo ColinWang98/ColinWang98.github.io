@@ -18,7 +18,8 @@ test('poetry has no visible controls or obsolete button handlers', () => {
 
 test('screen body type has one scale while the name retains pixel lettering', () => {
   const css = read('assets/css/ceramic.css');
-  assert.match(css, /\.ceramic-theme :is\(\.position-title, \.research-motto\) \{[^}]*font-size: 16px;[^}]*line-height: 1\.6/);
+  assert.match(css, /\.ceramic-theme :is\(\.position-title, \.research-motto\) \{[^}]*font-size: 18px;[^}]*line-height: 1\.6/);
   assert.match(css, /\.ceramic-theme \.name-title \{[^}]*font-family: var\(--font-eink\)/);
-  assert.match(read('assets/css/hero-poem.css'), /\.hero-poem \.hero-poem__text \{[^}]*font-size: 16px;[^}]*line-height: 1\.6/);
+  assert.match(read('assets/css/hero-poem.css'), /\.hero-poem \.hero-poem__text \{[^}]*font-size: 18px;[^}]*line-height: 1\.6/);
+  assert.match(css, /font-size: clamp\(2\.5rem, 3vw, 2\.75rem\)/);
 });

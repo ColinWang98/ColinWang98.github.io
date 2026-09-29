@@ -11,7 +11,7 @@
   color: var(--hero-poem-ink);
   box-shadow: none;
   font-family: var(--font-sans, "Manrope", sans-serif);
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   overflow-wrap: anywhere;
 }
@@ -21,7 +21,7 @@
 .hero-poem .hero-poem__label {
   margin: 0;
   color: var(--text-muted);
-  font: 13px/1.4 var(--font-eink, monospace);
+  font: 14px/1.4 var(--font-eink, monospace);
   letter-spacing: .04em;
 }
 .hero-poem__verses, .hero-poem__entry { min-width: 0; }
@@ -34,7 +34,7 @@
   margin: 0;
   color: var(--hero-poem-ink);
   font-family: inherit;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   line-height: 1.6;

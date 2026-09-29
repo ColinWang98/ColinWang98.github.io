@@ -21,7 +21,7 @@ const assert = require('node:assert/strict');
         hiddenVideo: getComputedStyle(document.querySelector('[data-device-page="video"]')).display
       }));
       assert.ok(profile.height <= (width === 1440 ? 360 : 500), `compact profile at ${width}px: ${profile.height}`);
-      assert.ok(profile.fonts.every(size => size === '16px'));
+      assert.ok(profile.fonts.every(size => size === '18px'));
       assert.equal(profile.buttons, 0);
       assert.equal(profile.hiddenVideo, 'none');
       await page.getByRole('button', { name: 'Play Jizura video', exact: true }).click();

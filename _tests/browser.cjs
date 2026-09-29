@@ -28,12 +28,16 @@ const path = require('node:path');
           text: document.body.innerText.length,
           current: document.querySelectorAll('#site-nav [aria-current="page"]').length,
           font: parseFloat(getComputedStyle(document.body).fontSize),
+          bioFont: parseFloat(getComputedStyle(document.querySelector('.author__bio')).fontSize),
+          navFont: parseFloat(getComputedStyle(document.querySelector('#site-nav a')).fontSize),
+          buttonFont: parseFloat(getComputedStyle(document.querySelector('.btn--cv')).fontSize),
           header: document.querySelector('.masthead').getBoundingClientRect().height,
           overlap: [...document.querySelectorAll('.paper-box, .timeline-content, .research-card')].some((el) => el.scrollWidth > el.clientWidth + 2)
         }));
         assert.ok(metrics.scroll <= metrics.width + 1, `${route || 'home'} ${width}: horizontal overflow ${JSON.stringify(metrics)}`);
         assert.ok(!metrics.overlap, `${route || 'home'} ${width}: card content overflow`);
-        assert.ok(metrics.text > 200 && metrics.current === 1 && metrics.font >= 15, `${route || 'home'} ${width}: content/nav/font`);
+        assert.ok(metrics.text > 200 && metrics.current === 1 && metrics.font >= 18, `${route || 'home'} ${width}: content/nav/font`);
+        assert.ok(metrics.bioFont >= 15 && metrics.navFont >= 16 && metrics.buttonFont >= 16, `${route || 'home'} ${width}: readable shared typography ${JSON.stringify(metrics)}`);
         assert.ok(metrics.header < 90, `${route || 'home'} ${width}: masthead grew to ${metrics.header}px`);
       }
       console.log(`PASS layout: /${route} at six widths`);

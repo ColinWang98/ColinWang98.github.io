@@ -27,7 +27,7 @@ function controller({ rejectPlay = false, reducedMotion = false, animations = tr
   selectors['.device-pages'].getBoundingClientRect = () => ({ height: [280, 360, 400, 240, 320][entries.findIndex(entry => entry.attributes['aria-hidden'] === 'false')] || 280 });
   const video = selectors['[data-device-video]'];
   Object.assign(video, {
-    dataset: { src: '/assets/videos/jizura.mp4' }, paused: true, ended: false, currentTime: 0, plays: 0,
+    dataset: { src: '/assets/videos/jizura.mp4', title: 'RADWIMPS - \u541b\u3068\u7f8a\u3068\u9752' }, paused: true, ended: false, currentTime: 0, plays: 0,
     pause() { this.paused = true; this.events.pause?.(); },
     play() {
       this.plays += 1;
@@ -59,6 +59,8 @@ test('video is not requested on initial load and START plays it on demand', asyn
   assert.equal(page.video.src, '/assets/videos/jizura.mp4');
   assert.equal(page.video.plays, 1);
   assert.equal(page.start.textContent, 'PAUSE');
+  assert.equal(page.status.textContent, `Playing: ${page.video.dataset.title}.`);
+  assert.equal(page.start.getAttribute('aria-label'), `pause ${page.video.dataset.title}`);
   assert.equal(page.entries[4].inert, false);
   assert.equal(page.entries[0].inert, true);
 });

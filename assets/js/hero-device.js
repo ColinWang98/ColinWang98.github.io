@@ -10,6 +10,7 @@
   const help = device.querySelector("[data-device-help]");
   const announcement = device.querySelector("[data-device-announcement]");
   const video = device.querySelector("[data-device-video]");
+  const videoTitle = video.dataset.title;
   const status = device.querySelector("[data-video-status]");
   const modes = { up: "profile", right: "research", down: "projects", left: "contact" };
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -34,7 +35,7 @@
   function controls() {
     const viewing = mode === "video";
     start.textContent = viewing ? (video.ended ? "REPLAY" : video.paused ? "PLAY" : "PAUSE") : "START";
-    start.setAttribute("aria-label", viewing ? `${start.textContent.toLowerCase()} Jizura video` : "Play Jizura video");
+    start.setAttribute("aria-label", viewing ? `${start.textContent.toLowerCase()} ${videoTitle}` : `Play ${videoTitle}`);
     help.textContent = viewing ? "Center plays / pauses. Arrows explore. Esc exits." : "Arrows explore. START to play.";
     directions.forEach((button) => button.setAttribute("aria-pressed", String(modes[button.dataset.deviceDirection] === mode)));
   }
@@ -111,7 +112,7 @@
   });
   video.addEventListener("play", () => {
     if (mode !== "video" || document.hidden) { video.pause(); return; }
-    status.textContent = "Playing Jizura.";
+    status.textContent = `Playing: ${videoTitle}.`;
     controls();
   });
   video.addEventListener("pause", () => { status.textContent = "Paused."; controls(); });

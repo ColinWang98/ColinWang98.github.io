@@ -24,14 +24,15 @@ const assert = require('node:assert/strict');
       assert.ok(profile.fonts.every(size => size === '18px'));
       assert.equal(profile.buttons, 0);
       assert.equal(profile.hiddenVideo, 'none');
-      await page.getByRole('button', { name: 'Play Jizura video', exact: true }).click();
+      await page.getByRole('button', { name: 'Play RADWIMPS - \u541b\u3068\u7f8a\u3068\u9752', exact: true }).click();
       await page.waitForFunction(() => {
         const video = document.querySelector('video');
         return !video.paused && video.currentTime > 0 && video.videoWidth > 0;
       }, null, { timeout: 20000 });
       const bounds = await video.boundingBox();
       assert.ok(bounds.width > 150 && bounds.x >= 0 && bounds.x + bounds.width <= width);
-      await page.getByRole('button', { name: 'pause Jizura video', exact: true }).click();
+      assert.equal(await page.locator('[data-video-status]').innerText(), 'Playing: RADWIMPS - \u541b\u3068\u7f8a\u3068\u9752.');
+      await page.getByRole('button', { name: 'pause RADWIMPS - \u541b\u3068\u7f8a\u3068\u9752', exact: true }).click();
       assert.equal(await video.evaluate(el => el.paused), true);
       if (width === 1440) {
         await video.evaluate(el => { el.currentTime = 60; });
@@ -40,7 +41,7 @@ const assert = require('node:assert/strict');
           return !video.seeking && video.currentTime >= 60 && video.readyState >= 2;
         });
       }
-      await page.getByRole('button', { name: 'play Jizura video', exact: true }).click();
+      await page.getByRole('button', { name: 'play RADWIMPS - \u541b\u3068\u7f8a\u3068\u9752', exact: true }).click();
       await page.waitForFunction(() => !document.querySelector('video').paused);
       await page.getByRole('button', { name: 'Back to profile' }).click();
       assert.equal(await video.evaluate(el => el.paused), true);

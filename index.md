@@ -43,7 +43,7 @@ classes: homepage
         <div class="device-actions"><a class="btn" href="mailto:{{ site.author.email }}">Email me</a><a class="btn btn--secondary" href="{{ '/assets/Wang Yao CV.pdf' | relative_url }}" download>Download CV</a></div>
       </section>
       <section class="device-page device-video" data-device-page="video" aria-label="Video player" hidden>
-        <video class="device-video-player" data-device-video controls playsinline preload="none" width="640" height="360" data-src="{{ '/assets/videos/jizura.mp4' | relative_url }}" aria-label="Jizura video"></video>
+        <video class="device-video-player" data-device-video controls playsinline preload="none" width="640" height="360" data-src="{{ '/assets/videos/jizura.mp4' | relative_url }}" data-title="RADWIMPS - 君と羊と青" aria-label="RADWIMPS - 君と羊と青"></video>
         <p class="video-status" data-video-status role="status">Press START to play.</p>
         <div class="device-actions"><button class="btn btn--secondary" type="button" data-video-exit>Back to profile</button><a href="{{ '/assets/videos/jizura.mp4' | relative_url }}" target="_blank" rel="noopener noreferrer">Open video &nearr;</a></div>
       </section>
@@ -56,12 +56,12 @@ classes: homepage
         <button class="wheel-link wheel-link--right" type="button" data-device-direction="right" aria-label="Show research" aria-controls="device-pages" aria-pressed="false"><span aria-hidden="true">&#9654;</span></button>
         <button class="wheel-link wheel-link--bottom" type="button" data-device-direction="down" aria-label="Show projects" aria-controls="device-pages" aria-pressed="false"><span aria-hidden="true">&#9660;</span></button>
         <button class="wheel-link wheel-link--left" type="button" data-device-direction="left" aria-label="Show contact" aria-controls="device-pages" aria-pressed="false"><span aria-hidden="true">&#9664;</span></button>
-        <button class="wheel-center" type="button" data-device-start aria-label="Play Jizura video">START</button>
+        <button class="wheel-center" type="button" data-device-start aria-label="Play RADWIMPS - 君と羊と青">START</button>
       </div>
       <p class="wheel-help" data-device-help>Arrows explore. START to play.</p>
     </div>
   </div>
-  <noscript><p><a href="{{ '/assets/videos/jizura.mp4' | relative_url }}">Watch Jizura video</a></p></noscript>
+  <noscript><p><a href="{{ '/assets/videos/jizura.mp4' | relative_url }}">Watch RADWIMPS - 君と羊と青</a></p></noscript>
 </div>
 
 <section class="home-introduction" aria-labelledby="about-me">

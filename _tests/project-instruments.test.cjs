@@ -47,9 +47,9 @@ test('reading line excludes aperture portions outside the viewport', () => {
   assert.equal(readingLine(73, 120, 120, 844, true, 73), 193 + (844 - 193) / 3);
 });
 
-const ids = ['project-neonhk', 'project-breathing', 'project-intercultural', 'project-moderator', 'project-metachamber', 'project-farm'];
+const ids = ['project-breathing', 'project-intercultural', 'project-moderator', 'project-metachamber', 'project-farm'];
 
-test('frame contains six real, ordered links and a progressive disclosure button', () => {
+test('frame contains five real, ordered links and a progressive disclosure button', () => {
   const html = read('_includes/project-instruments.html');
   assert.match(html, /class="[^"]*project-frame-header/);
   assert.match(html, /class="[^"]*project-frame-window[^\"]*"[^>]*aria-hidden="true"/);
@@ -102,12 +102,12 @@ test('selector is a real button with progressive enhancement and a decorative po
   assert.match(read('assets/js/project-instruments.js'), /--project-angle/);
 });
 
-test('all six projects carry unique anchors and readable metadata', () => {
+test('all five projects carry unique anchors and readable metadata', () => {
   const html = read('index.md');
   const projects = [...html.matchAll(/<div class="paper-box" id="([^"]+)" data-project[^>]*>/g)];
-  assert.equal(projects.length, 6);
+  assert.equal(projects.length, 5);
   assert.deepEqual(projects.map((match) => match[1]), ids);
-  assert.equal(new Set(projects.map((match) => match[1])).size, 6);
+  assert.equal(new Set(projects.map((match) => match[1])).size, 5);
   for (const [markup] of projects) {
     assert.match(markup, /data-category="(AI|XR|Heritage|UI-UX)"/);
     assert.match(markup, /data-period="[^"]+"/);
@@ -245,7 +245,7 @@ test('viewing frame browser behavior', { skip: !process.env.PROJECT_FRAME_BROWSE
     assert.equal(await ending.locator('[data-project].is-current-project').getAttribute('id'), 'project-farm');
   });
 
-  await t.test('all six native anchors update title, period, category and focus', async () => {
+  await t.test('all five native anchors update title, period, category and focus', async () => {
     for (const id of [...ids, ids[2], ids[0]]) {
       await menu.locator(`a[href="#${id}"]`).click();
       await settle();
@@ -277,7 +277,7 @@ test('viewing frame browser behavior', { skip: !process.env.PROJECT_FRAME_BROWSE
     await page.locator('[data-project]').first().evaluate((el) => { el.style.minHeight = '900px'; });
     await settle();
     await settle();
-    assert.ok(await page.evaluate(() => window.projectReads >= 6), 'resize refreshes cached project positions');
+    assert.ok(await page.evaluate(() => window.projectReads >= 5), 'resize refreshes cached project positions');
   });
 
   await t.test('compact dropdown closes safely on Escape, outside click, Tab and navigation', async () => {
@@ -347,8 +347,8 @@ test('viewing frame browser behavior', { skip: !process.env.PROJECT_FRAME_BROWSE
     await fallback.setContent(html);
     for (const size of [{ width: 1440, height: 900 }, { width: 320, height: 640 }]) {
       await fallback.setViewportSize(size);
-      assert.equal(await fallback.locator('#project-navigation a:visible').count(), 6);
-      assert.equal(await fallback.locator('[data-project]:visible').count(), 6);
+      assert.equal(await fallback.locator('#project-navigation a:visible').count(), 5);
+      assert.equal(await fallback.locator('[data-project]:visible').count(), 5);
       assert.ok(await fallback.locator('.instrument-menu-toggle').isHidden());
       await fallback.locator('#project-navigation a').last().click();
       assert.ok(fallback.url().endsWith('#project-farm'));

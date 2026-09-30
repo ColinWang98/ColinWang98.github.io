@@ -854,6 +854,7 @@ article.page.homepage {
 
 .education-logo {
   display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   flex: 0 0 92px;
   place-items: center;
   width: 92px;

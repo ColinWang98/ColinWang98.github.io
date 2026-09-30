@@ -55,14 +55,14 @@ const path = require('node:path');
     const projects = await page.locator('[data-project]').evaluateAll((elements) => elements.map((el) => ({ id: el.id, title: el.querySelector('h3').textContent, category: el.dataset.category, period: el.dataset.period })));
     const projectIndex = page.locator('.project-frame-index');
     const frameHeader = page.locator('.project-frame-header');
-    assert.deepEqual(projects.map((project) => project.id), ['project-neonhk', 'project-breathing', 'project-intercultural', 'project-moderator', 'project-metachamber', 'project-farm']);
-    assert.equal(await projectIndex.locator('a').count(), 6);
-    for (const index of [0, 1, 2, 3, 4, 5, 2, 0]) {
+    assert.deepEqual(projects.map((project) => project.id), ['project-breathing', 'project-intercultural', 'project-moderator', 'project-metachamber', 'project-farm']);
+    assert.equal(await projectIndex.locator('a').count(), 5);
+    for (const index of [0, 1, 2, 3, 4, 2, 0]) {
       const project = projects[index];
       await projectIndex.locator(`a[href="#${project.id}"]`).click();
       await page.waitForFunction((id) => document.querySelector('[data-project].is-current-project')?.id === id, project.id);
       assert.equal(await frameHeader.locator('[data-project-title]').textContent(), project.title);
-      assert.equal(await frameHeader.locator('[data-project-count]').innerText(), `${String(index + 1).padStart(2, '0')} / 06`);
+      assert.equal(await frameHeader.locator('[data-project-count]').innerText(), `${String(index + 1).padStart(2, '0')} / 05`);
       assert.equal(await frameHeader.locator('[data-category-readout]').innerText(), project.category);
       assert.equal(await frameHeader.locator('[data-period-readout]').innerText(), project.period);
       assert.equal(await projectIndex.locator('[aria-current="location"]').count(), 1);
@@ -77,9 +77,9 @@ const path = require('node:path');
     }
     await projectIndex.locator('a[href="#project-moderator"]').click();
     await page.screenshot({ path: path.join(output, 'projects-desktop.png') });
-    console.log('PASS project anchors: all six plus reverse jumps, metadata, focus and hash');
+    console.log('PASS project anchors: all five plus reverse jumps, metadata, focus and hash');
 
-    for (const index of [4, 5, 0]) {
+    for (const index of [3, 4, 0]) {
       await page.locator('[data-project-next]').click();
       await page.waitForFunction((id) => document.querySelector('[data-project].is-current-project')?.id === id, projects[index].id);
       assert.equal(new URL(page.url()).hash, `#${projects[index].id}`);
@@ -190,8 +190,8 @@ const path = require('node:path');
     const nojs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
     const fallback = await nojs.newPage();
     await fallback.goto(base, { waitUntil: 'domcontentloaded' });
-    assert.equal(await fallback.locator('[data-project]').count(), 6);
-    assert.equal(await fallback.locator('.project-frame-index a:visible').count(), 6);
+    assert.equal(await fallback.locator('[data-project]').count(), 5);
+    assert.equal(await fallback.locator('.project-frame-index a:visible').count(), 5);
     await fallback.locator('.project-frame-index a[href="#project-farm"]').click();
     assert.equal(new URL(fallback.url()).hash, '#project-farm');
     await nojs.close();

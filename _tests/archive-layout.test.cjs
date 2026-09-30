@@ -11,7 +11,8 @@ test('home puts research evidence before the project explorer and retains all de
   assert.match(home, /class="hero-display"/);
   assert.match(home, /class="hero-wheel"/);
   assert.doesNotMatch(home, /data-phd-status/);
-  for (const id of ['neonhk', 'breathing', 'intercultural', 'moderator', 'metachamber', 'farm']) {
+  assert.doesNotMatch(home, /neonhk|NeonHK/);
+  for (const id of ['breathing', 'intercultural', 'moderator', 'metachamber', 'farm']) {
     assert.equal((home.match(new RegExp(`id="project-${id}"`, 'g')) || []).length, 1);
   }
 });

@@ -32,7 +32,7 @@ classes: homepage
       <section class="device-page device-info" data-device-page="projects" aria-label="Project overview" hidden>
         <p class="device-eyebrow">PROJECTS / 03</p>
         <h2>From research<br>to prototypes.</h2>
-        <ul><li><a href="#project-neonhk">NeonHK: AI-supported spatial storytelling</a></li><li><a href="#project-breathing">VR breathing training with biofeedback</a></li><li><a href="#project-moderator">AI versus human usability moderators</a></li></ul>
+        <ul><li><a href="#project-breathing">VR breathing training with biofeedback</a></li><li><a href="#project-moderator">AI versus human usability moderators</a></li></ul>
         <a class="btn btn--secondary" href="#featured-research-projects">Explore all projects &rarr;</a>
       </section>
       <section class="device-page device-info" data-device-page="contact" aria-label="Contact and PhD interests" hidden>
@@ -116,31 +116,6 @@ classes: homepage
 <section class="project-explorer" aria-label="Research project explorer">
 {% include project-instruments.html %}
 <div class="project-stream">
-<h2 id="ongoing-project">Ongoing Project</h2>
-
-<div class="paper-box" id="project-neonhk" data-project data-category="AI" data-year="now" data-period="Ongoing">
-  <div class="paper-box-text">
-    <h3>NeonHK Spatial Story</h3>
-    <div class="project-tags">
-      <span class="badge">AI Storytelling</span>
-      <span class="badge">Urban Experience</span>
-      <span class="badge">Hong Kong</span>
-      <span class="badge">XR Research</span>
-    </div>
-
-    <p>An ongoing project exploring AI-supported spatial storytelling for Hong Kong urban scenes, connecting visual place cues with situated narrative experiences.</p>
-
-    <div class="project-links">
-      <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">View Current Project</a>
-    </div>
-  </div>
-  <div class="paper-box-image">
-    <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-thumb thumb--image">
-      <img src="/assets/neonhk-snapshot.png" alt="NeonHK Spatial Story interface snapshot" loading="lazy" decoding="async">
-    </a>
-  </div>
-</div>
-
 <h2 id="featured-research-projects">Featured Research Projects</h2>
 
 <div class="paper-box" id="project-breathing" data-project data-category="XR" data-year="2025" data-period="10/2024 - 03/2025">

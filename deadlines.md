@@ -20,8 +20,13 @@ classes: subpage deadlines-page
     <label>Status<select id="deadline-status"><option value="upcoming">Upcoming</option><option value="all">All deadlines</option><option value="past">Past</option></select></label>
   </form>
   <p id="deadline-source" class="deadline-meta" role="status">Loading conference data...</p>
-  <p id="deadline-count" class="deadline-meta" aria-live="polite"></p>
+  <section class="deadline-board" aria-labelledby="deadline-board-title">
+  <header class="deadline-board-header">
+    <h2 id="deadline-board-title"><i class="fa-solid fa-clock" aria-hidden="true"></i> Submission board</h2>
+    <p id="deadline-count" class="deadline-meta" aria-live="polite"></p>
+  </header>
   <div id="deadline-list"></div>
+  </section>
   <noscript>JavaScript is required for conference filtering and countdowns. <a href="https://hci-deadlines.github.io/">Visit HCI Deadlines</a>.</noscript>
 </div>
 <script defer src="{{ '/assets/js/vendor/js-yaml.min.js' | relative_url }}"></script>

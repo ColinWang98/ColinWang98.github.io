@@ -51,6 +51,9 @@ const fixtures = [
       await page.screenshot({ path: path.join(output, `deadlines-flap-${width}.png`), fullPage: true });
       for (const display of await page.locator('.deadline-title').all()) {
         await display.scrollIntoViewIfNeeded();
+        // Flush the scroll frame so IntersectionObserver starts the reveal before advancing timers.
+        await page.clock.runFor(50);
+        await page.screenshot();
         await page.clock.runFor(4000);
         assert.ok(await display.evaluate(el => [...el.children].every(cell => cell.dataset.value === cell.dataset.target)), 'long titles settle completely');
         assert.ok(await display.evaluate(el => [...el.children].every(cell => cell.getBoundingClientRect().right <= el.getBoundingClientRect().right + 1)), 'title cells stay inside their column');
@@ -72,8 +75,27 @@ const fixtures = [
       console.log(`PASS filters, clock animation and layout at ${width}px`);
       await page.clock.setSystemTime(new Date('2026-10-02T00:00:01Z'));
     }
-    fallback = true;
     await page.emulateMedia({ reducedMotion: 'reduce' });
+    for (const [width, rootSize] of [[1920, 16], [1536, 16], [1280, 16], [960, 16], [390, 20], [320, 24]]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto('http://127.0.0.1:4173/deadlines/');
+      await page.waitForFunction(() => document.querySelectorAll('.deadline-row').length === 3);
+      await page.evaluate(size => { document.documentElement.style.fontSize = `${size}px`; }, rootSize);
+      const metrics = await page.locator('.deadline-board').evaluate(board => {
+        const font = selector => parseFloat(getComputedStyle(board.querySelector(selector)).fontSize);
+        return {
+          meta: font('.deadline-row .deadline-meta'), title: font('.deadline-title .deadline-flap'),
+          digit: font('.deadline-clock .deadline-flap'), unit: font('.deadline-unit-label'),
+          fits: [...board.querySelectorAll('.deadline-title, .deadline-clock')].every(el => el.scrollWidth <= el.clientWidth)
+        };
+      });
+      assert.ok(metrics.meta >= rootSize && metrics.title >= rootSize * 1.625 && metrics.digit >= rootSize * 2 && metrics.unit >= rootSize * .875, JSON.stringify(metrics));
+      assert.ok(metrics.fits, `readable cells without clipping at ${width}px / ${rootSize}px font`);
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `no overflow at ${width}px / ${rootSize}px font`);
+      await page.screenshot({ path: path.join(output, `deadlines-readable-${width}-${rootSize}.png`), fullPage: true });
+    }
+    console.log('PASS wide screens, scaled desktop widths and enlarged default fonts');
+    fallback = true;
     await page.goto('http://127.0.0.1:4173/deadlines/');
     await page.waitForFunction(() => document.querySelector('#deadline-source').textContent.includes('Saved data'));
     await page.locator('.deadline-clock').first().scrollIntoViewIfNeeded();

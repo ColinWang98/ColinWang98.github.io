@@ -12,32 +12,32 @@
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 12px; padding: 20px 24px; border-bottom: 1px solid #bcc6b8;
 }
-.deadlines-page .deadline-board-header h2 { margin: 0; font-size: 18px; color: var(--board-text); }
+.deadlines-page .deadline-board-header h2 { margin: 0; font-size: 1.25rem; color: var(--board-text); }
 .deadlines-page .deadline-board-header i { margin-right: 8px; color: #536e48; }
-.deadlines-page .deadline-board .deadline-meta { color: var(--board-muted); font-size: 13px; line-height: 1.6; }
+.deadlines-page .deadline-board .deadline-meta { color: var(--board-muted); font-size: 1rem; line-height: 1.6; }
 .deadlines-page #deadline-count { margin: 0; font-family: var(--font-instrument); }
 .deadlines-page .deadline-row {
-  grid-template-columns: minmax(0, 1fr) minmax(260px, .9fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
   padding: 24px; gap: 24px; border-color: #bcc6b8;
 }
 .deadlines-page .deadline-row:first-child { border-top: 0; }
-.deadlines-page .deadline-row h2 { font-size: 22px; }
+.deadlines-page .deadline-row h2 { font-size: 1.625rem; }
 .deadlines-page .deadline-row h2 a { display: block; color: #263b28; text-decoration: none; }
 .deadlines-page .deadline-row h2 a:hover { color: #152d19; }
 .deadlines-page .deadline-row h2 a:focus-visible { outline: 2px solid #536e48; outline-offset: 4px; }
 .deadline-title { display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 12px; }
-.deadline-title .deadline-flap { width: 22px; flex-basis: 22px; height: 32px; font-size: 20px; line-height: 32px; }
+.deadline-title .deadline-flap { width: 1.75rem; flex-basis: 1.75rem; height: 2.625rem; font-size: 1.625rem; line-height: 2.625rem; }
 .deadline-title-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.deadlines-page .deadline-row p { font-size: 14px; color: var(--board-text); }
-.deadlines-page .deadline-row .deadline-meta { font-size: 13px; color: var(--board-muted); }
-.deadlines-page .deadline-timing { min-width: 0; }
-.deadlines-page .deadline-clock { display: flex; gap: 10px; margin-bottom: 14px; color: #263b28; }
+.deadlines-page .deadline-row p { font-size: 1.0625rem; color: var(--board-text); }
+.deadlines-page .deadline-row .deadline-meta { font-size: 1rem; color: var(--board-muted); }
+.deadlines-page .deadline-timing { min-width: 0; container: deadline-timing / inline-size; }
+.deadlines-page .deadline-clock { display: flex; flex-wrap: wrap; gap: .875rem; margin-bottom: 1rem; color: #263b28; }
 .deadline-unit { display: grid; gap: 7px; align-content: start; }
 .deadline-digits { display: flex; gap: 3px; }
-.deadline-unit-label { color: var(--board-muted); font: 10px/1.3 var(--font-instrument); text-transform: uppercase; letter-spacing: 0; }
+.deadline-unit-label { color: var(--board-muted); font: .875rem/1.4 var(--font-instrument); text-transform: uppercase; letter-spacing: 0; }
 .deadline-flap {
-  position: relative; display: block; width: 23px; height: 34px; flex: 0 0 23px;
-  font: 700 26px/34px ui-monospace, monospace; text-align: center;
+  position: relative; display: block; width: 1.875rem; height: 2.75rem; flex: 0 0 1.875rem;
+  font: 700 2rem/2.75rem ui-monospace, monospace; text-align: center;
   perspective: 160px; border-radius: 3px; box-shadow: 0 2px 1px #66735d66, 0 -1px 0 #f4f6ef;
 }
 .deadline-flap > span { position: absolute; left: 0; width: 100%; height: 50%; overflow: hidden; backface-visibility: hidden; }
@@ -48,16 +48,14 @@
 .deadlines-page .is-soon .deadline-clock { color: #704614; }
 .is-soon .deadline-clock :is(.flap-top, .flap-out) { background: #ebd5a9; }
 .is-soon .deadline-clock :is(.flap-bottom, .flap-in) { background: #dfc493; }
-.deadlines-page .deadline-state { font: 600 16px/34px var(--font-instrument); color: var(--board-muted); text-transform: uppercase; }
+.deadlines-page .deadline-state { font: 600 1rem/1.6 var(--font-instrument); color: var(--board-muted); text-transform: uppercase; }
 .deadlines-page .deadline-empty { padding: 32px 24px; margin: 0; color: var(--board-text); }
-@media (max-width: 1200px) {
-  .deadlines-page .deadline-row { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+@container deadline-timing (max-width: 22rem) {
+  .deadlines-page .deadline-clock { display: grid; grid-template-columns: repeat(2, max-content); gap: 1rem; }
+  .deadline-state { grid-column: 1 / -1; }
 }
 @media (max-width: 480px) {
   .deadlines-page .deadline-board-header, .deadlines-page .deadline-row { padding: 18px 12px; }
-  .deadlines-page .deadline-clock { gap: 7px; }
-  .deadline-digits { gap: 2px; }
-  .deadline-flap { width: 20px; flex-basis: 20px; height: 30px; font-size: 23px; line-height: 30px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .deadlines-page .flap-out, .deadlines-page .flap-in { display: none; }

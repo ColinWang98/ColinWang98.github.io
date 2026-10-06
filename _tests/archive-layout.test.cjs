@@ -11,8 +11,10 @@ test('home puts research evidence before the project explorer and retains all de
   assert.match(home, /class="hero-display"/);
   assert.match(home, /class="hero-wheel"/);
   assert.doesNotMatch(home, /data-phd-status/);
-  assert.doesNotMatch(home, /neonhk|NeonHK/);
-  for (const id of ['breathing', 'intercultural', 'moderator', 'metachamber', 'farm']) {
+  assert.match(home, /<h3>Spatial Hong Kong<\/h3>/);
+  assert.match(home, /https:\/\/neonhk\.vercel\.app\//);
+  assert.match(home, /assets\/spatial-hong-kong\.png/);
+  for (const id of ['neonhk', 'breathing', 'intercultural', 'moderator', 'metachamber', 'farm']) {
     assert.equal((home.match(new RegExp(`id="project-${id}"`, 'g')) || []).length, 1);
   }
 });

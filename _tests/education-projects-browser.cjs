@@ -28,21 +28,24 @@ const { chromium } = require('playwright');
       await page.evaluate(() => scrollTo(0, 0));
       await page.screenshot({ path: path.join(output, `education-logos-${width}.png`), fullPage: true });
       await page.goto('http://127.0.0.1:4173/');
-      assert.doesNotMatch(await page.locator('body').innerHTML(), /neonhk/i);
-      assert.equal(await page.locator('[data-project]').count(), 5);
+      assert.equal(await page.locator('#project-neonhk h3').innerText(), 'Spatial Hong Kong');
+      await page.locator('#project-neonhk img').scrollIntoViewIfNeeded();
+      await page.locator('#project-neonhk img').evaluate(img => img.decode());
+      assert.equal(await page.locator('#project-neonhk .btn').getAttribute('href'), 'https://neonhk.vercel.app/');
+      assert.equal(await page.locator('[data-project]').count(), 6);
       const links = page.locator('#project-navigation a');
-      assert.equal(await links.count(), 5);
+      assert.equal(await links.count(), 6);
       assert.deepEqual(await links.evaluateAll(els => els.map(el => el.hash)), await page.locator('[data-project]').evaluateAll(els => els.map(el => `#${el.id}`)));
-      assert.equal(await page.locator('[data-project-title]').innerText(), 'VR Breathing Training Platform');
-      assert.equal(await page.locator('[data-project-count]').innerText(), '01 / 05');
+      assert.equal(await page.locator('[data-project-title]').innerText(), 'Spatial Hong Kong');
+      assert.equal(await page.locator('[data-project-count]').innerText(), '01 / 06');
       await page.locator('.project-instruments').scrollIntoViewIfNeeded();
-      for (let i = 1; i <= 5; i++) {
+      for (let i = 1; i <= 6; i++) {
         await page.locator('[data-project-next]').click();
-        await page.waitForFunction(index => document.querySelector('[data-project-count]').textContent === `${String(index + 1).padStart(2, '0')} / 05`, i % 5);
+        await page.waitForFunction(index => document.querySelector('[data-project-count]').textContent === `${String(index + 1).padStart(2, '0')} / 06`, i % 6);
       }
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `no horizontal overflow at ${width}px`);
-      await page.screenshot({ path: path.join(output, `projects-without-neonhk-${width}.png`), fullPage: true });
-      console.log(`PASS education logos and five-project navigation at ${width}px`);
+      await page.screenshot({ path: path.join(output, `projects-with-spatial-hong-kong-${width}.png`), fullPage: true });
+      console.log(`PASS education logos and six-project navigation at ${width}px`);
     }
   } finally {
     await browser.close();

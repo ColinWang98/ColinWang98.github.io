@@ -44,7 +44,7 @@ project element carries `data-project`, `data-category`, `data-year` and
 copy of the project content. Categories are AI, XR, Heritage and UI-UX. Dates
 describe the project, not its publication.
 
-The frame's five real anchors are in the shared project include; the compact
+The frame's six real anchors are in the shared project include; the compact
 mobile menu reuses them. Projects scroll with the document through the sticky
 viewing frame, without an inner scrollbar or scroll snapping. Header height
 measurements use `--header-height`, separate from `--nav-height`, to avoid

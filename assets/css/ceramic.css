@@ -13,19 +13,19 @@
   --text-muted: #606568;
   --accent: #526354;
   --accent-strong: #374b3d;
-  --cream: #e0e0e0;
+  --cream: #f8f9f8;
   --surface: #e0e0e0;
   --surface-soft: #d8d8d8;
   --surface-strong: #fff;
   --border: #c3c6c4;
   --glass-edge: var(--border);
   --glass-frost: var(--surface);
-  --housing-face: var(--surface);
+  --housing-face: linear-gradient(145deg, #f0f2f0, #e4e6e4 42%, #e0e0e0);
   --screen-face: linear-gradient(160deg, #dce0d8, #d0d5cc);
   --shadow-dark: #bebebe;
   --shadow-light: #fff;
-  --raised: 10px 10px 30px var(--shadow-dark), -10px -10px 30px var(--shadow-light);
-  --raised-small: 6px 6px 18px var(--shadow-dark), -6px -6px 18px var(--shadow-light);
+  --raised: 5px 5px 10px #39453d33, -5px -5px 10px #ffffffd9, inset 0 1px 1px #ffffffb3, inset 0 -1px 1px #67716a1a;
+  --raised-small: 3px 3px 7px #39453d29, -3px -3px 7px #ffffffcc, inset 0 1px 1px #ffffffa6, inset 0 -1px 1px #67716a14;
   --recessed: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px #f6f6f6;
   /* Matching layers let raised keys transition into recesses without snapping. */
   --key-rest: 4px 4px 9px var(--shadow-dark), -4px -4px 9px var(--shadow-light), inset 0 0 0 transparent, inset 0 0 0 transparent;
@@ -66,7 +66,7 @@ body.ceramic-theme::before { display: none; }
 .skip-link:focus { transform: none; }
 
 /* Navigation remains navigation, not a row of device buttons. */
-.ceramic-theme .masthead { background: #e0e0e0f5; border-color: #ffffff70; box-shadow: 0 7px 18px #00000008; backdrop-filter: blur(10px); }
+.ceramic-theme .masthead { background: #f8f9f8f5; border-color: #ffffff70; box-shadow: 0 7px 18px #00000008; backdrop-filter: blur(10px); }
 .ceramic-theme .masthead__inner-wrap { justify-content: space-between; min-height: var(--nav-height); padding: 8px 24px; gap: 24px; }
 .site-signature { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; flex-shrink: 0; border-radius: 4px; color: var(--text-strong); text-decoration: none; }
 .site-wordmark { display: block; width: 110px; height: 40px; flex-shrink: 0; }
@@ -164,7 +164,7 @@ body.ceramic-theme::before { display: none; }
 .ceramic-theme .poem-stage { min-height: 420px; }
 
 /* Homepage identity screen: stable information, a separate space for poetry. */
-.ceramic-theme .hero-section { margin: 0 0 40px; padding: 24px; border: 1px solid #ffffff45; border-radius: 28px; background: var(--housing-face); box-shadow: 14px 14px 38px var(--shadow-dark), -14px -14px 38px var(--shadow-light); overflow: visible; }
+.ceramic-theme .hero-section { margin: 0 0 40px; padding: 24px; border: 1px solid #ffffff45; border-radius: 28px; background: var(--housing-face); box-shadow: var(--raised); overflow: visible; }
 .ceramic-theme .hero-section::before { display: none; }
 .hero-device-label { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 16px; font: 14px var(--font-instrument); color: var(--text-muted); }
 .hero-device-grid { display: grid; grid-template-columns: minmax(0, 1fr) 224px; gap: 32px; align-items: center; }

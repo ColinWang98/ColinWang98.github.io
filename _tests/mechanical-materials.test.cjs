@@ -9,7 +9,10 @@ test('restored iPod theme shares soft surfaces and motion tokens', () => {
   for (const token of ['--housing-face:', '--screen-face:', '--key-rest:', '--key-pressed:', '--motion-release:']) {
     assert.ok(css.includes(token), `missing ${token}`);
   }
-  assert.match(css, /--cream: #e0e0e0;/);
+  assert.match(css, /--cream: #f8f9f8;/);
+  assert.match(css, /--surface: #e0e0e0;/);
+  assert.match(css, /--housing-face: linear-gradient\(145deg, #f0f2f0, #e4e6e4 42%, #e0e0e0\);/);
+  assert.match(css, /\.ceramic-theme \.hero-section \{[^}]*box-shadow: var\(--raised\);/);
   assert.match(css, /--shadow-dark: #bebebe;/);
   assert.match(css, /--shadow-light: #fff;/);
   assert.doesNotMatch(css, /#efede5|#f8f6ef|#e8e6dd/);

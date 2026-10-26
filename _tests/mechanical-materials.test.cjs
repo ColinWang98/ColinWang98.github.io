@@ -49,14 +49,16 @@ test('the identity screen shares pixel typography and a classic green LCD', () =
 
 test('project instrument housing shares the same neutral material', () => {
   const css = read('assets/css/project-instruments.css');
-  assert.match(css, /var\(--housing-face[,)]/);
-  assert.match(css, /var\(--surface-soft\)/);
+  const covers = read('assets/css/project-covers.css');
+  assert.match(css, /background: var\(--instrument-panel\)/);
+  assert.match(covers, /background: var\(--instrument-panel\)/);
+  assert.match(covers, /border: 1px solid var\(--instrument-edge\)/);
 });
 
 test('project index adds restrained metal and signal details scoped to its housing', () => {
   const css = read('assets/css/project-instruments.css');
-  assert.match(css, /\.project-instruments \{[^}]*--instrument-signal:/);
-  assert.match(css, /\.project-frame-header \{[^}]*repeating-linear-gradient/);
+  assert.match(css, /\.project-explorer \{[^}]*--instrument-signal:/);
+  assert.match(css, /\.project-frame-header \{[^}]*background: var\(--instrument-metal\)/);
   assert.match(css, /\.project-selector-knob \{[^}]*repeating-conic-gradient/);
   assert.match(css, /\.project-selector-pointer::before \{[^}]*var\(--instrument-signal\)/);
   assert.match(css, /\.project-frame-index a\[aria-current\] \{[^}]*var\(--instrument-ink\)/);

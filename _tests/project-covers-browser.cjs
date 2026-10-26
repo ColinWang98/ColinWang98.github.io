@@ -13,6 +13,8 @@ const { chromium } = require('playwright');
       await page.goto('http://127.0.0.1:4173/');
       const covers = page.locator('.project-cover');
       assert.equal(await covers.count(), 6);
+      assert.equal(await page.locator('[data-project]').first().evaluate(el => getComputedStyle(el).boxShadow), 'none');
+      assert.equal(await covers.first().evaluate(el => getComputedStyle(el).borderTopWidth), '0px');
       for (const cover of await covers.all()) {
         await cover.scrollIntoViewIfNeeded();
         await cover.locator('img').evaluate(img => img.decode());

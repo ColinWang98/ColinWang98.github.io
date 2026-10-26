@@ -72,8 +72,8 @@ test('frame uses section-bounded sticky positioning without scroll capture code'
   assert.match(js, /max-height: 699px/);
   assert.doesNotMatch(css, /position:\s*fixed|scroll-snap/);
   assert.match(css, /\.project-instruments\.is-enhanced \.project-frame-index\s*\{[^}]*max-height:[^}]*overflow-y:\s*auto/s);
-  assert.match(css, /var\(--housing-face/);
-  assert.match(css, /var\(--surface-soft/);
+  assert.match(css, /var\(--instrument-metal/);
+  assert.match(css, /var\(--instrument-deck/);
   assert.doesNotMatch(js, /addEventListener\(["'](?:wheel|touchmove)["']|preventDefault\(|scrollTo\(|scrollIntoView\(/);
   for (const observer of ['IntersectionObserver', 'ResizeObserver', 'requestAnimationFrame']) assert.ok(js.includes(observer));
   assert.match(css, /prefers-reduced-motion:\s*reduce/);

@@ -4,6 +4,10 @@
   counter-increment: project-preview;
   grid-template-columns: minmax(0, 1fr);
   gap: 24px;
+  background: var(--instrument-panel);
+  border: 1px solid var(--instrument-edge);
+  border-radius: 6px;
+  box-shadow: none;
 }
 .project-stream .paper-box-text { grid-row: 2; }
 .project-cover {
@@ -14,20 +18,18 @@
   max-width: 480px;
   justify-self: center;
   align-self: start;
-  padding: 8px;
+  padding: 0;
   box-sizing: border-box;
-  border: 1px solid #adb2ad;
-  border-radius: 10px;
-  background: repeating-linear-gradient(0deg, #ffffff12 0 1px, #30363004 1px 3px),
-    linear-gradient(110deg, #f0f1ee85, #ffffff10 45%, #bdc1bc30), var(--housing-face, #e5e7e3);
-  box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #b9beba;
+  border: 0;
+  background: none;
+  box-shadow: none;
   container-type: inline-size;
 }
 .project-cover::before {
   content: "PROJECT / " counter(project-preview, decimal-leading-zero);
   display: block;
   padding: 4px 4px 10px 16px;
-  background: linear-gradient(#d46b3b, #d46b3b) 4px 10px / 5px 5px no-repeat;
+  background: linear-gradient(var(--instrument-signal), var(--instrument-signal)) 4px 10px / 5px 5px no-repeat;
   color: var(--text-strong);
   font: 13px/1.4 var(--font-instrument);
   letter-spacing: 0.06em;

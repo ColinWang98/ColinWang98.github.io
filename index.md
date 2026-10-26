@@ -132,11 +132,13 @@ classes: homepage
       <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Explore Spatial Hong Kong &nearr;</a>
     </div>
   </div>
-  <div class="paper-box-image">
-    <a href="https://neonhk.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-thumb thumb--image">
-      <img src="{{ '/assets/spatial-hong-kong.png' | relative_url }}" alt="Spatial Hong Kong: map and street-view selection interface" width="1280" height="720" loading="lazy" decoding="async">
-    </a>
-  </div>
+  <figure class="project-cover cover--spatial">
+    <div class="project-cover-art">
+      <div class="project-cover-copy"><span>Spatial<br>Hong Kong</span><small>Street-view storytelling</small></div>
+      <img class="project-cover-screen" src="{{ '/assets/spatial-hong-kong.png' | relative_url }}" alt="Spatial Hong Kong: map and street-view selection interface" width="1280" height="720" loading="lazy" decoding="async">
+    </div>
+    <figcaption>Application interface</figcaption>
+  </figure>
 </div>
 
 <h2 id="featured-research-projects">Featured Research Projects</h2>
@@ -156,11 +158,19 @@ classes: homepage
     <p><strong>Research Focus:</strong> Bio-responsive interaction, Implicit/Explicit cues, Therapeutic VR</p>
     <p><strong>Duration:</strong> 10/2024 - 03/2025</p>
   </div>
-  <div class="paper-box-image">
+  <figure class="project-cover cover--breathing">
+    <div class="project-cover-art">
+      <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/breathing.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
+      <div class="project-cover-copy"><span>VR<br>Breathing</span><small>Biofeedback &amp; wellbeing</small></div>
+    </div>
+    <figcaption>AI-generated concept illustration</figcaption>
+  </figure>
+  <details class="project-demo">
+    <summary>Watch the breathing training demo</summary>
     <iframe src="https://drive.google.com/file/d/1LDRFxU0sGxzm0ri0hFEfME6U3Egr_d7t/preview"
             width="100%" height="250" frameborder="0" loading="lazy" title="VR Breathing Training Platform preview" allowfullscreen>
     </iframe>
-  </div>
+  </details>
 </div>
 
 <div class="paper-box" id="project-intercultural" data-project data-category="XR" data-year="now" data-period="12/2024 - Present">
@@ -179,14 +189,13 @@ classes: homepage
     <p><strong>Platform:</strong> Virtual Reality</p>
     
   </div>
-  <div class="paper-box-image">
-    <div class="project-poster poster--violet" role="img" aria-label="VR collaborative 3D painting project preview">
-      <div>
-        <i class="fas fa-palette" aria-hidden="true"></i>
-        <p>VR Collaborative<br>3D Painting</p>
-      </div>
+  <figure class="project-cover cover--intercultural">
+    <div class="project-cover-art">
+      <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/intercultural.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
+      <div class="project-cover-copy"><span>Shared<br>Perspectives</span><small>Intercultural collaboration in VR</small></div>
     </div>
-  </div>
+    <figcaption>AI-generated concept illustration</figcaption>
+  </figure>
 </div>
 
 <div class="paper-box" id="project-moderator" data-project data-category="AI" data-year="2025" data-period="06/2025 - 09/2025">
@@ -204,14 +213,13 @@ classes: homepage
     <p><strong>Research Focus:</strong> Literature review, Experimental design and conduction</p>
     <p><strong>Duration:</strong> 06/2025 - 09/2025</p>
   </div>
-  <div class="paper-box-image">
-    <div class="project-poster poster--ember" role="img" aria-label="AI versus human moderator study preview">
-      <div>
-        <i class="fas fa-robot" aria-hidden="true"></i>
-        <p>AI vs Human<br>Moderator Study</p>
-      </div>
+  <figure class="project-cover cover--moderator">
+    <div class="project-cover-art">
+      <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/moderator.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
+      <div class="project-cover-copy"><span>AI &amp; Human<br>Moderators</span><small>Listening to the usability experience</small></div>
     </div>
-  </div>
+    <figcaption>AI-generated concept illustration</figcaption>
+  </figure>
 </div>
 
 <div class="paper-box" id="project-metachamber" data-project data-category="Heritage" data-year="2024" data-period="06/2024 - 08/2024">
@@ -229,11 +237,19 @@ classes: homepage
     <p><strong>Technical Stack:</strong> Unity, SketchUp, Blender, Spatial.io, AI Integration</p>
     <p><strong>Key Features:</strong> Scene Interaction, AI Character Dialogues, Music Appreciation</p>
   </div>
-  <div class="paper-box-image">
+  <figure class="project-cover cover--heritage">
+    <div class="project-cover-art">
+      <div class="project-cover-copy"><span>The Red<br>MetaChamber</span><small>Literature becomes a place</small></div>
+      <img class="project-cover-screen" src="{{ '/images/RedMeta.png' | relative_url }}" alt="Original Red MetaChamber project artwork depicting a Chinese garden" width="670" height="441" loading="lazy" decoding="async">
+    </div>
+    <figcaption>Original project artwork</figcaption>
+  </figure>
+  <details class="project-demo">
+    <summary>Watch the Red MetaChamber demo</summary>
     <iframe src="https://drive.google.com/file/d/1xEbWGYLEB5gONDsF0zcCc2zGLkpVm9xT/preview"
             width="100%" height="250" frameborder="0" loading="lazy" title="The Red MetaChamber preview" allowfullscreen>
     </iframe>
-  </div>
+  </details>
 </div>
 
 <div class="paper-box" id="project-farm" data-project data-category="UI-UX" data-year="2025" data-period="11/2024 - 03/2025">
@@ -255,7 +271,15 @@ classes: homepage
       <a href="https://www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy?node-id=245-276&starting-point-node-id=245%3A276&show-proto-sidebar=1&t=CfAqJiNC7My3qKD0-9" target="_blank" rel="noopener noreferrer" class="btn">View Full Prototype</a>
     </div>
   </div>
-  <div class="paper-box-image">
+  <figure class="project-cover cover--farm">
+    <div class="project-cover-art">
+      <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/farm.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
+      <div class="project-cover-copy"><span>Urban<br>Green Care</span><small>Accessible gardening experiences</small></div>
+    </div>
+    <figcaption>AI-generated concept illustration</figcaption>
+  </figure>
+  <details class="project-demo">
+    <summary>Explore the farming therapy prototype</summary>
     <iframe
       class="embed-frame"
       width="100%"
@@ -265,7 +289,7 @@ classes: homepage
       src="https://www.figma.com/embed?embed_host=share&url=https%3A//www.figma.com/proto/FQzUH1De4VzhFHOtUhwqvi/Farming-Therapy%3Fnode-id%3D245-276%26starting-point-node-id%3D245%253A276%26scaling%3Dscale-down%26content-scaling%3Dfixed%26show-proto-sidebar%3D0%26t%3DCfAqJiNC7My3qKD0-1"
       allowfullscreen>
     </iframe>
-  </div>
+  </details>
 </div>
 </div>
 </section>

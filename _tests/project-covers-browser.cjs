@@ -19,7 +19,7 @@ const { chromium } = require('playwright');
         assert.ok(await cover.evaluate(el => {
           const art = el.querySelector('.project-cover-art').getBoundingClientRect();
           const text = el.querySelector('.project-cover-copy').getBoundingClientRect();
-          return text.left >= art.left && text.right <= art.right && text.bottom <= art.bottom;
+          return art.height <= 321 && text.left >= art.left && text.right <= art.right && text.bottom <= art.bottom;
         }), `cover text fits at ${width}`);
       }
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

@@ -378,7 +378,8 @@ test('shared theme loads unconditionally and project script is homepage-only', (
   const head = read('_includes/head.html');
   assert.ok(!head.includes('home-neumorphic.css'));
   assert.match(head, /ceramic.css/);
-  assert.match(read('_includes/scripts.html'), /if page.classes == 'homepage'[\s\S]*project-instruments.js[\s\S]*endif/);
+  assert.match(read('_includes/scripts.html'), /if page.classes == 'homepage'[\s\S]*project-gallery.js[\s\S]*endif/);
+  assert.doesNotMatch(read('_includes/scripts.html'), /project-instruments.js/);
   assert.ok(!read('_layouts/default.html').includes('page-orb'));
 });
 

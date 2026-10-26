@@ -114,7 +114,6 @@ classes: homepage
 </section>
 
 <section class="project-explorer" aria-label="Research project explorer">
-{% include project-instruments.html %}
 <div class="project-stream">
 <h2 id="ongoing-project">Ongoing Project</h2>
 
@@ -134,7 +133,6 @@ classes: homepage
   </div>
   <figure class="project-cover cover--spatial">
     <div class="project-cover-art">
-      <div class="project-cover-copy"><span>Spatial<br>Hong Kong</span><small>Street-view storytelling</small></div>
       <img class="project-cover-screen" src="{{ '/assets/spatial-hong-kong.png' | relative_url }}" alt="Spatial Hong Kong: map and street-view selection interface" width="1280" height="720" loading="lazy" decoding="async">
     </div>
     <figcaption>Application interface</figcaption>
@@ -161,7 +159,6 @@ classes: homepage
   <figure class="project-cover cover--breathing">
     <div class="project-cover-art">
       <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/breathing.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
-      <div class="project-cover-copy"><span>VR<br>Breathing</span><small>Biofeedback &amp; wellbeing</small></div>
     </div>
     <figcaption>AI-generated concept illustration</figcaption>
   </figure>
@@ -192,7 +189,6 @@ classes: homepage
   <figure class="project-cover cover--intercultural">
     <div class="project-cover-art">
       <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/intercultural.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
-      <div class="project-cover-copy"><span>Shared<br>Perspectives</span><small>Intercultural collaboration in VR</small></div>
     </div>
     <figcaption>AI-generated concept illustration</figcaption>
   </figure>
@@ -216,7 +212,6 @@ classes: homepage
   <figure class="project-cover cover--moderator">
     <div class="project-cover-art">
       <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/moderator.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
-      <div class="project-cover-copy"><span>AI &amp; Human<br>Moderators</span><small>Listening to the usability experience</small></div>
     </div>
     <figcaption>AI-generated concept illustration</figcaption>
   </figure>
@@ -239,7 +234,6 @@ classes: homepage
   </div>
   <figure class="project-cover cover--heritage">
     <div class="project-cover-art">
-      <div class="project-cover-copy"><span>The Red<br>MetaChamber</span><small>Literature becomes a place</small></div>
       <img class="project-cover-screen" src="{{ '/images/RedMeta.png' | relative_url }}" alt="Original Red MetaChamber project artwork depicting a Chinese garden" width="670" height="441" loading="lazy" decoding="async">
     </div>
     <figcaption>Original project artwork</figcaption>
@@ -274,7 +268,6 @@ classes: homepage
   <figure class="project-cover cover--farm">
     <div class="project-cover-art">
       <img class="project-cover-backdrop" src="{{ '/assets/images/project-covers/farm.webp' | relative_url }}" alt="" width="1200" height="800" loading="lazy" decoding="async">
-      <div class="project-cover-copy"><span>Urban<br>Green Care</span><small>Accessible gardening experiences</small></div>
     </div>
     <figcaption>AI-generated concept illustration</figcaption>
   </figure>

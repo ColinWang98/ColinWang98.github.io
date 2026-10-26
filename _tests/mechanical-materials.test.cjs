@@ -51,8 +51,8 @@ test('project instrument housing shares the same neutral material', () => {
   const css = read('assets/css/project-instruments.css');
   const covers = read('assets/css/project-covers.css');
   assert.match(css, /background: var\(--instrument-panel\)/);
-  assert.match(covers, /background: var\(--instrument-panel\)/);
-  assert.match(covers, /border: 1px solid var\(--instrument-edge\)/);
+  assert.match(covers, /background: transparent/);
+  assert.match(covers, /background: var\(--instrument-edge\)/);
 });
 
 test('project index adds restrained metal and signal details scoped to its housing', () => {

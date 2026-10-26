@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
   const browser = await chromium.launch({ channel: 'msedge', headless: true });
   fs.mkdirSync('_site/verification', { recursive: true });
   try {
-    const page = await browser.newPage({ reducedMotion: 'reduce' });
+    const page = await browser.newPage({ reducedMotion: 'reduce', javaScriptEnabled: false });
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
     for (const width of [320, 390, 768, 1280, 1440, 1920]) {
       await page.setViewportSize({ width, height: 1400 });
@@ -15,14 +15,17 @@ const { chromium } = require('playwright');
       assert.equal(await covers.count(), 6);
       assert.equal(await page.locator('[data-project]').first().evaluate(el => getComputedStyle(el).boxShadow), 'none');
       assert.equal(await covers.first().evaluate(el => getComputedStyle(el).borderTopWidth), '0px');
+      assert.equal(await page.locator('[data-project]').first().evaluate(el => getComputedStyle(el).backgroundColor), 'rgba(0, 0, 0, 0)');
+      assert.equal(await page.locator('.project-cover-copy').count(), 0);
       for (const cover of await covers.all()) {
         await cover.scrollIntoViewIfNeeded();
         await cover.locator('img').evaluate(img => img.decode());
         assert.ok(await cover.evaluate(el => {
           const art = el.querySelector('.project-cover-art').getBoundingClientRect();
-          const text = el.querySelector('.project-cover-copy').getBoundingClientRect();
-          return art.height <= 321 && text.left >= art.left && text.right <= art.right && text.bottom <= art.bottom;
-        }), `cover text fits at ${width}`);
+          const text = el.closest('[data-project]').querySelector('.paper-box-text').getBoundingClientRect();
+          const sideBySide = art.left >= text.right;
+          return art.width <= 321 && art.height <= 181 && (sideBySide || art.top >= text.bottom);
+        }), `small illustration follows or sits beside text at ${width}`);
       }
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       for (const demo of await page.locator('.project-demo').all()) {

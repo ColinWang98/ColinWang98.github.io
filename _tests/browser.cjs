@@ -48,106 +48,18 @@ const path = require('node:path');
     }
     await page.setViewportSize({ width: 1440, height: 1000 });
     await page.goto(base, { waitUntil: 'domcontentloaded' });
-    await page.locator('.project-instruments.is-enhanced').waitFor();
-    await page.waitForTimeout(1000);
-    assert.ok(await page.locator('.masthead').evaluate((el) => el.getBoundingClientRect().height) < 90, 'stable masthead after observer updates');
-    await page.screenshot({ path: path.join(output, 'ipod-eink-desktop.png') });
-    const projects = await page.locator('[data-project]').evaluateAll((elements) => elements.map((el) => ({ id: el.id, title: el.querySelector('h3').textContent, category: el.dataset.category, period: el.dataset.period })));
-    const projectIndex = page.locator('.project-frame-index');
-    const frameHeader = page.locator('.project-frame-header');
-    assert.deepEqual(projects.map((project) => project.id), ['project-neonhk', 'project-breathing', 'project-intercultural', 'project-moderator', 'project-metachamber', 'project-farm']);
-    assert.equal(await projectIndex.locator('a').count(), 6);
-    for (const index of [0, 1, 2, 3, 4, 5, 2, 0]) {
-      const project = projects[index];
-      await projectIndex.locator(`a[href="#${project.id}"]`).click();
-      await page.waitForFunction((id) => document.querySelector('[data-project].is-current-project')?.id === id, project.id);
-      assert.equal(await frameHeader.locator('[data-project-title]').textContent(), project.title);
-      assert.equal(await frameHeader.locator('[data-project-count]').innerText(), `${String(index + 1).padStart(2, '0')} / 06`);
-      assert.equal(await frameHeader.locator('[data-category-readout]').innerText(), project.category);
-      assert.equal(await frameHeader.locator('[data-period-readout]').innerText(), project.period);
-      assert.equal(await projectIndex.locator('[aria-current="location"]').count(), 1);
-      assert.equal(await projectIndex.locator('[aria-current="location"]').getAttribute('href'), `#${project.id}`);
-      assert.equal(await page.evaluate(() => document.activeElement.id), project.id);
-      assert.equal(new URL(page.url()).hash, `#${project.id}`);
-      const clearance = await page.locator(`#${project.id}`).evaluate((el) => ({
-        projectTop: el.getBoundingClientRect().top,
-        headerBottom: document.querySelector('.project-frame-header').getBoundingClientRect().bottom
-      }));
-      assert.ok(clearance.projectTop >= clearance.headerBottom - 1, `${project.id}: anchor covered by frame ${JSON.stringify(clearance)}`);
+    assert.equal(await page.locator('.project-gallery-card').count(), 6);
+    for (const card of await page.locator('.project-gallery-card').all()) {
+      await card.click();
+      assert.ok(await page.getByRole('dialog').isVisible());
+      await page.keyboard.press('Escape');
+      assert.ok(await card.evaluate(el => document.activeElement === el));
     }
-    await projectIndex.locator('a[href="#project-moderator"]').click();
-    await page.screenshot({ path: path.join(output, 'projects-desktop.png') });
-    console.log('PASS project anchors: all six plus reverse jumps, metadata, focus and hash');
-
-    for (const index of [4, 5, 0]) {
-      await page.locator('[data-project-next]').click();
-      await page.waitForFunction((id) => document.querySelector('[data-project].is-current-project')?.id === id, projects[index].id);
-      assert.equal(new URL(page.url()).hash, `#${projects[index].id}`);
-      const angle = await page.locator('.project-instruments').evaluate((el) => parseFloat(el.style.getPropertyValue('--project-angle')));
-      assert.equal((angle % 360 + 360) % 360, (-135 + index * 54 + 360) % 360);
-    }
-    console.log('PASS selector press advances projects, wraps, and synchronizes its pointer');
-    await projectIndex.locator('a[href="#project-moderator"]').click();
-
-    for (const index of [1, 4, 2]) {
-      await page.evaluate((id) => {
-        const target = document.getElementById(id);
-        const panel = document.querySelector('.project-instruments');
-        const frame = panel.getBoundingClientRect();
-        const header = document.querySelector('.project-frame-header').getBoundingClientRect();
-        const compact = matchMedia('(max-width: 1099px), (max-height: 699px)').matches;
-        const apertureTop = Math.max(header.bottom, parseFloat(getComputedStyle(panel).top));
-        const apertureBottom = compact ? innerHeight : Math.min(frame.bottom, innerHeight);
-        const readingLine = apertureTop + Math.max(0, apertureBottom - apertureTop) / 3;
-        window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - readingLine + 10);
-      }, projects[index].id);
-      await page.waitForFunction((id) => document.querySelector('[data-project].is-current-project')?.id === id, projects[index].id);
-    }
-    assert.equal(await page.locator('.project-instruments').evaluate((el) => getComputedStyle(el).position), 'sticky');
-    assert.equal(await page.locator('.project-stream').evaluate((el) => getComputedStyle(el).overflowY), 'visible');
-    await page.emulateMedia({ reducedMotion: 'no-preference' });
-    assert.equal(await page.locator('html').evaluate((el) => getComputedStyle(el).scrollBehavior), 'smooth');
-    await projectIndex.locator('a[href="#project-moderator"]').click();
-    await page.waitForFunction(() => document.querySelector('[data-project].is-current-project')?.id === 'project-moderator');
-    await page.waitForTimeout(800);
-    await page.locator('[data-project-next]').click();
-    await page.waitForFunction(() => document.querySelector('[data-project].is-current-project')?.id === 'project-metachamber');
-    await projectIndex.locator('a[href="#project-moderator"]').click();
-    await page.waitForFunction(() => document.querySelector('[data-project].is-current-project')?.id === 'project-moderator');
-    assert.equal(await page.locator('[data-project].is-current-project').getAttribute('id'), 'project-moderator');
-    assert.ok(await page.locator('.project-instruments, .project-frame-header, .project-frame-window').evaluateAll((elements) => elements.every((el) => getComputedStyle(el).animationName === 'none')), 'the viewing frame itself does not animate');
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    assert.equal(await page.locator('html').evaluate((el) => getComputedStyle(el).scrollBehavior), 'auto');
-    assert.ok(await page.locator('.project-instruments, .project-instruments *').evaluateAll((elements) => elements.every((el) => {
-      const style = getComputedStyle(el);
-      return style.animationName === 'none' && style.transitionDuration.split(',').every((duration) => parseFloat(duration) === 0);
-    })), 'reduced motion removes frame animations and transitions');
-    await projectIndex.locator('a[href="#project-farm"]').click();
-    await page.waitForFunction(() => document.querySelector('#project-farm').classList.contains('is-current-project'));
-    console.log('PASS aperture-based natural scrolling, native smooth anchors and reduced motion');
-
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(`${base}/#project-moderator`, { waitUntil: 'domcontentloaded' });
-    await page.waitForFunction(() => document.querySelector('#project-moderator').classList.contains('is-current-project'));
-    await page.locator('[data-project-next]').click();
-    await page.waitForFunction(() => document.querySelector('#project-metachamber').classList.contains('is-current-project'));
-    assert.equal(await page.locator('#project-navigation').isHidden(), true, 'compact knob works without opening the list');
-    await page.screenshot({ path: path.join(output, 'projects-mobile.png') });
-    const toggle = page.locator('.instrument-menu-toggle');
-    await toggle.click();
-    assert.equal(await toggle.getAttribute('aria-expanded'), 'true');
+    await page.goto(`${base}/#project-moderator`);
+    assert.ok(await page.getByRole('dialog').isVisible());
     await page.keyboard.press('Escape');
-    assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
-    assert.ok(await toggle.evaluate((el) => document.activeElement === el));
-    await toggle.click();
-    await projectIndex.locator('a[href="#project-farm"]').click();
-    await page.waitForFunction(() => document.querySelector('#project-farm').classList.contains('is-current-project'));
-    assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
-    assert.equal(await page.evaluate(() => document.activeElement.id), 'project-farm');
-    await toggle.click();
-    await page.locator('.masthead').click({ position: { x: 2, y: 2 } });
-    assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
-    assert.ok(await projectIndex.isHidden());
+    console.log('PASS gallery dialogs, keyboard focus and mobile deep link');
     await page.evaluate(() => window.scrollTo(0, 0));
     await page.locator('.author__menu-toggle').click();
     assert.equal(await page.locator('.author__menu-toggle').getAttribute('aria-expanded'), 'true');
@@ -159,7 +71,7 @@ const path = require('node:path');
     await page.keyboard.press('Enter');
     await page.mouse.click(380, 340);
     await page.screenshot({ path: path.join(output, 'ipod-eink-mobile.png') });
-    console.log('PASS mobile: deep link, instrument menu, Escape, Contact and keyboard avatar');
+    console.log('PASS mobile: Escape, Contact and keyboard avatar');
 
     await page.goto(`${base}/others/`, { waitUntil: 'domcontentloaded' });
     // Poetry internals are verified by their own suite, not this page smoke test.
@@ -191,9 +103,9 @@ const path = require('node:path');
     const fallback = await nojs.newPage();
     await fallback.goto(base, { waitUntil: 'domcontentloaded' });
     assert.equal(await fallback.locator('[data-project]').count(), 6);
-    assert.equal(await fallback.locator('.project-frame-index a:visible').count(), 6);
-    await fallback.locator('.project-frame-index a[href="#project-farm"]').click();
-    assert.equal(new URL(fallback.url()).hash, '#project-farm');
+    assert.equal(await fallback.locator('[data-project]:visible').count(), 6);
+    await fallback.goto(`${base}/#project-farm`);
+    assert.ok(await fallback.locator('#project-farm').isVisible());
     await nojs.close();
     assert.deepEqual(errors, [], `uncaught page errors: ${errors.join('; ')}`);
     console.log('PASS no-JS navigation and no uncaught script errors');

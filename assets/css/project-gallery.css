@@ -38,7 +38,7 @@
 .project-gallery-card:hover .project-cover-art { transform: translateY(-3px); box-shadow: 0 8px 20px #30323412; }
 .project-gallery-card:active .project-cover-art { transform: translateY(0); }
 #ongoing-project + .project-gallery-card { grid-column: 1 / -1; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 32px; }
-#ongoing-project + .project-gallery-card .project-cover-art { aspect-ratio: 16 / 9; }
+#ongoing-project + .project-gallery-card .project-cover-art:not(.project-cover-art--designed) { aspect-ratio: 16 / 9; }
 .project-dialog-open { overflow: hidden; }
 .project-dialog {
   width: min(940px, calc(100% - 48px));

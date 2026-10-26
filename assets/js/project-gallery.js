@@ -28,6 +28,13 @@
     card.setAttribute('aria-haspopup', 'dialog');
     card.setAttribute('aria-label', `Read about ${title.textContent}`);
     const artwork = project.querySelector('.project-cover-art').cloneNode(true);
+    if (project.dataset.galleryCover) {
+      const image = artwork.querySelector('img');
+      image.src = project.dataset.galleryCover;
+      image.width = 1200;
+      image.height = 800;
+      artwork.classList.add('project-cover-art--designed');
+    }
     artwork.setAttribute('aria-hidden', 'true');
     const description = document.createElement('span');
     description.className = 'project-gallery-description';

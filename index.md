@@ -117,7 +117,7 @@ classes: homepage
 <div class="project-stream">
 <h2 id="ongoing-project">Ongoing Project</h2>
 
-<div class="paper-box" id="project-neonhk" data-project data-category="AI" data-year="now" data-period="Ongoing">
+<div class="paper-box" id="project-neonhk" data-project data-category="AI" data-year="now" data-period="Ongoing" data-gallery-cover="{{ '/assets/images/project-covers/spatial-hong-kong-cover.webp' | relative_url }}">
   <div class="paper-box-text">
     <h3>Spatial Hong Kong</h3>
     <div class="project-tags">
@@ -133,7 +133,7 @@ classes: homepage
   </div>
   <figure class="project-cover cover--spatial">
     <div class="project-cover-art">
-      <img class="project-cover-screen" src="{{ '/assets/spatial-hong-kong.png' | relative_url }}" alt="Spatial Hong Kong: map and street-view selection interface" width="1280" height="720" loading="lazy" decoding="async">
+      <img class="project-cover-screen" src="{{ '/assets/spatial-hong-kong-2026-10.png' | relative_url }}" alt="Spatial Hong Kong: updated map and street-view selection interface" width="1280" height="720" loading="lazy" decoding="async">
     </div>
     <figcaption>Application interface</figcaption>
   </figure>

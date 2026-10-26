@@ -11,7 +11,8 @@ test('six covers preserve real source images and distinguish concept artwork', (
   for (const name of ['breathing', 'intercultural', 'moderator', 'farm']) {
     assert.ok(fs.existsSync(path.join(root, `assets/images/project-covers/${name}.webp`)));
   }
-  assert.match(home, /assets\/spatial-hong-kong.png/);
+  assert.match(home, /assets\/spatial-hong-kong-2026-10\.png/);
+  assert.ok(fs.existsSync(path.join(root, 'assets/spatial-hong-kong-2026-10.png')));
   assert.match(home, /images\/RedMeta.png/);
 });
 
